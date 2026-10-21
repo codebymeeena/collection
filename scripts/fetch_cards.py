@@ -34,6 +34,12 @@ CHARACTERS = {
 EXTRA_NUMBERS = {
     "luffy": {"EB02-020", "OP11-080"},  # "We Are!", "Gear Two"
 }
+# Cards TCGplayer doesn't sell at all, taken straight from their PriceCharting page.
+EXTRA_PRICECHARTING = {
+    "luffy": [
+        "https://www.pricecharting.com/game/one-piece-promo/watermelon-luffy-x-eiichiro-oda-signature",
+    ],
+}
 SKIP_SOLD = os.environ.get("SKIP_SOLD") == "1"
 
 
@@ -189,6 +195,48 @@ def pc_details(row):
         "psa10": price_after(html, 'id="manual_only_price"'),
         "volume": vol.group(1).strip() if vol else "",
         "recentSales": sorted(sold, key=lambda x: x["date"], reverse=True)[:10],
+    }
+
+
+def pricecharting_card(url, label):
+    """A card entry built only from a PriceCharting product page."""
+    html = get(url, tries=2, timeout=30)
+    if not html:
+        print(f"  ! PriceCharting page {url} didn't load", flush=True)
+        return None
+    title = re.search(r'<h1[^>]*id="product_name"[^>]*>\s*([^<]+)', html)
+    title = unescape(title.group(1)).strip() if title else url.rstrip("/").rsplit("/", 1)[-1].replace("-", " ").title()
+    console = re.search(r'<a href="/console/([^"]+)"', html)
+    slug = url.rstrip("/").rsplit("/", 1)[-1]
+    number = re.search(r"\b((?:OP|ST|EB|PRB)\d{2}-\d{3}|P-\d{3})\b", title, re.I)
+    sold = pc_details({"title": title, "url": url, "html": html})
+    image, remote = "", ""
+    m = re.search(r"https://storage\.googleapis\.com/images\.pricecharting\.com/([A-Za-z0-9_-]+)/", html)
+    if m:
+        for size in ("1600", "240"):
+            remote = f"https://storage.googleapis.com/images.pricecharting.com/{m.group(1)}/{size}.jpg"
+            path = os.path.join(IMG_DIR, f"pc-{slug}.jpg")
+            if not os.path.exists(path):
+                img = get(remote, binary=True, tries=2)
+                if img and len(img) > 1000:
+                    with open(path, "wb") as f:
+                        f.write(img)
+            if os.path.exists(path):
+                image = f"images/pc-{slug}.jpg"
+                break
+    print(f"  PriceCharting extra: {title} -> {sold['ungraded']} raw, {len(sold['recentSales'])} sales", flush=True)
+    q = urllib.parse.quote
+    return {
+        "productId": f"pc-{slug}", "name": title, "baseName": title, "variant": "Standard",
+        "number": number.group(1).upper() if number else "",
+        "set": (console.group(1).replace("-", " ").title() if console else "PriceCharting"),
+        "setCode": "PROMO", "rarity": "", "cost": "", "color": "", "type": "", "power": "",
+        "counter": "", "attribute": "", "subtypes": "", "effect": "", "released": "",
+        "don": False, "image": image or remote, "imageRemote": remote,
+        "tcgplayerUrl": "https://www.tcgplayer.com/search/one-piece-card-game/product?q=" + q(title),
+        "ebayUrl": "https://www.ebay.com/sch/i.html?LH_Sold=1&LH_Complete=1&_nkw=" + q(title + " one piece"),
+        "collectrUrl": "https://app.getcollectr.com/?query=" + q(title),
+        "pricechartingUrl": url, "sold": sold, "finishes": {},
     }
 
 
@@ -366,8 +414,17 @@ def collect(key, label, name_re, groups):
     got = sum(1 for c in cards if c["sold"])
     sales = sum(1 for c in cards if c["sold"] and c["sold"]["recentSales"])
     print(f"Sold-price data for {got}/{len(cards)} cards ({sales} with recent sales list)")
+    for url in EXTRA_PRICECHARTING.get(key, []):
+        extra_card = pricecharting_card(url, label)
+        if extra_card:
+            cards.append(extra_card)
+        elif previous.get(f"pc-{url.rstrip('/').rsplit('/', 1)[-1]}"):
+            # Page didn't load this time: keep last week's entry.
+            extra_card = dict(previous[f"pc-{url.rstrip('/').rsplit('/', 1)[-1]}"])
+            extra_card["finishes"] = {}
+            cards.append(extra_card)
     cards = split_finishes(cards)
-    cards.sort(key=lambda c: (c["released"], c["number"], c["productId"], c["foil"]))
+    cards.sort(key=lambda c: (c["released"], c["number"], str(c["productId"]), c["foil"]))
     with open(os.path.join(DATA_DIR, f"{key}.json"), "w") as f:
         json.dump({"updated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
                    "cards": cards}, f, indent=1)
