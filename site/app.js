@@ -126,13 +126,16 @@ function filtered() {
   const q = $("#search").value.toLowerCase().trim();
   const color = $("#color").value;
   const finish = $("#finish").value;
+  const kind = $("#kind").value;
   let list = state.cards.filter((c) => {
     const have = qty(c) > 0;
     if (state.view === "have" && !have) return false;
     if (state.view === "need" && have) return false;
     if (color && !c.color.includes(color)) return false;
     if (finish && c.finish !== finish) return false;
-    if (q && !`${c.name} ${c.number} ${c.set} ${c.rarity} ${c.variant} ${c.finish ?? ""}`.toLowerCase().includes(q)) return false;
+    if (kind === "don" && !c.don) return false;
+    if (kind === "cards" && c.don) return false;
+    if (q && !`${c.name} ${c.number} ${c.set} ${c.rarity} ${c.variant} ${c.finish ?? ""} ${c.don ? "don" : ""}`.toLowerCase().includes(q)) return false;
     return true;
   });
   const sort = $("#sort").value;
@@ -238,7 +241,7 @@ document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("cli
   state.view = b.dataset.view;
   render();
 }));
-["#search", "#color", "#finish", "#sort"].forEach((s) => $(s).addEventListener("input", render));
+["#search", "#color", "#kind", "#finish", "#sort"].forEach((s) => $(s).addEventListener("input", render));
 $("#listMode").addEventListener("click", (e) => {
   state.list = !state.list;
   e.target.textContent = state.list ? "Grid view" : "List view";

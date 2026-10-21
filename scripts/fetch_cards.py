@@ -65,6 +65,10 @@ def variant_of(name):
     return ", ".join(t for t in tags if not re.fullmatch(r"\d{3}", t)) or "Standard"
 
 
+def is_don(p):
+    return ext(p, "CardType") == "DON!!"
+
+
 def clean_name(name):
     name = re.sub(r"\s*[\(\[][^)\]]*[\)\]]", "", name)
     return re.sub(r"\s+-\s+[A-Z]+\d*-\d+$", "", name).strip()
@@ -221,7 +225,7 @@ def load_groups():
     print(f"{len(groups)} English groups")
     for g in groups:
         products = get_json(f"https://tcgcsv.com/tcgplayer/{CATEGORY}/{g['groupId']}/products")
-        g["products"] = [p for p in (products or {}).get("results", []) if ext(p, "Number")]
+        g["products"] = [p for p in (products or {}).get("results", []) if ext(p, "Number") or is_don(p)]
         g["prices"] = {}
         if not g["products"]:
             continue
@@ -238,14 +242,16 @@ def collect(key, label, name_re, groups):
     for g in groups:
         # Match on the name without its "(Zoro Deck)"-style tags, so other
         # characters from a character-themed deck are left out.
-        matches = [p for p in g["products"] if name_re.search(clean_name(p["name"]))]
+        # DON!! cards name the character only in brackets: "DON!! Card (Zoro) (Gold)".
+        matches = [p for p in g["products"]
+                   if name_re.search(clean_name(p["name"])) or (is_don(p) and name_re.search(p["name"]))]
         if not matches:
             continue
         price_by_id = g["prices"]
         print(f"{g['name']}: {len(matches)} {label} cards", flush=True)
         for p in matches:
             finishes = price_by_id.get(p["productId"], {})
-            number = ext(p, "Number")
+            number = ext(p, "Number") or ("DON!!" if is_don(p) else "")
             cards.append({
                 "productId": p["productId"],
                 "name": p["name"],
@@ -254,6 +260,7 @@ def collect(key, label, name_re, groups):
                 "number": number,
                 "set": g["name"],
                 "setCode": (g.get("abbreviation") or number.split("-")[0]).upper(),
+                "don": is_don(p),
                 "rarity": ext(p, "Rarity"),
                 "cost": ext(p, "Cost"),
                 "color": ext(p, "Color"),
@@ -273,7 +280,9 @@ def collect(key, label, name_re, groups):
     os.makedirs(IMG_DIR, exist_ok=True)
     for c in cards:
         official = f"https://en.onepiece-cardgame.com/images/cardlist/card/{c['number']}.png"
-        if c["variant"] == "Standard":
+        if c["don"]:
+            sources = [(c["imageRemote"], "jpg", None)]  # Bandai's list has no DON!! images by name
+        elif c["variant"] == "Standard":
             # Bandai's own image has no "SAMPLE" stamp and is this exact print.
             sources = [(official, "png", None), (c["imageRemote"], "jpg", None)]
         else:
@@ -299,9 +308,12 @@ def collect(key, label, name_re, groups):
         c["image"] = f"images/{os.path.basename(path)}" if path else c["imageRemote"]
 
         query = f"{c['number']} {c['baseName']} {'' if c['variant'] == 'Standard' else c['variant']}".strip()
+        if c["don"]:
+            query = f"DON!! card {c['variant'].replace(',', '')}"
         c["ebayUrl"] = ("https://www.ebay.com/sch/i.html?" + urllib.parse.urlencode(
             {"_nkw": query + " one piece -japanese", "LH_Sold": "1", "LH_Complete": "1"}))
-        c["collectrUrl"] = "https://app.getcollectr.com/?query=" + urllib.parse.quote(f"{c['baseName']} {c['number']}")
+        c["collectrUrl"] = "https://app.getcollectr.com/?query=" + urllib.parse.quote(
+            query if c["don"] else f"{c['baseName']} {c['number']}")
         c["pricechartingUrl"] = f"{PC}/search-products?" + urllib.parse.urlencode(
             {"type": "prices", "q": f"{label} {c['number']}"})
 
@@ -310,7 +322,7 @@ def collect(key, label, name_re, groups):
     searches = {}
     for c in cards:
         c["sold"] = None
-        if SKIP_SOLD:
+        if SKIP_SOLD or c["don"]:  # DON!! cards have no number to match on PriceCharting
             continue
         if c["number"] not in searches:
             searches[c["number"]] = pc_search(label, c["number"])

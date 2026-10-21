@@ -1,6 +1,6 @@
 # One Piece Card Collection
 
-A website with a tab per character — **Zoro** and **Luffy** so far — listing every **English** One Piece TCG card with that name in it (Roronoa Zoro, Zoro-Juurou, Monkey.D.Luffy, Luffytaro…) with:
+A website with a tab per character — **Zoro** and **Luffy** so far — listing every **English** One Piece TCG card with that name in it (Roronoa Zoro, Zoro-Juurou, Monkey.D.Luffy, Luffytaro…) plus their DON!! cards with:
 
 - card picture, name, card number, set, rarity, variant (parallel / alt art / manga…)
 - cost, colour, type and power, and whether it is **foil or non-foil** (cards sold in both finishes are listed twice, each with its own price and counter)
