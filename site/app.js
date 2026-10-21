@@ -31,6 +31,8 @@ const qty = (c) => state.owned.get(ownId(c)) || 0;
 // Main price, in order: TCGplayer market (this card's finish), then last eBay sale and
 // eBay sold average (both via PriceCharting), then TCGplayer mid.
 function mainPrice(c) {
+  // Hand-entered CAD prices are turned back into USD so money() shows them exactly as typed.
+  if (c.priceCad != null) return { v: fx.rate ? c.priceCad / fx.rate : c.priceCad, src: "price you entered" };
   if (c.price != null) return { v: c.price, src: "price you entered" };
   const last = [...(c.sold?.recentSales || [])].sort((a, b) => b.date.localeCompare(a.date))[0];
   const ebayBacked = last || c.sold?.ungraded != null;
