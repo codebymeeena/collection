@@ -2,6 +2,8 @@
 // Everything is saved in this browser (localStorage); Backup / Restore move it between devices.
 const Business = (() => {
   const KEY = "binder-business-v1";
+  const BINDER_TYPES = ["9-pocket", "4-pocket", "12-pocket", "Top loader", "Other"];
+  const binderType = (e) => e.binderType || "Not set";
   const CATEGORIES = ["Markers", "Binders", "Paint & brushes", "Shipping & fees", "Other supplies"];
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
@@ -36,6 +38,9 @@ const Business = (() => {
             <h2>💰 I sold a binder</h2>
             <label>Date <input type="date" name="date" required></label>
             <label>What / who <input name="desc" placeholder="e.g. Zoro binder for Sam" required></label>
+            <div class="row">
+              <label>Binder type <select name="binderType">${BINDER_TYPES.map((t) => `<option>${t}</option>`).join("")}</select></label>
+            </div>
             <div class="row">
               <label>Binders <input type="number" name="qty" min="1" step="1" value="1" required></label>
               <label>Paid (CA$) <input type="number" name="amount" min="0" step="0.01" placeholder="0.00" required></label>
@@ -109,6 +114,7 @@ const Business = (() => {
       date: f.date.value,
       desc: f.desc.value.trim(),
       category: type === "sale" ? "Binder sale" : f.category.value,
+      ...(type === "sale" && { binderType: f.binderType.value }),
       qty: Math.max(1, Math.floor(+f.qty.value) || 1),
       amount: Math.round((+f.amount.value || 0) * 100) / 100,
     };
@@ -130,6 +136,7 @@ const Business = (() => {
     f.qty.value = entry.qty;
     f.amount.value = entry.amount;
     if (f.category) f.category.value = entry.category;
+    if (f.binderType) f.binderType.value = BINDER_TYPES.includes(entry.binderType) ? entry.binderType : "Other";
     f.classList.add("editing");
     f.querySelector("button.primary").textContent = "Save changes";
     f.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -169,6 +176,13 @@ const Business = (() => {
       e.type === "sale" ? (m.made += e.amount) : (m.spent += e.amount);
     }
     const monthRows = Object.entries(months).sort(([a], [b]) => b.localeCompare(a));
+    const types = {};
+    for (const e of sales()) {
+      const t = (types[binderType(e)] ||= { count: 0, made: 0 });
+      t.count += e.qty;
+      t.made += e.amount;
+    }
+    const typeRows = Object.entries(types).sort(([, a], [, b]) => b.made - a.made);
     $("#bizBreakdown").innerHTML = `
       <div class="biz-cols">
         <div>
@@ -176,6 +190,12 @@ const Business = (() => {
           ${byCat.length ? byCat.map(([c, v]) => `
             <div class="bar-row"><span>${c}</span><b>${cad(v)}</b></div>
             <div class="bar"><i style="width:${(v / spent) * 100}%"></i></div>`).join("") : `<p class="meta">No expenses yet.</p>`}
+        </div>
+        <div>
+          <h2>Sales by binder type</h2>
+          ${typeRows.length ? `<table class="biz-table"><tr><th>Type</th><th>Sold</th><th>Made</th><th>Avg each</th></tr>
+            ${typeRows.map(([t, v]) => `<tr><td>${esc(t)}</td><td>${v.count}</td><td>${cad(v.made)}</td><td>${cad(v.made / v.count)}</td></tr>`).join("")}
+            </table>` : `<p class="meta">No sales yet.</p>`}
         </div>
         <div>
           <h2>By month</h2>
@@ -194,7 +214,7 @@ const Business = (() => {
       <div class="biz-entry ${e.type}" data-id="${esc(e.id)}">
         <span class="date">${esc(e.date)}</span>
         <span class="what"><b>${esc(e.desc || e.category)}</b>
-          <span class="meta">${e.type === "sale" ? `${e.qty} binder${e.qty > 1 ? "s" : ""}` : `${esc(e.category)}${e.qty > 1 ? ` · ×${e.qty}` : ""}`}</span></span>
+          <span class="meta">${e.type === "sale" ? `${e.qty} × ${e.binderType ? esc(e.binderType) + " " : ""}binder${e.qty > 1 ? "s" : ""}` : `${esc(e.category)}${e.qty > 1 ? ` · ×${e.qty}` : ""}`}</span></span>
         <span class="amt">${e.type === "sale" ? "+" : "−"}${cad(e.amount).replace("−", "")}</span>
         <button class="edit" title="Edit">Edit</button>
         <button class="del" title="Delete">✕</button>
@@ -207,9 +227,9 @@ const Business = (() => {
   }
   function downloadCsv() {
     const q = (v) => `"${String(v).replace(/"/g, '""')}"`;
-    const rows = [["Date", "Type", "Category", "Description", "Quantity", "Amount (CAD)"],
+    const rows = [["Date", "Type", "Category", "Binder type", "Description", "Quantity", "Amount (CAD)"],
       ...[...entries].sort((a, b) => a.date.localeCompare(b.date))
-        .map((e) => [e.date, e.type === "sale" ? "Sale" : "Expense", e.category, e.desc, e.qty, (e.type === "sale" ? 1 : -1) * e.amount])];
+        .map((e) => [e.date, e.type === "sale" ? "Sale" : "Expense", e.category, e.type === "sale" ? binderType(e) : "", e.desc, e.qty, (e.type === "sale" ? 1 : -1) * e.amount])];
     download(`binder-business-${today()}.csv`, rows.map((r) => r.map(q).join(",")).join("\n"), "text/csv");
   }
   async function restore(e) {
