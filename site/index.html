@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zoro Card Collection</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Zoro Card Collection</h1>
+  <p class="sub">Every English One Piece TCG Zoro card — tick the ones you have.</p>
+  <div class="stats" id="stats"></div>
+</header>
+
+<nav class="controls">
+  <div class="tabs" role="tablist">
+    <button data-view="all" class="active">All</button>
+    <button data-view="have">I have</button>
+    <button data-view="need">I need</button>
+  </div>
+  <input id="search" type="search" placeholder="Search name, number, set…">
+  <select id="color"><option value="">All colours</option></select>
+  <select id="sort">
+    <option value="number">Sort: release / number</option>
+    <option value="priceDesc">Price high → low</option>
+    <option value="priceAsc">Price low → high</option>
+    <option value="cost">Cost</option>
+  </select>
+  <button id="listMode" title="Switch between grid and list">List view</button>
+  <button id="export">Export my list</button>
+  <label class="import">Import<input id="import" type="file" accept="application/json" hidden></label>
+</nav>
+
+<main id="cards" class="grid"></main>
+
+<footer>
+  <p id="updated"></p>
+  <p>Prices: TCGplayer market price (via tcgcsv.com). “Sold (raw)” and the recent-sales list come from
+     PriceCharting, which tracks eBay sold listings for ungraded English copies. Each card links to eBay sold
+     listings, TCGplayer, Collectr and PriceCharting so you can double-check. Your “have” ticks are saved in this browser — use Export to back them up.</p>
+</footer>
+
+<dialog id="zoom"><img alt=""><button>Close</button></dialog>
+<script src="app.js"></script>
+</body>
+</html>
