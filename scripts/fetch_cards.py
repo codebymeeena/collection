@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Collect every English One Piece TCG card named Zoro.
+"""Collect every English One Piece TCG card for each character in CHARACTERS.
 
 Card data, images and TCGplayer prices come from tcgcsv.com (a daily mirror of
 TCGplayer's catalog). Recent sold prices come from PriceCharting, which
@@ -18,13 +18,17 @@ from html import unescape
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, "site")
-DATA_FILE = os.path.join(SITE, "data", "zoro.json")
+DATA_DIR = os.path.join(SITE, "data")
 IMG_DIR = os.path.join(SITE, "images")
 
 CATEGORY = 68  # One Piece Card Game on TCGplayer (English)
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/129.0 Safari/537.36")
-NAME_RE = re.compile(r"zoro", re.I)
+# Tab key -> (tab label, pattern the card's name must contain)
+CHARACTERS = {
+    "zoro": ("Zoro", re.compile(r"zoro", re.I)),
+    "luffy": ("Luffy", re.compile(r"luffy", re.I)),
+}
 SKIP_SOLD = os.environ.get("SKIP_SOLD") == "1"
 
 
@@ -66,9 +70,9 @@ def clean_name(name):
     return re.sub(r"\s+-\s+[A-Z]+\d*-\d+$", "", name).strip()
 
 
-def load_previous():
+def load_previous(key):
     try:
-        with open(DATA_FILE) as f:
+        with open(os.path.join(DATA_DIR, f"{key}.json")) as f:
             return {c["productId"]: c for c in json.load(f)["cards"]}
     except Exception:  # noqa: BLE001
         return {}
@@ -93,6 +97,7 @@ def pc_search(name, number):
     """PriceCharting rows (title, url, console, ungraded) for one card number."""
     url = f"{PC}/search-products?" + urllib.parse.urlencode(
         {"type": "prices", "q": f"{name} {number}"})
+    time.sleep(1)
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
@@ -174,40 +179,72 @@ def pc_details(row):
         "ungraded": price_after(html, 'id="used_price"'),
         "psa10": price_after(html, 'id="manual_only_price"'),
         "volume": vol.group(1).strip() if vol else "",
-        "recentSales": sold[:10],
+        "recentSales": sorted(sold, key=lambda x: x["date"], reverse=True)[:10],
     }
 
 
-def main():
-    previous = load_previous()
+def split_finishes(cards):
+    """One entry per finish TCGplayer sells, each with its own price.
+
+    `id` is what the site's "I have" tick stores: the non-foil (or only)
+    finish keeps the bare product id so ticks made before this split survive.
+    """
+    out = []
+    for c in cards:
+        finishes = c.pop("finishes")
+        known = bool(finishes)
+        finishes = finishes or {"Unknown": {}}  # no TCGplayer listing yet
+        only = len(finishes) == 1
+        for name, pr in sorted(finishes.items()):
+            foil = "foil" in name.lower()
+            e = dict(c)
+            e.update({
+                "id": str(c["productId"]) if only or not foil else f"{c['productId']}-foil",
+                "foil": foil,
+                "finish": ("Foil" if foil else "Non-foil") if known else "",
+                "tcgMarket": pr.get("marketPrice"),
+                "tcgLow": pr.get("lowPrice"),
+                "tcgMid": pr.get("midPrice"),
+                # PriceCharting doesn't split sales by finish.
+                "soldAnyFinish": not only,
+            })
+            out.append(e)
+    return out
+
+
+def load_groups():
     groups = get_json(f"https://tcgcsv.com/tcgplayer/{CATEGORY}/groups")
     if not groups:
         sys.exit("Could not reach tcgcsv.com")
     groups = [g for g in groups["results"]
               if not re.search(r"japanese|\bjp\b", g["name"], re.I)]
     print(f"{len(groups)} English groups")
+    for g in groups:
+        products = get_json(f"https://tcgcsv.com/tcgplayer/{CATEGORY}/{g['groupId']}/products")
+        g["products"] = [p for p in (products or {}).get("results", []) if ext(p, "Number")]
+        g["prices"] = {}
+        if not g["products"]:
+            continue
+        prices = get_json(f"https://tcgcsv.com/tcgplayer/{CATEGORY}/{g['groupId']}/prices") or {"results": []}
+        for pr in prices["results"]:
+            # One row per finish: "Normal" (non-foil) and/or "Foil".
+            g["prices"].setdefault(pr["productId"], {})[pr.get("subTypeName") or "Normal"] = pr
+    return groups
 
+
+def collect(key, label, name_re, groups):
+    previous = load_previous(key)
     cards = []
     for g in groups:
-        gid = g["groupId"]
-        products = get_json(f"https://tcgcsv.com/tcgplayer/{CATEGORY}/{gid}/products")
-        if not products:
-            continue
         # Match on the name without its "(Zoro Deck)"-style tags, so other
-        # characters from Zoro-themed decks are left out.
-        zoros = [p for p in products["results"]
-                 if NAME_RE.search(clean_name(p["name"])) and ext(p, "Number")]
-        if not zoros:
+        # characters from a character-themed deck are left out.
+        matches = [p for p in g["products"] if name_re.search(clean_name(p["name"]))]
+        if not matches:
             continue
-        prices = get_json(f"https://tcgcsv.com/tcgplayer/{CATEGORY}/{gid}/prices") or {"results": []}
-        price_by_id = {}
-        for pr in prices["results"]:
-            cur = price_by_id.get(pr["productId"])
-            if not cur or (pr.get("marketPrice") or 0) > (cur.get("marketPrice") or 0):
-                price_by_id[pr["productId"]] = pr
-        print(f"{g['name']}: {len(zoros)} Zoro cards", flush=True)
-        for p in zoros:
-            pr = price_by_id.get(p["productId"], {})
+        price_by_id = g["prices"]
+        print(f"{g['name']}: {len(matches)} {label} cards", flush=True)
+        for p in matches:
+            finishes = price_by_id.get(p["productId"], {})
             number = ext(p, "Number")
             cards.append({
                 "productId": p["productId"],
@@ -229,13 +266,10 @@ def main():
                 "released": (g.get("publishedOn") or "")[:10],
                 "imageRemote": (p.get("imageUrl") or "").replace("_200w", "_in_1000x1000"),
                 "tcgplayerUrl": p.get("url") or f"https://www.tcgplayer.com/product/{p['productId']}",
-                "tcgMarket": pr.get("marketPrice"),
-                "tcgLow": pr.get("lowPrice"),
-                "tcgMid": pr.get("midPrice"),
-                "printing": pr.get("subTypeName"),
+                "finishes": finishes,
             })
 
-    print(f"Found {len(cards)} Zoro cards")
+    print(f"Found {len(cards)} {label} cards")
     os.makedirs(IMG_DIR, exist_ok=True)
     for c in cards:
         official = f"https://en.onepiece-cardgame.com/images/cardlist/card/{c['number']}.png"
@@ -269,7 +303,7 @@ def main():
             {"_nkw": query + " one piece -japanese", "LH_Sold": "1", "LH_Complete": "1"}))
         c["collectrUrl"] = "https://app.getcollectr.com/?query=" + urllib.parse.quote(f"{c['baseName']} {c['number']}")
         c["pricechartingUrl"] = f"{PC}/search-products?" + urllib.parse.urlencode(
-            {"type": "prices", "q": f"{c['baseName']} {c['number']}"})
+            {"type": "prices", "q": f"{label} {c['number']}"})
 
     # Recent sold prices (PriceCharting tracks eBay sold listings). eBay itself
     # refuses requests from GitHub's servers, so it is linked instead.
@@ -278,11 +312,9 @@ def main():
         c["sold"] = None
         if SKIP_SOLD:
             continue
-        key = (c["baseName"], c["number"])
-        if key not in searches:
-            searches[key] = pc_search(*key)
-            time.sleep(1)
-        row, c["_score"] = pc_match(c, searches[key])
+        if c["number"] not in searches:
+            searches[c["number"]] = pc_search(label, c["number"])
+        row, c["_score"] = pc_match(c, searches[c["number"]])
         c["_row"] = row
 
     # Two versions must not share one PriceCharting product: keep the closest.
@@ -304,7 +336,7 @@ def main():
                 print(f"  ! PriceCharting {row['url']}: {e}", flush=True)
             time.sleep(1)
         # Keep last week's numbers only if PriceCharting didn't answer this time.
-        if (c["sold"] is None and not searches.get((c["baseName"], c["number"]))
+        if (c["sold"] is None and not searches.get(c["number"])
                 and previous.get(c["productId"], {}).get("sold")):
             c["sold"] = previous[c["productId"]]["sold"]
         print(f"  {c['number']} {c['variant'][:40]:40} -> "
@@ -313,14 +345,49 @@ def main():
     got = sum(1 for c in cards if c["sold"])
     sales = sum(1 for c in cards if c["sold"] and c["sold"]["recentSales"])
     print(f"Sold-price data for {got}/{len(cards)} cards ({sales} with recent sales list)")
-    keep = {os.path.basename(c["image"]) for c in cards}
+    cards = split_finishes(cards)
+    cards.sort(key=lambda c: (c["released"], c["number"], c["productId"], c["foil"]))
+    with open(os.path.join(DATA_DIR, f"{key}.json"), "w") as f:
+        json.dump({"updated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
+                   "cards": cards}, f, indent=1)
+    return cards
+
+
+def update_exchange_rate():
+    """USD -> CAD rate for the site; every source we use quotes in USD."""
+    for url, pick in [
+        ("https://api.frankfurter.app/latest?from=USD&to=CAD", lambda d: (d["rates"]["CAD"], d["date"])),
+        ("https://open.er-api.com/v6/latest/USD", lambda d: (d["rates"]["CAD"], d["time_last_update_utc"][:16])),
+    ]:
+        try:
+            rate, date = pick(get_json(url))
+            with open(os.path.join(DATA_DIR, "fx.json"), "w") as f:
+                json.dump({"usdToCad": rate, "date": date, "source": url.split("/")[2]}, f, indent=1)
+            print(f"USD->CAD {rate} ({date})")
+            return
+        except Exception as e:  # noqa: BLE001
+            print(f"  ! exchange rate from {url}: {e}", flush=True)
+    print("  ! no exchange rate; keeping the previous one", flush=True)
+
+
+def main():
+    wanted = sys.argv[1:] or list(CHARACTERS)
+    update_exchange_rate()
+    groups = load_groups()
+    for key in wanted:
+        label, name_re = CHARACTERS[key]
+        collect(key, label, name_re, groups)
+
+    # Drop pictures no tab uses any more.
+    keep = set()
+    for key in CHARACTERS:
+        for c in load_previous(key).values():
+            keep.add(os.path.basename(c["image"]))
     for f in os.listdir(IMG_DIR):
         if f.endswith((".jpg", ".png")) and f not in keep:
             os.remove(os.path.join(IMG_DIR, f))
-    cards.sort(key=lambda c: (c["released"], c["number"], c["productId"]))
-    with open(DATA_FILE, "w") as f:
-        json.dump({"updated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
-                   "cards": cards}, f, indent=1)
+    with open(os.path.join(DATA_DIR, "characters.json"), "w") as f:
+        json.dump([{"key": k, "label": v[0]} for k, v in CHARACTERS.items()], f, indent=1)
 
 
 if __name__ == "__main__":

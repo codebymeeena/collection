@@ -1,32 +1,105 @@
-const KEY = "zoro-owned-v1";
+const KEY = "card-qty-v1"; // {card id: copies owned} for every tab (ids are unique)
+const OLD_KEY = "zoro-owned-v1"; // earlier tick-box list, read once as 1 copy each
+const CHAR_KEY = "card-tab-v1";
 const COLORS = { Red: "var(--red)", Green: "var(--green)", Blue: "var(--blue)",
                  Purple: "var(--purple)", Black: "var(--black)", Yellow: "var(--yellow)" };
-const state = { cards: [], view: "all", owned: loadOwned(), list: false };
+const state = { cards: [], view: "all", owned: new Map(), list: false, chars: [], char: null, cache: {} };
 const $ = (s) => document.querySelector(s);
-const money = (v) => (v == null ? "—" : "$" + Number(v).toFixed(2));
+// Sources quote US dollars; show Canadian dollars using the rate saved by the weekly update.
+const fx = { rate: null, date: "" };
+const money = (v) => (v == null ? "—" : fx.rate
+  ? "CA$" + (Number(v) * fx.rate).toLocaleString("en-CA", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+  : "US$" + Number(v).toFixed(2));
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
 function loadOwned() {
-  try { return new Set(JSON.parse(localStorage.getItem(KEY) || "[]")); } catch { return new Set(); }
+  try {
+    const saved = localStorage.getItem(KEY);
+    return toQty(JSON.parse(saved ?? localStorage.getItem(OLD_KEY) ?? "{}"));
+  } catch { return new Map(); }
+}
+// Accepts {id: qty} or the older [id, …] list (1 copy each).
+function toQty(data) {
+  const entries = Array.isArray(data) ? data.map((id) => [id, 1]) : Object.entries(data || {});
+  return new Map(entries.map(([id, n]) => [String(id), Math.max(0, Math.floor(+n) || 0)]).filter(([, n]) => n > 0));
 }
 function saveOwned() {
-  try { localStorage.setItem(KEY, JSON.stringify([...state.owned])); } catch {}
+  try { localStorage.setItem(KEY, JSON.stringify(Object.fromEntries(state.owned))); } catch {}
 }
-const price = (c) => c.tcgMarket ?? c.sold?.ungraded ?? c.tcgMid ?? null;
+const ownId = (c) => c.id ?? String(c.productId);
+const qty = (c) => state.owned.get(ownId(c)) || 0;
+// Main price, in order: last eBay sale, eBay sold average (both via PriceCharting),
+// TCGplayer market, Collectr, TCGplayer mid.
+function mainPrice(c) {
+  const last = [...(c.sold?.recentSales || [])].sort((a, b) => b.date.localeCompare(a.date))[0];
+  if (last) return { v: last.price, src: `last eBay sale, ${last.date}` };
+  if (c.sold?.ungraded != null) return { v: c.sold.ungraded, src: "eBay sold average" };
+  if (c.tcgMarket != null) return { v: c.tcgMarket, src: "TCGplayer market" };
+  if (c.collectr != null) return { v: c.collectr, src: "Collectr" };
+  if (c.tcgMid != null) return { v: c.tcgMid, src: "TCGplayer mid" };
+  return { v: null, src: "no price found" };
+}
+const price = (c) => mainPrice(c).v;
+
+// Keep the filter bar just under the sticky Zoro / Luffy tabs.
+const charbar = document.querySelector(".charbar");
+new ResizeObserver(() => document.documentElement.style.setProperty("--charbar-h", charbar.offsetHeight + "px")).observe(charbar);
 
 async function init() {
-  const data = await fetch("data/zoro.json").then((r) => r.json());
-  state.cards = data.cards;
+  state.owned = loadOwned();
+  try {
+    const r = await fetch("data/fx.json").then((res) => (res.ok ? res.json() : null));
+    if (r?.usdToCad) Object.assign(fx, { rate: r.usdToCad, date: r.date });
+  } catch {}
+  state.chars = await fetch("data/characters.json", { cache: "no-cache" })
+    .then((r) => (r.ok ? r.json() : null))
+    .catch(() => null) || [{ key: "zoro", label: "Zoro" }, { key: "luffy", label: "Luffy" }];
+  $("#chars").innerHTML = state.chars
+    .map((c) => `<button data-char="${esc(c.key)}" role="tab">${esc(c.label)}<span class="count"></span></button>`).join("");
+  // Card counts on the tabs (loads each tab's list in the background).
+  state.chars.forEach(async (c) => {
+    try {
+      const data = state.cache[c.key] ||= await fetch(`data/${c.key}.json`).then((r) => r.json());
+      const span = document.querySelector(`#chars button[data-char="${c.key}"] .count`);
+      if (span) span.textContent = `${data.cards.length} cards`;
+    } catch {}
+  });
+  $("#chars").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-char]");
+    if (b) location.hash = b.dataset.char;
+  });
+  window.addEventListener("hashchange", () => showChar(location.hash.slice(1)));
   // Seed from a committed owned.json the first time, if one exists.
-  if (!localStorage.getItem(KEY)) {
+  if (!state.owned.size) {
     try {
       const seed = await fetch("data/owned.json").then((r) => (r.ok ? r.json() : []));
-      seed.forEach((id) => state.owned.add(String(id)));
+      state.owned = toQty(seed);
       saveOwned();
     } catch {}
   }
-  $("#updated").textContent = `Prices updated ${new Date(data.updated).toLocaleString()} · ${data.cards.length} cards`;
+  let start = location.hash.slice(1);
+  if (!state.chars.some((c) => c.key === start)) {
+    try { start = localStorage.getItem(CHAR_KEY); } catch {}
+  }
+  await showChar(start);
+}
+
+async function showChar(key) {
+  const char = state.chars.find((c) => c.key === key) || state.chars[0];
+  state.char = char;
+  try { localStorage.setItem(CHAR_KEY, char.key); } catch {}
+  document.querySelectorAll("#chars button").forEach((b) => b.classList.toggle("active", b.dataset.char === char.key));
+  document.title = `${char.label} Card Collection`;
+  $("h1").textContent = `${char.label} Card Collection`;
+  $(".sub").textContent = `Every English One Piece TCG ${char.label} card — use + and − to count the ones you have.`;
+  $("#cards").innerHTML = `<p class="empty">Loading ${esc(char.label)} cards…</p>`;
+  const data = state.cache[char.key] ||= await fetch(`data/${char.key}.json`).then((r) => r.json());
+  if (state.char !== char) return; // another tab was picked while loading
+  state.cards = data.cards;
+  $("#updated").textContent = `Prices updated ${new Date(data.updated).toLocaleString()} · ${data.cards.length} cards · ` +
+    (fx.rate ? `Prices in CAD (1 USD = ${fx.rate.toFixed(4)} CAD, ${fx.date})` : "Prices in USD (exchange rate unavailable)");
   const colors = new Set(data.cards.flatMap((c) => c.color.split(/[;\/,]/).map((s) => s.trim()).filter(Boolean)));
+  $("#color").replaceChildren(new Option("All colours", ""));
   [...colors].sort().forEach((c) => $("#color").append(new Option(c, c)));
   render();
 }
@@ -34,12 +107,14 @@ async function init() {
 function filtered() {
   const q = $("#search").value.toLowerCase().trim();
   const color = $("#color").value;
+  const finish = $("#finish").value;
   let list = state.cards.filter((c) => {
-    const have = state.owned.has(String(c.productId));
+    const have = qty(c) > 0;
     if (state.view === "have" && !have) return false;
     if (state.view === "need" && have) return false;
     if (color && !c.color.includes(color)) return false;
-    if (q && !`${c.name} ${c.number} ${c.set} ${c.rarity} ${c.variant}`.toLowerCase().includes(q)) return false;
+    if (finish && c.finish !== finish) return false;
+    if (q && !`${c.name} ${c.number} ${c.set} ${c.rarity} ${c.variant} ${c.finish ?? ""}`.toLowerCase().includes(q)) return false;
     return true;
   });
   const sort = $("#sort").value;
@@ -50,21 +125,24 @@ function filtered() {
 }
 
 function stats() {
-  const have = state.cards.filter((c) => state.owned.has(String(c.productId)));
-  const need = state.cards.filter((c) => !state.owned.has(String(c.productId)));
-  const sum = (l) => l.reduce((t, c) => t + (price(c) || 0), 0);
+  const have = state.cards.filter((c) => qty(c) > 0);
+  const need = state.cards.filter((c) => qty(c) === 0);
+  const copies = have.reduce((t, c) => t + qty(c), 0);
+  const sum = (l, perCard) => l.reduce((t, c) => t + (price(c) || 0) * perCard(c), 0);
   $("#stats").innerHTML = [
-    [state.cards.length, "Zoro cards"],
+    [state.cards.length, `${state.char.label} cards`],
     [have.length, "I have"],
     [need.length, "I need"],
-    [money(sum(have)), "Value of mine"],
-    [money(sum(need)), "Cost to finish"],
+    [copies, "Copies I own"],
+    [money(sum(have, qty)), "Value of mine"],
+    [money(sum(need, () => 1)), "Cost to finish"],
   ].map(([v, l]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
 }
 
 function cardHtml(c) {
-  const id = String(c.productId);
-  const have = state.owned.has(id);
+  const id = ownId(c);
+  const n = qty(c);
+  const have = n > 0;
   const colorChips = c.color.split(/[;\/,]/).map((s) => s.trim()).filter(Boolean)
     .map((col) => `<span class="chip c" style="background:${COLORS[col] || "#777"}">${esc(col)}</span>`).join("");
   const s = c.sold;
@@ -80,13 +158,14 @@ function cardHtml(c) {
       <div class="name">${esc(c.baseName)}</div>
       ${c.imageNote ? `<div class="meta note">${esc(c.imageNote)}</div>` : ""}
       <div class="meta">${esc(c.number)} · ${esc(c.setCode)} · ${esc(c.rarity)}${c.variant !== "Standard" ? " · " + esc(c.variant) : ""}</div>
-      <div class="chips">${colorChips}
+      <div class="chips">${c.finish ? `<span class="chip ${c.foil ? "foil" : ""}">${c.foil ? "✦ Foil" : "Non-foil"}</span>` : ""}${colorChips}
         ${c.cost ? `<span class="chip">Cost ${esc(c.cost)}</span>` : ""}
         ${c.type ? `<span class="chip">${esc(c.type)}</span>` : ""}
         ${c.power ? `<span class="chip">${esc(c.power)} power</span>` : ""}</div>
+      <div class="main-price"><b>${money(price(c))}</b> <span class="meta">${esc(mainPrice(c).src)}${c.soldAnyFinish && c.sold ? " · any finish" : ""}</span></div>
       <dl class="prices">
         <dt>TCGplayer</dt><dd>${money(c.tcgMarket)}${c.tcgLow != null ? ` <span class="meta">(low ${money(c.tcgLow)})</span>` : ""}</dd>
-        <dt>Sold (raw)</dt><dd>${s ? `${money(s.ungraded)}${s.volume ? ` <span class="meta">(${esc(s.volume)})</span>` : ""}` : "—"}</dd>
+        <dt>Sold (raw${c.soldAnyFinish ? ", any finish" : ""})</dt><dd>${s ? `${money(s.ungraded)}${s.volume ? ` <span class="meta">(${esc(s.volume)})</span>` : ""}` : "—"}</dd>
         ${s?.psa10 ? `<dt>PSA 10</dt><dd>${money(s.psa10)}</dd>` : ""}
       </dl>
       ${sales}
@@ -96,7 +175,12 @@ function cardHtml(c) {
         <a href="${esc(c.collectrUrl)}" target="_blank" rel="noopener">Collectr</a>
         <a href="${esc(s?.url || c.pricechartingUrl)}" target="_blank" rel="noopener">PriceCharting</a>
       </div>
-      <label class="own"><input type="checkbox" data-id="${id}" ${have ? "checked" : ""}> I have this</label>
+      <div class="own" data-id="${esc(id)}">
+        <span>I have</span>
+        <button type="button" data-step="-1" aria-label="One less" ${have ? "" : "disabled"}>−</button>
+        <input type="number" min="0" step="1" inputmode="numeric" value="${n}" aria-label="Copies owned">
+        <button type="button" data-step="1" aria-label="One more">+</button>
+      </div>
     </div>
   </article>`;
 }
@@ -109,15 +193,21 @@ function render() {
   main.innerHTML = list.length ? list.map(cardHtml).join("") : `<p class="empty">No cards here yet.</p>`;
 }
 
+function setQty(id, n) {
+  n = Math.max(0, Math.floor(+n) || 0);
+  n ? state.owned.set(id, n) : state.owned.delete(id);
+  saveOwned();
+  render();
+}
 document.addEventListener("change", (e) => {
-  if (e.target.matches(".own input")) {
-    const id = e.target.dataset.id;
-    e.target.checked ? state.owned.add(id) : state.owned.delete(id);
-    saveOwned();
-    render();
-  }
+  if (e.target.matches(".own input")) setQty(e.target.closest(".own").dataset.id, e.target.value);
 });
 document.addEventListener("click", (e) => {
+  const step = e.target.closest(".own button[data-step]");
+  if (step) {
+    const id = step.closest(".own").dataset.id;
+    setQty(id, (state.owned.get(id) || 0) + Number(step.dataset.step));
+  }
   if (e.target.matches(".card img")) {
     const d = $("#zoom");
     d.querySelector("img").src = e.target.src;
@@ -130,14 +220,14 @@ document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("cli
   state.view = b.dataset.view;
   render();
 }));
-["#search", "#color", "#sort"].forEach((s) => $(s).addEventListener("input", render));
+["#search", "#color", "#finish", "#sort"].forEach((s) => $(s).addEventListener("input", render));
 $("#listMode").addEventListener("click", (e) => {
   state.list = !state.list;
   e.target.textContent = state.list ? "Grid view" : "List view";
   render();
 });
 $("#export").addEventListener("click", () => {
-  const blob = new Blob([JSON.stringify([...state.owned], null, 1)], { type: "application/json" });
+  const blob = new Blob([JSON.stringify(Object.fromEntries(state.owned), null, 1)], { type: "application/json" });
   const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: "owned.json" });
   a.click();
 });
@@ -145,7 +235,7 @@ $("#import").addEventListener("change", async (e) => {
   const file = e.target.files[0];
   if (!file) return;
   try {
-    state.owned = new Set(JSON.parse(await file.text()).map(String));
+    state.owned = toQty(JSON.parse(await file.text()));
     saveOwned();
     render();
   } catch { alert("That file isn't a valid owned.json"); }

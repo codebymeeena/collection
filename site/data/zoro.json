@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T02:10+00:00",
+ "updated": "2026-10-21T03:06+00:00",
  "cards": [
   {
    "productId": 641202,
@@ -21,14 +21,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/641202_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/641202/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-tournament-pack-2025-vol-3",
-   "tcgMarket": 0.28,
-   "tcgLow": 0.2,
-   "tcgMid": 0.4,
-   "printing": "Normal",
    "image": "images/641202.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=EB02-019+Roronoa+Zoro+Tournament+Pack+2025+Vol.+3+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20EB02-019",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+EB02-019",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+EB02-019",
    "sold": {
     "title": "Roronoa Zoro [Tournament Pack Vol. 3] EB02-019",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-tournament-pack-vol-3-eb02-019",
@@ -87,7 +83,14 @@
       "title": "Roronoa Zoro (Tournament Pack 2025 Vol. 3) #EB02-019 Near Mint English Tournament Pack Vol. 3"
      }
     ]
-   }
+   },
+   "id": "641202",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.28,
+   "tcgLow": 0.2,
+   "tcgMid": 0.4,
+   "soldAnyFinish": false
   },
   {
    "productId": 641203,
@@ -109,15 +112,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/641203_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/641203/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-winner-pack-2025-vol-3",
-   "tcgMarket": 24.2,
-   "tcgLow": 22.45,
-   "tcgMid": 32.0,
-   "printing": "Foil",
    "image": "images/641203.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=EB02-019+Roronoa+Zoro+Winner+Pack+2025+Vol.+3+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20EB02-019",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+EB02-019",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+EB02-019",
+   "sold": null,
+   "id": "641203",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 24.2,
+   "tcgLow": 22.45,
+   "tcgMid": 32.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 485262,
@@ -139,15 +145,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/485262_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/485262/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-op01-001-alternate-art",
-   "tcgMarket": 115.42,
-   "tcgLow": 98.99,
-   "tcgMid": 125.0,
-   "printing": "Foil",
    "image": "images/485262.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP01-001+Roronoa+Zoro+Alternate+Art+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP01-001",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP01-001",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP01-001",
+   "sold": null,
+   "id": "485262",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 115.42,
+   "tcgLow": 98.99,
+   "tcgMid": 125.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 515356,
@@ -169,15 +178,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/515356_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/515356/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-op01-025-treasure-cup",
-   "tcgMarket": null,
-   "tcgLow": null,
-   "tcgMid": null,
-   "printing": null,
    "image": "images/515356.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP01-025+Roronoa+Zoro+Treasure+Cup+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP01-025",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP01-025",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP01-025",
+   "sold": null,
+   "id": "515356",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
   },
   {
    "productId": 527620,
@@ -199,14 +211,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/527620_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/527620/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-op01-025-ultra-deck-the-three-captains",
-   "tcgMarket": 1.34,
-   "tcgLow": 1.0,
-   "tcgMid": 2.0,
-   "printing": "Foil",
    "image": "images/527620.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP01-025+Roronoa+Zoro+Ultra+Deck%3A+The+Three+Captains+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP01-025",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP01-025",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP01-025",
    "sold": {
     "title": "Roronoa Zoro [Ultra Deck: The Three Captains] OP01-025",
     "url": "https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-ultra-deck-the-three-captains-op01-025",
@@ -214,7 +222,14 @@
     "psa10": 90.0,
     "volume": "1 sale per month",
     "recentSales": []
-   }
+   },
+   "id": "527620",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 1.34,
+   "tcgLow": 1.0,
+   "tcgMid": 2.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 557288,
@@ -236,14 +251,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/557288_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/557288/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-english-version-1st-anniversary-set",
-   "tcgMarket": 659.12,
-   "tcgLow": 379.44,
-   "tcgMid": 631.49,
-   "printing": "Foil",
    "image": "images/557288.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP01-025+Roronoa+Zoro+English+Version+1st+Anniversary+Set+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP01-025",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP01-025",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP01-025",
    "sold": {
     "title": "Roronoa Zoro [1st Anniversary] OP01-025",
     "url": "https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-1st-anniversary-op01-025",
@@ -302,7 +313,14 @@
       "title": "Roronoa Zoro (English Version 1st Anniversary Set) #OP01-025 Near Mint English 1st Anniversary"
      }
     ]
-   }
+   },
+   "id": "557288",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 659.12,
+   "tcgLow": 379.44,
+   "tcgMid": 631.49,
+   "soldAnyFinish": false
   },
   {
    "productId": 544622,
@@ -324,15 +342,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/544622_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/544622/one-piece-card-game-one-piece-promotion-cards-zoro-juurou-judge-pack-vol-3",
-   "tcgMarket": 12.12,
-   "tcgLow": 11.04,
-   "tcgMid": 15.0,
-   "printing": "Foil",
    "image": "images/544622.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP05-067+Zoro-Juurou+Judge+Pack+Vol.+3+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Zoro-Juurou%20OP05-067",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro-Juurou+OP05-067",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP05-067",
+   "sold": null,
+   "id": "544622",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 12.12,
+   "tcgLow": 11.04,
+   "tcgMid": 15.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 583763,
@@ -354,15 +375,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/583763_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/583763/one-piece-card-game-one-piece-promotion-cards-zoro-juurou-event-pack-vol-5",
-   "tcgMarket": 81.33,
-   "tcgLow": 66.0,
-   "tcgMid": 78.56,
-   "printing": "Foil",
    "image": "images/583763.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP05-067+Zoro-Juurou+Event+Pack+Vol.+5+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Zoro-Juurou%20OP05-067",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro-Juurou+OP05-067",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP05-067",
+   "sold": null,
+   "id": "583763",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 81.33,
+   "tcgLow": 66.0,
+   "tcgMid": 78.56,
+   "soldAnyFinish": false
   },
   {
    "productId": 649618,
@@ -384,14 +408,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/649618_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/649618/one-piece-card-game-one-piece-promotion-cards-zoro-juurou-cs-25-26-event-pack",
-   "tcgMarket": 226.95,
-   "tcgLow": 129.99,
-   "tcgMid": 200.0,
-   "printing": "Foil",
    "image": "images/649618.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP05-067+Zoro-Juurou+CS+25-26+Event+Pack+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Zoro-Juurou%20OP05-067",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro-Juurou+OP05-067",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP05-067",
    "sold": {
     "title": "Zoro-Juurou [Championship 25-26] OP05-067",
     "url": "https://www.pricecharting.com/game/one-piece-awakening-of-the-new-era/zoro-juurou-championship-25-26-op05-067",
@@ -399,7 +419,14 @@
     "psa10": 739.85,
     "volume": "1 sale per week",
     "recentSales": []
-   }
+   },
+   "id": "649618",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 226.95,
+   "tcgLow": 129.99,
+   "tcgMid": 200.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 649663,
@@ -421,14 +448,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/649663_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/649663/one-piece-card-game-one-piece-promotion-cards-zoro-juurou-cs-25-26-event-pack-finalist-ver",
-   "tcgMarket": null,
-   "tcgLow": null,
-   "tcgMid": null,
-   "printing": null,
    "image": "images/649663.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP05-067+Zoro-Juurou+CS+25-26+Event+Pack+Finalist+Ver.+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Zoro-Juurou%20OP05-067",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro-Juurou+OP05-067",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP05-067",
    "sold": {
     "title": "Zoro-Juurou [Championship 25-26 Finalist] OP05-067",
     "url": "https://www.pricecharting.com/game/one-piece-promo/zoro-juurou-championship-25-26-finalist-op05-067",
@@ -436,7 +459,14 @@
     "psa10": 7877.0,
     "volume": "rare",
     "recentSales": []
-   }
+   },
+   "id": "649663",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
   },
   {
    "productId": 617591,
@@ -458,14 +488,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/617591_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/617591/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-one-piece-japanese-version-2nd-anniversary-set",
-   "tcgMarket": 167.31,
-   "tcgLow": 139.11,
-   "tcgMid": 192.39,
-   "printing": "Foil",
    "image": "images/617591.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP06-118+Roronoa+Zoro+One+Piece+Japanese+Version+2nd+Anniversary+Set+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP06-118",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP06-118",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP06-118",
    "sold": {
     "title": "Roronoa Zoro [2nd Anniversary] OP06-118",
     "url": "https://www.pricecharting.com/game/one-piece-wings-of-the-captain/roronoa-zoro-2nd-anniversary-op06-118",
@@ -524,7 +550,14 @@
       "title": "Roronoa Zoro (One Piece Japanese Version 2nd Anniversary Set) #OP06-118 Near Mint English 2nd Anniversary"
      }
     ]
-   }
+   },
+   "id": "617591",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 167.31,
+   "tcgLow": 139.11,
+   "tcgMid": 192.39,
+   "soldAnyFinish": false
   },
   {
    "productId": 620096,
@@ -546,14 +579,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/620096_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/620096/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-one-piece-day-dallas-2025",
-   "tcgMarket": 488.47,
-   "tcgLow": 300.0,
-   "tcgMid": 455.35,
-   "printing": "Foil",
    "image": "images/620096.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP07-113+Roronoa+Zoro+One+Piece+Day+Dallas+2025+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP07-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP07-113",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP07-113",
    "sold": {
     "title": "Roronoa Zoro [One Piece Day Dallas] OP07-113",
     "url": "https://www.pricecharting.com/game/one-piece-500-years-in-the-future/roronoa-zoro-one-piece-day-dallas-op07-113",
@@ -612,7 +641,14 @@
       "title": "Roronoa Zoro (One Piece Day Dallas 2025) #OP07-113 Near Mint English One Piece Day Dallas"
      }
     ]
-   }
+   },
+   "id": "620096",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 488.47,
+   "tcgLow": 300.0,
+   "tcgMid": 455.35,
+   "soldAnyFinish": false
   },
   {
    "productId": 650704,
@@ -634,14 +670,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/650704_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/650704/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-illustration-box-vol3",
-   "tcgMarket": 1.85,
-   "tcgLow": 0.99,
-   "tcgMid": 3.14,
-   "printing": "Foil",
    "image": "images/650704.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP07-113+Roronoa+Zoro+Illustration+Box+Vol.3+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP07-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP07-113",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP07-113",
    "sold": {
     "title": "Roronoa Zoro [Illustration Box Vol. 3] OP07-113",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-illustration-box-vol-3-op07-113",
@@ -700,7 +732,14 @@
       "title": "Roronoa Zoro (Illustration Box Vol.3) #OP07-113 Near Mint English Illustration Box Vol. 3"
      }
     ]
-   }
+   },
+   "id": "650704",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 1.85,
+   "tcgLow": 0.99,
+   "tcgMid": 3.14,
+   "soldAnyFinish": false
   },
   {
    "productId": 683982,
@@ -722,14 +761,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/683982_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/683982/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-113-regionals-finalist-card-set-26-27",
-   "tcgMarket": 439.68,
-   "tcgLow": 395.95,
-   "tcgMid": 416.25,
-   "printing": "Foil",
    "image": "images/683982.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP07-113+Roronoa+Zoro+Regionals+Finalist+Card+Set+26-27+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP07-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP07-113",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP07-113",
    "sold": {
     "title": "Roronoa Zoro [Regionals 26-27 Finalist] OP07-113",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-regionals-26-27-finalist-op07-113",
@@ -788,7 +823,14 @@
       "title": "Roronoa Zoro (113) (Regionals Finalist Card Set 26-27) #OP07-113 Near Mint English Regionals 26-27 Finalist"
      }
     ]
-   }
+   },
+   "id": "683982",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 439.68,
+   "tcgLow": 395.95,
+   "tcgMid": 416.25,
+   "soldAnyFinish": false
   },
   {
    "productId": 686285,
@@ -810,15 +852,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/686285_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/686285/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-113-regional-participation-pack-2026-vol1",
-   "tcgMarket": 30.65,
-   "tcgLow": 29.0,
-   "tcgMid": 34.88,
-   "printing": "Foil",
    "image": "images/686285.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP07-113+Roronoa+Zoro+Regional+Participation+Pack+2026+Vol.1+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP07-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP07-113",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP07-113",
+   "sold": null,
+   "id": "686285",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 30.65,
+   "tcgLow": 29.0,
+   "tcgMid": 34.88,
+   "soldAnyFinish": false
   },
   {
    "productId": 686286,
@@ -840,14 +885,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/686286_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/686286/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-113-regionals-champion-card-set-26-27",
-   "tcgMarket": null,
-   "tcgLow": null,
-   "tcgMid": null,
-   "printing": null,
    "image": "images/686286.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP07-113+Roronoa+Zoro+Regionals+Champion+Card+Set+26-27+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP07-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP07-113",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP07-113",
    "sold": {
     "title": "Roronoa Zoro [Regionals 26-27 Champion] OP07-113",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-regionals-26-27-champion-op07-113",
@@ -855,7 +896,14 @@
     "psa10": 10200.0,
     "volume": "rare",
     "recentSales": []
-   }
+   },
+   "id": "686286",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
   },
   {
    "productId": 619217,
@@ -877,15 +925,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/619217_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/619217/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-championship-25-26-regionals-season-1",
-   "tcgMarket": null,
-   "tcgLow": 8000.0,
-   "tcgMid": 8000.0,
-   "printing": "Foil",
    "image": "images/619217.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP09-076+Roronoa+Zoro+Championship+25-26+Regionals+Season+1+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP09-076",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP09-076",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP09-076",
+   "sold": null,
+   "id": "619217",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": null,
+   "tcgLow": 8000.0,
+   "tcgMid": 8000.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 652239,
@@ -907,14 +958,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/652239_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/652239/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-welcome-pack-vol-2",
-   "tcgMarket": 5.52,
-   "tcgLow": 5.27,
-   "tcgMid": 7.57,
-   "printing": "Normal",
    "image": "images/652239.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP09-076+Roronoa+Zoro+Welcome+Pack+Vol.+2+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP09-076",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP09-076",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP09-076",
    "sold": {
     "title": "Roronoa Zoro [Welcome Pack Vol. 2] OP09-076",
     "url": "https://www.pricecharting.com/game/one-piece-emperors-in-the-new-world/roronoa-zoro-welcome-pack-vol-2-op09-076",
@@ -973,7 +1020,14 @@
       "title": "Roronoa Zoro (Welcome Pack Vol. 2) #OP09-076 Near Mint English Welcome Pack Vol. 2"
      }
     ]
-   }
+   },
+   "id": "652239",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 5.52,
+   "tcgLow": 5.27,
+   "tcgMid": 7.57,
+   "soldAnyFinish": false
   },
   {
    "productId": 641240,
@@ -995,15 +1049,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/641240_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/641240/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-judge-pack-vol-6",
-   "tcgMarket": 14.56,
-   "tcgLow": 11.0,
-   "tcgMid": 16.0,
-   "printing": "Foil",
    "image": "images/641240.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP10-113+Roronoa+Zoro+Judge+Pack+Vol.+6+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP10-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP10-113",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP10-113",
+   "sold": null,
+   "id": "641240",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 14.56,
+   "tcgLow": 11.0,
+   "tcgMid": 16.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 656609,
@@ -1025,14 +1082,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656609_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/656609/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-learn-together-deck-set-set-sail-event",
-   "tcgMarket": 20.85,
-   "tcgLow": 19.5,
-   "tcgMid": 24.95,
-   "printing": "Normal",
    "image": "images/656609.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP10-113+Roronoa+Zoro+Learn+Together+Deck+Set+-+Set+Sail+Event+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP10-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP10-113",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP10-113",
    "sold": {
     "title": "Roronoa Zoro [Set Sail Event] OP10-113",
     "url": "https://www.pricecharting.com/game/one-piece-learn-together-deck-set/roronoa-zoro-set-sail-event-op10-113",
@@ -1091,7 +1144,14 @@
       "title": "Roronoa Zoro (Learn Together Deck Set - Set Sail Event) #OP10-113 Near Mint English Set Sail Event"
      }
     ]
-   }
+   },
+   "id": "656609",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 20.85,
+   "tcgLow": 19.5,
+   "tcgMid": 24.95,
+   "soldAnyFinish": false
   },
   {
    "productId": 657119,
@@ -1113,14 +1173,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/657119_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/657119/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-serial-numbered",
-   "tcgMarket": null,
-   "tcgLow": 50000.0,
-   "tcgMid": 50000.0,
-   "printing": "Foil",
    "image": "images/657119.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP12-020+Roronoa+Zoro+Serial+Numbered+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP12-020",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP12-020",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP12-020",
    "sold": {
     "title": "Roronoa Zoro [Serial] OP12-020",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-serial-op12-020",
@@ -1128,7 +1184,14 @@
     "psa10": 26257.14,
     "volume": "rare",
     "recentSales": []
-   }
+   },
+   "id": "657119",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": null,
+   "tcgLow": 50000.0,
+   "tcgMid": 50000.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 657221,
@@ -1150,14 +1213,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/657221_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/657221/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-op12-020-official-playmat-limited-edition-vol4",
-   "tcgMarket": 550.29,
-   "tcgLow": 398.96,
-   "tcgMid": 517.63,
-   "printing": "Foil",
    "image": "images/657221.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP12-020+Roronoa+Zoro+Official+Playmat+Limited+Edition+Vol.4+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP12-020",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP12-020",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP12-020",
    "sold": {
     "title": "Roronoa Zoro [Playmat Limited Edition] OP12-020",
     "url": "https://www.pricecharting.com/game/one-piece-legacy-of-the-master/roronoa-zoro-playmat-limited-edition-op12-020",
@@ -1165,7 +1224,14 @@
     "psa10": 657.48,
     "volume": "2 sales per week",
     "recentSales": []
-   }
+   },
+   "id": "657221",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 550.29,
+   "tcgLow": 398.96,
+   "tcgMid": 517.63,
+   "soldAnyFinish": false
   },
   {
    "productId": 694877,
@@ -1187,14 +1253,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/694877_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/694877/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-premium-card-collection-best-selection-vol-6",
-   "tcgMarket": 16.52,
-   "tcgLow": 14.01,
-   "tcgMid": 20.0,
-   "printing": "Foil",
    "image": "images/694877.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP13-037+Roronoa+Zoro+Premium+Card+Collection+-Best+Selection+Vol.+6-+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP13-037",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP13-037",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP13-037",
    "sold": {
     "title": "Roronoa Zoro [Best Selection] OP13-037",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-best-selection-op13-037",
@@ -1253,7 +1315,14 @@
       "title": "Roronoa Zoro (Premium Card Collection -Best Selection Vol. 6-) #OP13-037 Near Mint English Best Selection"
      }
     ]
-   }
+   },
+   "id": "694877",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 16.52,
+   "tcgLow": 14.01,
+   "tcgMid": 20.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 721296,
@@ -1275,15 +1344,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/721296_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/721296/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-treasure-cup-august-2026",
-   "tcgMarket": null,
-   "tcgLow": 1600.0,
-   "tcgMid": 1899.0,
-   "printing": "Foil",
    "image": "images/721296.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP15-113+Roronoa+Zoro+Treasure+Cup+August+2026+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP15-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP15-113",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP15-113",
+   "sold": null,
+   "id": "721296",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": null,
+   "tcgLow": 1600.0,
+   "tcgMid": 1899.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 539176,
@@ -1305,15 +1377,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/539176_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/539176/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-event-pack-vol-3",
-   "tcgMarket": 38.96,
-   "tcgLow": 34.4,
-   "tcgMid": 45.95,
-   "printing": "Foil",
    "image": "images/539176.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=P-042+Roronoa+Zoro+Event+Pack+Vol.+3+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20P-042",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+P-042",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+P-042",
+   "sold": null,
+   "id": "539176",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 38.96,
+   "tcgLow": 34.4,
+   "tcgMid": 45.95,
+   "soldAnyFinish": false
   },
   {
    "productId": 579985,
@@ -1335,15 +1410,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/579985_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/579985/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-cs-2024-event-pack",
-   "tcgMarket": 197.56,
-   "tcgLow": 98.05,
-   "tcgMid": 138.99,
-   "printing": "Foil",
    "image": "images/579985.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=P-042+Roronoa+Zoro+CS+2024+Event+Pack+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20P-042",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+P-042",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+P-042",
+   "sold": null,
+   "id": "579985",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 197.56,
+   "tcgLow": 98.05,
+   "tcgMid": 138.99,
+   "soldAnyFinish": false
   },
   {
    "productId": 580035,
@@ -1365,15 +1443,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/580035_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/580035/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-cs-2024-event-pack-finalist",
-   "tcgMarket": null,
-   "tcgLow": null,
-   "tcgMid": null,
-   "printing": null,
    "image": "images/580035.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=P-042+Roronoa+Zoro+CS+2024+Event+Pack+Finalist+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20P-042",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+P-042",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+P-042",
+   "sold": null,
+   "id": "580035",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
   },
   {
    "productId": 537438,
@@ -1395,15 +1476,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/537438_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/537438/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-op-06-pre-release-tournament-participant",
-   "tcgMarket": 2.51,
-   "tcgLow": 1.97,
-   "tcgMid": 4.55,
-   "printing": "Normal",
    "image": "images/537438.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=P-045+Roronoa+Zoro+OP-06+Pre-Release+Tournament%2C+Participant+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20P-045",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+P-045",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+P-045",
+   "sold": null,
+   "id": "537438",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 2.51,
+   "tcgLow": 1.97,
+   "tcgMid": 4.55,
+   "soldAnyFinish": false
   },
   {
    "productId": 537439,
@@ -1425,15 +1509,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/537439_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/537439/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-op-06-pre-release-tournament-winner",
-   "tcgMarket": 393.01,
-   "tcgLow": 300.0,
-   "tcgMid": 357.0,
-   "printing": "Foil",
    "image": "images/537439.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=P-045+Roronoa+Zoro+OP-06+Pre-Release+Tournament%2C+Winner+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20P-045",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+P-045",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+P-045",
+   "sold": null,
+   "id": "537439",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 393.01,
+   "tcgLow": 300.0,
+   "tcgMid": 357.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 588178,
@@ -1455,15 +1542,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/588178_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/588178/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-st15-st20-release-event-pack",
-   "tcgMarket": 9.5,
-   "tcgLow": 5.29,
-   "tcgMid": 8.3,
-   "printing": "Normal",
    "image": "images/588178.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=P-045+Roronoa+Zoro+ST15+-+ST20+Release+Event+Pack+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20P-045",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+P-045",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+P-045",
+   "sold": null,
+   "id": "588178",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 9.5,
+   "tcgLow": 5.29,
+   "tcgMid": 8.3,
+   "soldAnyFinish": false
   },
   {
    "productId": 588179,
@@ -1485,15 +1575,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/588179_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/588179/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-st15-st20-release-event-winner-pack",
-   "tcgMarket": 87.42,
-   "tcgLow": 99.0,
-   "tcgMid": 110.3,
-   "printing": "Foil",
    "image": "images/588179.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=P-045+Roronoa+Zoro+ST15+-+ST20+Release+Event+Winner+Pack+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20P-045",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+P-045",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+P-045",
+   "sold": null,
+   "id": "588179",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 87.42,
+   "tcgLow": 99.0,
+   "tcgMid": 110.3,
+   "soldAnyFinish": false
   },
   {
    "productId": 518703,
@@ -1515,14 +1608,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/518703_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/518703/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-sealed-battle-kit-vol-1",
-   "tcgMarket": 5.91,
-   "tcgLow": 5.68,
-   "tcgMid": 6.54,
-   "printing": "Normal",
    "image": "images/518703.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=P-056+Roronoa+Zoro+Sealed+Battle+Kit+Vol.+1+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20P-056",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+P-056",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+P-056",
    "sold": {
     "title": "Roronoa Zoro [Sealed Battle Kit] P-056",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-sealed-battle-kit-p-056",
@@ -1581,7 +1670,14 @@
       "title": "Roronoa Zoro (Sealed Battle Kit Vol. 1) #P-056 Near Mint English Sealed Battle Kit"
      }
     ]
-   }
+   },
+   "id": "518703",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 5.91,
+   "tcgLow": 5.68,
+   "tcgMid": 6.54,
+   "soldAnyFinish": false
   },
   {
    "productId": 546718,
@@ -1603,15 +1699,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/546718_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/546718/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-premium-card-collection-live-action-edition",
-   "tcgMarket": 19.05,
-   "tcgLow": 16.48,
-   "tcgMid": 24.2,
-   "printing": "Foil",
    "image": "images/546718.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=P-056+Roronoa+Zoro+Premium+Card+Collection+-Live+Action+Edition-+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20P-056",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+P-056",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+P-056",
+   "sold": null,
+   "id": "546718",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 19.05,
+   "tcgLow": 16.48,
+   "tcgMid": 24.2,
+   "soldAnyFinish": false
   },
   {
    "productId": 683972,
@@ -1633,14 +1732,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/683972_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/683972/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-114",
-   "tcgMarket": 104.87,
-   "tcgLow": 83.98,
-   "tcgMid": 120.0,
-   "printing": "Normal",
    "image": "images/683972.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=P-114+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20P-114",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+P-114",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+P-114",
    "sold": {
     "title": "Roronoa Zoro P-114",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-p-114",
@@ -1699,7 +1794,14 @@
       "title": "Roronoa Zoro (114) #P-114 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "683972",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 104.87,
+   "tcgLow": 83.98,
+   "tcgMid": 120.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 690670,
@@ -1721,15 +1823,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/690670_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/690670/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-p-141-premium-card-collection-live-action-edition-vol2-straw-hat-crew",
-   "tcgMarket": null,
-   "tcgLow": null,
-   "tcgMid": null,
-   "printing": null,
    "image": "images/690670.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=P-141+Roronoa+Zoro+Premium+Card+Collection+-Live+Action+Edition+Vol.2+Straw+Hat+Crew-+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20P-141",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+P-141",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+P-141",
+   "sold": null,
+   "id": "690670",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
   },
   {
    "productId": 693119,
@@ -1751,15 +1856,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/693119_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/693119/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-welcome-pack-2026-vol1",
-   "tcgMarket": 2.75,
-   "tcgLow": 2.35,
-   "tcgMid": 4.77,
-   "printing": "Normal",
    "image": "images/693119.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=PRB02-006+Roronoa+Zoro+Welcome+Pack+2026+Vol.1+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20PRB02-006",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+PRB02-006",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+PRB02-006",
+   "sold": null,
+   "id": "693119",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 2.75,
+   "tcgLow": 2.35,
+   "tcgMid": 4.77,
+   "soldAnyFinish": false
   },
   {
    "productId": 707252,
@@ -1781,15 +1889,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/707252_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/707252/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-round-1-promo",
-   "tcgMarket": 38.07,
-   "tcgLow": 38.12,
-   "tcgMid": 55.0,
-   "printing": "Foil",
    "image": "images/707252.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=PRB02-006+Roronoa+Zoro+Round+1+Promo+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20PRB02-006",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+PRB02-006",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+PRB02-006",
+   "sold": null,
+   "id": "707252",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 38.07,
+   "tcgLow": 38.12,
+   "tcgMid": 55.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 419388,
@@ -1811,15 +1922,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/419388_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/419388/one-piece-card-game-st-01-starter-deck-1-straw-hat-crew-super-pre-release-edition-roronoa-zoro",
-   "tcgMarket": 145.15,
-   "tcgLow": 48.79,
-   "tcgMid": 110.58,
-   "printing": "Foil",
    "image": "images/419388.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST01-013+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST01-013",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST01-013",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST01-013",
+   "sold": null,
+   "id": "419388",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 145.15,
+   "tcgLow": 48.79,
+   "tcgMid": 110.58,
+   "soldAnyFinish": false
   },
   {
    "productId": 455816,
@@ -1841,14 +1955,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/455816_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/455816/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-st01-013-treasure-cup",
-   "tcgMarket": null,
-   "tcgLow": 1349.95,
-   "tcgMid": 2025.0,
-   "printing": "Foil",
    "image": "images/455816.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST01-013+Roronoa+Zoro+Treasure+Cup+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST01-013",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST01-013",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST01-013",
    "sold": {
     "title": "Roronoa Zoro [Treasure Cup] ST01-013",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-1-straw-hat-crew/roronoa-zoro-treasure-cup-st01-013",
@@ -1872,7 +1982,14 @@
       "title": "Roronoa Zoro - ST01-013 (Treasure Cup) #ST01-013 Near Mint English Treasure Cup"
      }
     ]
-   }
+   },
+   "id": "455816",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": null,
+   "tcgLow": 1349.95,
+   "tcgMid": 2025.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 503253,
@@ -1894,15 +2011,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/503253_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/503253/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-3-on-3-cup-participant",
-   "tcgMarket": null,
-   "tcgLow": null,
-   "tcgMid": null,
-   "printing": null,
    "image": "images/503253.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST01-013+Roronoa+Zoro+3-on-3+Cup%2C+Participant+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST01-013",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST01-013",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST01-013",
+   "sold": null,
+   "id": "503253",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
   },
   {
    "productId": 503254,
@@ -1924,15 +2044,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/503254_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/503254/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-3-on-3-cup-winner",
-   "tcgMarket": null,
-   "tcgLow": null,
-   "tcgMid": null,
-   "printing": null,
    "image": "images/503254.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST01-013+Roronoa+Zoro+3-on-3+Cup%2C+Winner+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST01-013",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST01-013",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST01-013",
+   "sold": null,
+   "id": "503254",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
   },
   {
    "productId": 504480,
@@ -1954,15 +2077,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/504480_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/504480/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-premium-card-collection-one-piece-film-red-edition",
-   "tcgMarket": 26.97,
-   "tcgLow": 25.0,
-   "tcgMid": 32.34,
-   "printing": "Foil",
    "image": "images/504480.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST01-013+Roronoa+Zoro+Premium+Card+Collection+-ONE+PIECE+FILM+RED+Edition-+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST01-013",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST01-013",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST01-013",
+   "sold": null,
+   "id": "504480",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 26.97,
+   "tcgLow": 25.0,
+   "tcgMid": 32.34,
+   "soldAnyFinish": false
   },
   {
    "productId": 523812,
@@ -1984,14 +2110,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/523812_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/523812/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-gift-collection-2023",
-   "tcgMarket": 28.26,
-   "tcgLow": 24.52,
-   "tcgMid": 32.0,
-   "printing": "Foil",
    "image": "images/523812.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST01-013+Roronoa+Zoro+Gift+Collection+2023+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST01-013",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST01-013",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST01-013",
    "sold": {
     "title": "Roronoa Zoro [Gift Collection] ST01-013",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-1-straw-hat-crew/roronoa-zoro-gift-collection-st01-013",
@@ -2050,7 +2172,14 @@
       "title": "Roronoa Zoro (Gift Collection 2023) #ST01-013 Near Mint English Gift Collection"
      }
     ]
-   }
+   },
+   "id": "523812",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 28.26,
+   "tcgLow": 24.52,
+   "tcgMid": 32.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 564531,
@@ -2072,15 +2201,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/564531_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/564531/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-treasure-cup-2024",
-   "tcgMarket": null,
-   "tcgLow": null,
-   "tcgMid": null,
-   "printing": null,
    "image": "images/564531.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST12-008+Roronoa+Zoro+Treasure+Cup+2024+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST12-008",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST12-008",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST12-008",
+   "sold": null,
+   "id": "564531",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
   },
   {
    "productId": 649626,
@@ -2102,15 +2234,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/649626_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/649626/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-cs-25-26-3rd-place",
-   "tcgMarket": null,
-   "tcgLow": null,
-   "tcgMid": null,
-   "printing": null,
    "image": "images/649626.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST21-015+Roronoa+Zoro+CS+25-26+3rd+Place+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST21-015",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST21-015",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST21-015",
+   "sold": null,
+   "id": "649626",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
   },
   {
    "productId": 649627,
@@ -2132,14 +2267,10 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/649627_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/649627/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-cs-25-26-2nd-place",
-   "tcgMarket": null,
-   "tcgLow": null,
-   "tcgMid": null,
-   "printing": null,
    "image": "images/649627.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST21-015+Roronoa+Zoro+CS+25-26+2nd+Place+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST21-015",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST21-015",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST21-015",
    "sold": {
     "title": "Roronoa Zoro [Championship 25-26 2nd Place] ST21-015",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-championship-25-26-2nd-place-st21-015",
@@ -2147,7 +2278,14 @@
     "psa10": 45425.0,
     "volume": "1 sale per month",
     "recentSales": []
-   }
+   },
+   "id": "649627",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
   },
   {
    "productId": 649628,
@@ -2169,15 +2307,18 @@
    "released": "2022-09-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/649628_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/649628/one-piece-card-game-one-piece-promotion-cards-roronoa-zoro-cs-25-26-1st-place",
-   "tcgMarket": null,
-   "tcgLow": null,
-   "tcgMid": null,
-   "printing": null,
    "image": "images/649628.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST21-015+Roronoa+Zoro+CS+25-26+1st+Place+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST21-015",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST21-015",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST21-015",
+   "sold": null,
+   "id": "649628",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
   },
   {
    "productId": 454512,
@@ -2199,14 +2340,10 @@
    "released": "2022-12-02",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/454512_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/454512/one-piece-card-game-romance-dawn-roronoa-zoro-001",
-   "tcgMarket": 1.7,
-   "tcgLow": 1.67,
-   "tcgMid": 3.23,
-   "printing": "Normal",
    "image": "images/454512.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP01-001+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP01-001",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP01-001",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP01-001",
    "sold": {
     "title": "Roronoa Zoro OP01-001",
     "url": "https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-op01-001",
@@ -2265,7 +2402,14 @@
       "title": "Roronoa Zoro (001) #OP01-001 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "454512",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 1.7,
+   "tcgLow": 1.67,
+   "tcgMid": 3.23,
+   "soldAnyFinish": false
   },
   {
    "productId": 454513,
@@ -2287,14 +2431,10 @@
    "released": "2022-12-02",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/454513_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/454513/one-piece-card-game-romance-dawn-roronoa-zoro-001-parallel",
-   "tcgMarket": 660.39,
-   "tcgLow": 689.99,
-   "tcgMid": 743.99,
-   "printing": "Foil",
    "image": "images/454513.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP01-001+Roronoa+Zoro+Parallel+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP01-001",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP01-001",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP01-001",
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] OP01-001",
     "url": "https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-alternate-art-op01-001",
@@ -2353,7 +2493,14 @@
       "title": "Roronoa Zoro (001) (Parallel) #OP01-001 Near Mint English Alternate Art"
      }
     ]
-   }
+   },
+   "id": "454513",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 660.39,
+   "tcgLow": 689.99,
+   "tcgMid": 743.99,
+   "soldAnyFinish": false
   },
   {
    "productId": 453510,
@@ -2375,14 +2522,10 @@
    "released": "2022-12-02",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/453510_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/453510/one-piece-card-game-romance-dawn-roronoa-zoro-025",
-   "tcgMarket": 3.25,
-   "tcgLow": 2.8,
-   "tcgMid": 4.29,
-   "printing": "Foil",
    "image": "images/453510.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP01-025+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP01-025",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP01-025",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP01-025",
    "sold": {
     "title": "Roronoa Zoro OP01-025",
     "url": "https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-op01-025",
@@ -2401,7 +2544,14 @@
       "title": "PSA 10 Treasure Cup Zoro (2023) Top 8  #OP01-025 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "453510",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 3.25,
+   "tcgLow": 2.8,
+   "tcgMid": 4.29,
+   "soldAnyFinish": false
   },
   {
    "productId": 453511,
@@ -2423,14 +2573,10 @@
    "released": "2022-12-02",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/453511_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/453511/one-piece-card-game-romance-dawn-roronoa-zoro-025-parallel",
-   "tcgMarket": 237.02,
-   "tcgLow": 204.0,
-   "tcgMid": 275.04,
-   "printing": "Foil",
    "image": "images/453511.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP01-025+Roronoa+Zoro+Parallel+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP01-025",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP01-025",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP01-025",
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] OP01-025",
     "url": "https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-alternate-art-op01-025",
@@ -2489,7 +2635,14 @@
       "title": "Roronoa Zoro (025) (Parallel) #OP01-025 Near Mint English Alternate Art"
      }
     ]
-   }
+   },
+   "id": "453511",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 237.02,
+   "tcgLow": 204.0,
+   "tcgMid": 275.04,
+   "soldAnyFinish": false
   },
   {
    "productId": 288242,
@@ -2511,14 +2664,10 @@
    "released": "2022-12-02",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/288242_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/288242/one-piece-card-game-st-01-starter-deck-1-straw-hat-crew-roronoa-zoro",
-   "tcgMarket": 1.82,
-   "tcgLow": 1.45,
-   "tcgMid": 2.48,
-   "printing": "Foil",
    "image": "images/288242.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST01-013+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST01-013",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST01-013",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST01-013",
    "sold": {
     "title": "Roronoa Zoro ST01-013",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-1-straw-hat-crew/roronoa-zoro-st01-013",
@@ -2526,7 +2675,14 @@
     "psa10": 236.5,
     "volume": "2 sales per week",
     "recentSales": []
-   }
+   },
+   "id": "288242",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 1.82,
+   "tcgLow": 1.45,
+   "tcgMid": 2.48,
+   "soldAnyFinish": false
   },
   {
    "productId": 486670,
@@ -2548,15 +2704,18 @@
    "released": "2023-03-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/486670_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/486670/one-piece-card-game-paramount-war-pre-release-cards-roronoa-zoro",
-   "tcgMarket": 58.86,
-   "tcgLow": 40.0,
-   "tcgMid": 85.0,
-   "printing": "Normal",
    "image": "images/486670.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP02-043+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP02-043",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP02-043",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP02-043",
+   "sold": null,
+   "id": "486670",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 58.86,
+   "tcgLow": 40.0,
+   "tcgMid": 85.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 486371,
@@ -2578,14 +2737,10 @@
    "released": "2023-03-10",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/486371_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/486371/one-piece-card-game-paramount-war-roronoa-zoro",
-   "tcgMarket": 0.13,
-   "tcgLow": 0.01,
-   "tcgMid": 0.2,
-   "printing": "Normal",
    "image": "images/486371.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP02-043+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP02-043",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP02-043",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP02-043",
    "sold": {
     "title": "Roronoa Zoro OP02-043",
     "url": "https://www.pricecharting.com/game/one-piece-paramount-war/roronoa-zoro-op02-043",
@@ -2644,7 +2799,14 @@
       "title": "Roronoa Zoro #OP02-043 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "486371",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.13,
+   "tcgLow": 0.01,
+   "tcgMid": 0.2,
+   "soldAnyFinish": false
   },
   {
    "productId": 516741,
@@ -2666,14 +2828,10 @@
    "released": "2023-09-22",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/516741_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/516741/one-piece-card-game-kingdoms-of-intrigue-roronoa-zoro",
-   "tcgMarket": 0.19,
-   "tcgLow": 0.04,
-   "tcgMid": 0.27,
-   "printing": "Foil",
    "image": "images/516741.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP04-015+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP04-015",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP04-015",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP04-015",
    "sold": {
     "title": "Roronoa Zoro OP04-015",
     "url": "https://www.pricecharting.com/game/one-piece-kingdoms-of-intrigue/roronoa-zoro-op04-015",
@@ -2732,7 +2890,14 @@
       "title": "Roronoa Zoro #OP04-015 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "516741",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 0.19,
+   "tcgLow": 0.04,
+   "tcgMid": 0.27,
+   "soldAnyFinish": false
   },
   {
    "productId": 527665,
@@ -2754,14 +2919,10 @@
    "released": "2023-12-08",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/527665_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/527665/one-piece-card-game-awakening-of-the-new-era-zoro-juurou-alternate-art",
-   "tcgMarket": 31.0,
-   "tcgLow": 26.0,
-   "tcgMid": 33.37,
-   "printing": "Foil",
    "image": "images/527665.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP05-067+Zoro-Juurou+Alternate+Art+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Zoro-Juurou%20OP05-067",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro-Juurou+OP05-067",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP05-067",
    "sold": {
     "title": "Zoro-Juurou [Alternate Art] OP05-067",
     "url": "https://www.pricecharting.com/game/one-piece-awakening-of-the-new-era/zoro-juurou-alternate-art-op05-067",
@@ -2820,7 +2981,14 @@
       "title": "Zoro-Juurou (Alternate Art) #OP05-067 Near Mint English Alternate Art"
      }
     ]
-   }
+   },
+   "id": "527665",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 31.0,
+   "tcgLow": 26.0,
+   "tcgMid": 33.37,
+   "soldAnyFinish": false
   },
   {
    "productId": 528626,
@@ -2842,14 +3010,10 @@
    "released": "2023-12-08",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/528626_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/528626/one-piece-card-game-awakening-of-the-new-era-zoro-juurou",
-   "tcgMarket": 0.38,
-   "tcgLow": 0.18,
-   "tcgMid": 0.47,
-   "printing": "Foil",
    "image": "images/528626.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP05-067+Zoro-Juurou+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Zoro-Juurou%20OP05-067",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro-Juurou+OP05-067",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP05-067",
    "sold": {
     "title": "Zoro-Juurou OP05-067",
     "url": "https://www.pricecharting.com/game/one-piece-awakening-of-the-new-era/zoro-juurou-op05-067",
@@ -2908,7 +3072,14 @@
       "title": "Zoro-Juurou #OP05-067 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "528626",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 0.38,
+   "tcgLow": 0.18,
+   "tcgMid": 0.47,
+   "soldAnyFinish": false
   },
   {
    "productId": 541659,
@@ -2930,14 +3101,10 @@
    "released": "2024-03-15",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/541659_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/541659/one-piece-card-game-wings-of-the-captain-roronoa-zoro-alternate-art",
-   "tcgMarket": 124.05,
-   "tcgLow": 90.9,
-   "tcgMid": 124.05,
-   "printing": "Foil",
    "image": "images/541659.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP06-118+Roronoa+Zoro+Alternate+Art+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP06-118",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP06-118",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP06-118",
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] OP06-118",
     "url": "https://www.pricecharting.com/game/one-piece-wings-of-the-captain/roronoa-zoro-alternate-art-op06-118",
@@ -2996,7 +3163,14 @@
       "title": "Roronoa Zoro (Alternate Art) #OP06-118 Near Mint English Alternate Art"
      }
     ]
-   }
+   },
+   "id": "541659",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 124.05,
+   "tcgLow": 90.9,
+   "tcgMid": 124.05,
+   "soldAnyFinish": false
   },
   {
    "productId": 541660,
@@ -3018,14 +3192,10 @@
    "released": "2024-03-15",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/541660_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/541660/one-piece-card-game-wings-of-the-captain-roronoa-zoro-alternate-art-manga",
-   "tcgMarket": 2500.0,
-   "tcgLow": 2998.41,
-   "tcgMid": 27636.03,
-   "printing": "Foil",
    "image": "images/541660.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP06-118+Roronoa+Zoro+Alternate+Art%2C+Manga+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP06-118",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP06-118",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP06-118",
    "sold": {
     "title": "Roronoa Zoro [Alternate Art Manga] OP06-118",
     "url": "https://www.pricecharting.com/game/one-piece-wings-of-the-captain/roronoa-zoro-alternate-art-manga-op06-118",
@@ -3084,7 +3254,14 @@
       "title": "Roronoa Zoro (Alternate Art) (Manga) #OP06-118 Near Mint English Alternate Art Manga"
      }
     ]
-   }
+   },
+   "id": "541660",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 2500.0,
+   "tcgLow": 2998.41,
+   "tcgMid": 27636.03,
+   "soldAnyFinish": false
   },
   {
    "productId": 541661,
@@ -3106,14 +3283,10 @@
    "released": "2024-03-15",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/541661_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/541661/one-piece-card-game-wings-of-the-captain-roronoa-zoro",
-   "tcgMarket": 6.86,
-   "tcgLow": 6.25,
-   "tcgMid": 8.91,
-   "printing": "Foil",
    "image": "images/541661.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP06-118+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP06-118",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP06-118",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP06-118",
    "sold": {
     "title": "Roronoa Zoro OP06-118",
     "url": "https://www.pricecharting.com/game/one-piece-wings-of-the-captain/roronoa-zoro-op06-118",
@@ -3172,7 +3345,14 @@
       "title": "Roronoa Zoro #OP06-118 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "541661",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 6.86,
+   "tcgLow": 6.25,
+   "tcgMid": 8.91,
+   "soldAnyFinish": false
   },
   {
    "productId": 539151,
@@ -3194,14 +3374,10 @@
    "released": "2024-03-15",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/539151_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/539151/one-piece-card-game-st-12-starter-deck-12-zoro-and-sanji-roronoa-zoro-and-sanji",
-   "tcgMarket": 11.75,
-   "tcgLow": 10.89,
-   "tcgMid": 13.0,
-   "printing": "Foil",
    "image": "images/539151.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST12-001+Roronoa+Zoro+%26+Sanji+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20%26%20Sanji%20ST12-001",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+%26+Sanji+ST12-001",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST12-001",
    "sold": {
     "title": "Roronoa Zoro & Sanji ST12-001",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-12/roronoa-zoro-&amp;-sanji-st12-001",
@@ -3209,7 +3385,14 @@
     "psa10": null,
     "volume": "",
     "recentSales": []
-   }
+   },
+   "id": "539151",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 11.75,
+   "tcgLow": 10.89,
+   "tcgMid": 13.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 539152,
@@ -3231,14 +3414,10 @@
    "released": "2024-03-15",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/539152_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/539152/one-piece-card-game-st-12-starter-deck-12-zoro-and-sanji-roronoa-zoro",
-   "tcgMarket": 0.89,
-   "tcgLow": 0.53,
-   "tcgMid": 0.97,
-   "printing": "Normal",
    "image": "images/539152.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST12-008+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST12-008",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST12-008",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST12-008",
    "sold": {
     "title": "Roronoa Zoro ST12-008",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-12/roronoa-zoro-st12-008",
@@ -3262,7 +3441,14 @@
       "title": "Roronoa Zoro (Treasure Cup 2024) #ST12-008 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "539152",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.89,
+   "tcgLow": 0.53,
+   "tcgMid": 0.97,
+   "soldAnyFinish": false
   },
   {
    "productId": 552108,
@@ -3284,15 +3470,18 @@
    "released": "2024-06-21",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/552108_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/552108/one-piece-card-game-500-years-in-the-future-pre-release-cards-roronoa-zoro-034",
-   "tcgMarket": 19.01,
-   "tcgLow": 13.5,
-   "tcgMid": 21.59,
-   "printing": "Normal",
    "image": "images/552108.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP07-034+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP07-034",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP07-034",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP07-034",
+   "sold": null,
+   "id": "552108",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 19.01,
+   "tcgLow": 13.5,
+   "tcgMid": 21.59,
+   "soldAnyFinish": false
   },
   {
    "productId": 552129,
@@ -3314,15 +3503,18 @@
    "released": "2024-06-21",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/552129_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/552129/one-piece-card-game-500-years-in-the-future-pre-release-cards-roronoa-zoro-113",
-   "tcgMarket": 24.68,
-   "tcgLow": 13.39,
-   "tcgMid": 26.01,
-   "printing": "Normal",
    "image": "images/552129.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP07-113+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP07-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP07-113",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP07-113",
+   "sold": null,
+   "id": "552129",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 24.68,
+   "tcgLow": 13.39,
+   "tcgMid": 26.01,
+   "soldAnyFinish": false
   },
   {
    "productId": 545818,
@@ -3344,14 +3536,10 @@
    "released": "2024-06-28",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/545818_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/545818/one-piece-card-game-500-years-in-the-future-roronoa-zoro-034",
-   "tcgMarket": 0.13,
-   "tcgLow": 0.01,
-   "tcgMid": 0.18,
-   "printing": "Normal",
    "image": "images/545818.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP07-034+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP07-034",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP07-034",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP07-034",
    "sold": {
     "title": "Roronoa Zoro OP07-034",
     "url": "https://www.pricecharting.com/game/one-piece-500-years-in-the-future/roronoa-zoro-op07-034",
@@ -3359,7 +3547,14 @@
     "psa10": 70.0,
     "volume": "1 sale per month",
     "recentSales": []
-   }
+   },
+   "id": "545818",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.13,
+   "tcgLow": 0.01,
+   "tcgMid": 0.18,
+   "soldAnyFinish": false
   },
   {
    "productId": 545913,
@@ -3381,14 +3576,10 @@
    "released": "2024-06-28",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/545913_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/545913/one-piece-card-game-500-years-in-the-future-roronoa-zoro-113",
-   "tcgMarket": 0.15,
-   "tcgLow": 0.05,
-   "tcgMid": 0.21,
-   "printing": "Normal",
    "image": "images/545913.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP07-113+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP07-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP07-113",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP07-113",
    "sold": {
     "title": "Roronoa Zoro OP07-113",
     "url": "https://www.pricecharting.com/game/one-piece-500-years-in-the-future/roronoa-zoro-op07-113",
@@ -3447,7 +3638,14 @@
       "title": "Roronoa Zoro (113) #OP07-113 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "545913",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.15,
+   "tcgLow": 0.05,
+   "tcgMid": 0.21,
+   "soldAnyFinish": false
   },
   {
    "productId": 548424,
@@ -3469,14 +3667,10 @@
    "released": "2024-08-16",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/548424_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/548424/one-piece-card-game-st-14-starter-deck-14-3d2y-roronoa-zoro",
-   "tcgMarket": 0.17,
-   "tcgLow": 0.01,
-   "tcgMid": 0.2,
-   "printing": "Normal",
    "image": "images/548424.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST14-013+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST14-013",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST14-013",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST14-013",
    "sold": {
     "title": "Roronoa Zoro ST14-013",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-14-3d2y/roronoa-zoro-st14-013",
@@ -3535,7 +3729,14 @@
       "title": "Roronoa Zoro #ST14-013 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "548424",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.17,
+   "tcgLow": 0.01,
+   "tcgMid": 0.2,
+   "soldAnyFinish": false
   },
   {
    "productId": 581025,
@@ -3557,15 +3758,18 @@
    "released": "2024-10-25",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/581025_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/581025/one-piece-card-game-st-18-starter-deck-18-purple-monkeydluffy-zoro-juurou-op05-067",
-   "tcgMarket": 0.31,
-   "tcgLow": 0.1,
-   "tcgMid": 0.32,
-   "printing": "Normal",
    "image": "images/581025.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP05-067+Zoro-Juurou+OP05-067+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Zoro-Juurou%20OP05-067",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro-Juurou+OP05-067",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP05-067",
+   "sold": null,
+   "id": "581025",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.31,
+   "tcgLow": 0.1,
+   "tcgMid": 0.32,
+   "soldAnyFinish": false
   },
   {
    "productId": 581034,
@@ -3587,15 +3791,18 @@
    "released": "2024-10-25",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/581034_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/581034/one-piece-card-game-st-18-starter-deck-18-purple-monkeydluffy-zoro-juurou-st18-004",
-   "tcgMarket": 1.91,
-   "tcgLow": 1.5,
-   "tcgMid": 2.7,
-   "printing": "Foil",
    "image": "images/581034.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST18-004+Zoro-Juurou+ST18-004+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Zoro-Juurou%20ST18-004",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro-Juurou+ST18-004",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST18-004",
+   "sold": null,
+   "id": "581034",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 1.91,
+   "tcgLow": 1.5,
+   "tcgMid": 2.7,
+   "soldAnyFinish": false
   },
   {
    "productId": 587964,
@@ -3617,14 +3824,10 @@
    "released": "2024-11-08",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/587964_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/587964/one-piece-card-game-premium-booster-the-best-roronoa-zoro-manga",
-   "tcgMarket": 2350.0,
-   "tcgLow": 2999.99,
-   "tcgMid": 2999.99,
-   "printing": "Foil",
    "image": "images/587964.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP06-118+Roronoa+Zoro+Manga+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP06-118",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP06-118",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP06-118",
    "sold": {
     "title": "Roronoa Zoro [Manga PRB01] OP06-118",
     "url": "https://www.pricecharting.com/game/one-piece-wings-of-the-captain/roronoa-zoro-manga-prb01-op06-118",
@@ -3683,7 +3886,14 @@
       "title": "Roronoa Zoro (Manga) #OP06-118 Near Mint English Manga PRB01"
      }
     ]
-   }
+   },
+   "id": "587964",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 2350.0,
+   "tcgLow": 2999.99,
+   "tcgMid": 2999.99,
+   "soldAnyFinish": false
   },
   {
    "productId": 602789,
@@ -3705,15 +3915,18 @@
    "released": "2024-12-05",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/602789_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/602789/one-piece-card-game-one-piece-demo-deck-cards-roronoa-zoro",
-   "tcgMarket": 8.46,
-   "tcgLow": 10.0,
-   "tcgMid": 13.05,
-   "printing": "Normal",
    "image": "images/602789.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP01-001+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP01-001",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP01-001",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP01-001",
+   "sold": null,
+   "id": "602789",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 8.46,
+   "tcgLow": 10.0,
+   "tcgMid": 13.05,
+   "soldAnyFinish": false
   },
   {
    "productId": 596913,
@@ -3735,14 +3948,10 @@
    "released": "2024-12-13",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/596913_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/596913/one-piece-card-game-emperors-in-the-new-world-zoro-juurou-sp",
-   "tcgMarket": 488.11,
-   "tcgLow": 450.28,
-   "tcgMid": 521.31,
-   "printing": "Foil",
    "image": "images/596913.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP05-067+Zoro-Juurou+SP+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Zoro-Juurou%20OP05-067",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro-Juurou+OP05-067",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP05-067",
    "sold": {
     "title": "Zoro-Juurou [SP Foil] OP05-067",
     "url": "https://www.pricecharting.com/game/one-piece-awakening-of-the-new-era/zoro-juurou-sp-foil-op05-067",
@@ -3801,7 +4010,14 @@
       "title": "Zoro-Juurou (SP) #OP05-067 Near Mint English SP Foil"
      }
     ]
-   }
+   },
+   "id": "596913",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 488.11,
+   "tcgLow": 450.28,
+   "tcgMid": 521.31,
+   "soldAnyFinish": false
   },
   {
    "productId": 597016,
@@ -3823,15 +4039,18 @@
    "released": "2024-12-13",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/597016_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/597016/one-piece-card-game-emperors-in-the-new-world-roronoa-zoro-076",
-   "tcgMarket": 0.21,
-   "tcgLow": 0.04,
-   "tcgMid": 0.25,
-   "printing": "Foil",
    "image": "images/597016.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP09-076+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP09-076",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP09-076",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP09-076",
+   "sold": null,
+   "id": "597016",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 0.21,
+   "tcgLow": 0.04,
+   "tcgMid": 0.25,
+   "soldAnyFinish": false
   },
   {
    "productId": 600658,
@@ -3853,15 +4072,18 @@
    "released": "2024-12-13",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/600658_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/600658/one-piece-card-game-emperors-in-the-new-world-zoro-juurou-st18-004",
-   "tcgMarket": 46.1,
-   "tcgLow": 45.99,
-   "tcgMid": 61.36,
-   "printing": "Foil",
    "image": "images/600658.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST18-004+Zoro-Juurou+ST18-004+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Zoro-Juurou%20ST18-004",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro-Juurou+ST18-004",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST18-004",
+   "sold": null,
+   "id": "600658",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 46.1,
+   "tcgLow": 45.99,
+   "tcgMid": 61.36,
+   "soldAnyFinish": false
   },
   {
    "productId": 620763,
@@ -3883,15 +4105,18 @@
    "released": "2025-03-14",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/620763_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/620763/one-piece-card-game-royal-blood-release-event-cards-roronoa-zoro-038",
-   "tcgMarket": 12.69,
-   "tcgLow": 8.67,
-   "tcgMid": 11.99,
-   "printing": "Normal",
    "image": "images/620763.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP10-038+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP10-038",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP10-038",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP10-038",
+   "sold": null,
+   "id": "620763",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 12.69,
+   "tcgLow": 8.67,
+   "tcgMid": 11.99,
+   "soldAnyFinish": false
   },
   {
    "productId": 620812,
@@ -3913,15 +4138,18 @@
    "released": "2025-03-14",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/620812_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/620812/one-piece-card-game-royal-blood-release-event-cards-roronoa-zoro-113",
-   "tcgMarket": 16.6,
-   "tcgLow": 21.99,
-   "tcgMid": 26.44,
-   "printing": "Normal",
    "image": "images/620812.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP10-113+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP10-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP10-113",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP10-113",
+   "sold": null,
+   "id": "620812",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 16.6,
+   "tcgLow": 21.99,
+   "tcgMid": 26.44,
+   "soldAnyFinish": false
   },
   {
    "productId": 615592,
@@ -3943,15 +4171,18 @@
    "released": "2025-03-14",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/615592_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/615592/one-piece-card-game-st-21-starter-deck-21-ex-gear-5-roronoa-zoro",
-   "tcgMarket": 1.82,
-   "tcgLow": 1.25,
-   "tcgMid": 2.42,
-   "printing": "Foil",
    "image": "images/615592.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST21-015+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST21-015",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST21-015",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST21-015",
+   "sold": null,
+   "id": "615592",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 1.82,
+   "tcgLow": 1.25,
+   "tcgMid": 2.42,
+   "soldAnyFinish": false
   },
   {
    "productId": 615593,
@@ -3973,14 +4204,10 @@
    "released": "2025-03-14",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/615593_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/615593/one-piece-card-game-st-21-starter-deck-21-ex-gear-5-roronoa-zoro-parallel",
-   "tcgMarket": 26.08,
-   "tcgLow": 21.01,
-   "tcgMid": 27.24,
-   "printing": "Foil",
    "image": "images/615593.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST21-015+Roronoa+Zoro+Parallel+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST21-015",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST21-015",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST21-015",
    "sold": {
     "title": "Roronoa Zoro [Parallel Foil] ST21-015",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-21-gear5/roronoa-zoro-parallel-foil-st21-015",
@@ -4039,7 +4266,14 @@
       "title": "Roronoa Zoro (Parallel) #ST21-015 Near Mint English Parallel Foil"
      }
     ]
-   }
+   },
+   "id": "615593",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 26.08,
+   "tcgLow": 21.01,
+   "tcgMid": 27.24,
+   "soldAnyFinish": false
   },
   {
    "productId": 617077,
@@ -4061,14 +4295,10 @@
    "released": "2025-03-21",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/617077_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/617077/one-piece-card-game-royal-blood-roronoa-zoro-038",
-   "tcgMarket": 0.08,
-   "tcgLow": 0.01,
-   "tcgMid": 0.15,
-   "printing": "Normal",
    "image": "images/617077.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP10-038+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP10-038",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP10-038",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP10-038",
    "sold": {
     "title": "Roronoa Zoro OP10-038",
     "url": "https://www.pricecharting.com/game/one-piece-royal-blood/roronoa-zoro-op10-038",
@@ -4127,7 +4357,14 @@
       "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "617077",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.08,
+   "tcgLow": 0.01,
+   "tcgMid": 0.15,
+   "soldAnyFinish": false
   },
   {
    "productId": 617143,
@@ -4149,14 +4386,10 @@
    "released": "2025-03-21",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/617143_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/617143/one-piece-card-game-royal-blood-roronoa-zoro-095",
-   "tcgMarket": 0.19,
-   "tcgLow": 0.01,
-   "tcgMid": 0.23,
-   "printing": "Foil",
    "image": "images/617143.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP10-095+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP10-095",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP10-095",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP10-095",
    "sold": {
     "title": "Roronoa Zoro OP10-095",
     "url": "https://www.pricecharting.com/game/one-piece-royal-blood/roronoa-zoro-op10-095",
@@ -4215,7 +4448,14 @@
       "title": "Roronoa Zoro (095) #OP10-095 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "617143",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 0.19,
+   "tcgLow": 0.01,
+   "tcgMid": 0.23,
+   "soldAnyFinish": false
   },
   {
    "productId": 617164,
@@ -4237,14 +4477,10 @@
    "released": "2025-03-21",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/617164_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/617164/one-piece-card-game-royal-blood-roronoa-zoro-113",
-   "tcgMarket": 0.14,
-   "tcgLow": 0.01,
-   "tcgMid": 0.2,
-   "printing": "Normal",
    "image": "images/617164.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP10-113+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP10-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP10-113",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP10-113",
    "sold": {
     "title": "Roronoa Zoro OP10-113",
     "url": "https://www.pricecharting.com/game/one-piece-royal-blood/roronoa-zoro-op10-113",
@@ -4303,7 +4539,14 @@
       "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "617164",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.14,
+   "tcgLow": 0.01,
+   "tcgMid": 0.2,
+   "soldAnyFinish": false
   },
   {
    "productId": 629113,
@@ -4325,14 +4568,10 @@
    "released": "2025-05-09",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/629113_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/629113/one-piece-card-game-extra-booster-anime-25th-collection-roronoa-zoro",
-   "tcgMarket": 0.39,
-   "tcgLow": 0.1,
-   "tcgMid": 0.45,
-   "printing": "Foil",
    "image": "images/629113.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=EB02-019+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20EB02-019",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+EB02-019",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+EB02-019",
    "sold": {
     "title": "Roronoa Zoro EB02-019",
     "url": "https://www.pricecharting.com/game/one-piece-extra-booster-anime-25th-collection/roronoa-zoro-eb02-019",
@@ -4391,7 +4630,14 @@
       "title": "Roronoa Zoro #EB02-019 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "629113",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 0.39,
+   "tcgLow": 0.1,
+   "tcgMid": 0.45,
+   "soldAnyFinish": false
   },
   {
    "productId": 634456,
@@ -4413,15 +4659,18 @@
    "released": "2025-05-30",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/634456_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/634456/one-piece-card-game-a-fist-of-divine-speed-release-event-cards-roronoa-zoro",
-   "tcgMarket": 14.24,
-   "tcgLow": 24.0,
-   "tcgMid": 30.0,
-   "printing": "Normal",
    "image": "images/634456.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP11-016+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP11-016",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP11-016",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP11-016",
+   "sold": null,
+   "id": "634456",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 14.24,
+   "tcgLow": 24.0,
+   "tcgMid": 30.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 634608,
@@ -4443,14 +4692,10 @@
    "released": "2025-06-06",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/634608_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/634608/one-piece-card-game-st-24-starter-deck-24-green-jewelry-bonney-roronoa-zoro-reprint",
-   "tcgMarket": 0.09,
-   "tcgLow": 0.01,
-   "tcgMid": 0.15,
-   "printing": "Normal",
    "image": "images/634608.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP07-034+Roronoa+Zoro+Reprint+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP07-034",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP07-034",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP07-034",
    "sold": {
     "title": "Roronoa Zoro [Reprint] OP07-034",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-24-green-jewelry-bonney/roronoa-zoro-reprint-op07-034",
@@ -4509,7 +4754,14 @@
       "title": "Roronoa Zoro (Reprint) #OP07-034 Near Mint English Reprint"
      }
     ]
-   }
+   },
+   "id": "634608",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.09,
+   "tcgLow": 0.01,
+   "tcgMid": 0.15,
+   "soldAnyFinish": false
   },
   {
    "productId": 634315,
@@ -4531,14 +4783,10 @@
    "released": "2025-06-06",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/634315_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/634315/one-piece-card-game-st-26-starter-deck-26-purple-black-monkeydluffy-roronoa-zoro-reprint",
-   "tcgMarket": 0.17,
-   "tcgLow": 0.05,
-   "tcgMid": 0.2,
-   "printing": "Normal",
    "image": "images/634315.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP09-076+Roronoa+Zoro+Reprint+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP09-076",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP09-076",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP09-076",
    "sold": {
     "title": "Roronoa Zoro [Reprint] OP09-076",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-26-purple-monkeydluffy/roronoa-zoro-reprint-op09-076",
@@ -4597,7 +4845,14 @@
       "title": "Roronoa Zoro (Reprint) #OP09-076 Near Mint English Reprint"
      }
     ]
-   }
+   },
+   "id": "634315",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.17,
+   "tcgLow": 0.05,
+   "tcgMid": 0.2,
+   "soldAnyFinish": false
   },
   {
    "productId": 632374,
@@ -4619,14 +4874,10 @@
    "released": "2025-06-06",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/632374_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/632374/one-piece-card-game-a-fist-of-divine-speed-roronoa-zoro",
-   "tcgMarket": 0.12,
-   "tcgLow": 0.02,
-   "tcgMid": 0.15,
-   "printing": "Normal",
    "image": "images/632374.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP11-016+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP11-016",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP11-016",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP11-016",
    "sold": {
     "title": "Roronoa Zoro OP11-016",
     "url": "https://www.pricecharting.com/game/one-piece-fist-of-divine-speed/roronoa-zoro-op11-016",
@@ -4685,7 +4936,14 @@
       "title": "Roronoa Zoro #OP11-016 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "632374",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.12,
+   "tcgLow": 0.02,
+   "tcgMid": 0.15,
+   "soldAnyFinish": false
   },
   {
    "productId": 649280,
@@ -4707,15 +4965,18 @@
    "released": "2025-08-15",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/649280_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/649280/one-piece-card-game-legacy-of-the-master-release-event-cards-roronoa-zoro-036",
-   "tcgMarket": 9.22,
-   "tcgLow": 3.07,
-   "tcgMid": 9.25,
-   "printing": "Normal",
    "image": "images/649280.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP12-036+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP12-036",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP12-036",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP12-036",
+   "sold": null,
+   "id": "649280",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 9.22,
+   "tcgLow": 3.07,
+   "tcgMid": 9.25,
+   "soldAnyFinish": false
   },
   {
    "productId": 649324,
@@ -4737,15 +4998,18 @@
    "released": "2025-08-15",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/649324_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/649324/one-piece-card-game-legacy-of-the-master-release-event-cards-roronoa-zoro-113",
-   "tcgMarket": 15.54,
-   "tcgLow": 12.04,
-   "tcgMid": 17.99,
-   "printing": "Normal",
    "image": "images/649324.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP12-113+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP12-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP12-113",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP12-113",
+   "sold": null,
+   "id": "649324",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 15.54,
+   "tcgLow": 12.04,
+   "tcgMid": 17.99,
+   "soldAnyFinish": false
   },
   {
    "productId": 643747,
@@ -4767,14 +5031,10 @@
    "released": "2025-08-22",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/643747_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/643747/one-piece-card-game-legacy-of-the-master-roronoa-zoro-020",
-   "tcgMarket": 0.19,
-   "tcgLow": 0.03,
-   "tcgMid": 0.2,
-   "printing": "Normal",
    "image": "images/643747.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP12-020+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP12-020",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP12-020",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP12-020",
    "sold": {
     "title": "Roronoa Zoro OP12-020",
     "url": "https://www.pricecharting.com/game/one-piece-legacy-of-the-master/roronoa-zoro-op12-020",
@@ -4833,7 +5093,14 @@
       "title": "Roronoa Zoro (020) #OP12-020 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "643747",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.19,
+   "tcgLow": 0.03,
+   "tcgMid": 0.2,
+   "soldAnyFinish": false
   },
   {
    "productId": 643748,
@@ -4855,14 +5122,10 @@
    "released": "2025-08-22",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/643748_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/643748/one-piece-card-game-legacy-of-the-master-roronoa-zoro-020-alternate-art",
-   "tcgMarket": 57.49,
-   "tcgLow": 54.0,
-   "tcgMid": 66.95,
-   "printing": "Foil",
    "image": "images/643748.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP12-020+Roronoa+Zoro+Alternate+Art+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP12-020",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP12-020",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP12-020",
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] OP12-020",
     "url": "https://www.pricecharting.com/game/one-piece-legacy-of-the-master/roronoa-zoro-alternate-art-op12-020",
@@ -4921,7 +5184,14 @@
       "title": "Roronoa Zoro (020) (Alternate Art) #OP12-020 Near Mint English Alternate Art"
      }
     ]
-   }
+   },
+   "id": "643748",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 57.49,
+   "tcgLow": 54.0,
+   "tcgMid": 66.95,
+   "soldAnyFinish": false
   },
   {
    "productId": 643767,
@@ -4943,14 +5213,10 @@
    "released": "2025-08-22",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/643767_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/643767/one-piece-card-game-legacy-of-the-master-roronoa-zoro-036",
-   "tcgMarket": 0.1,
-   "tcgLow": 0.01,
-   "tcgMid": 0.15,
-   "printing": "Normal",
    "image": "images/643767.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP12-036+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP12-036",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP12-036",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP12-036",
    "sold": {
     "title": "Roronoa Zoro OP12-036",
     "url": "https://www.pricecharting.com/game/one-piece-legacy-of-the-master/roronoa-zoro-op12-036",
@@ -5009,7 +5275,14 @@
       "title": "Roronoa Zoro (036) #OP12-036 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "643767",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.1,
+   "tcgLow": 0.01,
+   "tcgMid": 0.15,
+   "soldAnyFinish": false
   },
   {
    "productId": 643860,
@@ -5031,14 +5304,10 @@
    "released": "2025-08-22",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/643860_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/643860/one-piece-card-game-legacy-of-the-master-roronoa-zoro-113",
-   "tcgMarket": 0.12,
-   "tcgLow": 0.01,
-   "tcgMid": 0.15,
-   "printing": "Normal",
    "image": "images/643860.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP12-113+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP12-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP12-113",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP12-113",
    "sold": {
     "title": "Roronoa Zoro OP12-113",
     "url": "https://www.pricecharting.com/game/one-piece-legacy-of-the-master/roronoa-zoro-op12-113",
@@ -5097,7 +5366,14 @@
       "title": "Roronoa Zoro (113) #OP12-113 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "643860",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.12,
+   "tcgLow": 0.01,
+   "tcgMid": 0.15,
+   "soldAnyFinish": false
   },
   {
    "productId": 646566,
@@ -5119,14 +5395,10 @@
    "released": "2025-08-22",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/646566_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/646566/one-piece-card-game-legacy-of-the-master-zoro-juurou-sp",
-   "tcgMarket": 242.08,
-   "tcgLow": 217.0,
-   "tcgMid": 242.22,
-   "printing": "Foil",
    "image": "images/646566.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST18-004+Zoro-Juurou+SP+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Zoro-Juurou%20ST18-004",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro-Juurou+ST18-004",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST18-004",
    "sold": {
     "title": "Zoro-Juurou [SP] ST18-004",
     "url": "https://www.pricecharting.com/game/one-piece-legacy-of-the-master/zoro-juurou-sp-st18-004",
@@ -5185,7 +5457,14 @@
       "title": "Zoro-Juurou (SP) #ST18-004 Near Mint English SP"
      }
     ]
-   }
+   },
+   "id": "646566",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 242.08,
+   "tcgLow": 217.0,
+   "tcgMid": 242.22,
+   "soldAnyFinish": false
   },
   {
    "productId": 656641,
@@ -5207,14 +5486,10 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656641_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/656641/one-piece-card-game-learn-together-deck-set-roronoa-zoro-eb02-019-zoro-deck",
-   "tcgMarket": 0.12,
-   "tcgLow": 0.05,
-   "tcgMid": 0.2,
-   "printing": "Normal",
    "image": "images/656641.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=EB02-019+Roronoa+Zoro+Zoro+Deck+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20EB02-019",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+EB02-019",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+EB02-019",
    "sold": {
     "title": "Roronoa Zoro [Zoro Deck] EB02-019",
     "url": "https://www.pricecharting.com/game/one-piece-learn-together-deck-set/roronoa-zoro-zoro-deck-eb02-019",
@@ -5273,7 +5548,14 @@
       "title": "Roronoa Zoro - EB02-019 (Zoro Deck) #EB02-019 Near Mint English Zoro Deck"
      }
     ]
-   }
+   },
+   "id": "656641",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.12,
+   "tcgLow": 0.05,
+   "tcgMid": 0.2,
+   "soldAnyFinish": false
   },
   {
    "productId": 656164,
@@ -5295,15 +5577,51 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656164_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/656164/one-piece-card-game-premium-booster-the-best-vol-2-roronoa-zoro-op06-118-reprint",
-   "tcgMarket": 5.08,
-   "tcgLow": 4.45,
-   "tcgMid": 5.77,
-   "printing": "Foil",
    "image": "images/656164.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP06-118+Roronoa+Zoro+Reprint+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP06-118",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP06-118",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP06-118",
+   "sold": null,
+   "id": "656164",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 3.64,
+   "tcgLow": 2.65,
+   "tcgMid": 5.0,
+   "soldAnyFinish": true
+  },
+  {
+   "productId": 656164,
+   "name": "Roronoa Zoro - OP06-118 (Reprint)",
+   "baseName": "Roronoa Zoro",
+   "variant": "Reprint",
+   "number": "OP06-118",
+   "set": "Premium Booster -The Best- Vol. 2",
+   "setCode": "PRB-02",
+   "rarity": "SEC",
+   "cost": "9",
+   "color": "Green",
+   "type": "Character",
+   "power": "9000",
+   "counter": "",
+   "attribute": "Slash",
+   "subtypes": "Straw Hat Crew",
+   "effect": "Disclaimer: This card was reprinted from the original set with changes to the copyright information (Note: the original print did not include \"EN\" at the end of the copyright). \r\n The non-foil version of this reprinted card was originally reprinted from the Learn Together Deck Set. \r\n\r\n[When Attacking][Once Per Turn](1) (You may rest the specified number of DON!! cards in your cost area.) : Set this Character as active.\r\n \r\n[Activate:Main][Once Per Turn](2) (You may rest the specified number of DON!! cards in your cost area.) : Set this Character as active.",
+   "released": "2025-10-03",
+   "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656164_in_1000x1000.jpg",
+   "tcgplayerUrl": "https://www.tcgplayer.com/product/656164/one-piece-card-game-premium-booster-the-best-vol-2-roronoa-zoro-op06-118-reprint",
+   "image": "images/656164.jpg",
+   "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP06-118+Roronoa+Zoro+Reprint+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
+   "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP06-118",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP06-118",
+   "sold": null,
+   "id": "656164-foil",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 5.08,
+   "tcgLow": 4.45,
+   "tcgMid": 5.77,
+   "soldAnyFinish": true
   },
   {
    "productId": 654099,
@@ -5325,14 +5643,10 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/654099_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/654099/one-piece-card-game-premium-booster-the-best-vol-2-roronoa-zoro-op09-076-alternate-art",
-   "tcgMarket": 57.67,
-   "tcgLow": 44.46,
-   "tcgMid": 57.67,
-   "printing": "Foil",
    "image": "images/654099.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP09-076+Roronoa+Zoro+Alternate+Art+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP09-076",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP09-076",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP09-076",
    "sold": {
     "title": "Roronoa Zoro [Alternate Art PRB-02] OP09-076",
     "url": "https://www.pricecharting.com/game/one-piece-premium-booster-2/roronoa-zoro-alternate-art-prb-02-op09-076",
@@ -5340,7 +5654,14 @@
     "psa10": 150.25,
     "volume": "1 sale per week",
     "recentSales": []
-   }
+   },
+   "id": "654099",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 57.67,
+   "tcgLow": 44.46,
+   "tcgMid": 57.67,
+   "soldAnyFinish": false
   },
   {
    "productId": 656081,
@@ -5362,15 +5683,18 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656081_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/656081/one-piece-card-game-premium-booster-the-best-vol-2-roronoa-zoro-op09-076",
-   "tcgMarket": 0.18,
-   "tcgLow": 0.01,
-   "tcgMid": 0.25,
-   "printing": "Foil",
    "image": "images/656081.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP09-076+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP09-076",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP09-076",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP09-076",
+   "sold": null,
+   "id": "656081",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 0.18,
+   "tcgLow": 0.01,
+   "tcgMid": 0.25,
+   "soldAnyFinish": false
   },
   {
    "productId": 654022,
@@ -5392,14 +5716,10 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/654022_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/654022/one-piece-card-game-premium-booster-the-best-vol-2-roronoa-zoro-op10-095-alternate-art",
-   "tcgMarket": 9.99,
-   "tcgLow": 8.71,
-   "tcgMid": 10.85,
-   "printing": "Foil",
    "image": "images/654022.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP10-095+Roronoa+Zoro+Alternate+Art+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP10-095",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP10-095",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP10-095",
    "sold": {
     "title": "Roronoa Zoro [Alternate Art PRB-02] OP10-095",
     "url": "https://www.pricecharting.com/game/one-piece-premium-booster-2/roronoa-zoro-alternate-art-prb-02-op10-095",
@@ -5407,7 +5727,14 @@
     "psa10": 67.94,
     "volume": "1 sale per month",
     "recentSales": []
-   }
+   },
+   "id": "654022",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 9.99,
+   "tcgLow": 8.71,
+   "tcgMid": 10.85,
+   "soldAnyFinish": false
   },
   {
    "productId": 656116,
@@ -5429,15 +5756,18 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656116_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/656116/one-piece-card-game-premium-booster-the-best-vol-2-roronoa-zoro-op10-095-reprint",
-   "tcgMarket": 0.13,
-   "tcgLow": 0.01,
-   "tcgMid": 0.25,
-   "printing": "Foil",
    "image": "images/656116.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP10-095+Roronoa+Zoro+Reprint+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP10-095",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP10-095",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP10-095",
+   "sold": null,
+   "id": "656116",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 0.13,
+   "tcgLow": 0.01,
+   "tcgMid": 0.25,
+   "soldAnyFinish": false
   },
   {
    "productId": 656671,
@@ -5459,14 +5789,10 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656671_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/656671/one-piece-card-game-learn-together-deck-set-roronoa-zoro-op11-016-luffy-deck",
-   "tcgMarket": 0.13,
-   "tcgLow": 0.01,
-   "tcgMid": 0.15,
-   "printing": "Normal",
    "image": "images/656671.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP11-016+Roronoa+Zoro+Luffy+Deck+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP11-016",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP11-016",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP11-016",
    "sold": {
     "title": "Roronoa Zoro [Luffy Deck] OP11-016",
     "url": "https://www.pricecharting.com/game/one-piece-learn-together-deck-set/roronoa-zoro-luffy-deck-op11-016",
@@ -5525,7 +5851,14 @@
       "title": "Roronoa Zoro - OP11-016 (Luffy Deck) #OP11-016 Near Mint English Luffy Deck"
      }
     ]
-   }
+   },
+   "id": "656671",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.13,
+   "tcgLow": 0.01,
+   "tcgMid": 0.15,
+   "soldAnyFinish": false
   },
   {
    "productId": 656631,
@@ -5547,14 +5880,10 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656631_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/656631/one-piece-card-game-learn-together-deck-set-roronoa-zoro-op12-020-zoro-deck",
-   "tcgMarket": 5.28,
-   "tcgLow": 4.75,
-   "tcgMid": 6.68,
-   "printing": "Foil",
    "image": "images/656631.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP12-020+Roronoa+Zoro+Zoro+Deck+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP12-020",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP12-020",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP12-020",
    "sold": {
     "title": "Roronoa Zoro [Zoro Deck Foil] OP12-020",
     "url": "https://www.pricecharting.com/game/one-piece-learn-together-deck-set/roronoa-zoro-zoro-deck-foil-op12-020",
@@ -5613,7 +5942,14 @@
       "title": "Roronoa Zoro - OP12-020 (Zoro Deck) #OP12-020 Near Mint English Zoro Deck Foil"
      }
     ]
-   }
+   },
+   "id": "656631",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 5.28,
+   "tcgLow": 4.75,
+   "tcgMid": 6.68,
+   "soldAnyFinish": false
   },
   {
    "productId": 656643,
@@ -5635,14 +5971,10 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656643_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/656643/one-piece-card-game-learn-together-deck-set-roronoa-zoro-op12-036-zoro-deck",
-   "tcgMarket": 0.08,
-   "tcgLow": 0.01,
-   "tcgMid": 0.19,
-   "printing": "Normal",
    "image": "images/656643.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP12-036+Roronoa+Zoro+Zoro+Deck+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP12-036",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP12-036",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP12-036",
    "sold": {
     "title": "Roronoa Zoro [Zoro Deck] OP12-036",
     "url": "https://www.pricecharting.com/game/one-piece-learn-together-deck-set/roronoa-zoro-zoro-deck-op12-036",
@@ -5701,7 +6033,14 @@
       "title": "Roronoa Zoro - OP12-036 (Zoro Deck) #OP12-036 Near Mint English Zoro Deck"
      }
     ]
-   }
+   },
+   "id": "656643",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.08,
+   "tcgLow": 0.01,
+   "tcgMid": 0.19,
+   "soldAnyFinish": false
   },
   {
    "productId": 656691,
@@ -5723,14 +6062,10 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656691_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/656691/one-piece-card-game-learn-together-deck-set-roronoa-zoro-p-056-nami-deck",
-   "tcgMarket": 0.31,
-   "tcgLow": 0.09,
-   "tcgMid": 0.31,
-   "printing": "Normal",
    "image": "images/656691.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=P-056+Roronoa+Zoro+Nami+Deck+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20P-056",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+P-056",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+P-056",
    "sold": {
     "title": "Roronoa Zoro [Nami Deck] P-056",
     "url": "https://www.pricecharting.com/game/one-piece-learn-together-deck-set/roronoa-zoro-nami-deck-p-056",
@@ -5789,7 +6124,14 @@
       "title": "Roronoa Zoro - P-056 (Nami Deck) #P-056 Near Mint English Nami Deck"
      }
     ]
-   }
+   },
+   "id": "656691",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.31,
+   "tcgLow": 0.09,
+   "tcgMid": 0.31,
+   "soldAnyFinish": false
   },
   {
    "productId": 653430,
@@ -5811,14 +6153,10 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/653430_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/653430/one-piece-card-game-premium-booster-the-best-vol-2-roronoa-zoro-prb02-006",
-   "tcgMarket": 2.28,
-   "tcgLow": 1.99,
-   "tcgMid": 4.78,
-   "printing": "Foil",
    "image": "images/653430.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=PRB02-006+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20PRB02-006",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+PRB02-006",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+PRB02-006",
    "sold": {
     "title": "Roronoa Zoro PRB02-006",
     "url": "https://www.pricecharting.com/game/one-piece-premium-booster-2/roronoa-zoro-prb02-006",
@@ -5877,7 +6215,14 @@
       "title": "Roronoa Zoro - PRB02-006 #PRB02-006 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "653430",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 2.28,
+   "tcgLow": 1.99,
+   "tcgMid": 4.78,
+   "soldAnyFinish": false
   },
   {
    "productId": 653431,
@@ -5899,14 +6244,10 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/653431_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/653431/one-piece-card-game-premium-booster-the-best-vol-2-roronoa-zoro-prb02-006-alternate-art",
-   "tcgMarket": 28.1,
-   "tcgLow": 22.01,
-   "tcgMid": 30.0,
-   "printing": "Foil",
    "image": "images/653431.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=PRB02-006+Roronoa+Zoro+Alternate+Art+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20PRB02-006",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+PRB02-006",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+PRB02-006",
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] PRB02-006",
     "url": "https://www.pricecharting.com/game/one-piece-premium-booster-2/roronoa-zoro-alternate-art-prb02-006",
@@ -5965,7 +6306,14 @@
       "title": "Roronoa Zoro - PRB02-006 (Alternate Art) #PRB02-006 Near Mint English Alternate Art"
      }
     ]
-   }
+   },
+   "id": "653431",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 28.1,
+   "tcgLow": 22.01,
+   "tcgMid": 30.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 664049,
@@ -5987,15 +6335,18 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/664049_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/664049/one-piece-card-game-learn-together-deck-set-roronoa-zoro-st12-008",
-   "tcgMarket": 0.11,
-   "tcgLow": 0.05,
-   "tcgMid": 0.16,
-   "printing": "Normal",
    "image": "images/664049.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST12-008+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST12-008",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST12-008",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST12-008",
+   "sold": null,
+   "id": "664049",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.11,
+   "tcgLow": 0.05,
+   "tcgMid": 0.16,
+   "soldAnyFinish": false
   },
   {
    "productId": 656097,
@@ -6017,15 +6368,18 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656097_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/656097/one-piece-card-game-premium-booster-the-best-vol-2-roronoa-zoro-st14-013-reprint",
-   "tcgMarket": 0.17,
-   "tcgLow": 0.01,
-   "tcgMid": 0.2,
-   "printing": "Normal",
    "image": "images/656097.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST14-013+Roronoa+Zoro+Reprint+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST14-013",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST14-013",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST14-013",
+   "sold": null,
+   "id": "656097",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.17,
+   "tcgLow": 0.01,
+   "tcgMid": 0.2,
+   "soldAnyFinish": false
   },
   {
    "productId": 656098,
@@ -6047,15 +6401,18 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656098_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/656098/one-piece-card-game-premium-booster-the-best-vol-2-roronoa-zoro-st14-013-pirate-foil",
-   "tcgMarket": 0.37,
-   "tcgLow": 0.1,
-   "tcgMid": 0.45,
-   "printing": "Foil",
    "image": "images/656098.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST14-013+Roronoa+Zoro+Pirate+Foil+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST14-013",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST14-013",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST14-013",
+   "sold": null,
+   "id": "656098",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 0.37,
+   "tcgLow": 0.1,
+   "tcgMid": 0.45,
+   "soldAnyFinish": false
   },
   {
    "productId": 656665,
@@ -6077,14 +6434,10 @@
    "released": "2025-10-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/656665_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/656665/one-piece-card-game-learn-together-deck-set-roronoa-zoro-st21-015-luffy-deck",
-   "tcgMarket": 1.08,
-   "tcgLow": 0.4,
-   "tcgMid": 1.25,
-   "printing": "Normal",
    "image": "images/656665.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST21-015+Roronoa+Zoro+Luffy+Deck+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST21-015",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST21-015",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST21-015",
    "sold": {
     "title": "Roronoa Zoro [Luffy Deck] ST21-015",
     "url": "https://www.pricecharting.com/game/one-piece-learn-together-deck-set/roronoa-zoro-luffy-deck-st21-015",
@@ -6143,7 +6496,14 @@
       "title": "Roronoa Zoro - ST21-015 (Luffy Deck) #ST21-015 Near Mint English Luffy Deck"
      }
     ]
-   }
+   },
+   "id": "656665",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 1.08,
+   "tcgLow": 0.4,
+   "tcgMid": 1.25,
+   "soldAnyFinish": false
   },
   {
    "productId": 657295,
@@ -6165,14 +6525,10 @@
    "released": "2025-11-07",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/657295_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/657295/one-piece-card-game-carrying-on-his-will-roronoa-zoro",
-   "tcgMarket": 0.28,
-   "tcgLow": 0.05,
-   "tcgMid": 0.34,
-   "printing": "Foil",
    "image": "images/657295.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP13-037+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP13-037",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP13-037",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP13-037",
    "sold": {
     "title": "Roronoa Zoro OP13-037",
     "url": "https://www.pricecharting.com/game/one-piece-carrying-on-his-will/roronoa-zoro-op13-037",
@@ -6231,7 +6587,14 @@
       "title": "Roronoa Zoro #OP13-037 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "657295",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 0.28,
+   "tcgLow": 0.05,
+   "tcgMid": 0.34,
+   "soldAnyFinish": false
   },
   {
    "productId": 671819,
@@ -6253,15 +6616,18 @@
    "released": "2026-01-09",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/671819_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/671819/one-piece-card-game-the-azure-seas-seven-release-event-cards-strive-to-surpass-me-roronoa-zoro",
-   "tcgMarket": 6.64,
-   "tcgLow": 6.63,
-   "tcgMid": 11.96,
-   "printing": "Normal",
    "image": "images/671819.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP14-036+Strive+to+Surpass+me%2C+Roronoa+Zoro%21%21%21+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Strive%20to%20Surpass%20me%2C%20Roronoa%20Zoro%21%21%21%20OP14-036",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Strive+to+Surpass+me%2C+Roronoa+Zoro%21%21%21+OP14-036",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP14-036",
+   "sold": null,
+   "id": "671819",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 6.64,
+   "tcgLow": 6.63,
+   "tcgMid": 11.96,
+   "soldAnyFinish": false
   },
   {
    "productId": 670250,
@@ -6283,14 +6649,10 @@
    "released": "2026-01-16",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/670250_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/670250/one-piece-card-game-the-azure-seas-seven-roronoa-zoro-op14-015-alternate-art",
-   "tcgMarket": 16.73,
-   "tcgLow": 14.9,
-   "tcgMid": 20.0,
-   "printing": "Foil",
    "image": "images/670250.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP14-015+Roronoa+Zoro+Alternate+Art+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP14-015",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP14-015",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP14-015",
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] OP14-015",
     "url": "https://www.pricecharting.com/game/one-piece-azure-sea%27s-seven/roronoa-zoro-alternate-art-op14-015",
@@ -6349,7 +6711,14 @@
       "title": "Roronoa Zoro - OP14-015 (Alternate Art) #OP14-015 Near Mint English Alternate Art"
      }
     ]
-   }
+   },
+   "id": "670250",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 16.73,
+   "tcgLow": 14.9,
+   "tcgMid": 20.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 672111,
@@ -6371,14 +6740,10 @@
    "released": "2026-01-16",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/672111_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/672111/one-piece-card-game-the-azure-seas-seven-roronoa-zoro-op14-015",
-   "tcgMarket": 0.22,
-   "tcgLow": 0.01,
-   "tcgMid": 0.25,
-   "printing": "Foil",
    "image": "images/672111.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP14-015+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP14-015",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP14-015",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP14-015",
    "sold": {
     "title": "Roronoa Zoro OP14-015",
     "url": "https://www.pricecharting.com/game/one-piece-azure-sea%27s-seven/roronoa-zoro-op14-015",
@@ -6437,7 +6802,14 @@
       "title": "Roronoa Zoro - OP14-015 #OP14-015 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "672111",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 0.22,
+   "tcgLow": 0.01,
+   "tcgMid": 0.25,
+   "soldAnyFinish": false
   },
   {
    "productId": 671377,
@@ -6459,14 +6831,10 @@
    "released": "2026-01-16",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/671377_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/671377/one-piece-card-game-the-azure-seas-seven-strive-to-surpass-me-roronoa-zoro",
-   "tcgMarket": 0.13,
-   "tcgLow": 0.01,
-   "tcgMid": 0.15,
-   "printing": "Normal",
    "image": "images/671377.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP14-036+Strive+to+Surpass+me%2C+Roronoa+Zoro%21%21%21+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Strive%20to%20Surpass%20me%2C%20Roronoa%20Zoro%21%21%21%20OP14-036",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Strive+to+Surpass+me%2C+Roronoa+Zoro%21%21%21+OP14-036",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP14-036",
    "sold": {
     "title": "Strive To Surpass Me, Roronoa Zoro OP14-036",
     "url": "https://www.pricecharting.com/game/one-piece-azure-sea%27s-seven/strive-to-surpass-me-roronoa-zoro-op14-036",
@@ -6525,7 +6893,14 @@
       "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "671377",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.13,
+   "tcgLow": 0.01,
+   "tcgMid": 0.15,
+   "soldAnyFinish": false
   },
   {
    "productId": 670642,
@@ -6547,14 +6922,10 @@
    "released": "2026-01-16",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/670642_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/670642/one-piece-card-game-the-azure-seas-seven-roronoa-zoro-prb02-006-sp",
-   "tcgMarket": 913.2,
-   "tcgLow": 755.0,
-   "tcgMid": 899.99,
-   "printing": "Foil",
    "image": "images/670642.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=PRB02-006+Roronoa+Zoro+SP+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20PRB02-006",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+PRB02-006",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+PRB02-006",
    "sold": {
     "title": "Roronoa Zoro [SP] PRB02-006",
     "url": "https://www.pricecharting.com/game/one-piece-azure-sea%27s-seven/roronoa-zoro-sp-prb02-006",
@@ -6613,7 +6984,14 @@
       "title": "Roronoa Zoro - PRB02-006 (SP) #PRB02-006 Near Mint English SP"
      }
     ]
-   }
+   },
+   "id": "670642",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 913.2,
+   "tcgLow": 755.0,
+   "tcgMid": 899.99,
+   "soldAnyFinish": false
   },
   {
    "productId": 671609,
@@ -6635,14 +7013,10 @@
    "released": "2026-01-16",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/671609_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/671609/one-piece-card-game-st-29-starter-deck-29-egghead-roronoa-zoro",
-   "tcgMarket": 1.04,
-   "tcgLow": 0.39,
-   "tcgMid": 1.15,
-   "printing": "Foil",
    "image": "images/671609.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST29-014+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST29-014",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST29-014",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST29-014",
    "sold": {
     "title": "Roronoa Zoro ST29-014",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-29-egghead/roronoa-zoro-st29-014",
@@ -6701,7 +7075,14 @@
       "title": "Roronoa Zoro #ST29-014 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "671609",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 1.04,
+   "tcgLow": 0.39,
+   "tcgMid": 1.15,
+   "soldAnyFinish": false
   },
   {
    "productId": 671610,
@@ -6723,14 +7104,10 @@
    "released": "2026-01-16",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/671610_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/671610/one-piece-card-game-st-29-starter-deck-29-egghead-roronoa-zoro-full-art",
-   "tcgMarket": 9.24,
-   "tcgLow": 7.5,
-   "tcgMid": 11.12,
-   "printing": "Foil",
    "image": "images/671610.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST29-014+Roronoa+Zoro+Full+Art+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST29-014",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST29-014",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST29-014",
    "sold": {
     "title": "Roronoa Zoro [Full Art] ST29-014",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-29-egghead/roronoa-zoro-full-art-st29-014",
@@ -6789,7 +7166,14 @@
       "title": "Roronoa Zoro (Full Art) #ST29-014 Near Mint English Full Art"
      }
     ]
-   }
+   },
+   "id": "671610",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 9.24,
+   "tcgLow": 7.5,
+   "tcgMid": 11.12,
+   "soldAnyFinish": false
   },
   {
    "productId": 686449,
@@ -6811,15 +7195,18 @@
    "released": "2026-03-27",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/686449_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/686449/one-piece-card-game-adventure-on-kamis-island-release-event-cards-roronoa-zoro-op15-094",
-   "tcgMarket": 14.74,
-   "tcgLow": 12.14,
-   "tcgMid": 13.99,
-   "printing": "Normal",
    "image": "images/686449.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP15-094+Roronoa+Zoro+OP15-094+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP15-094",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP15-094",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP15-094",
+   "sold": null,
+   "id": "686449",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 14.74,
+   "tcgLow": 12.14,
+   "tcgMid": 13.99,
+   "soldAnyFinish": false
   },
   {
    "productId": 685303,
@@ -6841,15 +7228,18 @@
    "released": "2026-04-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/685303_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/685303/one-piece-card-game-adventure-on-kamis-island-roronoa-zoro-eb04-007",
-   "tcgMarket": 16.78,
-   "tcgLow": 13.0,
-   "tcgMid": 18.46,
-   "printing": "Foil",
    "image": "images/685303.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=EB04-007+Roronoa+Zoro+EB04-007+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20EB04-007",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+EB04-007",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+EB04-007",
+   "sold": null,
+   "id": "685303",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 16.78,
+   "tcgLow": 13.0,
+   "tcgMid": 18.46,
+   "soldAnyFinish": false
   },
   {
    "productId": 685304,
@@ -6871,14 +7261,10 @@
    "released": "2026-04-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/685304_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/685304/one-piece-card-game-adventure-on-kamis-island-roronoa-zoro-eb04-007-alternate-art",
-   "tcgMarket": 65.47,
-   "tcgLow": 64.99,
-   "tcgMid": 75.0,
-   "printing": "Foil",
    "image": "images/685304.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=EB04-007+Roronoa+Zoro+EB04-007%2C+Alternate+Art+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20EB04-007",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+EB04-007",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+EB04-007",
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] EB04-007",
     "url": "https://www.pricecharting.com/game/one-piece-extra-booster-eb04/roronoa-zoro-alternate-art-eb04-007",
@@ -6937,7 +7323,14 @@
       "title": "Roronoa Zoro (EB04-007) (Alternate Art) #EB04-007 Near Mint English Alternate Art"
      }
     ]
-   }
+   },
+   "id": "685304",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 65.47,
+   "tcgLow": 64.99,
+   "tcgMid": 75.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 685335,
@@ -6959,15 +7352,18 @@
    "released": "2026-04-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/685335_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/685335/one-piece-card-game-adventure-on-kamis-island-roronoa-zoro-op13-037",
-   "tcgMarket": 155.88,
-   "tcgLow": 125.0,
-   "tcgMid": 170.0,
-   "printing": "Foil",
    "image": "images/685335.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP13-037+Roronoa+Zoro+OP13-037+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP13-037",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP13-037",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP13-037",
+   "sold": null,
+   "id": "685335",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 155.88,
+   "tcgLow": 125.0,
+   "tcgMid": 170.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 685448,
@@ -6989,15 +7385,18 @@
    "released": "2026-04-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/685448_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/685448/one-piece-card-game-adventure-on-kamis-island-roronoa-zoro-op15-094",
-   "tcgMarket": 0.14,
-   "tcgLow": 0.01,
-   "tcgMid": 0.2,
-   "printing": "Normal",
    "image": "images/685448.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP15-094+Roronoa+Zoro+OP15-094+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP15-094",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP15-094",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP15-094",
+   "sold": null,
+   "id": "685448",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.14,
+   "tcgLow": 0.01,
+   "tcgMid": 0.2,
+   "soldAnyFinish": false
   },
   {
    "productId": 686295,
@@ -7019,15 +7418,18 @@
    "released": "2026-04-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/686295_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/686295/one-piece-card-game-adventure-on-kamis-island-roronoa-zoro-op15-094-dash-pack",
-   "tcgMarket": 3.39,
-   "tcgLow": 3.0,
-   "tcgMid": 5.33,
-   "printing": "Foil",
    "image": "images/686295.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP15-094+Roronoa+Zoro+OP15-094%2C+Dash+Pack+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP15-094",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP15-094",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP15-094",
+   "sold": null,
+   "id": "686295",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 3.39,
+   "tcgLow": 3.0,
+   "tcgMid": 5.33,
+   "soldAnyFinish": false
   },
   {
    "productId": 685469,
@@ -7049,15 +7451,18 @@
    "released": "2026-04-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/685469_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/685469/one-piece-card-game-adventure-on-kamis-island-roronoa-zoro-op15-113",
-   "tcgMarket": 4.06,
-   "tcgLow": 3.0,
-   "tcgMid": 4.99,
-   "printing": "Foil",
    "image": "images/685469.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP15-113+Roronoa+Zoro+OP15-113+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP15-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP15-113",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP15-113",
+   "sold": null,
+   "id": "685469",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 4.06,
+   "tcgLow": 3.0,
+   "tcgMid": 4.99,
+   "soldAnyFinish": false
   },
   {
    "productId": 685470,
@@ -7079,14 +7484,10 @@
    "released": "2026-04-03",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/685470_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/685470/one-piece-card-game-adventure-on-kamis-island-roronoa-zoro-op15-113-alternate-art",
-   "tcgMarket": 28.81,
-   "tcgLow": 26.68,
-   "tcgMid": 34.8,
-   "printing": "Foil",
    "image": "images/685470.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP15-113+Roronoa+Zoro+OP15-113%2C+Alternate+Art+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP15-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP15-113",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP15-113",
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] OP15-113",
     "url": "https://www.pricecharting.com/game/one-piece-adventure-on-kami%27s-island/roronoa-zoro-alternate-art-op15-113",
@@ -7145,7 +7546,14 @@
       "title": "Roronoa Zoro (OP15-113) (Alternate Art) #OP15-113 Near Mint English Alternate Art"
      }
     ]
-   }
+   },
+   "id": "685470",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 28.81,
+   "tcgLow": 26.68,
+   "tcgMid": 34.8,
+   "soldAnyFinish": false
   },
   {
    "productId": 696724,
@@ -7167,15 +7575,18 @@
    "released": "2026-06-05",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/696724_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/696724/one-piece-card-game-the-time-of-battle-release-event-cards-roronoa-zoro-035",
-   "tcgMarket": 3.45,
-   "tcgLow": 2.48,
-   "tcgMid": 4.0,
-   "printing": "Normal",
    "image": "images/696724.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP16-035+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP16-035",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP16-035",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP16-035",
+   "sold": null,
+   "id": "696724",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 3.45,
+   "tcgLow": 2.48,
+   "tcgMid": 4.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 696733,
@@ -7197,15 +7608,18 @@
    "released": "2026-06-05",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/696733_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/696733/one-piece-card-game-the-time-of-battle-release-event-cards-roronoa-zoro-053",
-   "tcgMarket": 4.13,
-   "tcgLow": 2.0,
-   "tcgMid": 4.99,
-   "printing": "Normal",
    "image": "images/696733.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP16-053+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP16-053",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP16-053",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP16-053",
+   "sold": null,
+   "id": "696733",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 4.13,
+   "tcgLow": 2.0,
+   "tcgMid": 4.99,
+   "soldAnyFinish": false
   },
   {
    "productId": 696021,
@@ -7227,14 +7641,10 @@
    "released": "2026-06-12",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/696021_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/696021/one-piece-card-game-the-time-of-battle-roronoa-zoro-035",
-   "tcgMarket": 0.12,
-   "tcgLow": 0.01,
-   "tcgMid": 0.15,
-   "printing": "Normal",
    "image": "images/696021.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP16-035+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP16-035",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP16-035",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP16-035",
    "sold": {
     "title": "Roronoa Zoro OP16-035",
     "url": "https://www.pricecharting.com/game/one-piece-the-time-of-battle/roronoa-zoro-op16-035",
@@ -7293,7 +7703,14 @@
       "title": "Roronoa Zoro (035) #OP16-035 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "696021",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.12,
+   "tcgLow": 0.01,
+   "tcgMid": 0.15,
+   "soldAnyFinish": false
   },
   {
    "productId": 696039,
@@ -7315,14 +7732,10 @@
    "released": "2026-06-12",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/696039_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/696039/one-piece-card-game-the-time-of-battle-roronoa-zoro-053",
-   "tcgMarket": 0.12,
-   "tcgLow": 0.01,
-   "tcgMid": 0.15,
-   "printing": "Normal",
    "image": "images/696039.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP16-053+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP16-053",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP16-053",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP16-053",
    "sold": {
     "title": "Roronoa Zoro OP16-053",
     "url": "https://www.pricecharting.com/game/one-piece-the-time-of-battle/roronoa-zoro-op16-053",
@@ -7381,7 +7794,14 @@
       "title": "Roronoa Zoro (053) #OP16-053 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "696039",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.12,
+   "tcgLow": 0.01,
+   "tcgMid": 0.15,
+   "soldAnyFinish": false
   },
   {
    "productId": 706319,
@@ -7403,15 +7823,18 @@
    "released": "2026-07-31",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/706319_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/706319/one-piece-card-game-st-32-starter-deck-32-green-roronoa-zoro-roronoa-zoro-op12-020",
-   "tcgMarket": 1.48,
-   "tcgLow": 0.99,
-   "tcgMid": 2.0,
-   "printing": "Foil",
    "image": "images/706319.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP12-020+Roronoa+Zoro+OP12-020+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP12-020",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP12-020",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP12-020",
+   "sold": null,
+   "id": "706319",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 1.48,
+   "tcgLow": 0.99,
+   "tcgMid": 2.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 706312,
@@ -7433,14 +7856,10 @@
    "released": "2026-07-31",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/706312_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/706312/one-piece-card-game-st-31-starter-deck-31-red-monkeydluffy-roronoa-zoro",
-   "tcgMarket": 0.11,
-   "tcgLow": 0.05,
-   "tcgMid": 0.18,
-   "printing": "Normal",
    "image": "images/706312.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP14-015+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP14-015",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP14-015",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP14-015",
    "sold": {
     "title": "Roronoa Zoro OP14-015",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-31-red-monkeydluffy/roronoa-zoro-op14-015",
@@ -7499,7 +7918,14 @@
       "title": "Roronoa Zoro #OP14-015 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "706312",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.11,
+   "tcgLow": 0.05,
+   "tcgMid": 0.18,
+   "soldAnyFinish": false
   },
   {
    "productId": 706327,
@@ -7521,15 +7947,18 @@
    "released": "2026-07-31",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/706327_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/706327/one-piece-card-game-st-32-starter-deck-32-green-roronoa-zoro-roronoa-zoro-st32-005",
-   "tcgMarket": 0.93,
-   "tcgLow": 0.69,
-   "tcgMid": 1.09,
-   "printing": "Normal",
    "image": "images/706327.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ST32-005+Roronoa+Zoro+ST32-005+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20ST32-005",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+ST32-005",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+ST32-005",
+   "sold": null,
+   "id": "706327",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.93,
+   "tcgLow": 0.69,
+   "tcgMid": 1.09,
+   "soldAnyFinish": false
   },
   {
    "productId": 712687,
@@ -7551,15 +7980,18 @@
    "released": "2026-08-21",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/712687_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/712687/one-piece-card-game-the-worlds-strongest-warriors-release-event-cards-roronoa-zoro-035",
-   "tcgMarket": 4.11,
-   "tcgLow": 3.45,
-   "tcgMid": 4.42,
-   "printing": "Normal",
    "image": "images/712687.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP17-035+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP17-035",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP17-035",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP17-035",
+   "sold": null,
+   "id": "712687",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 4.11,
+   "tcgLow": 3.45,
+   "tcgMid": 4.42,
+   "soldAnyFinish": false
   },
   {
    "productId": 712725,
@@ -7581,15 +8013,18 @@
    "released": "2026-08-21",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/712725_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/712725/one-piece-card-game-the-worlds-strongest-warriors-release-event-cards-roronoa-zoro-095",
-   "tcgMarket": 15.56,
-   "tcgLow": 13.01,
-   "tcgMid": 16.61,
-   "printing": "Normal",
    "image": "images/712725.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP17-095+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP17-095",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP17-095",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP17-095",
+   "sold": null,
+   "id": "712725",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 15.56,
+   "tcgLow": 13.01,
+   "tcgMid": 16.61,
+   "soldAnyFinish": false
   },
   {
    "productId": 705991,
@@ -7611,14 +8046,10 @@
    "released": "2026-08-28",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/705991_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/705991/one-piece-card-game-the-worlds-strongest-warriors-roronoa-zoro-eb04-007-sp",
-   "tcgMarket": 374.98,
-   "tcgLow": 373.2,
-   "tcgMid": 399.99,
-   "printing": "Foil",
    "image": "images/705991.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=EB04-007+Roronoa+Zoro+EB04-007%2C+SP+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20EB04-007",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+EB04-007",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+EB04-007",
    "sold": {
     "title": "Roronoa Zoro [SP] EB04-007",
     "url": "https://www.pricecharting.com/game/one-piece-world%27s-strongest-warriors/roronoa-zoro-sp-eb04-007",
@@ -7677,7 +8108,14 @@
       "title": "Roronoa Zoro (EB04-007) (SP) #EB04-007 Near Mint English SP"
      }
     ]
-   }
+   },
+   "id": "705991",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": 374.98,
+   "tcgLow": 373.2,
+   "tcgMid": 399.99,
+   "soldAnyFinish": false
   },
   {
    "productId": 712609,
@@ -7699,14 +8137,10 @@
    "released": "2026-08-28",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/712609_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/712609/one-piece-card-game-the-worlds-strongest-warriors-roronoa-zoro-035",
-   "tcgMarket": 0.14,
-   "tcgLow": 0.01,
-   "tcgMid": 0.15,
-   "printing": "Normal",
    "image": "images/712609.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP17-035+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP17-035",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP17-035",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP17-035",
    "sold": {
     "title": "Roronoa Zoro OP17-035",
     "url": "https://www.pricecharting.com/game/one-piece-world%27s-strongest-warriors/roronoa-zoro-op17-035",
@@ -7765,7 +8199,14 @@
       "title": "Roronoa Zoro (035) #OP17-035 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "712609",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.14,
+   "tcgLow": 0.01,
+   "tcgMid": 0.15,
+   "soldAnyFinish": false
   },
   {
    "productId": 710617,
@@ -7787,14 +8228,10 @@
    "released": "2026-08-28",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/710617_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/710617/one-piece-card-game-the-worlds-strongest-warriors-roronoa-zoro-095",
-   "tcgMarket": 0.13,
-   "tcgLow": 0.01,
-   "tcgMid": 0.19,
-   "printing": "Normal",
    "image": "images/710617.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP17-095+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP17-095",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP17-095",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP17-095",
    "sold": {
     "title": "Roronoa Zoro OP17-095",
     "url": "https://www.pricecharting.com/game/one-piece-world%27s-strongest-warriors/roronoa-zoro-op17-095",
@@ -7853,7 +8290,14 @@
       "title": "Roronoa Zoro (095) #OP17-095 Near Mint English"
      }
     ]
-   }
+   },
+   "id": "710617",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 0.13,
+   "tcgLow": 0.01,
+   "tcgMid": 0.19,
+   "soldAnyFinish": false
   },
   {
    "productId": 716628,
@@ -7875,15 +8319,18 @@
    "released": "2026-09-18",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/716628_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/716628/one-piece-card-game-set-sail-deck-set-roronoa-zoro-luffy-deck",
-   "tcgMarket": 2.9,
-   "tcgLow": 1.0,
-   "tcgMid": 3.26,
-   "printing": "Normal",
    "image": "images/716628.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP15-113+Roronoa+Zoro+Luffy+Deck+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP15-113",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP15-113",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP15-113",
+   "sold": null,
+   "id": "716628",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": 2.9,
+   "tcgLow": 1.0,
+   "tcgMid": 3.26,
+   "soldAnyFinish": false
   },
   {
    "productId": 722652,
@@ -7905,15 +8352,18 @@
    "released": "2026-11-20",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/722652_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/722652/one-piece-card-game-the-dominance-of-god-roronoa-zoro-017",
-   "tcgMarket": null,
-   "tcgLow": 3.0,
-   "tcgMid": 3.0,
-   "printing": "Normal",
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/722652_in_1000x1000.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP18-017+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP18-017",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP18-017",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP18-017",
+   "sold": null,
+   "id": "722652",
+   "foil": false,
+   "finish": "Non-foil",
+   "tcgMarket": null,
+   "tcgLow": 3.0,
+   "tcgMid": 3.0,
+   "soldAnyFinish": false
   },
   {
    "productId": 724684,
@@ -7935,15 +8385,18 @@
    "released": "2026-11-20",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/724684_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/724684/one-piece-card-game-the-dominance-of-god-roronoa-zoro-092",
-   "tcgMarket": null,
-   "tcgLow": null,
-   "tcgMid": null,
-   "printing": null,
    "image": "https://tcgplayer-cdn.tcgplayer.com/product/724684_in_1000x1000.jpg",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP18-092+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP18-092",
-   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Roronoa+Zoro+OP18-092",
-   "sold": null
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP18-092",
+   "sold": null,
+   "id": "724684",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
   }
  ]
 }

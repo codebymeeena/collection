@@ -18,7 +18,7 @@ h1 { margin: 0; font-size: 28px; }
 .stat b { display: block; font-size: 20px; }
 .stat span { color: var(--muted); font-size: 12px; }
 
-.controls { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line);
+.controls { position: sticky; top: var(--charbar-h, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line);
             display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 16px; max-width: 1300px; margin: auto; }
 .controls input, .controls select, .controls button, .import {
   font: inherit; padding: 7px 10px; border-radius: 8px; border: 1px solid var(--line);
@@ -47,9 +47,14 @@ main { max-width: 1300px; margin: auto; padding: 16px; }
 .prices dd { margin: 0; font-weight: 600; }
 .links { display: flex; gap: 8px; font-size: 13px; flex-wrap: wrap; }
 .links a { color: var(--blue); }
-.own { margin-top: auto; display: flex; align-items: center; gap: 8px; font-weight: 600; cursor: pointer;
+.own { margin-top: auto; display: flex; align-items: center; gap: 6px; font-weight: 600;
        padding: 6px 8px; border-radius: 8px; border: 1px dashed var(--line); }
-.own input { width: 18px; height: 18px; accent-color: var(--accent); }
+.own span { margin-right: auto; }
+.own button { font: inherit; font-weight: 700; width: 32px; height: 32px; border-radius: 8px; cursor: pointer;
+              border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+.own button:disabled { opacity: .4; cursor: default; }
+.own input { width: 52px; height: 32px; text-align: center; font: inherit; border-radius: 8px;
+             border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
 
 /* list view */
 .list { display: block; }
@@ -73,3 +78,16 @@ details { font-size: 13px; }
 summary { cursor: pointer; color: var(--blue); }
 .sales { list-style: none; padding: 0; margin: 4px 0 0; max-height: 160px; overflow: auto; }
 .sales li { padding: 2px 0; border-bottom: 1px solid var(--line); }
+.charbar { position: sticky; top: 0; z-index: 6; background: var(--bg); border-bottom: 1px solid var(--line); }
+.chars { display: flex; max-width: 1300px; margin: auto; padding: 10px 16px; gap: 0; }
+.chars button { flex: 1 1 0; font: inherit; font-weight: 700; font-size: 18px; padding: 12px 16px; cursor: pointer;
+                border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+.chars button:first-child { border-radius: 12px 0 0 12px; }
+.chars button:last-child { border-radius: 0 12px 12px 0; }
+.chars button + button { border-left: none; }
+.chars button .count { font-weight: 500; font-size: 14px; opacity: .75; margin-left: 6px; }
+.chars button.active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.chip.foil { border: none; color: #3a2a00;
+             background: linear-gradient(120deg, #f6e27a, #e9c6ff 45%, #a7e8ff 70%, #f6e27a); }
+.main-price b { font-size: 20px; }
+@media (max-width: 700px) { .controls { position: static; } }

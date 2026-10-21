@@ -1,0 +1,9 @@
+// Cloudflare settings: serve the static site in ./site (works for Workers Builds and `wrangler deploy`).
+{
+  "name": "tcg-card-pc",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./site",
+    "not_found_handling": "single-page-application"
+  }
+}
