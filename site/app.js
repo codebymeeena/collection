@@ -28,14 +28,13 @@ function saveOwned() {
 }
 const ownId = (c) => c.id ?? String(c.productId);
 const qty = (c) => state.owned.get(ownId(c)) || 0;
-// Main price, in order: last eBay sale, eBay sold average (both via PriceCharting),
-// TCGplayer market, Collectr, TCGplayer mid.
+// Main price, in order: TCGplayer market (this card's finish), then last eBay sale and
+// eBay sold average (both via PriceCharting), then TCGplayer mid.
 function mainPrice(c) {
+  if (c.tcgMarket != null) return { v: c.tcgMarket, src: "TCGplayer market" };
   const last = [...(c.sold?.recentSales || [])].sort((a, b) => b.date.localeCompare(a.date))[0];
   if (last) return { v: last.price, src: `last eBay sale, ${last.date}` };
   if (c.sold?.ungraded != null) return { v: c.sold.ungraded, src: "eBay sold average" };
-  if (c.tcgMarket != null) return { v: c.tcgMarket, src: "TCGplayer market" };
-  if (c.collectr != null) return { v: c.collectr, src: "Collectr" };
   if (c.tcgMid != null) return { v: c.tcgMid, src: "TCGplayer mid" };
   return { v: null, src: "no price found" };
 }
@@ -162,7 +161,7 @@ function cardHtml(c) {
         ${c.cost ? `<span class="chip">Cost ${esc(c.cost)}</span>` : ""}
         ${c.type ? `<span class="chip">${esc(c.type)}</span>` : ""}
         ${c.power ? `<span class="chip">${esc(c.power)} power</span>` : ""}</div>
-      <div class="main-price"><b>${money(price(c))}</b> <span class="meta">${esc(mainPrice(c).src)}${c.soldAnyFinish && c.sold ? " · any finish" : ""}</span></div>
+      <div class="main-price"><b>${money(price(c))}</b> <span class="meta">${esc(mainPrice(c).src)}${c.soldAnyFinish && c.tcgMarket == null && c.sold ? " · any finish" : ""}</span></div>
       <dl class="prices">
         <dt>TCGplayer</dt><dd>${money(c.tcgMarket)}${c.tcgLow != null ? ` <span class="meta">(low ${money(c.tcgLow)})</span>` : ""}</dd>
         <dt>Sold (raw${c.soldAnyFinish ? ", any finish" : ""})</dt><dd>${s ? `${money(s.ungraded)}${s.volume ? ` <span class="meta">(${esc(s.volume)})</span>` : ""}` : "—"}</dd>
