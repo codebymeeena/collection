@@ -1,0 +1,16 @@
+{
+ "_help": "Cards added by hand. 'price' is in US dollars like the other sources (the site converts to CAD). An entry whose id matches a fetched card overrides it; otherwise it is added to that tab.",
+ "luffy": [
+  {
+   "id": "pc-watermelon-luffy-x-eiichiro-oda-signature",
+   "name": "Watermelon Luffy X Eiichiro Oda Signature",
+   "baseName": "Watermelon Luffy X Eiichiro Oda Signature",
+   "variant": "Eiichiro Oda Signature",
+   "set": "One Piece Promo",
+   "setCode": "PROMO",
+   "price": 55.17,
+   "image": "images/manual/watermelon-luffy-oda.jpg",
+   "pricechartingUrl": "https://www.pricecharting.com/game/one-piece-promo/watermelon-luffy-x-eiichiro-oda-signature"
+  }
+ ]
+}

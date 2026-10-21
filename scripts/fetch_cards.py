@@ -29,6 +29,17 @@ CHARACTERS = {
     "zoro": ("Zoro", re.compile(r"zoro", re.I)),
     "luffy": ("Luffy", re.compile(r"luffy", re.I)),
 }
+# Cards that belong on a tab but don't have the character's name in their title,
+# by card number (every version of that number is included).
+EXTRA_NUMBERS = {
+    "luffy": {"EB02-020", "OP11-080", "OP15-002"},  # "We Are!", "Gear Two", OP15-002
+}
+# Cards TCGplayer doesn't sell at all, taken straight from their PriceCharting page.
+EXTRA_PRICECHARTING = {
+    "luffy": [
+        "https://www.pricecharting.com/game/one-piece-promo/watermelon-luffy-x-eiichiro-oda-signature",
+    ],
+}
 SKIP_SOLD = os.environ.get("SKIP_SOLD") == "1"
 
 
@@ -63,6 +74,10 @@ def ext(product, key):
 def variant_of(name):
     tags = re.findall(r"[\(\[]([^)\]]*)[\)\]]", name)
     return ", ".join(t for t in tags if not re.fullmatch(r"\d{3}", t)) or "Standard"
+
+
+def is_don(p):
+    return ext(p, "CardType") == "DON!!"
 
 
 def clean_name(name):
@@ -183,6 +198,48 @@ def pc_details(row):
     }
 
 
+def pricecharting_card(url, label):
+    """A card entry built only from a PriceCharting product page."""
+    html = get(url, tries=2, timeout=30)
+    if not html:
+        print(f"  ! PriceCharting page {url} didn't load", flush=True)
+        return None
+    title = re.search(r'<h1[^>]*id="product_name"[^>]*>\s*([^<]+)', html)
+    title = unescape(title.group(1)).strip() if title else url.rstrip("/").rsplit("/", 1)[-1].replace("-", " ").title()
+    console = re.search(r'<a href="/console/([^"]+)"', html)
+    slug = url.rstrip("/").rsplit("/", 1)[-1]
+    number = re.search(r"\b((?:OP|ST|EB|PRB)\d{2}-\d{3}|P-\d{3})\b", title, re.I)
+    sold = pc_details({"title": title, "url": url, "html": html})
+    image, remote = "", ""
+    m = re.search(r"https://storage\.googleapis\.com/images\.pricecharting\.com/([A-Za-z0-9_-]+)/", html)
+    if m:
+        for size in ("1600", "240"):
+            remote = f"https://storage.googleapis.com/images.pricecharting.com/{m.group(1)}/{size}.jpg"
+            path = os.path.join(IMG_DIR, f"pc-{slug}.jpg")
+            if not os.path.exists(path):
+                img = get(remote, binary=True, tries=2)
+                if img and len(img) > 1000:
+                    with open(path, "wb") as f:
+                        f.write(img)
+            if os.path.exists(path):
+                image = f"images/pc-{slug}.jpg"
+                break
+    print(f"  PriceCharting extra: {title} -> {sold['ungraded']} raw, {len(sold['recentSales'])} sales", flush=True)
+    q = urllib.parse.quote
+    return {
+        "productId": f"pc-{slug}", "name": title, "baseName": title, "variant": "Standard",
+        "number": number.group(1).upper() if number else "",
+        "set": (console.group(1).replace("-", " ").title() if console else "PriceCharting"),
+        "setCode": "PROMO", "rarity": "", "cost": "", "color": "", "type": "", "power": "",
+        "counter": "", "attribute": "", "subtypes": "", "effect": "", "released": "",
+        "don": False, "image": image or remote, "imageRemote": remote,
+        "tcgplayerUrl": "https://www.tcgplayer.com/search/one-piece-card-game/product?q=" + q(title),
+        "ebayUrl": "https://www.ebay.com/sch/i.html?LH_Sold=1&LH_Complete=1&_nkw=" + q(title + " one piece"),
+        "collectrUrl": "https://app.getcollectr.com/?query=" + q(title),
+        "pricechartingUrl": url, "sold": sold, "finishes": {},
+    }
+
+
 def split_finishes(cards):
     """One entry per finish TCGplayer sells, each with its own price.
 
@@ -221,7 +278,7 @@ def load_groups():
     print(f"{len(groups)} English groups")
     for g in groups:
         products = get_json(f"https://tcgcsv.com/tcgplayer/{CATEGORY}/{g['groupId']}/products")
-        g["products"] = [p for p in (products or {}).get("results", []) if ext(p, "Number")]
+        g["products"] = [p for p in (products or {}).get("results", []) if ext(p, "Number") or is_don(p)]
         g["prices"] = {}
         if not g["products"]:
             continue
@@ -233,19 +290,23 @@ def load_groups():
 
 
 def collect(key, label, name_re, groups):
+    extra = EXTRA_NUMBERS.get(key, set())
     previous = load_previous(key)
     cards = []
     for g in groups:
         # Match on the name without its "(Zoro Deck)"-style tags, so other
         # characters from a character-themed deck are left out.
-        matches = [p for p in g["products"] if name_re.search(clean_name(p["name"]))]
+        # DON!! cards name the character only in brackets: "DON!! Card (Zoro) (Gold)".
+        matches = [p for p in g["products"]
+                   if name_re.search(clean_name(p["name"])) or (is_don(p) and name_re.search(p["name"]))
+                   or ext(p, "Number") in extra]
         if not matches:
             continue
         price_by_id = g["prices"]
         print(f"{g['name']}: {len(matches)} {label} cards", flush=True)
         for p in matches:
             finishes = price_by_id.get(p["productId"], {})
-            number = ext(p, "Number")
+            number = ext(p, "Number") or ("DON!!" if is_don(p) else "")
             cards.append({
                 "productId": p["productId"],
                 "name": p["name"],
@@ -254,6 +315,7 @@ def collect(key, label, name_re, groups):
                 "number": number,
                 "set": g["name"],
                 "setCode": (g.get("abbreviation") or number.split("-")[0]).upper(),
+                "don": is_don(p),
                 "rarity": ext(p, "Rarity"),
                 "cost": ext(p, "Cost"),
                 "color": ext(p, "Color"),
@@ -273,7 +335,9 @@ def collect(key, label, name_re, groups):
     os.makedirs(IMG_DIR, exist_ok=True)
     for c in cards:
         official = f"https://en.onepiece-cardgame.com/images/cardlist/card/{c['number']}.png"
-        if c["variant"] == "Standard":
+        if c["don"]:
+            sources = [(c["imageRemote"], "jpg", None)]  # Bandai's list has no DON!! images by name
+        elif c["variant"] == "Standard":
             # Bandai's own image has no "SAMPLE" stamp and is this exact print.
             sources = [(official, "png", None), (c["imageRemote"], "jpg", None)]
         else:
@@ -299,9 +363,12 @@ def collect(key, label, name_re, groups):
         c["image"] = f"images/{os.path.basename(path)}" if path else c["imageRemote"]
 
         query = f"{c['number']} {c['baseName']} {'' if c['variant'] == 'Standard' else c['variant']}".strip()
+        if c["don"]:
+            query = f"DON!! card {c['variant'].replace(',', '')}"
         c["ebayUrl"] = ("https://www.ebay.com/sch/i.html?" + urllib.parse.urlencode(
             {"_nkw": query + " one piece -japanese", "LH_Sold": "1", "LH_Complete": "1"}))
-        c["collectrUrl"] = "https://app.getcollectr.com/?query=" + urllib.parse.quote(f"{c['baseName']} {c['number']}")
+        c["collectrUrl"] = "https://app.getcollectr.com/?query=" + urllib.parse.quote(
+            query if c["don"] else f"{c['baseName']} {c['number']}")
         c["pricechartingUrl"] = f"{PC}/search-products?" + urllib.parse.urlencode(
             {"type": "prices", "q": f"{label} {c['number']}"})
 
@@ -310,10 +377,12 @@ def collect(key, label, name_re, groups):
     searches = {}
     for c in cards:
         c["sold"] = None
-        if SKIP_SOLD:
+        if SKIP_SOLD or c["don"]:  # DON!! cards have no number to match on PriceCharting
             continue
         if c["number"] not in searches:
-            searches[c["number"]] = pc_search(label, c["number"])
+            # "We Are!"-style extras don't contain the tab's name; search by their own name.
+            who = label if label.lower() in c["baseName"].lower() else c["baseName"]
+            searches[c["number"]] = pc_search(who, c["number"])
         row, c["_score"] = pc_match(c, searches[c["number"]])
         c["_row"] = row
 
@@ -345,8 +414,17 @@ def collect(key, label, name_re, groups):
     got = sum(1 for c in cards if c["sold"])
     sales = sum(1 for c in cards if c["sold"] and c["sold"]["recentSales"])
     print(f"Sold-price data for {got}/{len(cards)} cards ({sales} with recent sales list)")
+    for url in EXTRA_PRICECHARTING.get(key, []):
+        extra_card = pricecharting_card(url, label)
+        if extra_card:
+            cards.append(extra_card)
+        elif previous.get(f"pc-{url.rstrip('/').rsplit('/', 1)[-1]}"):
+            # Page didn't load this time: keep last week's entry.
+            extra_card = dict(previous[f"pc-{url.rstrip('/').rsplit('/', 1)[-1]}"])
+            extra_card["finishes"] = {}
+            cards.append(extra_card)
     cards = split_finishes(cards)
-    cards.sort(key=lambda c: (c["released"], c["number"], c["productId"], c["foil"]))
+    cards.sort(key=lambda c: (c["released"], c["number"], str(c["productId"]), c["foil"]))
     with open(os.path.join(DATA_DIR, f"{key}.json"), "w") as f:
         json.dump({"updated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
                    "cards": cards}, f, indent=1)
