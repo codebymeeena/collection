@@ -31,8 +31,15 @@ const qty = (c) => state.owned.get(ownId(c)) || 0;
 // Main price, in order: TCGplayer market (this card's finish), then last eBay sale and
 // eBay sold average (both via PriceCharting), then TCGplayer mid.
 function mainPrice(c) {
-  if (c.tcgMarket != null) return { v: c.tcgMarket, src: "TCGplayer market" };
   const last = [...(c.sold?.recentSales || [])].sort((a, b) => b.date.localeCompare(a.date))[0];
+  const ebayBacked = last || c.sold?.ungraded != null;
+  // TCGplayer's market price only moves when a copy sells there, so on very rare cards it
+  // can be years old. If even the cheapest listing is over 3x it and no eBay sale backs it up,
+  // the cheapest listing is the better guide.
+  if (c.tcgMarket != null && c.tcgLow > 3 * c.tcgMarket && !ebayBacked) {
+    return { v: c.tcgLow, src: `TCGplayer cheapest listing (market price ${money(c.tcgMarket)} looks out of date)` };
+  }
+  if (c.tcgMarket != null) return { v: c.tcgMarket, src: "TCGplayer market" };
   if (last) return { v: last.price, src: `last eBay sale, ${last.date}` };
   if (c.sold?.ungraded != null) return { v: c.sold.ungraded, src: "eBay sold average" };
   if (c.tcgMid != null) return { v: c.tcgMid, src: "TCGplayer mid" };
