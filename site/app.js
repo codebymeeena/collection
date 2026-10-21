@@ -31,6 +31,7 @@ const qty = (c) => state.owned.get(ownId(c)) || 0;
 // Main price, in order: TCGplayer market (this card's finish), then last eBay sale and
 // eBay sold average (both via PriceCharting), then TCGplayer mid.
 function mainPrice(c) {
+  if (c.price != null) return { v: c.price, src: "price you entered" };
   const last = [...(c.sold?.recentSales || [])].sort((a, b) => b.date.localeCompare(a.date))[0];
   const ebayBacked = last || c.sold?.ungraded != null;
   // TCGplayer's market price only moves when a copy sells there, so on very rare cards it
@@ -52,6 +53,7 @@ const charbar = document.querySelector(".charbar");
 new ResizeObserver(() => document.documentElement.style.setProperty("--charbar-h", charbar.offsetHeight + "px")).observe(charbar);
 
 async function init() {
+  state.manual = await fetch("data/manual.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
   state.owned = loadOwned();
   try {
     const r = await fetch("data/fx.json").then((res) => (res.ok ? res.json() : null));
@@ -102,6 +104,30 @@ async function route(key) {
   Business.show();
 }
 
+// Cards added by hand in data/manual.json: override a fetched card with the same id, or add a new one.
+function withManual(cards, manual = []) {
+  const out = cards.map((c) => ({ ...c }));
+  for (const m of manual) {
+    const card = out.find((c) => ownId(c) === m.id);
+    if (card) {
+      Object.assign(card, m, { imageRemote: card.image || card.imageRemote });
+    } else {
+      const q = encodeURIComponent(m.name);
+      out.push({
+        productId: m.id, number: "", rarity: "", cost: "", color: "", type: "", power: "", finish: "",
+        foil: false, don: false, variant: "Standard", setCode: "", set: "", imageRemote: "",
+        tcgMarket: null, tcgLow: null, tcgMid: null, sold: null,
+        tcgplayerUrl: `https://www.tcgplayer.com/search/one-piece-card-game/product?q=${q}`,
+        ebayUrl: `https://www.ebay.com/sch/i.html?LH_Sold=1&LH_Complete=1&_nkw=${q}`,
+        collectrUrl: `https://app.getcollectr.com/?query=${q}`,
+        pricechartingUrl: `https://www.pricecharting.com/search-products?type=prices&q=${q}`,
+        baseName: m.name, ...m,
+      });
+    }
+  }
+  return out;
+}
+
 async function showChar(key) {
   const char = state.chars.find((c) => c.key === key) || state.chars[0];
   state.char = char;
@@ -113,7 +139,7 @@ async function showChar(key) {
   $("#cards").innerHTML = `<p class="empty">Loading ${esc(char.label)} cards…</p>`;
   const data = state.cache[char.key] ||= await fetch(`data/${char.key}.json`).then((r) => r.json());
   if (state.char !== char) return; // another tab was picked while loading
-  state.cards = data.cards;
+  state.cards = withManual(data.cards, state.manual?.[char.key]);
   $("#updated").textContent = `Prices updated ${new Date(data.updated).toLocaleString()} · ${data.cards.length} cards · ` +
     (fx.rate ? `Prices in CAD (1 USD = ${fx.rate.toFixed(4)} CAD, ${fx.date})` : "Prices in USD (exchange rate unavailable)");
   const colors = new Set(data.cards.flatMap((c) => c.color.split(/[;\/,]/).map((s) => s.trim()).filter(Boolean)));
@@ -174,11 +200,11 @@ function cardHtml(c) {
     : "";
   return `<article class="card ${have ? "have" : ""}">
     <img loading="lazy" src="${esc(c.image)}" alt="${esc(c.name)}" data-full="${esc(c.image)}"
-         onerror="if(this.src!=='${esc(c.imageRemote)}')this.src='${esc(c.imageRemote)}'">
+         onerror="this.onerror=null;${c.imageRemote ? `this.src='${esc(c.imageRemote)}'` : "this.classList.add('noimg')"}">
     <div class="body">
       <div class="name">${esc(c.baseName)}</div>
       ${c.imageNote ? `<div class="meta note">${esc(c.imageNote)}</div>` : ""}
-      <div class="meta">${esc(c.number)} · ${esc(c.setCode)} · ${esc(c.rarity)}${c.variant !== "Standard" ? " · " + esc(c.variant) : ""}</div>
+      <div class="meta">${[c.number, c.setCode, c.rarity, c.variant !== "Standard" && c.variant].filter(Boolean).map(esc).join(" · ")}</div>
       <div class="chips">${c.finish ? `<span class="chip ${c.foil ? "foil" : ""}">${c.foil ? "✦ Foil" : "Non-foil"}</span>` : ""}${colorChips}
         ${c.cost ? `<span class="chip">Cost ${esc(c.cost)}</span>` : ""}
         ${c.type ? `<span class="chip">${esc(c.type)}</span>` : ""}

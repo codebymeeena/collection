@@ -136,3 +136,4 @@ summary { cursor: pointer; color: var(--blue); }
   .chars button { font-size: 15px; padding: 10px 6px; }
   .chars button .count { display: none; }
 }
+.card img.noimg { opacity: .25; }
