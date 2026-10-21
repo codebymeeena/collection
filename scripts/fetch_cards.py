@@ -29,6 +29,11 @@ CHARACTERS = {
     "zoro": ("Zoro", re.compile(r"zoro", re.I)),
     "luffy": ("Luffy", re.compile(r"luffy", re.I)),
 }
+# Cards that belong on a tab but don't have the character's name in their title,
+# by card number (every version of that number is included).
+EXTRA_NUMBERS = {
+    "luffy": {"EB02-020", "OP11-080"},  # "We Are!", "Gear Two"
+}
 SKIP_SOLD = os.environ.get("SKIP_SOLD") == "1"
 
 
@@ -237,6 +242,7 @@ def load_groups():
 
 
 def collect(key, label, name_re, groups):
+    extra = EXTRA_NUMBERS.get(key, set())
     previous = load_previous(key)
     cards = []
     for g in groups:
@@ -244,7 +250,8 @@ def collect(key, label, name_re, groups):
         # characters from a character-themed deck are left out.
         # DON!! cards name the character only in brackets: "DON!! Card (Zoro) (Gold)".
         matches = [p for p in g["products"]
-                   if name_re.search(clean_name(p["name"])) or (is_don(p) and name_re.search(p["name"]))]
+                   if name_re.search(clean_name(p["name"])) or (is_don(p) and name_re.search(p["name"]))
+                   or ext(p, "Number") in extra]
         if not matches:
             continue
         price_by_id = g["prices"]
@@ -325,7 +332,9 @@ def collect(key, label, name_re, groups):
         if SKIP_SOLD or c["don"]:  # DON!! cards have no number to match on PriceCharting
             continue
         if c["number"] not in searches:
-            searches[c["number"]] = pc_search(label, c["number"])
+            # "We Are!"-style extras don't contain the tab's name; search by their own name.
+            who = label if label.lower() in c["baseName"].lower() else c["baseName"]
+            searches[c["number"]] = pc_search(who, c["number"])
         row, c["_score"] = pc_match(c, searches[c["number"]])
         c["_row"] = row
 
