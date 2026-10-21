@@ -4,15 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>One Piece Card Collection</title>
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 <div class="charbar">
   <div class="chars" id="chars" role="tablist" aria-label="Character">
     <button data-char="zoro" role="tab">Zoro</button>
     <button data-char="luffy" role="tab">Luffy</button>
+    <button data-char="business" role="tab">Binder Business</button>
   </div>
 </div>
+<section id="businessView" hidden></section>
+<div id="cardsView">
 <header>
   <h1>Zoro Card Collection</h1>
   <p class="sub">Every English One Piece TCG Zoro card — use + and − to count the ones you have.</p>
@@ -47,13 +50,15 @@
 
 <footer>
   <p id="updated"></p>
-  <p>Site version 6</p>
+  <p>Site version 7</p>
   <p>All prices are shown in Canadian dollars, converted from the US-dollar prices below at the weekly exchange rate. The big price on each card is the TCGplayer market price (or, when that is clearly out of date — the cheapest listing is over 3× it and no eBay sale backs it — the cheapest TCGplayer listing); if TCGplayer has none, it falls back to the last eBay sale, then the eBay sold average. (Collectr has no public prices, so it is linked on each card instead.) Prices: TCGplayer market price (via tcgcsv.com). “Sold (raw)” and the recent-sales list come from
      PriceCharting, which tracks eBay sold listings for ungraded English copies. Each card links to eBay sold
      listings, TCGplayer, Collectr and PriceCharting so you can double-check. Your quantities are saved in this browser — use Export to back them up.</p>
 </footer>
+</div>
 
 <dialog id="zoom"><img alt=""><button>Close</button></dialog>
-<script src="app.js?v=6"></script>
+<script src="business.js?v=7"></script>
+<script src="app.js?v=7"></script>
 </body>
 </html>

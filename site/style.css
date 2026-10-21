@@ -91,3 +91,48 @@ summary { cursor: pointer; color: var(--blue); }
              background: linear-gradient(120deg, #f6e27a, #e9c6ff 45%, #a7e8ff 70%, #f6e27a); }
 .main-price b { font-size: 20px; }
 @media (max-width: 700px) { .controls { position: static; } }
+
+/* Binder business tab */
+[hidden] { display: none !important; }
+.biz { display: flex; flex-direction: column; gap: 16px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; box-shadow: var(--shadow); }
+.panel h2 { margin: 0 0 12px; font-size: 18px; }
+.biz-forms { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.biz-forms form { display: flex; flex-direction: column; gap: 10px; }
+.biz-forms form.editing { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+.biz-forms label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); flex: 1; }
+.biz-forms .row { display: flex; gap: 10px; }
+.biz input, .biz select, .biz button, .biz .import {
+  font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--bg); color: var(--ink); min-width: 0; }
+.biz button, .biz .import { cursor: pointer; background: var(--panel); }
+.biz button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 650; }
+.stat.pos b { color: var(--green); }
+.stat.neg b { color: var(--red); }
+.biz-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.bar-row { display: flex; justify-content: space-between; font-size: 14px; margin-top: 8px; }
+.bar { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; margin-top: 4px; }
+.bar i { display: block; height: 100%; background: var(--accent); }
+.biz-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.biz-table th, .biz-table td { text-align: right; padding: 6px 4px; border-bottom: 1px solid var(--line); }
+.biz-table th:first-child, .biz-table td:first-child { text-align: left; }
+.biz-table td.pos { color: var(--green); font-weight: 600; }
+.biz-table td.neg { color: var(--red); font-weight: 600; }
+.biz-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 10px; }
+.biz-head h2 { margin: 0; margin-right: auto; }
+.biz-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.biz-entry { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.biz-entry .date { color: var(--muted); font-size: 13px; width: 86px; flex: none; }
+.biz-entry .what { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.biz-entry .amt { font-weight: 700; }
+.biz-entry.sale .amt { color: var(--green); }
+.biz-entry.expense .amt { color: var(--red); }
+.biz-entry button { padding: 4px 8px; font-size: 13px; }
+@media (max-width: 520px) { .biz-entry .date { width: 70px; font-size: 12px; } }
+.biz-forms label { flex: none; }
+.biz-forms .row label { flex: 1 1 0; }
+.biz input, .biz select { width: 100%; }
+@media (max-width: 520px) {
+  .chars button { font-size: 15px; padding: 10px 6px; }
+  .chars button .count { display: none; }
+}
