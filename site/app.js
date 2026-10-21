@@ -61,7 +61,8 @@ async function init() {
     .then((r) => (r.ok ? r.json() : null))
     .catch(() => null) || [{ key: "zoro", label: "Zoro" }, { key: "luffy", label: "Luffy" }];
   $("#chars").innerHTML = state.chars
-    .map((c) => `<button data-char="${esc(c.key)}" role="tab">${esc(c.label)}<span class="count"></span></button>`).join("");
+    .map((c) => `<button data-char="${esc(c.key)}" role="tab">${esc(c.label)}<span class="count"></span></button>`).join("") +
+    `<button data-char="business" role="tab">Binder Business</button>`;
   // Card counts on the tabs (loads each tab's list in the background).
   state.chars.forEach(async (c) => {
     try {
@@ -74,7 +75,7 @@ async function init() {
     const b = e.target.closest("button[data-char]");
     if (b) location.hash = b.dataset.char;
   });
-  window.addEventListener("hashchange", () => showChar(location.hash.slice(1)));
+  window.addEventListener("hashchange", () => route(location.hash.slice(1)));
   // Seed from a committed owned.json the first time, if one exists.
   if (!state.owned.size) {
     try {
@@ -84,10 +85,21 @@ async function init() {
     } catch {}
   }
   let start = location.hash.slice(1);
-  if (!state.chars.some((c) => c.key === start)) {
+  if (start !== "business" && !state.chars.some((c) => c.key === start)) {
     try { start = localStorage.getItem(CHAR_KEY); } catch {}
   }
-  await showChar(start);
+  await route(start);
+}
+
+// "business" opens the binder business tracker; anything else is a card tab.
+async function route(key) {
+  const business = key === "business";
+  $("#businessView").hidden = !business;
+  $("#cardsView").hidden = business;
+  if (!business) return showChar(key);
+  try { localStorage.setItem(CHAR_KEY, key); } catch {}
+  document.querySelectorAll("#chars button").forEach((b) => b.classList.toggle("active", b.dataset.char === key));
+  Business.show();
 }
 
 async function showChar(key) {
@@ -96,8 +108,8 @@ async function showChar(key) {
   try { localStorage.setItem(CHAR_KEY, char.key); } catch {}
   document.querySelectorAll("#chars button").forEach((b) => b.classList.toggle("active", b.dataset.char === char.key));
   document.title = `${char.label} Card Collection`;
-  $("h1").textContent = `${char.label} Card Collection`;
-  $(".sub").textContent = `Every English One Piece TCG ${char.label} card — use + and − to count the ones you have.`;
+  $("#cardsView h1").textContent = `${char.label} Card Collection`;
+  $("#cardsView .sub").textContent = `Every English One Piece TCG ${char.label} card — use + and − to count the ones you have.`;
   $("#cards").innerHTML = `<p class="empty">Loading ${esc(char.label)} cards…</p>`;
   const data = state.cache[char.key] ||= await fetch(`data/${char.key}.json`).then((r) => r.json());
   if (state.char !== char) return; // another tab was picked while loading

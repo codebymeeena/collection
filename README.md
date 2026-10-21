@@ -10,6 +10,14 @@ A website with a tab per character — **Zoro** and **Luffy** so far — listing
 - a **quantity counter** (− / +) for how many copies you own, with tabs for *All*, *I have* and *I need*, and totals for what your
   collection is worth and what it would cost to finish
 
+## Binder Business tab
+
+A third tab tracks the binder painting business: log supply purchases (markers, binders, paint,
+shipping, other) and binder sales, and it shows profit (all time and this month), money made,
+money spent, binders sold, average per binder, spending by type and a month-by-month table.
+Entries can be edited or deleted. They are saved in the browser; **Backup** / **Restore** move them
+between devices and **Download CSV** opens in Excel / Google Sheets.
+
 ## How it works
 
 - `scripts/fetch_cards.py` pulls the card list, pictures and TCGplayer prices from
