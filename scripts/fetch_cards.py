@@ -32,7 +32,7 @@ CHARACTERS = {
 # Cards that belong on a tab but don't have the character's name in their title,
 # by card number (every version of that number is included).
 EXTRA_NUMBERS = {
-    "luffy": {"EB02-020", "OP11-080"},  # "We Are!", "Gear Two"
+    "luffy": {"EB02-020", "OP11-080", "OP15-002"},  # "We Are!", "Gear Two", OP15-002
 }
 # Cards TCGplayer doesn't sell at all, taken straight from their PriceCharting page.
 EXTRA_PRICECHARTING = {
