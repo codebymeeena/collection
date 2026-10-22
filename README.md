@@ -18,6 +18,13 @@ money spent, binders sold, average per binder, spending by type and a month-by-m
 Entries can be edited or deleted. They are saved in the browser; **Backup** / **Restore** move them
 between devices and **Download CSV** opens in Excel / Google Sheets.
 
+## Sync & share (☁ button)
+
+`worker.js` adds a small sync API on Cloudflare D1 (database `collection-sync`, bound as `DB` in
+`wrangler.jsonc`). Press ☁ → **Turn on sync** to get a private sync code; type it on another device
+(☁ → Connect) to keep card counts and binder business entries in sync. ☁ → **Copy share link** gives a
+view-only link for anyone else.
+
 ## How it works
 
 - `scripts/fetch_cards.py` pulls the card list, pictures and TCGplayer prices from

@@ -137,3 +137,27 @@ summary { cursor: pointer; color: var(--blue); }
   .chars button .count { display: none; }
 }
 .card img.noimg { opacity: .25; }
+
+/* Sync */
+.chars .sync-btn { flex: none; width: 52px; border-left: 1px solid var(--line); margin-left: 8px; border-radius: 12px; font-size: 20px; }
+.chars .sync-btn.on { color: var(--accent); border-color: var(--accent); }
+#syncDialog { border: 1px solid var(--line); border-radius: 14px; padding: 0; background: var(--panel); color: var(--ink); width: min(460px, calc(100vw - 32px)); }
+#syncDialog::backdrop { background: rgba(0,0,0,.5); }
+.sync-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px 0; }
+.sync-head h2 { margin: 0; font-size: 20px; }
+.sync-body { padding: 4px 16px 16px; }
+.sync-body h3 { font-size: 15px; margin: 18px 0 4px; }
+.sync-body button, .sync-body input, .sync-head button { font: inherit; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; }
+.sync-body input { flex: 1; min-width: 0; cursor: text; text-transform: uppercase; }
+.sync-body button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 650; }
+.sync-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.sync-code { font: 600 20px ui-monospace, Menlo, monospace; letter-spacing: 1px; margin: 4px 0; word-break: break-all; }
+.sync-on { color: var(--green); font-weight: 600; }
+.sync-err { color: var(--red); }
+.sync-off { margin-top: 4px; color: var(--red); }
+.view-banner { position: relative; z-index: 7; display: flex; gap: 10px; align-items: center; justify-content: center; flex-wrap: wrap;
+               padding: 8px 16px; background: var(--yellow); color: #222; font-weight: 600; }
+.view-banner button { font: inherit; padding: 4px 10px; border-radius: 8px; border: 1px solid #0003; background: #fff; cursor: pointer; }
+body.viewonly .own button, body.viewonly .biz-forms, body.viewonly .biz-entry button, body.viewonly .biz-actions .import,
+body.viewonly #import, body.viewonly .import { display: none !important; }
+body.viewonly .own input { pointer-events: none; }

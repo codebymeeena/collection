@@ -1,9 +1,20 @@
-// Cloudflare settings: serve the static site in ./site (works for Workers Builds and `wrangler deploy`).
+// Cloudflare settings: serve the static site in ./site, plus the sync API in worker.js
+// (works for Workers Builds and `wrangler deploy`).
 {
   "name": "tcg-card-pc",
+  "main": "worker.js",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./site",
-    "not_found_handling": "single-page-application"
-  }
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "collection-sync",
+      "database_id": "f5e3b161-21bf-4e16-92c3-33f1f0f027e4"
+    }
+  ]
 }
