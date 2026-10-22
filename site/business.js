@@ -12,14 +12,18 @@ const Business = (() => {
   let entries = load();
   let filter = "all";
   let editing = null;
+  let readOnly = false;
 
   function load() {
     try { return JSON.parse(localStorage.getItem(KEY) || "{}").entries || []; } catch { return []; }
   }
-  function save() {
+  // notify=false for data that came from the cloud, so it isn't treated as a new edit.
+  function save(notify = true) {
+    if (readOnly) return;
     try { localStorage.setItem(KEY, JSON.stringify({ entries })); } catch {
       alert("Couldn't save in this browser (private window?). Use Backup so you don't lose it.");
     }
+    if (notify) window.dispatchEvent(new Event("data-changed"));
   }
   const sum = (list) => list.reduce((t, e) => t + e.amount, 0);
   const sales = () => entries.filter((e) => e.type === "sale");
@@ -248,6 +252,13 @@ const Business = (() => {
 
   let mounted = false;
   return {
+    getEntries: () => entries,
+    setEntries(list, ro) {
+      readOnly = ro;
+      entries = Array.isArray(list) ? list : [];
+      if (!ro) save(false);
+      if (mounted) render();
+    },
     show() {
       if (!mounted) { mount(); mounted = true; }
       document.title = "Binder Business";

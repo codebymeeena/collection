@@ -23,9 +23,22 @@ function toQty(data) {
   const entries = Array.isArray(data) ? data.map((id) => [id, 1]) : Object.entries(data || {});
   return new Map(entries.map(([id, n]) => [String(id), Math.max(0, Math.floor(+n) || 0)]).filter(([, n]) => n > 0));
 }
-function saveOwned() {
+// notify=false for data that came from the cloud or a seed file, so it isn't treated as a new edit.
+function saveOwned(notify = true) {
+  if (state.viewOnly) return;
   try { localStorage.setItem(KEY, JSON.stringify(Object.fromEntries(state.owned))); } catch {}
+  if (notify) window.dispatchEvent(new Event("data-changed"));
 }
+// Used by sync.js.
+window.App = {
+  getOwned: () => Object.fromEntries(state.owned),
+  setOwned(data, readOnly) {
+    state.viewOnly = readOnly;
+    state.owned = toQty(data);
+    saveOwned(false);
+    if (state.char && !$("#cardsView").hidden) render();
+  },
+};
 const ownId = (c) => c.id ?? String(c.productId);
 const qty = (c) => state.owned.get(ownId(c)) || 0;
 // Main price, in order: TCGplayer market (this card's finish), then last eBay sale and
@@ -66,7 +79,9 @@ async function init() {
     .catch(() => null) || [{ key: "zoro", label: "Zoro" }, { key: "luffy", label: "Luffy" }];
   $("#chars").innerHTML = state.chars
     .map((c) => `<button data-char="${esc(c.key)}" role="tab">${esc(c.label)}<span class="count"></span></button>`).join("") +
-    `<button data-char="business" role="tab">Binder Business</button>`;
+    `<button data-char="business" role="tab">Binder Business</button>` +
+    `<button type="button" id="syncBtn" class="sync-btn" title="Sync & share" aria-label="Sync and share">☁</button>`;
+  $("#syncBtn").addEventListener("click", () => Sync.open());
   // Card counts on the tabs (loads each tab's list in the background).
   state.chars.forEach(async (c) => {
     try {
@@ -85,7 +100,7 @@ async function init() {
     try {
       const seed = await fetch("data/owned.json").then((r) => (r.ok ? r.json() : []));
       state.owned = toQty(seed);
-      saveOwned();
+      saveOwned(false);
     } catch {}
   }
   let start = location.hash.slice(1);
@@ -93,6 +108,7 @@ async function init() {
     try { start = localStorage.getItem(CHAR_KEY); } catch {}
   }
   await route(start);
+  await Sync.init();
 }
 
 // "business" opens the binder business tracker; anything else is a card tab.
