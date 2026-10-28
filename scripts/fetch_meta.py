@@ -214,7 +214,8 @@ def summarize(entries):
                      "winRate": round(100 * wins / (wins + losses)) if wins + losses else None,
                      "source": f"Limitless Play online events, last {RECENT_DAYS} days"},
             "deck": {"source": "Limitless Play", "event": best["event"], "date": best["date"],
-                     "format": "online", "placement": f"{best['placing']} of {best['players']} ({best['wins']}-{best['losses']})",
+                     "format": "online", "placement": (f"{best['placing']} of {best['players']} ({best['wins']}-{best['losses']})" if best["placing"] < 999
+                                   else f"{best['wins']}-{best['losses']} in a {best['players']}-player event"),
                      "url": f"{PLAY}/tournament/{best['tid']}/player/{best['player']}/decklist",
                      "cards": best["cards"]},
             "core": [c for c in core if c["pct"] >= 25][:40],
