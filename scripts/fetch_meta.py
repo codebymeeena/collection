@@ -119,7 +119,7 @@ def latest_list(deck_id):
     if not rows:
         return None
     place, fmt, list_id = min(rows)
-    place = f"{place}{'th' if 10 <= place % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(place % 10, 'th')}"
+    place = f"placed {ordinal(place)}"
     page = get(f"{LIMITLESS}/decks/list/{list_id}")
     if not page:
         return None
@@ -188,6 +188,10 @@ def play_data():
     return entries, matchups
 
 
+def ordinal(n):
+    return f"{n}{'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
+
+
 def summarize(entries):
     """Per leader: share, win rate, best recent list and the cards most lists play."""
     total = len(entries) or 1
@@ -214,8 +218,8 @@ def summarize(entries):
                      "winRate": round(100 * wins / (wins + losses)) if wins + losses else None,
                      "source": f"Limitless Play online events, last {RECENT_DAYS} days"},
             "deck": {"source": "Limitless Play", "event": best["event"], "date": best["date"],
-                     "format": "online", "placement": (f"{best['placing']} of {best['players']} ({best['wins']}-{best['losses']})" if best["placing"] < 999
-                                   else f"{best['wins']}-{best['losses']} in a {best['players']}-player event"),
+                     "format": "online", "placement": (f"placed {ordinal(best['placing'])} of {best['players']} ({best['wins']}-{best['losses']})"
+                                   if best["placing"] < 999 else f"went {best['wins']}-{best['losses']} in a {best['players']}-player event"),
                      "url": f"{PLAY}/tournament/{best['tid']}/player/{best['player']}/decklist",
                      "cards": best["cards"]},
             "core": [c for c in core if c["pct"] >= 25][:40],

@@ -36,7 +36,7 @@ const Matchups = (() => {
         <b>${esc(l.name)}</b> <span class="meta">${l.id}</span>
         <div class="chips">${chips(l.color)}${l.life ? `<span class="chip">${esc(l.life)} life</span>` : ""}${l.power ? `<span class="chip">${esc(l.power)} power</span>` : ""}</div>
         <p class="mu-effect">${esc(l.effect)}</p>
-        <p class="meta">${d ? `Deck: placed ${esc(d.placement)} at ${esc(d.event)} (${esc(d.date)}) — <a href="${esc(d.url)}" target="_blank" rel="noopener">list</a>`
+        <p class="meta">${d ? `Deck: ${esc(d.placement)} at ${esc(d.event)} (${esc(d.date)}) — <a href="${esc(d.url)}" target="_blank" rel="noopener">list</a>`
           : "No tournament list yet — tips use the cards that support this leader."}${l.meta?.lists
           ? ` · ${l.meta.lists} recent lists (${l.meta.share}% of decks)${l.meta.winRate != null ? `, ${l.meta.winRate}% game wins` : ""}`
           : l.meta ? ` · ${l.meta.share}% of in-person top decks` : ""}</p>

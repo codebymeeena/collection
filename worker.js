@@ -76,7 +76,7 @@ function deckBlock(l, cards) {
   if (l.meta?.lists) out.push(`Meta: ${l.meta.lists} lists (${l.meta.share}% of all decks) in ${l.meta.source}${l.meta.winRate != null ? `, ${l.meta.winRate}% game win rate` : ""}.`);
   else if (l.meta) out.push(`Meta: ${l.meta.share}% of in-person tournament top finishes (Limitless).`);
   if (l.deck) {
-    out.push(`Best recent list: placed ${l.deck.placement} at ${l.deck.event} (${l.deck.date}):`);
+    out.push(`Best recent list (${l.deck.placement} at ${l.deck.event}, ${l.deck.date}):`);
     for (const c of l.deck.cards.filter((c) => c.id !== l.id).slice(0, 35)) out.push("- " + cardLine(c.id, c.count, cards));
   } else {
     out.push("No tournament decklist exists yet for this leader. Cards that support it (likely in the deck):");
