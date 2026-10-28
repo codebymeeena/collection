@@ -182,3 +182,4 @@ body.viewonly .own input { pointer-events: none; }
 .mu-list { columns: 2 260px; padding-left: 18px; font-size: 14px; }
 .mu-decks details + details { margin-top: 10px; }
 @media (max-width: 520px) { .mu-card img { width: 90px; } .chars button { font-size: 13px; } }
+.mu-record { text-align: center; margin: 0; }
