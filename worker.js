@@ -73,13 +73,18 @@ function cardLine(id, count, cards) {
 function deckBlock(l, cards) {
   const out = [`${l.name} (${l.id}) — ${l.color} Leader, ${l.life || "?"} life, ${l.power || "?"} power.`,
     `Leader effect: ${l.effect || "(none)"}`];
-  if (l.meta) out.push(`Meta: ${l.meta.share}% of recent tournament top finishes (Limitless).`);
+  if (l.meta?.lists) out.push(`Meta: ${l.meta.lists} lists (${l.meta.share}% of all decks) in ${l.meta.source}${l.meta.winRate != null ? `, ${l.meta.winRate}% game win rate` : ""}.`);
+  else if (l.meta) out.push(`Meta: ${l.meta.share}% of in-person tournament top finishes (Limitless).`);
   if (l.deck) {
-    out.push(`Most recent tournament list: ${l.deck.placement} at ${l.deck.event} (${l.deck.date}, ${l.deck.format} format):`);
+    out.push(`Best recent list: placed ${l.deck.placement} at ${l.deck.event} (${l.deck.date}):`);
     for (const c of l.deck.cards.filter((c) => c.id !== l.id).slice(0, 35)) out.push("- " + cardLine(c.id, c.count, cards));
   } else {
     out.push("No tournament decklist exists yet for this leader. Cards that support it (likely in the deck):");
     for (const c of (l.support || []).slice(0, 25)) out.push("- " + cardLine(c.id, null, cards));
+  }
+  if (l.core?.length) {
+    out.push(`Cards most ${l.name} lists play (share of lists, average copies):`);
+    out.push(l.core.slice(0, 25).map((c) => `${cards[c.id]?.name || c.id} (${c.pct}%, ${c.avg})`).join("; "));
   }
   return out.join("\n");
 }
@@ -99,6 +104,12 @@ async function tips(url, env) {
   if (hit) return json({ text: hit.text, cached: true, created: hit.created });
 
   const today = new Date().toISOString().slice(0, 10);
+  const rec = meta.matchups?.[`${me}|${vs}`];
+  const record = rec && rec[0] + rec[1]
+    ? `Real recent results for this exact matchup (online events, last ${meta.recentDays} days): ${a.name} won ${rec[0]}, lost ${rec[1]}` +
+      `${rec[2] ? `, drew ${rec[2]}` : ""} (${Math.round((100 * rec[0]) / (rec[0] + rec[1]))}% win rate over ${rec[0] + rec[1]} games` +
+      `${rec[0] + rec[1] < 10 ? " — small sample" : ""}).`
+    : "No recorded games between these two leaders yet.";
   const messages = [
     { role: "system", content:
       "You are an expert One Piece Card Game (Bandai TCG) coach. Give practical, specific matchup advice. " +
@@ -106,10 +117,10 @@ async function tips(url, env) {
       "Refer to cards by name. If the data isn't enough to be sure about something, say so briefly. " +
       "Write in clear, simple English for a player who already knows the rules." },
     { role: "user", content:
-      `Today is ${today}. Newest tournament decklist available: ${meta.newestList || "unknown"} — newer sets may have shifted the meta.\n\n` +
+      `Today is ${today}. Newest tournament data: ${meta.newestList || "unknown"}.\n${record}\n\n` +
       `I AM PLAYING:\n${deckBlock(a, meta.cards)}\n\nMY OPPONENT IS PLAYING:\n${deckBlock(b, meta.cards)}\n\n` +
       "Write matchup tips for ME. Use exactly these markdown sections:\n" +
-      "## Matchup overview\n(who is favoured and why, 2-3 sentences)\n" +
+      "## Matchup overview\n(who is favoured and why, 2-3 sentences; use the real results if there are enough games)\n" +
       "## What their deck wants to do\n" +
       "## Their key cards to watch\n(bullets: card name — why it matters — how to play around it)\n" +
       "## Mulligan: what to keep\n" +

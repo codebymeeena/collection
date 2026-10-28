@@ -22,7 +22,7 @@ const Matchups = (() => {
     const words = filter.toLowerCase().split(/\s+/).filter(Boolean);
     const hits = sorted().filter((l) => words.every((w) => `${l.name} ${l.id} ${l.color}`.toLowerCase().includes(w)));
     if (!hits.length) return `<option value="">No leader matches “${esc(filter)}”</option>`;
-    return hits.map((l) => `<option value="${l.id}" ${l.id === selected ? "selected" : ""}>${esc(l.name)} · ${esc(l.color)} · ${l.id}${l.meta ? ` · ${l.meta.share}% of meta` : ""}</option>`)
+    return hits.map((l) => `<option value="${l.id}" ${l.id === selected ? "selected" : ""}>${esc(l.name)} · ${esc(l.color)} · ${l.id}${l.meta ? ` · ${l.meta.share}% of meta` : ""}${l.meta?.winRate != null ? ` · ${l.meta.winRate}% wins` : ""}</option>`)
       .join("");
   }
 
@@ -36,16 +36,20 @@ const Matchups = (() => {
         <b>${esc(l.name)}</b> <span class="meta">${l.id}</span>
         <div class="chips">${chips(l.color)}${l.life ? `<span class="chip">${esc(l.life)} life</span>` : ""}${l.power ? `<span class="chip">${esc(l.power)} power</span>` : ""}</div>
         <p class="mu-effect">${esc(l.effect)}</p>
-        <p class="meta">${d ? `Deck: ${esc(d.placement)} at ${esc(d.event)} (${esc(d.date)}) — <a href="${esc(d.url)}" target="_blank" rel="noopener">list</a>`
-          : "No tournament list yet — tips use the cards that support this leader."}${l.meta ? ` · ${l.meta.share}% of recent top decks` : ""}</p>
+        <p class="meta">${d ? `Deck: placed ${esc(d.placement)} at ${esc(d.event)} (${esc(d.date)}) — <a href="${esc(d.url)}" target="_blank" rel="noopener">list</a>`
+          : "No tournament list yet — tips use the cards that support this leader."}${l.meta?.lists
+          ? ` · ${l.meta.lists} recent lists (${l.meta.share}% of decks)${l.meta.winRate != null ? `, ${l.meta.winRate}% game wins` : ""}`
+          : l.meta ? ` · ${l.meta.share}% of in-person top decks` : ""}</p>
       </div>`;
   }
 
   function deckList(l) {
     const list = l.deck ? l.deck.cards.filter((c) => c.id !== l.id) : (l.support || []);
+    const core = l.core?.length ? `<p class="meta">Most-played across recent lists: ${l.core.slice(0, 12)
+      .map((c) => `${esc(meta.cards[c.id]?.name || c.id)} ${c.pct}%`).join(", ")}</p>` : "";
     return `<details><summary>${esc(l.name)}'s ${l.deck ? "decklist" : "supporting cards"} (${list.length})</summary><ul class="mu-list">${list
       .map((c) => { const t = meta.cards[c.id] || {}; return `<li title="${esc(t.effect || "")}">${c.count ? `<b>${c.count}×</b> ` : ""}${esc(t.name || c.id)} <span class="meta">${c.id}${t.cost ? ` · cost ${t.cost}` : ""}</span></li>`; })
-      .join("")}</ul></details>`;
+      .join("")}</ul>${core}</details>`;
   }
 
   // Tiny markdown: ## headings, - bullets, **bold**, paragraphs.
@@ -73,6 +77,11 @@ const Matchups = (() => {
       $(`#mu-${side}-card`).innerHTML = card(side);
     }
     $("#mu-go").disabled = !(leader(picks.me) && leader(picks.vs));
+    const rec = meta.matchups?.[`${picks.me}|${picks.vs}`];
+    $("#mu-record").innerHTML = rec && rec[0] + rec[1]
+      ? `Recent online results, ${esc(leader(picks.me).name)} vs ${esc(leader(picks.vs).name)}: <b>${rec[0]}W – ${rec[1]}L${rec[2] ? ` – ${rec[2]}D` : ""}</b>
+         (${Math.round((100 * rec[0]) / (rec[0] + rec[1]))}% wins${rec[0] + rec[1] < 10 ? ", small sample" : ""})`
+      : leader(picks.me) && leader(picks.vs) ? "No recorded games between these two leaders in the last month." : "";
   }
 
   async function go() {
@@ -112,6 +121,7 @@ const Matchups = (() => {
               <div class="mu-card" id="mu-${side}-card"></div>
             </div>`).join("")}
         </div>
+        <p class="mu-record" id="mu-record"></p>
         <button class="primary mu-go" id="mu-go">Get tips</button>
         <div id="mu-out"></div>
       </main>`;
@@ -139,7 +149,7 @@ const Matchups = (() => {
         }
         picks.me ||= sorted()[0]?.id;
         picks.vs ||= sorted()[1]?.id;
-        $("#mu-asof").textContent = `${meta.leaders.length} leaders · decklists from Limitless (newest: ${meta.newestList || "—"}) · data updated ${new Date(meta.updated).toLocaleDateString()}`;
+        $("#mu-asof").textContent = `${meta.leaders.length} leaders · decklists and results from Limitless online events (last ${meta.recentDays || 30} days, newest ${meta.newestList || "—"}) · updated ${new Date(meta.updated).toLocaleDateString()}`;
       }
       render();
     },
