@@ -3,11 +3,14 @@
 //   PUT /api/sync          header X-Sync-Code: <code>   body: JSON   -> save
 //   GET /api/sync          header X-Sync-Code: <code>                -> load
 //   GET /api/view/<viewId>                                           -> load, read-only
+//   GET /api/tips?me=<leader id>&vs=<leader id>                      -> AI matchup tips (Workers AI)
 //
 // The sync code is a long random secret made on the first device. Rows are stored under
 // SHA-256(code); that hash doubles as the view-only id, so a share link can read but never write.
 
 const MAX_BYTES = 1_000_000;
+const MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
+const LEADER_ID = /^[A-Z]{1,4}\d{0,2}-\d{3}$/;
 
 async function sha256(text) {
   const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
@@ -21,6 +24,7 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (!url.pathname.startsWith("/api/")) return env.ASSETS.fetch(request);
+    if (url.pathname === "/api/tips" && request.method === "GET") return tips(url, env);
 
     await env.DB.prepare(
       "CREATE TABLE IF NOT EXISTS sync (id TEXT PRIMARY KEY, data TEXT NOT NULL, updated INTEGER NOT NULL)"
@@ -55,3 +59,75 @@ export default {
     return json({ error: "not found" }, 404);
   },
 };
+
+// ---------- Matchup tips ----------
+
+function cardLine(id, count, cards) {
+  const c = cards[id];
+  if (!c) return `${count ? count + "x " : ""}${id}`;
+  const stats = [c.type, c.color, c.cost && `cost ${c.cost}`, c.power && `${c.power} power`, c.counter && `+${c.counter} counter`]
+    .filter(Boolean).join(", ");
+  return `${count ? count + "x " : ""}${c.name} (${id}) [${stats}]${c.effect ? " — " + c.effect.slice(0, 260) : ""}`;
+}
+
+function deckBlock(l, cards) {
+  const out = [`${l.name} (${l.id}) — ${l.color} Leader, ${l.life || "?"} life, ${l.power || "?"} power.`,
+    `Leader effect: ${l.effect || "(none)"}`];
+  if (l.meta) out.push(`Meta: ${l.meta.share}% of recent tournament top finishes (Limitless).`);
+  if (l.deck) {
+    out.push(`Most recent tournament list: ${l.deck.placement} at ${l.deck.event} (${l.deck.date}, ${l.deck.format} format):`);
+    for (const c of l.deck.cards.filter((c) => c.id !== l.id).slice(0, 35)) out.push("- " + cardLine(c.id, c.count, cards));
+  } else {
+    out.push("No tournament decklist exists yet for this leader. Cards that support it (likely in the deck):");
+    for (const c of (l.support || []).slice(0, 25)) out.push("- " + cardLine(c.id, null, cards));
+  }
+  return out.join("\n");
+}
+
+async function tips(url, env) {
+  const me = url.searchParams.get("me") || "";
+  const vs = url.searchParams.get("vs") || "";
+  if (!LEADER_ID.test(me) || !LEADER_ID.test(vs)) return json({ error: "pick two leaders" }, 400);
+  const meta = await env.ASSETS.fetch(new Request(new URL("/data/meta.json", url))).then((r) => r.json());
+  const leaders = Object.fromEntries(meta.leaders.map((l) => [l.id, l]));
+  const a = leaders[me], b = leaders[vs];
+  if (!a || !b) return json({ error: "unknown leader" }, 404);
+
+  await env.DB.prepare("CREATE TABLE IF NOT EXISTS tips (key TEXT PRIMARY KEY, text TEXT NOT NULL, created INTEGER NOT NULL)").run();
+  const key = `${me}|${vs}|${meta.updated}`;
+  const hit = await env.DB.prepare("SELECT text, created FROM tips WHERE key = ?").bind(key).first();
+  if (hit) return json({ text: hit.text, cached: true, created: hit.created });
+
+  const today = new Date().toISOString().slice(0, 10);
+  const messages = [
+    { role: "system", content:
+      "You are an expert One Piece Card Game (Bandai TCG) coach. Give practical, specific matchup advice. " +
+      "Base every statement about a card ONLY on the card text given to you; never invent cards, effects or numbers. " +
+      "Refer to cards by name. If the data isn't enough to be sure about something, say so briefly. " +
+      "Write in clear, simple English for a player who already knows the rules." },
+    { role: "user", content:
+      `Today is ${today}. Newest tournament decklist available: ${meta.newestList || "unknown"} — newer sets may have shifted the meta.\n\n` +
+      `I AM PLAYING:\n${deckBlock(a, meta.cards)}\n\nMY OPPONENT IS PLAYING:\n${deckBlock(b, meta.cards)}\n\n` +
+      "Write matchup tips for ME. Use exactly these markdown sections:\n" +
+      "## Matchup overview\n(who is favoured and why, 2-3 sentences)\n" +
+      "## What their deck wants to do\n" +
+      "## Their key cards to watch\n(bullets: card name — why it matters — how to play around it)\n" +
+      "## Mulligan: what to keep\n" +
+      "## Game plan\n(early game, mid game, closing out)\n" +
+      "## Key plays to win\n(5-8 concrete bullets using my cards)\n" +
+      "## Mistakes to avoid\n" +
+      "Keep it under 650 words." },
+  ];
+  let text;
+  try {
+    const out = await env.AI.run(MODEL, { messages, max_tokens: 1500, temperature: 0.4 });
+    text = (out.response || "").trim();
+  } catch (e) {
+    const limit = /limit|quota|429|neuron/i.test(String(e.message || e));
+    return json({ error: limit ? "The free daily AI limit has been used up — try again tomorrow." : `The AI didn't answer (${e.message || e}).` },
+      limit ? 429 : 502);
+  }
+  if (!text) return json({ error: "The AI returned an empty answer — try again." }, 502);
+  await env.DB.prepare("INSERT OR REPLACE INTO tips (key, text, created) VALUES (?, ?, ?)").bind(key, text, Date.now()).run();
+  return json({ text, cached: false, created: Date.now() });
+}

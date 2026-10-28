@@ -80,6 +80,7 @@ async function init() {
   $("#chars").innerHTML = state.chars
     .map((c) => `<button data-char="${esc(c.key)}" role="tab">${esc(c.label)}<span class="count"></span></button>`).join("") +
     `<button data-char="business" role="tab">Binder Business</button>` +
+    `<button data-char="matchups" role="tab">Matchup Tips</button>` +
     `<button type="button" id="syncBtn" class="sync-btn" title="Sync & share" aria-label="Sync and share">☁</button>`;
   $("#syncBtn").addEventListener("click", () => Sync.open());
   // Card counts on the tabs (loads each tab's list in the background).
@@ -104,22 +105,24 @@ async function init() {
     } catch {}
   }
   let start = location.hash.slice(1);
-  if (start !== "business" && !state.chars.some((c) => c.key === start)) {
+  if (!PAGES[start] && !state.chars.some((c) => c.key === start)) {
     try { start = localStorage.getItem(CHAR_KEY); } catch {}
   }
   await route(start);
   await Sync.init();
 }
 
-// "business" opens the binder business tracker; anything else is a card tab.
+// Extra tabs that aren't card lists; anything else is a card tab.
+const PAGES = { business: () => Business.show(), matchups: () => Matchups.show() };
 async function route(key) {
-  const business = key === "business";
-  $("#businessView").hidden = !business;
-  $("#cardsView").hidden = business;
-  if (!business) return showChar(key);
+  const page = PAGES[key];
+  $("#businessView").hidden = key !== "business";
+  $("#matchupsView").hidden = key !== "matchups";
+  $("#cardsView").hidden = !!page;
+  if (!page) return showChar(key);
   try { localStorage.setItem(CHAR_KEY, key); } catch {}
   document.querySelectorAll("#chars button").forEach((b) => b.classList.toggle("active", b.dataset.char === key));
-  Business.show();
+  page();
 }
 
 // Cards added by hand in data/manual.json: override a fetched card with the same id, or add a new one.
