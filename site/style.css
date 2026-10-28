@@ -161,3 +161,24 @@ summary { cursor: pointer; color: var(--blue); }
 body.viewonly .own button, body.viewonly .biz-forms, body.viewonly .biz-entry button, body.viewonly .biz-actions .import,
 body.viewonly #import, body.viewonly .import { display: none !important; }
 body.viewonly .own input { pointer-events: none; }
+
+/* Matchup tips */
+.mu-pick { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.mu-pick .panel { display: flex; flex-direction: column; gap: 8px; }
+.mu-pick input, .mu-pick select { font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); width: 100%; }
+.mu-card { display: flex; gap: 12px; align-items: flex-start; }
+.mu-card img { width: 120px; flex: none; border-radius: 8px; aspect-ratio: 5 / 7; object-fit: cover; background: var(--line); }
+.mu-card .chips { margin: 4px 0; }
+.mu-effect { font-size: 13px; margin: 4px 0; }
+.mu-go { font: inherit; font-weight: 700; font-size: 17px; padding: 12px; border-radius: 10px; border: none; cursor: pointer;
+         background: var(--accent); color: var(--accent-ink); }
+.mu-go:disabled { opacity: .5; cursor: default; }
+#mu-out { display: flex; flex-direction: column; gap: 16px; }
+.mu-tips h2 { margin-top: 0; }
+.mu-tips h3 { margin: 18px 0 6px; font-size: 17px; }
+.mu-tips li { margin: 4px 0; }
+.mu-note { margin-top: 16px; }
+.mu-loading { font-weight: 600; }
+.mu-list { columns: 2 260px; padding-left: 18px; font-size: 14px; }
+.mu-decks details + details { margin-top: 10px; }
+@media (max-width: 520px) { .mu-card img { width: 90px; } .chars button { font-size: 13px; } }

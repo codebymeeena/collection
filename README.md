@@ -25,6 +25,16 @@ between devices and **Download CSV** opens in Excel / Google Sheets.
 (☁ → Connect) to keep card counts and binder business entries in sync. ☁ → **Copy share link** gives a
 view-only link for anyone else.
 
+## Matchup Tips tab
+
+Pick your leader and your opponent's; `/api/tips` (in `worker.js`) asks Cloudflare's free Workers AI
+(`@cf/meta/llama-3.3-70b-instruct-fp8-fast`, binding `AI`) for tips, giving it both leaders' real effects
+and their newest tournament decklists with full card text. Answers are saved in D1, so a repeated
+matchup is instant and free. `scripts/fetch_meta.py` (workflow "Update matchup data", Mondays and
+Thursdays) writes `site/data/meta.json`: every English leader from tcgcsv.com, meta share and the best
+finish at each leader's newest event from onepiece.limitlesstcg.com, and, for leaders with no
+tournament list yet, the cards that support them.
+
 ## How it works
 
 - `scripts/fetch_cards.py` pulls the card list, pictures and TCGplayer prices from
