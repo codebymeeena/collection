@@ -198,7 +198,9 @@ def summarize(entries):
     for lid, es in by_leader.items():
         wins = sum(e["wins"] for e in es)
         losses = sum(e["losses"] for e in es)
-        best = max(es, key=lambda e: (e["wins"] - e["losses"], -e["placing"] / max(e["players"], 1), e["date"]))
+        # Best record among the last two weeks' lists (older ones only if there are none).
+        fresh = time.strftime("%Y-%m-%d", time.gmtime(time.time() - 14 * 86400))
+        best = max(es, key=lambda e: (e["date"] >= fresh, e["wins"] - e["losses"], -e["placing"] / max(e["players"], 1), e["date"]))
         usage = {}
         for e in es:
             for c in e["cards"]:
