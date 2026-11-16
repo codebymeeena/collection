@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T10:09+00:00",
+ "updated": "2026-11-16T19:37+00:00",
  "cards": [
   {
    "productId": 712744,
@@ -30,9 +30,9 @@
    "id": "712744",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 8.78,
-   "tcgLow": 6.89,
-   "tcgMid": 12.99,
+   "tcgMarket": 9.51,
+   "tcgLow": 8.2,
+   "tcgMid": 11.78,
    "soldAnyFinish": false
   },
   {
@@ -67,6 +67,16 @@
     "psa10": null,
     "volume": "1 sale per week",
     "recentSales": [
+     {
+      "date": "2026-11-11",
+      "price": 0.34,
+      "title": "Roronoa Zoro (Tournament Pack 2025 Vol. 3) #EB02-019 Near Mint English Tournament Pack Vol. 3"
+     },
+     {
+      "date": "2026-11-06",
+      "price": 0.2,
+      "title": "Roronoa Zoro (Tournament Pack 2025 Vol. 3) #EB02-019 Near Mint English Tournament Pack Vol. 3"
+     },
      {
       "date": "2026-10-25",
       "price": 0.28,
@@ -106,25 +116,15 @@
       "date": "2026-10-08",
       "price": 0.23,
       "title": "Roronoa Zoro (Tournament Pack 2025 Vol. 3) #EB02-019 Near Mint English Tournament Pack Vol. 3"
-     },
-     {
-      "date": "2026-10-07",
-      "price": 0.35,
-      "title": "Roronoa Zoro (Tournament Pack 2025 Vol. 3) #EB02-019 Near Mint English Tournament Pack Vol. 3"
-     },
-     {
-      "date": "2026-10-06",
-      "price": 0.25,
-      "title": "Roronoa Zoro (Tournament Pack 2025 Vol. 3) #EB02-019 Near Mint English Tournament Pack Vol. 3"
      }
     ]
    },
    "id": "641202",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.28,
-   "tcgLow": 0.15,
-   "tcgMid": 0.36,
+   "tcgMarket": 0.29,
+   "tcgLow": 0.18,
+   "tcgMid": 0.38,
    "soldAnyFinish": false
   },
   {
@@ -156,9 +156,9 @@
    "id": "641203",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 22.59,
-   "tcgLow": 19.45,
-   "tcgMid": 25.02,
+   "tcgMarket": 22.31,
+   "tcgLow": 18.3,
+   "tcgMid": 23.79,
    "soldAnyFinish": false
   },
   {
@@ -190,9 +190,9 @@
    "id": "485262",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 96.04,
-   "tcgLow": 81.99,
-   "tcgMid": 120.06,
+   "tcgMarket": 94.59,
+   "tcgLow": 70.0,
+   "tcgMid": 101.24,
    "soldAnyFinish": false
   },
   {
@@ -258,14 +258,14 @@
     "title": "Roronoa Zoro [Ultra Deck: The Three Captains] OP01-025",
     "url": "https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-ultra-deck-the-three-captains-op01-025",
     "ungraded": 3.29,
-    "psa10": 90.0,
+    "psa10": 81.78,
     "volume": "1 sale per month",
     "recentSales": []
    },
    "id": "527620",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 1.37,
+   "tcgMarket": 1.43,
    "tcgLow": 1.0,
    "tcgMid": 2.0,
    "soldAnyFinish": false
@@ -298,10 +298,15 @@
    "sold": {
     "title": "Roronoa Zoro [1st Anniversary] OP01-025",
     "url": "https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-1st-anniversary-op01-025",
-    "ungraded": 410.31,
-    "psa10": 877.79,
+    "ungraded": 411.0,
+    "psa10": 805.05,
     "volume": "2 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-11",
+      "price": 372.0,
+      "title": "Roronoa Zoro (English Version 1st Anniversary Set) #OP01-025 Near Mint English 1st Anniversary"
+     },
      {
       "date": "2026-11-03",
       "price": 351.99,
@@ -346,20 +351,15 @@
       "date": "2026-10-13",
       "price": 414.98,
       "title": "Roronoa Zoro (English Version 1st Anniversary Set) #OP01-025 Near Mint English 1st Anniversary"
-     },
-     {
-      "date": "2026-10-10",
-      "price": 426.05,
-      "title": "Roronoa Zoro (English Version 1st Anniversary Set) #OP01-025 Near Mint English 1st Anniversary"
      }
     ]
    },
    "id": "557288",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 578.96,
-   "tcgLow": 370.51,
-   "tcgMid": 578.96,
+   "tcgMarket": 545.1,
+   "tcgLow": 343.17,
+   "tcgMid": 536.92,
    "soldAnyFinish": false
   },
   {
@@ -391,9 +391,9 @@
    "id": "544622",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 13.16,
-   "tcgLow": 13.29,
-   "tcgMid": 19.2,
+   "tcgMarket": 13.34,
+   "tcgLow": 12.99,
+   "tcgMid": 17.94,
    "soldAnyFinish": false
   },
   {
@@ -425,9 +425,9 @@
    "id": "583763",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 78.46,
-   "tcgLow": 62.0,
-   "tcgMid": 73.63,
+   "tcgMarket": 74.56,
+   "tcgLow": 58.0,
+   "tcgMid": 74.69,
    "soldAnyFinish": false
   },
   {
@@ -467,8 +467,8 @@
    "foil": true,
    "finish": "Foil",
    "tcgMarket": 208.92,
-   "tcgLow": 106.3,
-   "tcgMid": 195.99,
+   "tcgLow": 105.99,
+   "tcgMid": 184.16,
    "soldAnyFinish": false
   },
   {
@@ -500,7 +500,7 @@
     "title": "Zoro-Juurou [Championship 25-26 Finalist] OP05-067",
     "url": "https://www.pricecharting.com/game/one-piece-promo/zoro-juurou-championship-25-26-finalist-op05-067",
     "ungraded": null,
-    "psa10": 6650.0,
+    "psa10": 6392.86,
     "volume": "rare",
     "recentSales": []
    },
@@ -540,7 +540,7 @@
    "sold": {
     "title": "Roronoa Zoro [2nd Anniversary] OP06-118",
     "url": "https://www.pricecharting.com/game/one-piece-wings-of-the-captain/roronoa-zoro-2nd-anniversary-op06-118",
-    "ungraded": 150.16,
+    "ungraded": 185.13,
     "psa10": 426.0,
     "volume": "1 sale per week",
     "recentSales": [
@@ -600,8 +600,8 @@
    "foil": true,
    "finish": "Foil",
    "tcgMarket": 150.96,
-   "tcgLow": 115.48,
-   "tcgMid": 171.79,
+   "tcgLow": 110.51,
+   "tcgMid": 150.96,
    "soldAnyFinish": false
   },
   {
@@ -632,10 +632,15 @@
    "sold": {
     "title": "Roronoa Zoro [One Piece Day Dallas] OP07-113",
     "url": "https://www.pricecharting.com/game/one-piece-500-years-in-the-future/roronoa-zoro-one-piece-day-dallas-op07-113",
-    "ungraded": 351.56,
-    "psa10": 675.0,
+    "ungraded": 333.03,
+    "psa10": 665.0,
     "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-07",
+      "price": 326.05,
+      "title": "Roronoa Zoro (One Piece Day Dallas 2025) #OP07-113 Near Mint English One Piece Day Dallas"
+     },
      {
       "date": "2026-10-30",
       "price": 340.0,
@@ -680,11 +685,6 @@
       "date": "2026-07-22",
       "price": 564.99,
       "title": "Roronoa Zoro (One Piece Day Dallas 2025) #OP07-113 Near Mint English One Piece Day Dallas"
-     },
-     {
-      "date": "2026-07-17",
-      "price": 500.0,
-      "title": "Roronoa Zoro (One Piece Day Dallas 2025) #OP07-113 Near Mint English One Piece Day Dallas"
      }
     ]
    },
@@ -692,7 +692,7 @@
    "foil": true,
    "finish": "Foil",
    "tcgMarket": 445.5,
-   "tcgLow": 295.0,
+   "tcgLow": 280.0,
    "tcgMid": 350.0,
    "soldAnyFinish": false
   },
@@ -724,10 +724,20 @@
    "sold": {
     "title": "Roronoa Zoro [Illustration Box Vol. 3] OP07-113",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-illustration-box-vol-3-op07-113",
-    "ungraded": 1.5,
-    "psa10": 45.4,
+    "ungraded": 1.46,
+    "psa10": 40.5,
     "volume": "1 sale per week",
     "recentSales": [
+     {
+      "date": "2026-11-12",
+      "price": 1.5,
+      "title": "Roronoa Zoro (Illustration Box Vol.3) #OP07-113 Near Mint English Illustration Box Vol. 3"
+     },
+     {
+      "date": "2026-11-11",
+      "price": 0.99,
+      "title": "Roronoa Zoro (Illustration Box Vol.3) #OP07-113 Near Mint English Illustration Box Vol. 3"
+     },
      {
       "date": "2026-11-07",
       "price": 1.0,
@@ -767,25 +777,15 @@
       "date": "2026-10-23",
       "price": 1.09,
       "title": "Roronoa Zoro (Illustration Box Vol.3) #OP07-113 Near Mint English Illustration Box Vol. 3"
-     },
-     {
-      "date": "2026-10-22",
-      "price": 2.64,
-      "title": "Roronoa Zoro (Illustration Box Vol.3) #OP07-113 Near Mint English Illustration Box Vol. 3"
-     },
-     {
-      "date": "2026-10-18",
-      "price": 2.45,
-      "title": "Roronoa Zoro (Illustration Box Vol.3) #OP07-113 Near Mint English Illustration Box Vol. 3"
      }
     ]
    },
    "id": "650704",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 1.35,
-   "tcgLow": 0.98,
-   "tcgMid": 2.57,
+   "tcgMarket": 1.29,
+   "tcgLow": 0.94,
+   "tcgMid": 2.39,
    "soldAnyFinish": false
   },
   {
@@ -876,8 +876,8 @@
    "foil": true,
    "finish": "Foil",
    "tcgMarket": 439.68,
-   "tcgLow": 400.0,
-   "tcgMid": 409.69,
+   "tcgLow": 299.99,
+   "tcgMid": 399.99,
    "soldAnyFinish": false
   },
   {
@@ -909,9 +909,9 @@
    "id": "686285",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 30.58,
-   "tcgLow": 23.49,
-   "tcgMid": 33.29,
+   "tcgMarket": 29.97,
+   "tcgLow": 24.66,
+   "tcgMid": 32.54,
    "soldAnyFinish": false
   },
   {
@@ -1017,10 +1017,15 @@
    "sold": {
     "title": "Roronoa Zoro [Welcome Pack Vol. 2] OP09-076",
     "url": "https://www.pricecharting.com/game/one-piece-emperors-in-the-new-world/roronoa-zoro-welcome-pack-vol-2-op09-076",
-    "ungraded": 5.55,
-    "psa10": 71.98,
-    "volume": "1 sale per day",
+    "ungraded": 5.85,
+    "psa10": 71.15,
+    "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-09",
+      "price": 5.85,
+      "title": "Roronoa Zoro (Welcome Pack Vol. 2) #OP09-076 Near Mint English Welcome Pack Vol. 2"
+     },
      {
       "date": "2026-11-08",
       "price": 4.4,
@@ -1065,11 +1070,6 @@
       "date": "2026-10-28",
       "price": 4.0,
       "title": "Roronoa Zoro (Welcome Pack Vol. 2) #OP09-076 Near Mint English Welcome Pack Vol. 2"
-     },
-     {
-      "date": "2026-10-27",
-      "price": 4.75,
-      "title": "Roronoa Zoro (Welcome Pack Vol. 2) #OP09-076 Near Mint English Welcome Pack Vol. 2"
      }
     ]
    },
@@ -1077,8 +1077,8 @@
    "foil": false,
    "finish": "Non-foil",
    "tcgMarket": 5.28,
-   "tcgLow": 4.9,
-   "tcgMid": 6.99,
+   "tcgLow": 4.19,
+   "tcgMid": 6.81,
    "soldAnyFinish": false
   },
   {
@@ -1110,9 +1110,9 @@
    "id": "641240",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 12.01,
-   "tcgLow": 11.01,
-   "tcgMid": 15.99,
+   "tcgMarket": 12.07,
+   "tcgLow": 10.0,
+   "tcgMid": 15.29,
    "soldAnyFinish": false
   },
   {
@@ -1143,10 +1143,25 @@
    "sold": {
     "title": "Roronoa Zoro [Set Sail Event] OP10-113",
     "url": "https://www.pricecharting.com/game/one-piece-learn-together-deck-set/roronoa-zoro-set-sail-event-op10-113",
-    "ungraded": 20.76,
-    "psa10": 121.3,
+    "ungraded": 20.35,
+    "psa10": 122.24,
     "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-12",
+      "price": 17.65,
+      "title": "Roronoa Zoro (Learn Together Deck Set - Set Sail Event) #OP10-113 Near Mint English Set Sail Event"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 19.15,
+      "title": "Roronoa Zoro (Learn Together Deck Set - Set Sail Event) #OP10-113 Near Mint English Set Sail Event"
+     },
+     {
+      "date": "2026-11-07",
+      "price": 18.16,
+      "title": "Roronoa Zoro (Learn Together Deck Set - Set Sail Event) #OP10-113 Near Mint English Set Sail Event"
+     },
      {
       "date": "2026-11-05",
       "price": 18.16,
@@ -1181,30 +1196,15 @@
       "date": "2026-10-20",
       "price": 20.35,
       "title": "Roronoa Zoro (Learn Together Deck Set - Set Sail Event) #OP10-113 Near Mint English Set Sail Event"
-     },
-     {
-      "date": "2026-10-17",
-      "price": 20.35,
-      "title": "Roronoa Zoro (Learn Together Deck Set - Set Sail Event) #OP10-113 Near Mint English Set Sail Event"
-     },
-     {
-      "date": "2026-10-16",
-      "price": 20.35,
-      "title": "Roronoa Zoro (Learn Together Deck Set - Set Sail Event) #OP10-113 Near Mint English Set Sail Event"
-     },
-     {
-      "date": "2026-10-15",
-      "price": 20.76,
-      "title": "Roronoa Zoro (Learn Together Deck Set - Set Sail Event) #OP10-113 Near Mint English Set Sail Event"
      }
     ]
    },
    "id": "656609",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 20.5,
-   "tcgLow": 17.9,
-   "tcgMid": 22.22,
+   "tcgMarket": 20.36,
+   "tcgLow": 17.65,
+   "tcgMid": 21.39,
    "soldAnyFinish": false
   },
   {
@@ -1236,7 +1236,7 @@
     "title": "Roronoa Zoro [Serial] OP12-020",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-serial-op12-020",
     "ungraded": null,
-    "psa10": 23726.81,
+    "psa10": 22655.0,
     "volume": "rare",
     "recentSales": []
    },
@@ -1284,9 +1284,9 @@
    "id": "657221",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 448.25,
-   "tcgLow": 369.99,
-   "tcgMid": 499.0,
+   "tcgMarket": 461.25,
+   "tcgLow": 299.99,
+   "tcgMid": 452.99,
    "soldAnyFinish": false
   },
   {
@@ -1317,10 +1317,30 @@
    "sold": {
     "title": "Roronoa Zoro [Best Selection] OP13-037",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-best-selection-op13-037",
-    "ungraded": 16.78,
+    "ungraded": 15.61,
     "psa10": 77.0,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-15",
+      "price": 14.29,
+      "title": "Roronoa Zoro (Premium Card Collection -Best Selection Vol. 6-) #OP13-037 Near Mint English Best Selection"
+     },
+     {
+      "date": "2026-11-14",
+      "price": 14.25,
+      "title": "Roronoa Zoro (Premium Card Collection -Best Selection Vol. 6-) #OP13-037 Near Mint English Best Selection"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 14.35,
+      "title": "Roronoa Zoro (Premium Card Collection -Best Selection Vol. 6-) #OP13-037 Near Mint English Best Selection"
+     },
+     {
+      "date": "2026-11-07",
+      "price": 14.0,
+      "title": "Roronoa Zoro (Premium Card Collection -Best Selection Vol. 6-) #OP13-037 Near Mint English Best Selection"
+     },
      {
       "date": "2026-11-05",
       "price": 14.0,
@@ -1350,35 +1370,15 @@
       "date": "2026-10-23",
       "price": 16.24,
       "title": "Roronoa Zoro (Premium Card Collection -Best Selection Vol. 6-) #OP13-037 Near Mint English Best Selection"
-     },
-     {
-      "date": "2026-10-22",
-      "price": 16.84,
-      "title": "Roronoa Zoro (Premium Card Collection -Best Selection Vol. 6-) #OP13-037 Near Mint English Best Selection"
-     },
-     {
-      "date": "2026-10-20",
-      "price": 14.01,
-      "title": "Roronoa Zoro (Premium Card Collection -Best Selection Vol. 6-) #OP13-037 Near Mint English Best Selection"
-     },
-     {
-      "date": "2026-10-19",
-      "price": 15.5,
-      "title": "Roronoa Zoro (Premium Card Collection -Best Selection Vol. 6-) #OP13-037 Near Mint English Best Selection"
-     },
-     {
-      "date": "2026-10-18",
-      "price": 16.78,
-      "title": "Roronoa Zoro (Premium Card Collection -Best Selection Vol. 6-) #OP13-037 Near Mint English Best Selection"
      }
     ]
    },
    "id": "694877",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 13.7,
-   "tcgLow": 13.7,
-   "tcgMid": 18.63,
+   "tcgMarket": 14.09,
+   "tcgLow": 13.39,
+   "tcgMid": 19.02,
    "soldAnyFinish": false
   },
   {
@@ -1412,7 +1412,7 @@
    "finish": "Foil",
    "tcgMarket": null,
    "tcgLow": 1600.0,
-   "tcgMid": 2448.99,
+   "tcgMid": 2398.99,
    "soldAnyFinish": false
   },
   {
@@ -1444,9 +1444,9 @@
    "id": "539176",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 38.22,
-   "tcgLow": 20.15,
-   "tcgMid": 43.0,
+   "tcgMarket": 37.35,
+   "tcgLow": 18.64,
+   "tcgMid": 41.99,
    "soldAnyFinish": false
   },
   {
@@ -1478,9 +1478,9 @@
    "id": "579985",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 167.25,
-   "tcgLow": 87.97,
-   "tcgMid": 129.48,
+   "tcgMarket": 147.88,
+   "tcgLow": 69.99,
+   "tcgMid": 113.95,
    "soldAnyFinish": false
   },
   {
@@ -1546,9 +1546,9 @@
    "id": "537438",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 2.83,
-   "tcgLow": 2.48,
-   "tcgMid": 4.55,
+   "tcgMarket": 2.85,
+   "tcgLow": 2.0,
+   "tcgMid": 4.53,
    "soldAnyFinish": false
   },
   {
@@ -1581,8 +1581,8 @@
    "foil": true,
    "finish": "Foil",
    "tcgMarket": 393.81,
-   "tcgLow": 268.24,
-   "tcgMid": 319.95,
+   "tcgLow": 250.0,
+   "tcgMid": 319.9,
    "soldAnyFinish": false
   },
   {
@@ -1614,9 +1614,9 @@
    "id": "588178",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 8.87,
-   "tcgLow": 5.24,
-   "tcgMid": 8.01,
+   "tcgMarket": 7.88,
+   "tcgLow": 4.75,
+   "tcgMid": 7.89,
    "soldAnyFinish": false
   },
   {
@@ -1649,8 +1649,8 @@
    "foil": true,
    "finish": "Foil",
    "tcgMarket": 101.73,
-   "tcgLow": 95.98,
-   "tcgMid": 125.98,
+   "tcgLow": 95.48,
+   "tcgMid": 111.99,
    "soldAnyFinish": false
   },
   {
@@ -1681,10 +1681,15 @@
    "sold": {
     "title": "Roronoa Zoro [Sealed Battle Kit] P-056",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-sealed-battle-kit-p-056",
-    "ungraded": 5.93,
-    "psa10": 33.75,
+    "ungraded": 4.99,
+    "psa10": 22.5,
     "volume": "1 sale per month",
     "recentSales": [
+     {
+      "date": "2026-11-09",
+      "price": 4.0,
+      "title": "Roronoa Zoro (Sealed Battle Kit Vol. 1) #P-056 Near Mint English Sealed Battle Kit"
+     },
      {
       "date": "2026-11-05",
       "price": 4.0,
@@ -1729,18 +1734,13 @@
       "date": "2026-10-01",
       "price": 3.47,
       "title": "Roronoa Zoro (Sealed Battle Kit Vol. 1) #P-056 Near Mint English Sealed Battle Kit"
-     },
-     {
-      "date": "2026-09-30",
-      "price": 3.99,
-      "title": "Roronoa Zoro (Sealed Battle Kit Vol. 1) #P-056 Near Mint English Sealed Battle Kit"
      }
     ]
    },
    "id": "518703",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 5.94,
+   "tcgMarket": 5.85,
    "tcgLow": 4.0,
    "tcgMid": 6.43,
    "soldAnyFinish": false
@@ -1774,9 +1774,9 @@
    "id": "546718",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 17.81,
-   "tcgLow": 15.5,
-   "tcgMid": 21.74,
+   "tcgMarket": 17.6,
+   "tcgLow": 15.62,
+   "tcgMid": 21.34,
    "soldAnyFinish": false
   },
   {
@@ -1807,8 +1807,8 @@
    "sold": {
     "title": "Roronoa Zoro P-114",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-p-114",
-    "ungraded": 83.98,
-    "psa10": 202.0,
+    "ungraded": 83.99,
+    "psa10": 182.04,
     "volume": "1 sale per day",
     "recentSales": [
      {
@@ -1866,9 +1866,9 @@
    "id": "683972",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 89.94,
-   "tcgLow": 76.74,
-   "tcgMid": 123.0,
+   "tcgMarket": 86.41,
+   "tcgLow": 75.99,
+   "tcgMid": 113.0,
    "soldAnyFinish": false
   },
   {
@@ -1934,9 +1934,9 @@
    "id": "693119",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 2.69,
-   "tcgLow": 1.98,
-   "tcgMid": 3.76,
+   "tcgMarket": 2.06,
+   "tcgLow": 1.5,
+   "tcgMid": 3.0,
    "soldAnyFinish": false
   },
   {
@@ -1968,9 +1968,9 @@
    "id": "707252",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 39.05,
-   "tcgLow": 36.49,
-   "tcgMid": 43.0,
+   "tcgMarket": 34.09,
+   "tcgLow": 28.0,
+   "tcgMid": 41.35,
    "soldAnyFinish": false
   },
   {
@@ -2002,9 +2002,9 @@
    "id": "419388",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 130.44,
-   "tcgLow": 51.45,
-   "tcgMid": 87.5,
+   "tcgMarket": 125.82,
+   "tcgLow": 51.44,
+   "tcgMid": 73.5,
    "soldAnyFinish": false
   },
   {
@@ -2035,7 +2035,7 @@
    "sold": {
     "title": "Roronoa Zoro [Treasure Cup] ST01-013",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-1-straw-hat-crew/roronoa-zoro-treasure-cup-st01-013",
-    "ungraded": 1816.49,
+    "ungraded": 1815.92,
     "psa10": 3225.0,
     "volume": "4 sales per year",
     "recentSales": [
@@ -2161,9 +2161,9 @@
    "id": "504480",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 25.28,
-   "tcgLow": 16.22,
-   "tcgMid": 27.0,
+   "tcgMarket": 23.26,
+   "tcgLow": 20.98,
+   "tcgMid": 26.2,
    "soldAnyFinish": false
   },
   {
@@ -2194,10 +2194,15 @@
    "sold": {
     "title": "Roronoa Zoro [Gift Collection] ST01-013",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-1-straw-hat-crew/roronoa-zoro-gift-collection-st01-013",
-    "ungraded": 29.25,
-    "psa10": 114.69,
+    "ungraded": 28.93,
+    "psa10": 111.25,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-07",
+      "price": 23.94,
+      "title": "Roronoa Zoro (Gift Collection 2023) #ST01-013 Near Mint English Gift Collection"
+     },
      {
       "date": "2026-11-06",
       "price": 23.94,
@@ -2242,20 +2247,15 @@
       "date": "2026-10-19",
       "price": 28.35,
       "title": "Roronoa Zoro (Gift Collection 2023) #ST01-013 Near Mint English Gift Collection"
-     },
-     {
-      "date": "2026-10-17",
-      "price": 28.56,
-      "title": "Roronoa Zoro (Gift Collection 2023) #ST01-013 Near Mint English Gift Collection"
      }
     ]
    },
    "id": "523812",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 25.3,
-   "tcgLow": 22.8,
-   "tcgMid": 29.97,
+   "tcgMarket": 25.04,
+   "tcgLow": 20.99,
+   "tcgMid": 28.27,
    "soldAnyFinish": false
   },
   {
@@ -2354,8 +2354,8 @@
    "sold": {
     "title": "Roronoa Zoro [Championship 25-26 2nd Place] ST21-015",
     "url": "https://www.pricecharting.com/game/one-piece-promo/roronoa-zoro-championship-25-26-2nd-place-st21-015",
-    "ungraded": 177.42,
-    "psa10": 29130.63,
+    "ungraded": 153.27,
+    "psa10": 225.5,
     "volume": "1 sale per month",
     "recentSales": []
    },
@@ -2429,10 +2429,30 @@
    "sold": {
     "title": "Roronoa Zoro OP01-001",
     "url": "https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-op01-001",
-    "ungraded": 2.59,
-    "psa10": 162.5,
-    "volume": "1 sale per day",
+    "ungraded": 2.18,
+    "psa10": 178.25,
+    "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-12",
+      "price": 1.95,
+      "title": "Roronoa Zoro (001) #OP01-001 Near Mint English"
+     },
+     {
+      "date": "2026-11-11",
+      "price": 2.21,
+      "title": "Roronoa Zoro (001) #OP01-001 Near Mint English"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 2.53,
+      "title": "Roronoa Zoro (001) #OP01-001 Near Mint English"
+     },
+     {
+      "date": "2026-11-08",
+      "price": 2.06,
+      "title": "Roronoa Zoro (001) #OP01-001 Near Mint English"
+     },
      {
       "date": "2026-11-07",
       "price": 3.03,
@@ -2462,35 +2482,15 @@
       "date": "2026-10-29",
       "price": 2.05,
       "title": "Roronoa Zoro (001) #OP01-001 Near Mint English"
-     },
-     {
-      "date": "2026-10-28",
-      "price": 2.01,
-      "title": "Roronoa Zoro (001) #OP01-001 Near Mint English"
-     },
-     {
-      "date": "2026-10-22",
-      "price": 1.75,
-      "title": "Roronoa Zoro (001) #OP01-001 Near Mint English"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 1.85,
-      "title": "Roronoa Zoro (001) #OP01-001 Near Mint English"
-     },
-     {
-      "date": "2026-10-17",
-      "price": 1.75,
-      "title": "Roronoa Zoro (001) #OP01-001 Near Mint English"
      }
     ]
    },
    "id": "454512",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 2.24,
-   "tcgLow": 1.55,
-   "tcgMid": 3.1,
+   "tcgMarket": 2.2,
+   "tcgLow": 1.57,
+   "tcgMid": 3.25,
    "soldAnyFinish": false
   },
   {
@@ -2521,10 +2521,20 @@
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] OP01-001",
     "url": "https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-alternate-art-op01-001",
-    "ungraded": 367.8,
-    "psa10": 927.17,
+    "ungraded": 416.0,
+    "psa10": 900.04,
     "volume": "2 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-15",
+      "price": 165.0,
+      "title": "Roronoa Zoro (001) (Parallel) #OP01-001 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-08",
+      "price": 165.0,
+      "title": "Roronoa Zoro (001) (Parallel) #OP01-001 Near Mint English Alternate Art"
+     },
      {
       "date": "2026-10-28",
       "price": 165.02,
@@ -2564,25 +2574,15 @@
       "date": "2026-07-12",
       "price": 780.0,
       "title": "Roronoa Zoro (001) (Parallel) #OP01-001 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-07-06",
-      "price": 800.0,
-      "title": "Roronoa Zoro (001) (Parallel) #OP01-001 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-06-30",
-      "price": 568.18,
-      "title": "Roronoa Zoro (001) (Parallel) #OP01-001 Near Mint English Alternate Art"
      }
     ]
    },
    "id": "454513",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 613.61,
-   "tcgLow": 501.29,
-   "tcgMid": 710.0,
+   "tcgMarket": 625.67,
+   "tcgLow": 515.0,
+   "tcgMid": 709.65,
    "soldAnyFinish": false
   },
   {
@@ -2613,7 +2613,7 @@
    "sold": {
     "title": "Roronoa Zoro OP01-025",
     "url": "https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-op01-025",
-    "ungraded": 4.63,
+    "ungraded": 4.21,
     "psa10": 81.0,
     "volume": "1 sale per week",
     "recentSales": [
@@ -2632,9 +2632,9 @@
    "id": "453510",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 2.66,
+   "tcgMarket": 2.71,
    "tcgLow": 2.09,
-   "tcgMid": 3.99,
+   "tcgMid": 3.86,
    "soldAnyFinish": false
   },
   {
@@ -2665,10 +2665,15 @@
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] OP01-025",
     "url": "https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-alternate-art-op01-025",
-    "ungraded": 234.64,
-    "psa10": 511.0,
+    "ungraded": 235.48,
+    "psa10": 545.43,
     "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-06",
+      "price": 217.02,
+      "title": "Roronoa Zoro (025) (Parallel) #OP01-025 Near Mint English Alternate Art"
+     },
      {
       "date": "2026-10-31",
       "price": 230.57,
@@ -2713,20 +2718,15 @@
       "date": "2026-09-23",
       "price": 246.29,
       "title": "Roronoa Zoro (025) (Parallel) #OP01-025 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-09-21",
-      "price": 246.29,
-      "title": "Roronoa Zoro (025) (Parallel) #OP01-025 Near Mint English Alternate Art"
      }
     ]
    },
    "id": "453511",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 224.87,
+   "tcgMarket": 241.21,
    "tcgLow": 180.0,
-   "tcgMid": 248.68,
+   "tcgMid": 249.99,
    "soldAnyFinish": false
   },
   {
@@ -2757,17 +2757,17 @@
    "sold": {
     "title": "Roronoa Zoro ST01-013",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-1-straw-hat-crew/roronoa-zoro-st01-013",
-    "ungraded": 3.62,
-    "psa10": 207.44,
+    "ungraded": 3.56,
+    "psa10": 199.25,
     "volume": "2 sales per week",
     "recentSales": []
    },
    "id": "288242",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 1.57,
-   "tcgLow": 0.8,
-   "tcgMid": 2.08,
+   "tcgMarket": 1.41,
+   "tcgLow": 0.89,
+   "tcgMid": 2.0,
    "soldAnyFinish": false
   },
   {
@@ -2832,10 +2832,25 @@
    "sold": {
     "title": "Roronoa Zoro OP02-043",
     "url": "https://www.pricecharting.com/game/one-piece-paramount-war/roronoa-zoro-op02-043",
-    "ungraded": 0.25,
+    "ungraded": 0.34,
     "psa10": 999.99,
     "volume": "2 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-11",
+      "price": 0.1,
+      "title": "Roronoa Zoro #OP02-043 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.15,
+      "title": "Roronoa Zoro #OP02-043 Near Mint English"
+     },
+     {
+      "date": "2026-11-08",
+      "price": 0.08,
+      "title": "Roronoa Zoro #OP02-043 Near Mint English"
+     },
      {
       "date": "2026-11-05",
       "price": 0.08,
@@ -2869,21 +2884,6 @@
      {
       "date": "2026-10-23",
       "price": 0.16,
-      "title": "Roronoa Zoro #OP02-043 Near Mint English"
-     },
-     {
-      "date": "2026-10-22",
-      "price": 0.14,
-      "title": "Roronoa Zoro #OP02-043 Near Mint English"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 0.25,
-      "title": "Roronoa Zoro #OP02-043 Near Mint English"
-     },
-     {
-      "date": "2026-10-16",
-      "price": 0.18,
       "title": "Roronoa Zoro #OP02-043 Near Mint English"
      }
     ]
@@ -2929,6 +2929,21 @@
     "volume": "2 sales per week",
     "recentSales": [
      {
+      "date": "2026-11-13",
+      "price": 0.3,
+      "title": "Roronoa Zoro #OP04-015 Near Mint English"
+     },
+     {
+      "date": "2026-11-12",
+      "price": 0.35,
+      "title": "Roronoa Zoro #OP04-015 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.15,
+      "title": "Roronoa Zoro #OP04-015 Near Mint English"
+     },
+     {
       "date": "2026-11-08",
       "price": 0.15,
       "title": "Roronoa Zoro #OP04-015 Near Mint English"
@@ -2962,28 +2977,13 @@
       "date": "2026-11-01",
       "price": 0.25,
       "title": "Roronoa Zoro #OP04-015 Near Mint English"
-     },
-     {
-      "date": "2026-10-29",
-      "price": 0.22,
-      "title": "Roronoa Zoro #OP04-015 Near Mint English"
-     },
-     {
-      "date": "2026-10-26",
-      "price": 0.3,
-      "title": "Roronoa Zoro #OP04-015 Near Mint English"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 0.08,
-      "title": "Roronoa Zoro #OP04-015 Near Mint English"
      }
     ]
    },
    "id": "516741",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 0.25,
+   "tcgMarket": 0.24,
    "tcgLow": 0.04,
    "tcgMid": 0.27,
    "soldAnyFinish": false
@@ -3016,8 +3016,8 @@
    "sold": {
     "title": "Zoro-Juurou [Alternate Art] OP05-067",
     "url": "https://www.pricecharting.com/game/one-piece-awakening-of-the-new-era/zoro-juurou-alternate-art-op05-067",
-    "ungraded": 23.14,
-    "psa10": 108.75,
+    "ungraded": 21.32,
+    "psa10": 107.5,
     "volume": "1 sale per day",
     "recentSales": [
      {
@@ -3075,9 +3075,9 @@
    "id": "527665",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 26.62,
-   "tcgLow": 20.5,
-   "tcgMid": 29.99,
+   "tcgMarket": 25.48,
+   "tcgLow": 19.0,
+   "tcgMid": 27.43,
    "soldAnyFinish": false
   },
   {
@@ -3108,10 +3108,20 @@
    "sold": {
     "title": "Zoro-Juurou OP05-067",
     "url": "https://www.pricecharting.com/game/one-piece-awakening-of-the-new-era/zoro-juurou-op05-067",
-    "ungraded": 0.43,
-    "psa10": 379.4,
+    "ungraded": 0.41,
+    "psa10": 335.0,
     "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-11",
+      "price": 0.41,
+      "title": "Zoro-Juurou #OP05-067 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.2,
+      "title": "Zoro-Juurou #OP05-067 Near Mint English"
+     },
      {
       "date": "2026-11-06",
       "price": 0.45,
@@ -3151,25 +3161,15 @@
       "date": "2026-10-12",
       "price": 0.37,
       "title": "Zoro-Juurou #OP05-067 Near Mint English"
-     },
-     {
-      "date": "2026-10-11",
-      "price": 0.5,
-      "title": "Zoro-Juurou #OP05-067 Near Mint English"
-     },
-     {
-      "date": "2026-10-10",
-      "price": 0.36,
-      "title": "Zoro-Juurou #OP05-067 Near Mint English"
      }
     ]
    },
    "id": "528626",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 0.43,
+   "tcgMarket": 0.37,
    "tcgLow": 0.18,
-   "tcgMid": 0.48,
+   "tcgMid": 0.49,
    "soldAnyFinish": false
   },
   {
@@ -3201,9 +3201,9 @@
    "id": "542683",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 4.27,
+   "tcgMarket": 4.3,
    "tcgLow": 3.0,
-   "tcgMid": 5.5,
+   "tcgMid": 5.39,
    "soldAnyFinish": false
   },
   {
@@ -3234,10 +3234,30 @@
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] OP06-118",
     "url": "https://www.pricecharting.com/game/one-piece-wings-of-the-captain/roronoa-zoro-alternate-art-op06-118",
-    "ungraded": 104.49,
-    "psa10": 279.99,
+    "ungraded": 99.59,
+    "psa10": 280.0,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-15",
+      "price": 80.44,
+      "title": "Roronoa Zoro (Alternate Art) #OP06-118 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-14",
+      "price": 82.0,
+      "title": "Roronoa Zoro (Alternate Art) #OP06-118 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 88.0,
+      "title": "Roronoa Zoro (Alternate Art) #OP06-118 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-07",
+      "price": 89.7,
+      "title": "Roronoa Zoro (Alternate Art) #OP06-118 Near Mint English Alternate Art"
+     },
      {
       "date": "2026-11-03",
       "price": 98.98,
@@ -3267,35 +3287,15 @@
       "date": "2026-10-21",
       "price": 104.01,
       "title": "Roronoa Zoro (Alternate Art) #OP06-118 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 104.49,
-      "title": "Roronoa Zoro (Alternate Art) #OP06-118 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-19",
-      "price": 104.73,
-      "title": "Roronoa Zoro (Alternate Art) #OP06-118 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-12",
-      "price": 108.69,
-      "title": "Roronoa Zoro (Alternate Art) #OP06-118 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-11",
-      "price": 114.0,
-      "title": "Roronoa Zoro (Alternate Art) #OP06-118 Near Mint English Alternate Art"
      }
     ]
    },
    "id": "541659",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 116.14,
-   "tcgLow": 83.24,
-   "tcgMid": 109.49,
+   "tcgMarket": 110.39,
+   "tcgLow": 80.44,
+   "tcgMid": 98.99,
    "soldAnyFinish": false
   },
   {
@@ -3327,7 +3327,7 @@
     "title": "Roronoa Zoro [Alternate Art Manga] OP06-118",
     "url": "https://www.pricecharting.com/game/one-piece-wings-of-the-captain/roronoa-zoro-alternate-art-manga-op06-118",
     "ungraded": 2544.86,
-    "psa10": 4225.0,
+    "psa10": 4195.13,
     "volume": "1 sale per week",
     "recentSales": [
      {
@@ -3387,7 +3387,7 @@
    "finish": "Foil",
    "tcgMarket": 2500.0,
    "tcgLow": 2998.41,
-   "tcgMid": 3204.01,
+   "tcgMid": 3177.0,
    "soldAnyFinish": false
   },
   {
@@ -3418,10 +3418,25 @@
    "sold": {
     "title": "Roronoa Zoro OP06-118",
     "url": "https://www.pricecharting.com/game/one-piece-wings-of-the-captain/roronoa-zoro-op06-118",
-    "ungraded": 6.79,
-    "psa10": 56.75,
+    "ungraded": 6.82,
+    "psa10": 55.94,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-11",
+      "price": 5.32,
+      "title": "Roronoa Zoro #OP06-118 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 7.0,
+      "title": "Roronoa Zoro #OP06-118 Near Mint English"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 6.99,
+      "title": "Roronoa Zoro #OP06-118 Near Mint English"
+     },
      {
       "date": "2026-11-06",
       "price": 5.5,
@@ -3456,30 +3471,15 @@
       "date": "2026-10-27",
       "price": 6.0,
       "title": "Roronoa Zoro #OP06-118 Near Mint English"
-     },
-     {
-      "date": "2026-10-26",
-      "price": 9.62,
-      "title": "Roronoa Zoro #OP06-118 Near Mint English"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 7.07,
-      "title": "Roronoa Zoro #OP06-118 Near Mint English"
-     },
-     {
-      "date": "2026-10-22",
-      "price": 6.72,
-      "title": "Roronoa Zoro #OP06-118 Near Mint English"
      }
     ]
    },
    "id": "541661",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 6.56,
-   "tcgLow": 5.99,
-   "tcgMid": 8.33,
+   "tcgMarket": 6.28,
+   "tcgLow": 5.8,
+   "tcgMid": 8.14,
    "soldAnyFinish": false
   },
   {
@@ -3518,9 +3518,9 @@
    "id": "539151",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 9.56,
-   "tcgLow": 8.31,
-   "tcgMid": 11.64,
+   "tcgMarket": 8.88,
+   "tcgLow": 5.24,
+   "tcgMid": 10.95,
    "soldAnyFinish": false
   },
   {
@@ -3577,7 +3577,7 @@
    "finish": "Non-foil",
    "tcgMarket": 0.85,
    "tcgLow": 0.53,
-   "tcgMid": 0.95,
+   "tcgMid": 0.93,
    "soldAnyFinish": false
   },
   {
@@ -3609,9 +3609,9 @@
    "id": "552108",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 19.68,
+   "tcgMarket": 19.4,
    "tcgLow": 13.5,
-   "tcgMid": 21.59,
+   "tcgMid": 25.44,
    "soldAnyFinish": false
   },
   {
@@ -3644,8 +3644,8 @@
    "foil": false,
    "finish": "Non-foil",
    "tcgMarket": 24.16,
-   "tcgLow": 18.53,
-   "tcgMid": 49.0,
+   "tcgLow": 16.99,
+   "tcgMid": 26.61,
    "soldAnyFinish": false
   },
   {
@@ -3684,9 +3684,9 @@
    "id": "545818",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.14,
+   "tcgMarket": 0.16,
    "tcgLow": 0.01,
-   "tcgMid": 0.18,
+   "tcgMid": 0.19,
    "soldAnyFinish": false
   },
   {
@@ -3717,10 +3717,25 @@
    "sold": {
     "title": "Roronoa Zoro OP07-113",
     "url": "https://www.pricecharting.com/game/one-piece-500-years-in-the-future/roronoa-zoro-op07-113",
-    "ungraded": 1.25,
-    "psa10": 97.25,
+    "ungraded": 1.32,
+    "psa10": 90.0,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-12",
+      "price": 0.15,
+      "title": "Roronoa Zoro (113) #OP07-113 Near Mint English"
+     },
+     {
+      "date": "2026-11-11",
+      "price": 1.32,
+      "title": "Roronoa Zoro (113) #OP07-113 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.15,
+      "title": "Roronoa Zoro (113) #OP07-113 Near Mint English"
+     },
      {
       "date": "2026-11-06",
       "price": 0.16,
@@ -3755,30 +3770,15 @@
       "date": "2026-10-30",
       "price": 0.08,
       "title": "Roronoa Zoro (113) #OP07-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-28",
-      "price": 0.15,
-      "title": "Roronoa Zoro (113) #OP07-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-28",
-      "price": 0.2,
-      "title": "Roronoa Zoro (113) #OP07-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-27",
-      "price": 0.15,
-      "title": "Roronoa Zoro (113) #OP07-113 Near Mint English"
      }
     ]
    },
    "id": "545913",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.15,
+   "tcgMarket": 0.19,
    "tcgLow": 0.05,
-   "tcgMid": 0.2,
+   "tcgMid": 0.21,
    "soldAnyFinish": false
   },
   {
@@ -3813,6 +3813,11 @@
     "psa10": null,
     "volume": "2 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-12",
+      "price": 0.1,
+      "title": "Roronoa Zoro #ST14-013 Near Mint English"
+     },
      {
       "date": "2026-11-05",
       "price": 0.15,
@@ -3857,18 +3862,13 @@
       "date": "2026-10-15",
       "price": 0.17,
       "title": "Roronoa Zoro #ST14-013 Near Mint English"
-     },
-     {
-      "date": "2026-10-05",
-      "price": 0.1,
-      "title": "Roronoa Zoro #ST14-013 Near Mint English"
      }
     ]
    },
    "id": "548424",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.16,
+   "tcgMarket": 0.17,
    "tcgLow": 0.01,
    "tcgMid": 0.2,
    "soldAnyFinish": false
@@ -3902,7 +3902,7 @@
    "id": "581025",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.3,
+   "tcgMarket": 0.29,
    "tcgLow": 0.1,
    "tcgMid": 0.32,
    "soldAnyFinish": false
@@ -3936,9 +3936,9 @@
    "id": "581034",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 2.3,
+   "tcgMarket": 2.42,
    "tcgLow": 1.99,
-   "tcgMid": 2.7,
+   "tcgMid": 2.78,
    "soldAnyFinish": false
   },
   {
@@ -3970,9 +3970,9 @@
    "id": "587192",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 739.18,
-   "tcgLow": 750.0,
-   "tcgMid": 900.0,
+   "tcgMarket": 762.77,
+   "tcgLow": 735.0,
+   "tcgMid": 825.0,
    "soldAnyFinish": false
   },
   {
@@ -4004,8 +4004,8 @@
    "id": "593830",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 4.81,
-   "tcgLow": 3.47,
+   "tcgMarket": 4.39,
+   "tcgLow": 3.45,
    "tcgMid": 5.0,
    "soldAnyFinish": true
   },
@@ -4039,8 +4039,8 @@
    "foil": true,
    "finish": "Foil",
    "tcgMarket": 25.99,
-   "tcgLow": 21.49,
-   "tcgMid": 25.52,
+   "tcgLow": 18.66,
+   "tcgMid": 25.25,
    "soldAnyFinish": true
   },
   {
@@ -4164,8 +4164,8 @@
    "id": "602789",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 9.58,
-   "tcgLow": 9.58,
+   "tcgMarket": 10.26,
+   "tcgLow": 9.45,
    "tcgMid": 11.0,
    "soldAnyFinish": false
   },
@@ -4197,7 +4197,7 @@
    "sold": {
     "title": "Zoro-Juurou [SP Foil] OP05-067",
     "url": "https://www.pricecharting.com/game/one-piece-awakening-of-the-new-era/zoro-juurou-sp-foil-op05-067",
-    "ungraded": 469.99,
+    "ungraded": 466.98,
     "psa10": 675.0,
     "volume": "3 sales per week",
     "recentSales": [
@@ -4256,9 +4256,9 @@
    "id": "596913",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 469.14,
-   "tcgLow": 499.71,
-   "tcgMid": 526.5,
+   "tcgMarket": 469.33,
+   "tcgLow": 490.0,
+   "tcgMid": 535.08,
    "soldAnyFinish": false
   },
   {
@@ -4324,9 +4324,9 @@
    "id": "600658",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 44.94,
-   "tcgLow": 37.99,
-   "tcgMid": 51.35,
+   "tcgMarket": 44.38,
+   "tcgLow": 38.99,
+   "tcgMid": 49.03,
    "soldAnyFinish": false
   },
   {
@@ -4394,7 +4394,7 @@
    "finish": "Non-foil",
    "tcgMarket": 21.05,
    "tcgLow": 10.07,
-   "tcgMid": 26.89,
+   "tcgMid": 25.99,
    "soldAnyFinish": false
   },
   {
@@ -4426,9 +4426,9 @@
    "id": "615592",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 1.55,
+   "tcgMarket": 1.38,
    "tcgLow": 0.99,
-   "tcgMid": 1.97,
+   "tcgMid": 1.85,
    "soldAnyFinish": false
   },
   {
@@ -4459,10 +4459,30 @@
    "sold": {
     "title": "Roronoa Zoro [Parallel Foil] ST21-015",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-21-gear5/roronoa-zoro-parallel-foil-st21-015",
-    "ungraded": 23.99,
-    "psa10": 111.17,
-    "volume": "2 sales per week",
+    "ungraded": 21.88,
+    "psa10": 113.71,
+    "volume": "1 sale per week",
     "recentSales": [
+     {
+      "date": "2026-11-07",
+      "price": 20.96,
+      "title": "Roronoa Zoro (Parallel) #ST21-015 Near Mint English Parallel Foil"
+     },
+     {
+      "date": "2026-11-06",
+      "price": 20.97,
+      "title": "Roronoa Zoro (Parallel) #ST21-015 Near Mint English Parallel Foil"
+     },
+     {
+      "date": "2026-11-05",
+      "price": 20.99,
+      "title": "Roronoa Zoro (Parallel) #ST21-015 Near Mint English Parallel Foil"
+     },
+     {
+      "date": "2026-11-04",
+      "price": 21.98,
+      "title": "Roronoa Zoro (Parallel) #ST21-015 Near Mint English Parallel Foil"
+     },
      {
       "date": "2026-11-04",
       "price": 20.0,
@@ -4492,35 +4512,15 @@
       "date": "2026-10-21",
       "price": 24.47,
       "title": "Roronoa Zoro (Parallel) #ST21-015 Near Mint English Parallel Foil"
-     },
-     {
-      "date": "2026-10-17",
-      "price": 23.47,
-      "title": "Roronoa Zoro (Parallel) #ST21-015 Near Mint English Parallel Foil"
-     },
-     {
-      "date": "2026-10-16",
-      "price": 25.69,
-      "title": "Roronoa Zoro (Parallel) #ST21-015 Near Mint English Parallel Foil"
-     },
-     {
-      "date": "2026-10-14",
-      "price": 23.49,
-      "title": "Roronoa Zoro (Parallel) #ST21-015 Near Mint English Parallel Foil"
-     },
-     {
-      "date": "2026-10-13",
-      "price": 21.85,
-      "title": "Roronoa Zoro (Parallel) #ST21-015 Near Mint English Parallel Foil"
      }
     ]
    },
    "id": "615593",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 23.36,
-   "tcgLow": 19.97,
-   "tcgMid": 25.0,
+   "tcgMarket": 22.96,
+   "tcgLow": 19.4,
+   "tcgMid": 24.5,
    "soldAnyFinish": false
   },
   {
@@ -4551,10 +4551,50 @@
    "sold": {
     "title": "Roronoa Zoro OP10-038",
     "url": "https://www.pricecharting.com/game/one-piece-royal-blood/roronoa-zoro-op10-038",
-    "ungraded": 0.17,
+    "ungraded": 0.15,
     "psa10": 21.5,
     "volume": "1 sale per week",
     "recentSales": [
+     {
+      "date": "2026-11-15",
+      "price": 0.1,
+      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
+     },
+     {
+      "date": "2026-11-14",
+      "price": 0.21,
+      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
+     },
+     {
+      "date": "2026-11-13",
+      "price": 0.05,
+      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
+     },
+     {
+      "date": "2026-11-11",
+      "price": 1.31,
+      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.05,
+      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 0.6,
+      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
+     },
+     {
+      "date": "2026-11-08",
+      "price": 0.05,
+      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
+     },
+     {
+      "date": "2026-11-07",
+      "price": 0.08,
+      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
+     },
      {
       "date": "2026-11-04",
       "price": 0.25,
@@ -4564,55 +4604,15 @@
       "date": "2026-11-03",
       "price": 0.1,
       "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
-     },
-     {
-      "date": "2026-11-01",
-      "price": 0.3,
-      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
-     },
-     {
-      "date": "2026-10-31",
-      "price": 0.11,
-      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
-     },
-     {
-      "date": "2026-10-29",
-      "price": 0.03,
-      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
-     },
-     {
-      "date": "2026-10-28",
-      "price": 0.3,
-      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
-     },
-     {
-      "date": "2026-10-26",
-      "price": 0.25,
-      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 0.05,
-      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
-     },
-     {
-      "date": "2026-10-19",
-      "price": 0.05,
-      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
-     },
-     {
-      "date": "2026-10-17",
-      "price": 0.02,
-      "title": "Roronoa Zoro (038) #OP10-038 Near Mint English"
      }
     ]
    },
    "id": "617077",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.15,
+   "tcgMarket": 0.2,
    "tcgLow": 0.01,
-   "tcgMid": 0.17,
+   "tcgMid": 0.2,
    "soldAnyFinish": false
   },
   {
@@ -4648,6 +4648,21 @@
     "volume": "3 sales per week",
     "recentSales": [
      {
+      "date": "2026-11-11",
+      "price": 0.2,
+      "title": "Roronoa Zoro (095) #OP10-095 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.2,
+      "title": "Roronoa Zoro (095) #OP10-095 Near Mint English"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 0.6,
+      "title": "Roronoa Zoro (095) #OP10-095 Near Mint English"
+     },
+     {
       "date": "2026-11-07",
       "price": 0.15,
       "title": "Roronoa Zoro (095) #OP10-095 Near Mint English"
@@ -4681,28 +4696,13 @@
       "date": "2026-10-26",
       "price": 0.25,
       "title": "Roronoa Zoro (095) #OP10-095 Near Mint English"
-     },
-     {
-      "date": "2026-10-23",
-      "price": 0.1,
-      "title": "Roronoa Zoro (095) #OP10-095 Near Mint English"
-     },
-     {
-      "date": "2026-10-22",
-      "price": 0.2,
-      "title": "Roronoa Zoro (095) #OP10-095 Near Mint English"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 0.3,
-      "title": "Roronoa Zoro (095) #OP10-095 Near Mint English"
      }
     ]
    },
    "id": "617143",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 0.21,
+   "tcgMarket": 0.23,
    "tcgLow": 0.01,
    "tcgMid": 0.25,
    "soldAnyFinish": false
@@ -4735,10 +4735,45 @@
    "sold": {
     "title": "Roronoa Zoro OP10-113",
     "url": "https://www.pricecharting.com/game/one-piece-royal-blood/roronoa-zoro-op10-113",
-    "ungraded": 0.14,
+    "ungraded": 0.15,
     "psa10": null,
     "volume": "1 sale per week",
     "recentSales": [
+     {
+      "date": "2026-11-14",
+      "price": 0.2,
+      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
+     },
+     {
+      "date": "2026-11-12",
+      "price": 0.08,
+      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
+     },
+     {
+      "date": "2026-11-11",
+      "price": 0.27,
+      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.14,
+      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
+     },
+     {
+      "date": "2026-11-06",
+      "price": 0.15,
+      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
+     },
+     {
+      "date": "2026-11-05",
+      "price": 0.14,
+      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
+     },
+     {
+      "date": "2026-11-04",
+      "price": 0.15,
+      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
+     },
      {
       "date": "2026-11-03",
       "price": 0.14,
@@ -4752,41 +4787,6 @@
      {
       "date": "2026-10-31",
       "price": 0.25,
-      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-30",
-      "price": 0.1,
-      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-29",
-      "price": 0.1,
-      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-28",
-      "price": 0.14,
-      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-26",
-      "price": 0.14,
-      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-24",
-      "price": 0.12,
-      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-23",
-      "price": 0.1,
-      "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-22",
-      "price": 0.19,
       "title": "Roronoa Zoro (113) #OP10-113 Near Mint English"
      }
     ]
@@ -4828,9 +4828,24 @@
     "title": "Roronoa Zoro EB02-019",
     "url": "https://www.pricecharting.com/game/one-piece-extra-booster-anime-25th-collection/roronoa-zoro-eb02-019",
     "ungraded": 0.37,
-    "psa10": 204.99,
+    "psa10": 209.47,
     "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-13",
+      "price": 0.24,
+      "title": "Roronoa Zoro #EB02-019 Near Mint English"
+     },
+     {
+      "date": "2026-11-12",
+      "price": 0.23,
+      "title": "Roronoa Zoro #EB02-019 Near Mint English"
+     },
+     {
+      "date": "2026-11-11",
+      "price": 0.37,
+      "title": "Roronoa Zoro #EB02-019 Near Mint English"
+     },
      {
       "date": "2026-11-08",
       "price": 0.38,
@@ -4865,30 +4880,15 @@
       "date": "2026-10-28",
       "price": 0.36,
       "title": "Roronoa Zoro #EB02-019 Near Mint English"
-     },
-     {
-      "date": "2026-10-27",
-      "price": 0.38,
-      "title": "Roronoa Zoro #EB02-019 Near Mint English"
-     },
-     {
-      "date": "2026-10-26",
-      "price": 0.25,
-      "title": "Roronoa Zoro #EB02-019 Near Mint English"
-     },
-     {
-      "date": "2026-10-24",
-      "price": 0.27,
-      "title": "Roronoa Zoro #EB02-019 Near Mint English"
      }
     ]
    },
    "id": "629113",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 0.36,
+   "tcgMarket": 0.34,
    "tcgLow": 0.1,
-   "tcgMid": 0.42,
+   "tcgMid": 0.4,
    "soldAnyFinish": false
   },
   {
@@ -4920,9 +4920,9 @@
    "id": "634456",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 18.04,
-   "tcgLow": 19.84,
-   "tcgMid": 25.0,
+   "tcgMarket": 19.5,
+   "tcgLow": 19.49,
+   "tcgMid": 22.92,
    "soldAnyFinish": false
   },
   {
@@ -4957,6 +4957,16 @@
     "psa10": null,
     "volume": "2 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-10",
+      "price": 0.09,
+      "title": "Roronoa Zoro (Reprint) #OP07-034 Near Mint English Reprint"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 0.02,
+      "title": "Roronoa Zoro (Reprint) #OP07-034 Near Mint English Reprint"
+     },
      {
       "date": "2026-11-04",
       "price": 0.09,
@@ -4995,16 +5005,6 @@
      {
       "date": "2026-10-15",
       "price": 0.15,
-      "title": "Roronoa Zoro (Reprint) #OP07-034 Near Mint English Reprint"
-     },
-     {
-      "date": "2026-10-11",
-      "price": 0.03,
-      "title": "Roronoa Zoro (Reprint) #OP07-034 Near Mint English Reprint"
-     },
-     {
-      "date": "2026-10-09",
-      "price": 0.08,
       "title": "Roronoa Zoro (Reprint) #OP07-034 Near Mint English Reprint"
      }
     ]
@@ -5045,10 +5045,30 @@
    "sold": {
     "title": "Roronoa Zoro [Reprint] OP09-076",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-26-purple-monkeydluffy/roronoa-zoro-reprint-op09-076",
-    "ungraded": 0.12,
+    "ungraded": 0.11,
     "psa10": null,
     "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-11",
+      "price": 0.05,
+      "title": "Roronoa Zoro (Reprint) #OP09-076 Near Mint English Reprint"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.1,
+      "title": "Roronoa Zoro (Reprint) #OP09-076 Near Mint English Reprint"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 0.14,
+      "title": "Roronoa Zoro (Reprint) #OP09-076 Near Mint English Reprint"
+     },
+     {
+      "date": "2026-11-07",
+      "price": 0.06,
+      "title": "Roronoa Zoro (Reprint) #OP09-076 Near Mint English Reprint"
+     },
      {
       "date": "2026-11-02",
       "price": 0.19,
@@ -5078,33 +5098,13 @@
       "date": "2026-10-22",
       "price": 0.1,
       "title": "Roronoa Zoro (Reprint) #OP09-076 Near Mint English Reprint"
-     },
-     {
-      "date": "2026-10-20",
-      "price": 0.15,
-      "title": "Roronoa Zoro (Reprint) #OP09-076 Near Mint English Reprint"
-     },
-     {
-      "date": "2026-10-17",
-      "price": 0.1,
-      "title": "Roronoa Zoro (Reprint) #OP09-076 Near Mint English Reprint"
-     },
-     {
-      "date": "2026-10-16",
-      "price": 0.15,
-      "title": "Roronoa Zoro (Reprint) #OP09-076 Near Mint English Reprint"
-     },
-     {
-      "date": "2026-10-15",
-      "price": 0.15,
-      "title": "Roronoa Zoro (Reprint) #OP09-076 Near Mint English Reprint"
      }
     ]
    },
    "id": "634315",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.15,
+   "tcgMarket": 0.13,
    "tcgLow": 0.05,
    "tcgMid": 0.2,
    "soldAnyFinish": false
@@ -5141,6 +5141,16 @@
     "psa10": null,
     "volume": "1 sale per week",
     "recentSales": [
+     {
+      "date": "2026-11-12",
+      "price": 0.08,
+      "title": "Roronoa Zoro #OP11-016 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.15,
+      "title": "Roronoa Zoro #OP11-016 Near Mint English"
+     },
      {
       "date": "2026-11-07",
       "price": 0.25,
@@ -5179,16 +5189,6 @@
      {
       "date": "2026-10-25",
       "price": 0.25,
-      "title": "Roronoa Zoro #OP11-016 Near Mint English"
-     },
-     {
-      "date": "2026-10-24",
-      "price": 0.1,
-      "title": "Roronoa Zoro #OP11-016 Near Mint English"
-     },
-     {
-      "date": "2026-10-23",
-      "price": 0.1,
       "title": "Roronoa Zoro #OP11-016 Near Mint English"
      }
     ]
@@ -5230,9 +5230,9 @@
    "id": "649280",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 9.47,
-   "tcgLow": 3.07,
-   "tcgMid": 9.5,
+   "tcgMarket": 9.37,
+   "tcgLow": 3.78,
+   "tcgMid": 9.2,
    "soldAnyFinish": false
   },
   {
@@ -5297,10 +5297,30 @@
    "sold": {
     "title": "Roronoa Zoro OP12-020",
     "url": "https://www.pricecharting.com/game/one-piece-legacy-of-the-master/roronoa-zoro-op12-020",
-    "ungraded": 0.75,
+    "ungraded": 0.89,
     "psa10": 111.15,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-11",
+      "price": 0.21,
+      "title": "Roronoa Zoro (020) #OP12-020 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.2,
+      "title": "Roronoa Zoro (020) #OP12-020 Near Mint English"
+     },
+     {
+      "date": "2026-11-08",
+      "price": 0.13,
+      "title": "Roronoa Zoro (020) #OP12-020 Near Mint English"
+     },
+     {
+      "date": "2026-11-07",
+      "price": 0.16,
+      "title": "Roronoa Zoro (020) #OP12-020 Near Mint English"
+     },
      {
       "date": "2026-11-06",
       "price": 0.25,
@@ -5330,33 +5350,13 @@
       "date": "2026-10-28",
       "price": 0.19,
       "title": "Roronoa Zoro (020) #OP12-020 Near Mint English"
-     },
-     {
-      "date": "2026-10-26",
-      "price": 0.19,
-      "title": "Roronoa Zoro (020) #OP12-020 Near Mint English"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 0.21,
-      "title": "Roronoa Zoro (020) #OP12-020 Near Mint English"
-     },
-     {
-      "date": "2026-10-24",
-      "price": 0.25,
-      "title": "Roronoa Zoro (020) #OP12-020 Near Mint English"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 0.25,
-      "title": "Roronoa Zoro (020) #OP12-020 Near Mint English"
      }
     ]
    },
    "id": "643747",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.21,
+   "tcgMarket": 0.2,
    "tcgLow": 0.03,
    "tcgMid": 0.21,
    "soldAnyFinish": false
@@ -5389,10 +5389,30 @@
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] OP12-020",
     "url": "https://www.pricecharting.com/game/one-piece-legacy-of-the-master/roronoa-zoro-alternate-art-op12-020",
-    "ungraded": 51.49,
-    "psa10": 108.75,
+    "ungraded": 48.92,
+    "psa10": 105.5,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-11",
+      "price": 40.0,
+      "title": "Roronoa Zoro (020) (Alternate Art) #OP12-020 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 46.99,
+      "title": "Roronoa Zoro (020) (Alternate Art) #OP12-020 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-08",
+      "price": 44.98,
+      "title": "Roronoa Zoro (020) (Alternate Art) #OP12-020 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-07",
+      "price": 46.99,
+      "title": "Roronoa Zoro (020) (Alternate Art) #OP12-020 Near Mint English Alternate Art"
+     },
      {
       "date": "2026-11-02",
       "price": 48.66,
@@ -5422,35 +5442,15 @@
       "date": "2026-10-26",
       "price": 55.0,
       "title": "Roronoa Zoro (020) (Alternate Art) #OP12-020 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 50.0,
-      "title": "Roronoa Zoro (020) (Alternate Art) #OP12-020 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-19",
-      "price": 55.85,
-      "title": "Roronoa Zoro (020) (Alternate Art) #OP12-020 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-18",
-      "price": 59.0,
-      "title": "Roronoa Zoro (020) (Alternate Art) #OP12-020 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-17",
-      "price": 56.0,
-      "title": "Roronoa Zoro (020) (Alternate Art) #OP12-020 Near Mint English Alternate Art"
      }
     ]
    },
    "id": "643748",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 54.12,
-   "tcgLow": 46.99,
-   "tcgMid": 57.06,
+   "tcgMarket": 48.94,
+   "tcgLow": 38.99,
+   "tcgMid": 52.04,
    "soldAnyFinish": false
   },
   {
@@ -5481,10 +5481,25 @@
    "sold": {
     "title": "Roronoa Zoro OP12-036",
     "url": "https://www.pricecharting.com/game/one-piece-legacy-of-the-master/roronoa-zoro-op12-036",
-    "ungraded": 0.15,
+    "ungraded": 0.11,
     "psa10": 65.81,
     "volume": "1 sale per week",
     "recentSales": [
+     {
+      "date": "2026-11-12",
+      "price": 0.1,
+      "title": "Roronoa Zoro (036) #OP12-036 Near Mint English"
+     },
+     {
+      "date": "2026-11-11",
+      "price": 0.18,
+      "title": "Roronoa Zoro (036) #OP12-036 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.12,
+      "title": "Roronoa Zoro (036) #OP12-036 Near Mint English"
+     },
      {
       "date": "2026-11-07",
       "price": 0.05,
@@ -5519,28 +5534,13 @@
       "date": "2026-10-28",
       "price": 0.1,
       "title": "Roronoa Zoro (036) #OP12-036 Near Mint English"
-     },
-     {
-      "date": "2026-10-27",
-      "price": 0.04,
-      "title": "Roronoa Zoro (036) #OP12-036 Near Mint English"
-     },
-     {
-      "date": "2026-10-26",
-      "price": 0.1,
-      "title": "Roronoa Zoro (036) #OP12-036 Near Mint English"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 0.12,
-      "title": "Roronoa Zoro (036) #OP12-036 Near Mint English"
      }
     ]
    },
    "id": "643767",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.15,
+   "tcgMarket": 0.14,
    "tcgLow": 0.01,
    "tcgMid": 0.15,
    "soldAnyFinish": false
@@ -5573,10 +5573,25 @@
    "sold": {
     "title": "Roronoa Zoro OP12-113",
     "url": "https://www.pricecharting.com/game/one-piece-legacy-of-the-master/roronoa-zoro-op12-113",
-    "ungraded": 0.25,
+    "ungraded": 0.15,
     "psa10": null,
     "volume": "1 sale per week",
     "recentSales": [
+     {
+      "date": "2026-11-12",
+      "price": 0.15,
+      "title": "Roronoa Zoro (113) #OP12-113 Near Mint English"
+     },
+     {
+      "date": "2026-11-11",
+      "price": 0.18,
+      "title": "Roronoa Zoro (113) #OP12-113 Near Mint English"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 0.05,
+      "title": "Roronoa Zoro (113) #OP12-113 Near Mint English"
+     },
      {
       "date": "2026-11-07",
       "price": 0.15,
@@ -5610,21 +5625,6 @@
      {
       "date": "2026-10-28",
       "price": 0.11,
-      "title": "Roronoa Zoro (113) #OP12-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-27",
-      "price": 0.07,
-      "title": "Roronoa Zoro (113) #OP12-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-23",
-      "price": 0.08,
-      "title": "Roronoa Zoro (113) #OP12-113 Near Mint English"
-     },
-     {
-      "date": "2026-10-22",
-      "price": 0.1,
       "title": "Roronoa Zoro (113) #OP12-113 Near Mint English"
      }
     ]
@@ -5665,10 +5665,15 @@
    "sold": {
     "title": "Zoro-Juurou [SP] ST18-004",
     "url": "https://www.pricecharting.com/game/one-piece-legacy-of-the-master/zoro-juurou-sp-st18-004",
-    "ungraded": 210.52,
-    "psa10": 290.0,
+    "ungraded": 197.61,
+    "psa10": 298.64,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-09",
+      "price": 187.99,
+      "title": "Zoro-Juurou (SP) #ST18-004 Near Mint English SP"
+     },
      {
       "date": "2026-11-05",
       "price": 193.0,
@@ -5713,20 +5718,15 @@
       "date": "2026-10-10",
       "price": 223.95,
       "title": "Zoro-Juurou (SP) #ST18-004 Near Mint English SP"
-     },
-     {
-      "date": "2026-10-08",
-      "price": 224.94,
-      "title": "Zoro-Juurou (SP) #ST18-004 Near Mint English SP"
      }
     ]
    },
    "id": "646566",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 225.16,
-   "tcgLow": 180.0,
-   "tcgMid": 227.41,
+   "tcgMarket": 214.98,
+   "tcgLow": 178.5,
+   "tcgMid": 223.41,
    "soldAnyFinish": false
   },
   {
@@ -5850,9 +5850,9 @@
    "id": "656164",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 3.25,
+   "tcgMarket": 3.42,
    "tcgLow": 2.92,
-   "tcgMid": 4.95,
+   "tcgMid": 4.99,
    "soldAnyFinish": true
   },
   {
@@ -5884,9 +5884,9 @@
    "id": "656164-foil",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 4.44,
-   "tcgLow": 3.37,
-   "tcgMid": 5.22,
+   "tcgMarket": 4.13,
+   "tcgLow": 2.51,
+   "tcgMid": 5.1,
    "soldAnyFinish": true
   },
   {
@@ -5917,17 +5917,17 @@
    "sold": {
     "title": "Roronoa Zoro [Alternate Art PRB-02] OP09-076",
     "url": "https://www.pricecharting.com/game/one-piece-premium-booster-2/roronoa-zoro-alternate-art-prb-02-op09-076",
-    "ungraded": 57.23,
-    "psa10": 152.5,
+    "ungraded": 56.76,
+    "psa10": 145.31,
     "volume": "1 sale per week",
     "recentSales": []
    },
    "id": "654099",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 49.03,
+   "tcgMarket": 47.58,
    "tcgLow": 36.99,
-   "tcgMid": 52.78,
+   "tcgMid": 50.74,
    "soldAnyFinish": false
   },
   {
@@ -5959,7 +5959,7 @@
    "id": "656081",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 0.2,
+   "tcgMarket": 0.19,
    "tcgLow": 0.04,
    "tcgMid": 0.25,
    "soldAnyFinish": false
@@ -6000,9 +6000,9 @@
    "id": "654022",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 8.94,
-   "tcgLow": 6.51,
-   "tcgMid": 10.33,
+   "tcgMarket": 8.55,
+   "tcgLow": 6.57,
+   "tcgMid": 10.24,
    "soldAnyFinish": false
   },
   {
@@ -6034,7 +6034,7 @@
    "id": "656116",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 0.12,
+   "tcgMarket": 0.14,
    "tcgLow": 0.01,
    "tcgMid": 0.25,
    "soldAnyFinish": false
@@ -6159,10 +6159,30 @@
    "sold": {
     "title": "Roronoa Zoro [Zoro Deck Foil] OP12-020",
     "url": "https://www.pricecharting.com/game/one-piece-learn-together-deck-set/roronoa-zoro-zoro-deck-foil-op12-020",
-    "ungraded": 5.51,
-    "psa10": 55.03,
+    "ungraded": 5.03,
+    "psa10": 52.53,
     "volume": "1 sale per week",
     "recentSales": [
+     {
+      "date": "2026-11-11",
+      "price": 3.77,
+      "title": "Roronoa Zoro - OP12-020 (Zoro Deck) #OP12-020 Near Mint English Zoro Deck Foil"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 5.7,
+      "title": "Roronoa Zoro - OP12-020 (Zoro Deck) #OP12-020 Near Mint English Zoro Deck Foil"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 5.28,
+      "title": "Roronoa Zoro - OP12-020 (Zoro Deck) #OP12-020 Near Mint English Zoro Deck Foil"
+     },
+     {
+      "date": "2026-11-08",
+      "price": 5.0,
+      "title": "Roronoa Zoro - OP12-020 (Zoro Deck) #OP12-020 Near Mint English Zoro Deck Foil"
+     },
      {
       "date": "2026-11-04",
       "price": 5.28,
@@ -6192,35 +6212,15 @@
       "date": "2026-10-25",
       "price": 5.22,
       "title": "Roronoa Zoro - OP12-020 (Zoro Deck) #OP12-020 Near Mint English Zoro Deck Foil"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 5.81,
-      "title": "Roronoa Zoro - OP12-020 (Zoro Deck) #OP12-020 Near Mint English Zoro Deck Foil"
-     },
-     {
-      "date": "2026-10-20",
-      "price": 5.15,
-      "title": "Roronoa Zoro - OP12-020 (Zoro Deck) #OP12-020 Near Mint English Zoro Deck Foil"
-     },
-     {
-      "date": "2026-10-18",
-      "price": 5.17,
-      "title": "Roronoa Zoro - OP12-020 (Zoro Deck) #OP12-020 Near Mint English Zoro Deck Foil"
-     },
-     {
-      "date": "2026-10-14",
-      "price": 5.44,
-      "title": "Roronoa Zoro - OP12-020 (Zoro Deck) #OP12-020 Near Mint English Zoro Deck Foil"
      }
     ]
    },
    "id": "656631",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 5.34,
+   "tcgMarket": 5.23,
    "tcgLow": 4.0,
-   "tcgMid": 6.34,
+   "tcgMid": 6.18,
    "soldAnyFinish": false
   },
   {
@@ -6343,10 +6343,20 @@
    "sold": {
     "title": "Roronoa Zoro [Nami Deck] P-056",
     "url": "https://www.pricecharting.com/game/one-piece-learn-together-deck-set/roronoa-zoro-nami-deck-p-056",
-    "ungraded": 0.26,
+    "ungraded": 0.25,
     "psa10": null,
     "volume": "1 sale per week",
     "recentSales": [
+     {
+      "date": "2026-11-10",
+      "price": 0.4,
+      "title": "Roronoa Zoro - P-056 (Nami Deck) #P-056 Near Mint English Nami Deck"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 0.09,
+      "title": "Roronoa Zoro - P-056 (Nami Deck) #P-056 Near Mint English Nami Deck"
+     },
      {
       "date": "2026-11-04",
       "price": 0.25,
@@ -6386,25 +6396,15 @@
       "date": "2026-10-10",
       "price": 0.25,
       "title": "Roronoa Zoro - P-056 (Nami Deck) #P-056 Near Mint English Nami Deck"
-     },
-     {
-      "date": "2026-10-02",
-      "price": 0.3,
-      "title": "Roronoa Zoro - P-056 (Nami Deck) #P-056 Near Mint English Nami Deck"
-     },
-     {
-      "date": "2026-09-28",
-      "price": 0.25,
-      "title": "Roronoa Zoro - P-056 (Nami Deck) #P-056 Near Mint English Nami Deck"
      }
     ]
    },
    "id": "656691",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.32,
+   "tcgMarket": 0.33,
    "tcgLow": 0.09,
-   "tcgMid": 0.32,
+   "tcgMid": 0.33,
    "soldAnyFinish": false
   },
   {
@@ -6435,10 +6435,30 @@
    "sold": {
     "title": "Roronoa Zoro PRB02-006",
     "url": "https://www.pricecharting.com/game/one-piece-premium-booster-2/roronoa-zoro-prb02-006",
-    "ungraded": 3.07,
+    "ungraded": 2.75,
     "psa10": 49.5,
-    "volume": "1 sale per day",
+    "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-14",
+      "price": 1.99,
+      "title": "Roronoa Zoro - PRB02-006 #PRB02-006 Near Mint English"
+     },
+     {
+      "date": "2026-11-13",
+      "price": 1.99,
+      "title": "Roronoa Zoro - PRB02-006 #PRB02-006 Near Mint English"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 2.0,
+      "title": "Roronoa Zoro - PRB02-006 #PRB02-006 Near Mint English"
+     },
+     {
+      "date": "2026-11-08",
+      "price": 2.56,
+      "title": "Roronoa Zoro - PRB02-006 #PRB02-006 Near Mint English"
+     },
      {
       "date": "2026-11-04",
       "price": 3.49,
@@ -6468,35 +6488,15 @@
       "date": "2026-10-24",
       "price": 2.28,
       "title": "Roronoa Zoro - PRB02-006 #PRB02-006 Near Mint English"
-     },
-     {
-      "date": "2026-10-23",
-      "price": 2.28,
-      "title": "Roronoa Zoro - PRB02-006 #PRB02-006 Near Mint English"
-     },
-     {
-      "date": "2026-10-20",
-      "price": 2.32,
-      "title": "Roronoa Zoro - PRB02-006 #PRB02-006 Near Mint English"
-     },
-     {
-      "date": "2026-10-14",
-      "price": 2.29,
-      "title": "Roronoa Zoro - PRB02-006 #PRB02-006 Near Mint English"
-     },
-     {
-      "date": "2026-10-10",
-      "price": 3.49,
-      "title": "Roronoa Zoro - PRB02-006 #PRB02-006 Near Mint English"
      }
     ]
    },
    "id": "653430",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 2.38,
+   "tcgMarket": 2.14,
    "tcgLow": 1.0,
-   "tcgMid": 3.41,
+   "tcgMid": 3.5,
    "soldAnyFinish": false
   },
   {
@@ -6527,10 +6527,25 @@
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] PRB02-006",
     "url": "https://www.pricecharting.com/game/one-piece-premium-booster-2/roronoa-zoro-alternate-art-prb02-006",
-    "ungraded": 20.1,
-    "psa10": 79.5,
+    "ungraded": 18.01,
+    "psa10": 77.0,
     "volume": "2 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-11",
+      "price": 15.99,
+      "title": "Roronoa Zoro - PRB02-006 (Alternate Art) #PRB02-006 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 14.99,
+      "title": "Roronoa Zoro - PRB02-006 (Alternate Art) #PRB02-006 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 14.7,
+      "title": "Roronoa Zoro - PRB02-006 (Alternate Art) #PRB02-006 Near Mint English Alternate Art"
+     },
      {
       "date": "2026-11-04",
       "price": 17.45,
@@ -6565,30 +6580,15 @@
       "date": "2026-10-22",
       "price": 22.99,
       "title": "Roronoa Zoro - PRB02-006 (Alternate Art) #PRB02-006 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 22.99,
-      "title": "Roronoa Zoro - PRB02-006 (Alternate Art) #PRB02-006 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-13",
-      "price": 25.93,
-      "title": "Roronoa Zoro - PRB02-006 (Alternate Art) #PRB02-006 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-13",
-      "price": 25.95,
-      "title": "Roronoa Zoro - PRB02-006 (Alternate Art) #PRB02-006 Near Mint English Alternate Art"
      }
     ]
    },
    "id": "653431",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 20.75,
-   "tcgLow": 16.16,
-   "tcgMid": 25.93,
+   "tcgMarket": 18.19,
+   "tcgLow": 15.65,
+   "tcgMid": 22.69,
    "soldAnyFinish": false
   },
   {
@@ -6622,7 +6622,7 @@
    "finish": "Non-foil",
    "tcgMarket": 0.15,
    "tcgLow": 0.05,
-   "tcgMid": 0.2,
+   "tcgMid": 0.18,
    "soldAnyFinish": false
   },
   {
@@ -6656,7 +6656,7 @@
    "finish": "Non-foil",
    "tcgMarket": 0.18,
    "tcgLow": 0.01,
-   "tcgMid": 0.19,
+   "tcgMid": 0.2,
    "soldAnyFinish": false
   },
   {
@@ -6690,7 +6690,7 @@
    "finish": "Foil",
    "tcgMarket": 0.31,
    "tcgLow": 0.1,
-   "tcgMid": 0.39,
+   "tcgMid": 0.38,
    "soldAnyFinish": false
   },
   {
@@ -6721,10 +6721,25 @@
    "sold": {
     "title": "Roronoa Zoro [Luffy Deck] ST21-015",
     "url": "https://www.pricecharting.com/game/one-piece-learn-together-deck-set/roronoa-zoro-luffy-deck-st21-015",
-    "ungraded": 1.49,
-    "psa10": 93.5,
+    "ungraded": 1.29,
+    "psa10": 87.0,
     "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-13",
+      "price": 1.2,
+      "title": "Roronoa Zoro - ST21-015 (Luffy Deck) #ST21-015 Near Mint English Luffy Deck"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 1.07,
+      "title": "Roronoa Zoro - ST21-015 (Luffy Deck) #ST21-015 Near Mint English Luffy Deck"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 2.27,
+      "title": "Roronoa Zoro - ST21-015 (Luffy Deck) #ST21-015 Near Mint English Luffy Deck"
+     },
      {
       "date": "2026-11-06",
       "price": 1.25,
@@ -6759,28 +6774,13 @@
       "date": "2026-10-26",
       "price": 1.32,
       "title": "Roronoa Zoro - ST21-015 (Luffy Deck) #ST21-015 Near Mint English Luffy Deck"
-     },
-     {
-      "date": "2026-10-23",
-      "price": 0.79,
-      "title": "Roronoa Zoro - ST21-015 (Luffy Deck) #ST21-015 Near Mint English Luffy Deck"
-     },
-     {
-      "date": "2026-10-22",
-      "price": 0.45,
-      "title": "Roronoa Zoro - ST21-015 (Luffy Deck) #ST21-015 Near Mint English Luffy Deck"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 1.25,
-      "title": "Roronoa Zoro - ST21-015 (Luffy Deck) #ST21-015 Near Mint English Luffy Deck"
      }
     ]
    },
    "id": "656665",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 1.04,
+   "tcgMarket": 1.06,
    "tcgLow": 0.4,
    "tcgMid": 1.25,
    "soldAnyFinish": false
@@ -6813,10 +6813,20 @@
    "sold": {
     "title": "Roronoa Zoro OP13-037",
     "url": "https://www.pricecharting.com/game/one-piece-carrying-on-his-will/roronoa-zoro-op13-037",
-    "ungraded": 0.9,
+    "ungraded": 0.56,
     "psa10": 197.78,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-12",
+      "price": 0.33,
+      "title": "Roronoa Zoro #OP13-037 Near Mint English"
+     },
+     {
+      "date": "2026-11-11",
+      "price": 0.25,
+      "title": "Roronoa Zoro #OP13-037 Near Mint English"
+     },
      {
       "date": "2026-11-07",
       "price": 0.35,
@@ -6856,25 +6866,15 @@
       "date": "2026-10-03",
       "price": 0.27,
       "title": "Roronoa Zoro #OP13-037 Near Mint English"
-     },
-     {
-      "date": "2026-10-02",
-      "price": 0.35,
-      "title": "Roronoa Zoro #OP13-037 Near Mint English"
-     },
-     {
-      "date": "2026-09-28",
-      "price": 0.32,
-      "title": "Roronoa Zoro #OP13-037 Near Mint English"
      }
     ]
    },
    "id": "657295",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 0.31,
+   "tcgMarket": 0.28,
    "tcgLow": 0.09,
-   "tcgMid": 0.34,
+   "tcgMid": 0.33,
    "soldAnyFinish": false
   },
   {
@@ -6906,8 +6906,8 @@
    "id": "671819",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 6.82,
-   "tcgLow": 6.64,
+   "tcgMarket": 6.79,
+   "tcgLow": 6.49,
    "tcgMid": 7.99,
    "soldAnyFinish": false
   },
@@ -6939,10 +6939,30 @@
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] OP14-015",
     "url": "https://www.pricecharting.com/game/one-piece-azure-sea%27s-seven/roronoa-zoro-alternate-art-op14-015",
-    "ungraded": 14.91,
+    "ungraded": 14.75,
     "psa10": 64.0,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-13",
+      "price": 12.5,
+      "title": "Roronoa Zoro - OP14-015 (Alternate Art) #OP14-015 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 13.74,
+      "title": "Roronoa Zoro - OP14-015 (Alternate Art) #OP14-015 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-08",
+      "price": 14.75,
+      "title": "Roronoa Zoro - OP14-015 (Alternate Art) #OP14-015 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-07",
+      "price": 13.26,
+      "title": "Roronoa Zoro - OP14-015 (Alternate Art) #OP14-015 Near Mint English Alternate Art"
+     },
      {
       "date": "2026-11-04",
       "price": 14.75,
@@ -6972,35 +6992,15 @@
       "date": "2026-10-26",
       "price": 16.29,
       "title": "Roronoa Zoro - OP14-015 (Alternate Art) #OP14-015 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 15.98,
-      "title": "Roronoa Zoro - OP14-015 (Alternate Art) #OP14-015 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-24",
-      "price": 16.98,
-      "title": "Roronoa Zoro - OP14-015 (Alternate Art) #OP14-015 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-20",
-      "price": 16.67,
-      "title": "Roronoa Zoro - OP14-015 (Alternate Art) #OP14-015 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-15",
-      "price": 16.39,
-      "title": "Roronoa Zoro - OP14-015 (Alternate Art) #OP14-015 Near Mint English Alternate Art"
      }
     ]
    },
    "id": "670250",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 15.0,
-   "tcgLow": 12.0,
-   "tcgMid": 16.85,
+   "tcgMarket": 13.88,
+   "tcgLow": 11.74,
+   "tcgMid": 15.89,
    "soldAnyFinish": false
   },
   {
@@ -7031,10 +7031,25 @@
    "sold": {
     "title": "Roronoa Zoro OP14-015",
     "url": "https://www.pricecharting.com/game/one-piece-azure-sea%27s-seven/roronoa-zoro-op14-015",
-    "ungraded": 0.49,
-    "psa10": 54.71,
+    "ungraded": 0.47,
+    "psa10": 55.77,
     "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-15",
+      "price": 0.26,
+      "title": "Roronoa Zoro - OP14-015 #OP14-015 Near Mint English"
+     },
+     {
+      "date": "2026-11-14",
+      "price": 0.3,
+      "title": "Roronoa Zoro - OP14-015 #OP14-015 Near Mint English"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 0.6,
+      "title": "Roronoa Zoro - OP14-015 #OP14-015 Near Mint English"
+     },
      {
       "date": "2026-11-05",
       "price": 0.1,
@@ -7069,28 +7084,13 @@
       "date": "2026-10-21",
       "price": 0.25,
       "title": "Roronoa Zoro - OP14-015 #OP14-015 Near Mint English"
-     },
-     {
-      "date": "2026-10-20",
-      "price": 0.22,
-      "title": "Roronoa Zoro - OP14-015 #OP14-015 Near Mint English"
-     },
-     {
-      "date": "2026-10-15",
-      "price": 0.2,
-      "title": "Roronoa Zoro - OP14-015 #OP14-015 Near Mint English"
-     },
-     {
-      "date": "2026-10-11",
-      "price": 0.25,
-      "title": "Roronoa Zoro - OP14-015 #OP14-015 Near Mint English"
      }
     ]
    },
    "id": "672111",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 0.22,
+   "tcgMarket": 0.24,
    "tcgLow": 0.05,
    "tcgMid": 0.25,
    "soldAnyFinish": false
@@ -7123,10 +7123,40 @@
    "sold": {
     "title": "Strive To Surpass Me, Roronoa Zoro OP14-036",
     "url": "https://www.pricecharting.com/game/one-piece-azure-sea%27s-seven/strive-to-surpass-me-roronoa-zoro-op14-036",
-    "ungraded": 0.09,
+    "ungraded": 0.08,
     "psa10": null,
     "volume": "1 sale per week",
     "recentSales": [
+     {
+      "date": "2026-11-16",
+      "price": 0.19,
+      "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
+     },
+     {
+      "date": "2026-11-15",
+      "price": 0.09,
+      "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
+     },
+     {
+      "date": "2026-11-14",
+      "price": 0.16,
+      "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
+     },
+     {
+      "date": "2026-11-11",
+      "price": 0.01,
+      "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.1,
+      "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
+     },
+     {
+      "date": "2026-11-06",
+      "price": 0.07,
+      "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
+     },
      {
       "date": "2026-11-05",
       "price": 0.15,
@@ -7146,43 +7176,13 @@
       "date": "2026-10-30",
       "price": 0.05,
       "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
-     },
-     {
-      "date": "2026-10-29",
-      "price": 0.07,
-      "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
-     },
-     {
-      "date": "2026-10-27",
-      "price": 0.07,
-      "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
-     },
-     {
-      "date": "2026-10-26",
-      "price": 0.09,
-      "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 0.07,
-      "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
-     },
-     {
-      "date": "2026-10-23",
-      "price": 0.07,
-      "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 0.07,
-      "title": "Strive to Surpass me, Roronoa Zoro!!! #OP14-036 Near Mint English"
      }
     ]
    },
    "id": "671377",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.11,
+   "tcgMarket": 0.1,
    "tcgLow": 0.01,
    "tcgMid": 0.15,
    "soldAnyFinish": false
@@ -7215,10 +7215,20 @@
    "sold": {
     "title": "Roronoa Zoro [SP] PRB02-006",
     "url": "https://www.pricecharting.com/game/one-piece-azure-sea%27s-seven/roronoa-zoro-sp-prb02-006",
-    "ungraded": 840.0,
-    "psa10": 1395.0,
+    "ungraded": 834.15,
+    "psa10": 1382.27,
     "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-14",
+      "price": 883.98,
+      "title": "Roronoa Zoro - PRB02-006 (SP) #PRB02-006 Near Mint English SP"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 830.0,
+      "title": "Roronoa Zoro - PRB02-006 (SP) #PRB02-006 Near Mint English SP"
+     },
      {
       "date": "2026-11-05",
       "price": 849.95,
@@ -7258,25 +7268,15 @@
       "date": "2026-09-28",
       "price": 904.15,
       "title": "Roronoa Zoro - PRB02-006 (SP) #PRB02-006 Near Mint English SP"
-     },
-     {
-      "date": "2026-09-16",
-      "price": 900.0,
-      "title": "Roronoa Zoro - PRB02-006 (SP) #PRB02-006 Near Mint English SP"
-     },
-     {
-      "date": "2026-09-14",
-      "price": 899.99,
-      "title": "Roronoa Zoro w/ photos #PRB02-006 Near Mint English SP"
      }
     ]
    },
    "id": "670642",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 906.32,
+   "tcgMarket": 898.98,
    "tcgLow": 755.0,
-   "tcgMid": 896.99,
+   "tcgMid": 906.32,
    "soldAnyFinish": false
   },
   {
@@ -7307,10 +7307,30 @@
    "sold": {
     "title": "Roronoa Zoro ST29-014",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-29-egghead/roronoa-zoro-st29-014",
-    "ungraded": 1.17,
-    "psa10": 50.5,
+    "ungraded": 1.02,
+    "psa10": 43.18,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-14",
+      "price": 0.6,
+      "title": "Roronoa Zoro #ST29-014 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.89,
+      "title": "Roronoa Zoro #ST29-014 Near Mint English"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 0.6,
+      "title": "Roronoa Zoro #ST29-014 Near Mint English"
+     },
+     {
+      "date": "2026-11-08",
+      "price": 0.94,
+      "title": "Roronoa Zoro #ST29-014 Near Mint English"
+     },
      {
       "date": "2026-11-05",
       "price": 0.6,
@@ -7340,35 +7360,15 @@
       "date": "2026-10-25",
       "price": 0.82,
       "title": "Roronoa Zoro #ST29-014 Near Mint English"
-     },
-     {
-      "date": "2026-10-24",
-      "price": 1.01,
-      "title": "Roronoa Zoro #ST29-014 Near Mint English"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 1.0,
-      "title": "Roronoa Zoro #ST29-014 Near Mint English"
-     },
-     {
-      "date": "2026-10-20",
-      "price": 0.82,
-      "title": "Roronoa Zoro #ST29-014 Near Mint English"
-     },
-     {
-      "date": "2026-10-19",
-      "price": 1.04,
-      "title": "Roronoa Zoro #ST29-014 Near Mint English"
      }
     ]
    },
    "id": "671609",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 0.78,
+   "tcgMarket": 0.72,
    "tcgLow": 0.25,
-   "tcgMid": 1.01,
+   "tcgMid": 1.0,
    "soldAnyFinish": false
   },
   {
@@ -7399,10 +7399,35 @@
    "sold": {
     "title": "Roronoa Zoro [Full Art] ST29-014",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-29-egghead/roronoa-zoro-full-art-st29-014",
-    "ungraded": 8.09,
-    "psa10": 58.22,
+    "ungraded": 6.4,
+    "psa10": 60.22,
     "volume": "3 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-13",
+      "price": 5.84,
+      "title": "Roronoa Zoro (Full Art) #ST29-014 Near Mint English Full Art"
+     },
+     {
+      "date": "2026-11-11",
+      "price": 6.67,
+      "title": "Roronoa Zoro (Full Art) #ST29-014 Near Mint English Full Art"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 6.19,
+      "title": "Roronoa Zoro (Full Art) #ST29-014 Near Mint English Full Art"
+     },
+     {
+      "date": "2026-11-06",
+      "price": 7.18,
+      "title": "Roronoa Zoro (Full Art) #ST29-014 Near Mint English Full Art"
+     },
+     {
+      "date": "2026-11-05",
+      "price": 5.26,
+      "title": "Roronoa Zoro (Full Art) #ST29-014 Near Mint English Full Art"
+     },
      {
       "date": "2026-11-04",
       "price": 3.89,
@@ -7427,40 +7452,15 @@
       "date": "2026-10-27",
       "price": 8.47,
       "title": "Roronoa Zoro (Full Art) #ST29-014 Near Mint English Full Art"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 8.49,
-      "title": "Roronoa Zoro (Full Art) #ST29-014 Near Mint English Full Art"
-     },
-     {
-      "date": "2026-10-23",
-      "price": 8.73,
-      "title": "Roronoa Zoro (Full Art) #ST29-014 Near Mint English Full Art"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 8.75,
-      "title": "Roronoa Zoro (Full Art) #ST29-014 Near Mint English Full Art"
-     },
-     {
-      "date": "2026-10-18",
-      "price": 9.26,
-      "title": "Roronoa Zoro (Full Art) #ST29-014 Near Mint English Full Art"
-     },
-     {
-      "date": "2026-10-17",
-      "price": 9.1,
-      "title": "Roronoa Zoro (Full Art) #ST29-014 Near Mint English Full Art"
      }
     ]
    },
    "id": "671610",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 6.19,
-   "tcgLow": 6.0,
-   "tcgMid": 10.0,
+   "tcgMarket": 6.01,
+   "tcgLow": 5.71,
+   "tcgMid": 10.51,
    "soldAnyFinish": false
   },
   {
@@ -7494,7 +7494,7 @@
    "finish": "Non-foil",
    "tcgMarket": 15.92,
    "tcgLow": 12.14,
-   "tcgMid": 14.07,
+   "tcgMid": 14.12,
    "soldAnyFinish": false
   },
   {
@@ -7526,9 +7526,9 @@
    "id": "685303",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 16.2,
-   "tcgLow": 15.0,
-   "tcgMid": 19.09,
+   "tcgMarket": 15.79,
+   "tcgLow": 14.82,
+   "tcgMid": 18.81,
    "soldAnyFinish": false
   },
   {
@@ -7559,10 +7559,30 @@
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] EB04-007",
     "url": "https://www.pricecharting.com/game/one-piece-extra-booster-eb04/roronoa-zoro-alternate-art-eb04-007",
-    "ungraded": 65.02,
-    "psa10": 98.45,
+    "ungraded": 61.14,
+    "psa10": 106.46,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-14",
+      "price": 58.09,
+      "title": "Roronoa Zoro (EB04-007) (Alternate Art) #EB04-007 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-13",
+      "price": 58.16,
+      "title": "Roronoa Zoro (EB04-007) (Alternate Art) #EB04-007 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 58.66,
+      "title": "Roronoa Zoro (EB04-007) (Alternate Art) #EB04-007 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 48.88,
+      "title": "Roronoa Zoro (EB04-007) (Alternate Art) #EB04-007 Near Mint English Alternate Art"
+     },
      {
       "date": "2026-11-05",
       "price": 61.99,
@@ -7592,35 +7612,15 @@
       "date": "2026-10-26",
       "price": 66.92,
       "title": "Roronoa Zoro (EB04-007) (Alternate Art) #EB04-007 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 65.0,
-      "title": "Roronoa Zoro (EB04-007) (Alternate Art) #EB04-007 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-24",
-      "price": 69.99,
-      "title": "Roronoa Zoro (EB04-007) (Alternate Art) #EB04-007 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 69.99,
-      "title": "Roronoa Zoro (EB04-007) (Alternate Art) #EB04-007 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-18",
-      "price": 65.95,
-      "title": "Roronoa Zoro (EB04-007) (Alternate Art) #EB04-007 Near Mint English Alternate Art"
      }
     ]
    },
    "id": "685304",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 64.35,
-   "tcgLow": 58.67,
-   "tcgMid": 69.99,
+   "tcgMarket": 61.62,
+   "tcgLow": 58.46,
+   "tcgMid": 65.01,
    "soldAnyFinish": false
   },
   {
@@ -7652,9 +7652,9 @@
    "id": "685335",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 146.15,
-   "tcgLow": 120.0,
-   "tcgMid": 157.0,
+   "tcgMarket": 131.57,
+   "tcgLow": 104.99,
+   "tcgMid": 150.0,
    "soldAnyFinish": false
   },
   {
@@ -7686,7 +7686,7 @@
    "id": "685448",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.15,
+   "tcgMarket": 0.14,
    "tcgLow": 0.01,
    "tcgMid": 0.2,
    "soldAnyFinish": false
@@ -7720,9 +7720,9 @@
    "id": "686295",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 3.34,
+   "tcgMarket": 3.17,
    "tcgLow": 2.0,
-   "tcgMid": 4.45,
+   "tcgMid": 4.0,
    "soldAnyFinish": false
   },
   {
@@ -7754,9 +7754,9 @@
    "id": "685469",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 3.17,
+   "tcgMarket": 3.13,
    "tcgLow": 2.0,
-   "tcgMid": 4.48,
+   "tcgMid": 4.17,
    "soldAnyFinish": false
   },
   {
@@ -7787,10 +7787,25 @@
    "sold": {
     "title": "Roronoa Zoro [Alternate Art] OP15-113",
     "url": "https://www.pricecharting.com/game/one-piece-adventure-on-kami%27s-island/roronoa-zoro-alternate-art-op15-113",
-    "ungraded": 23.44,
-    "psa10": 64.0,
+    "ungraded": 21.29,
+    "psa10": 62.15,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-11",
+      "price": 25.8,
+      "title": "Roronoa Zoro (OP15-113) (Alternate Art) #OP15-113 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 25.8,
+      "title": "Roronoa Zoro (OP15-113) (Alternate Art) #OP15-113 Near Mint English Alternate Art"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 25.98,
+      "title": "Roronoa Zoro (OP15-113) (Alternate Art) #OP15-113 Near Mint English Alternate Art"
+     },
      {
       "date": "2026-11-06",
       "price": 25.98,
@@ -7825,30 +7840,15 @@
       "date": "2026-10-29",
       "price": 28.49,
       "title": "Roronoa Zoro (OP15-113) (Alternate Art) #OP15-113 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-27",
-      "price": 28.2,
-      "title": "Roronoa Zoro (OP15-113) (Alternate Art) #OP15-113 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 28.16,
-      "title": "Roronoa Zoro (OP15-113) (Alternate Art) #OP15-113 Near Mint English Alternate Art"
-     },
-     {
-      "date": "2026-10-22",
-      "price": 28.86,
-      "title": "Roronoa Zoro (OP15-113) (Alternate Art) #OP15-113 Near Mint English Alternate Art"
      }
     ]
    },
    "id": "685470",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 26.95,
-   "tcgLow": 24.49,
-   "tcgMid": 31.47,
+   "tcgMarket": 25.91,
+   "tcgLow": 24.0,
+   "tcgMid": 29.53,
    "soldAnyFinish": false
   },
   {
@@ -7880,7 +7880,7 @@
    "id": "696724",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 3.3,
+   "tcgMarket": 3.23,
    "tcgLow": 2.0,
    "tcgMid": 4.0,
    "soldAnyFinish": false
@@ -7916,7 +7916,7 @@
    "finish": "Non-foil",
    "tcgMarket": 4.08,
    "tcgLow": 2.0,
-   "tcgMid": 4.5,
+   "tcgMid": 4.58,
    "soldAnyFinish": false
   },
   {
@@ -7947,10 +7947,35 @@
    "sold": {
     "title": "Roronoa Zoro OP16-035",
     "url": "https://www.pricecharting.com/game/one-piece-the-time-of-battle/roronoa-zoro-op16-035",
-    "ungraded": 0.18,
+    "ungraded": 0.08,
     "psa10": null,
     "volume": "2 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-15",
+      "price": 0.04,
+      "title": "Roronoa Zoro (035) #OP16-035 Near Mint English"
+     },
+     {
+      "date": "2026-11-14",
+      "price": 0.05,
+      "title": "Roronoa Zoro (035) #OP16-035 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.1,
+      "title": "Roronoa Zoro (035) #OP16-035 Near Mint English"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 0.05,
+      "title": "Roronoa Zoro (035) #OP16-035 Near Mint English"
+     },
+     {
+      "date": "2026-11-08",
+      "price": 0.01,
+      "title": "Roronoa Zoro (035) #OP16-035 Near Mint English"
+     },
      {
       "date": "2026-11-05",
       "price": 0.01,
@@ -7975,38 +8000,13 @@
       "date": "2026-10-21",
       "price": 0.03,
       "title": "Roronoa Zoro (035) #OP16-035 Near Mint English"
-     },
-     {
-      "date": "2026-10-20",
-      "price": 0.05,
-      "title": "Roronoa Zoro (035) #OP16-035 Near Mint English"
-     },
-     {
-      "date": "2026-10-15",
-      "price": 0.25,
-      "title": "Roronoa Zoro (035) #OP16-035 Near Mint English"
-     },
-     {
-      "date": "2026-10-11",
-      "price": 0.05,
-      "title": "Roronoa Zoro (035) #OP16-035 Near Mint English"
-     },
-     {
-      "date": "2026-10-10",
-      "price": 0.05,
-      "title": "Roronoa Zoro (035) #OP16-035 Near Mint English"
-     },
-     {
-      "date": "2026-10-05",
-      "price": 0.07,
-      "title": "Roronoa Zoro (035) #OP16-035 Near Mint English"
      }
     ]
    },
    "id": "696021",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.09,
+   "tcgMarket": 0.07,
    "tcgLow": 0.01,
    "tcgMid": 0.15,
    "soldAnyFinish": false
@@ -8039,10 +8039,35 @@
    "sold": {
     "title": "Roronoa Zoro OP16-053",
     "url": "https://www.pricecharting.com/game/one-piece-the-time-of-battle/roronoa-zoro-op16-053",
-    "ungraded": 0.19,
+    "ungraded": 0.09,
     "psa10": null,
     "volume": "2 sales per week",
     "recentSales": [
+     {
+      "date": "2026-11-16",
+      "price": 0.01,
+      "title": "Roronoa Zoro (053) #OP16-053 Near Mint English"
+     },
+     {
+      "date": "2026-11-15",
+      "price": 0.05,
+      "title": "Roronoa Zoro (053) #OP16-053 Near Mint English"
+     },
+     {
+      "date": "2026-11-14",
+      "price": 0.02,
+      "title": "Roronoa Zoro (053) #OP16-053 Near Mint English"
+     },
+     {
+      "date": "2026-11-11",
+      "price": 0.01,
+      "title": "Roronoa Zoro (053) #OP16-053 Near Mint English"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 0.01,
+      "title": "Roronoa Zoro (053) #OP16-053 Near Mint English"
+     },
      {
       "date": "2026-11-05",
       "price": 0.08,
@@ -8067,38 +8092,13 @@
       "date": "2026-10-31",
       "price": 0.25,
       "title": "Roronoa Zoro (053) #OP16-053 Near Mint English"
-     },
-     {
-      "date": "2026-10-28",
-      "price": 0.1,
-      "title": "Roronoa Zoro (053) #OP16-053 Near Mint English"
-     },
-     {
-      "date": "2026-10-24",
-      "price": 0.01,
-      "title": "Roronoa Zoro (053) #OP16-053 Near Mint English"
-     },
-     {
-      "date": "2026-10-23",
-      "price": 0.1,
-      "title": "Roronoa Zoro (053) #OP16-053 Near Mint English"
-     },
-     {
-      "date": "2026-10-21",
-      "price": 0.18,
-      "title": "Roronoa Zoro (053) #OP16-053 Near Mint English"
-     },
-     {
-      "date": "2026-10-20",
-      "price": 0.35,
-      "title": "Roronoa Zoro (053) #OP16-053 Near Mint English"
      }
     ]
    },
    "id": "696039",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.11,
+   "tcgMarket": 0.08,
    "tcgLow": 0.01,
    "tcgMid": 0.15,
    "soldAnyFinish": false
@@ -8132,9 +8132,9 @@
    "id": "706319",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 1.33,
+   "tcgMarket": 1.18,
    "tcgLow": 0.75,
-   "tcgMid": 1.99,
+   "tcgMid": 1.88,
    "soldAnyFinish": false
   },
   {
@@ -8165,10 +8165,20 @@
    "sold": {
     "title": "Roronoa Zoro OP14-015",
     "url": "https://www.pricecharting.com/game/one-piece-starter-deck-31-red-monkeydluffy/roronoa-zoro-op14-015",
-    "ungraded": 0.12,
+    "ungraded": 0.11,
     "psa10": null,
     "volume": "1 sale per week",
     "recentSales": [
+     {
+      "date": "2026-11-10",
+      "price": 0.09,
+      "title": "Roronoa Zoro #OP14-015 Near Mint English"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 0.1,
+      "title": "Roronoa Zoro #OP14-015 Near Mint English"
+     },
      {
       "date": "2026-11-06",
       "price": 0.12,
@@ -8208,16 +8218,6 @@
       "date": "2026-10-29",
       "price": 0.1,
       "title": "Roronoa Zoro #OP14-015 Near Mint English"
-     },
-     {
-      "date": "2026-10-28",
-      "price": 0.13,
-      "title": "Roronoa Zoro #OP14-015 Near Mint English"
-     },
-     {
-      "date": "2026-10-27",
-      "price": 0.25,
-      "title": "Roronoa Zoro #OP14-015 Near Mint English"
      }
     ]
    },
@@ -8226,7 +8226,7 @@
    "finish": "Non-foil",
    "tcgMarket": 0.12,
    "tcgLow": 0.05,
-   "tcgMid": 0.18,
+   "tcgMid": 0.2,
    "soldAnyFinish": false
   },
   {
@@ -8258,7 +8258,7 @@
    "id": "706327",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.97,
+   "tcgMarket": 0.93,
    "tcgLow": 0.8,
    "tcgMid": 1.1,
    "soldAnyFinish": false
@@ -8292,9 +8292,9 @@
    "id": "712687",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 3.19,
-   "tcgLow": 2.19,
-   "tcgMid": 4.24,
+   "tcgMarket": 3.14,
+   "tcgLow": 0.6,
+   "tcgMid": 4.2,
    "soldAnyFinish": false
   },
   {
@@ -8326,9 +8326,9 @@
    "id": "712725",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 11.69,
-   "tcgLow": 10.0,
-   "tcgMid": 16.45,
+   "tcgMarket": 11.7,
+   "tcgLow": 11.69,
+   "tcgMid": 16.53,
    "soldAnyFinish": false
   },
   {
@@ -8359,10 +8359,30 @@
    "sold": {
     "title": "Roronoa Zoro [SP] EB04-007",
     "url": "https://www.pricecharting.com/game/one-piece-world%27s-strongest-warriors/roronoa-zoro-sp-eb04-007",
-    "ungraded": 368.45,
-    "psa10": 910.0,
+    "ungraded": 334.03,
+    "psa10": 839.55,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-14",
+      "price": 350.65,
+      "title": "Roronoa Zoro (EB04-007) (SP) #EB04-007 Near Mint English SP"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 370.0,
+      "title": "Roronoa Zoro (EB04-007) (SP) #EB04-007 Near Mint English SP"
+     },
+     {
+      "date": "2026-11-08",
+      "price": 325.84,
+      "title": "Roronoa Zoro (EB04-007) (SP) #EB04-007 Near Mint English SP"
+     },
+     {
+      "date": "2026-11-06",
+      "price": 358.98,
+      "title": "Roronoa Zoro (EB04-007) (SP) #EB04-007 Near Mint English SP"
+     },
      {
       "date": "2026-11-03",
       "price": 358.0,
@@ -8392,35 +8412,15 @@
       "date": "2026-10-29",
       "price": 371.06,
       "title": "Roronoa Zoro (EB04-007) (SP) #EB04-007 Near Mint English SP"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 359.99,
-      "title": "Roronoa Zoro (EB04-007) (SP) #EB04-007 Near Mint English SP"
-     },
-     {
-      "date": "2026-10-24",
-      "price": 374.58,
-      "title": "Roronoa Zoro (EB04-007) (SP) #EB04-007 Near Mint English SP"
-     },
-     {
-      "date": "2026-10-23",
-      "price": 374.77,
-      "title": "Roronoa Zoro (EB04-007) (SP) #EB04-007 Near Mint English SP"
-     },
-     {
-      "date": "2026-10-20",
-      "price": 375.17,
-      "title": "Roronoa Zoro (EB04-007) (SP) #EB04-007 Near Mint English SP"
      }
     ]
    },
    "id": "705991",
    "foil": true,
    "finish": "Foil",
-   "tcgMarket": 368.32,
-   "tcgLow": 325.0,
-   "tcgMid": 390.0,
+   "tcgMarket": 363.58,
+   "tcgLow": 336.01,
+   "tcgMid": 380.0,
    "soldAnyFinish": false
   },
   {
@@ -8451,10 +8451,30 @@
    "sold": {
     "title": "Roronoa Zoro OP17-035",
     "url": "https://www.pricecharting.com/game/one-piece-world%27s-strongest-warriors/roronoa-zoro-op17-035",
-    "ungraded": 0.11,
+    "ungraded": 0.14,
     "psa10": null,
     "volume": "1 sale per day",
     "recentSales": [
+     {
+      "date": "2026-11-15",
+      "price": 0.03,
+      "title": "Roronoa Zoro (035) #OP17-035 Near Mint English"
+     },
+     {
+      "date": "2026-11-14",
+      "price": 0.01,
+      "title": "Roronoa Zoro (035) #OP17-035 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.01,
+      "title": "Roronoa Zoro (035) #OP17-035 Near Mint English"
+     },
+     {
+      "date": "2026-11-09",
+      "price": 0.01,
+      "title": "Roronoa Zoro (035) #OP17-035 Near Mint English"
+     },
      {
       "date": "2026-11-05",
       "price": 0.01,
@@ -8484,33 +8504,13 @@
       "date": "2026-10-26",
       "price": 0.1,
       "title": "Roronoa Zoro (035) #OP17-035 Near Mint English"
-     },
-     {
-      "date": "2026-10-25",
-      "price": 0.18,
-      "title": "Roronoa Zoro (035) #OP17-035 Near Mint English"
-     },
-     {
-      "date": "2026-10-22",
-      "price": 0.03,
-      "title": "Roronoa Zoro (035) #OP17-035 Near Mint English"
-     },
-     {
-      "date": "2026-10-20",
-      "price": 0.1,
-      "title": "Roronoa Zoro (035) #OP17-035 Near Mint English"
-     },
-     {
-      "date": "2026-10-19",
-      "price": 0.08,
-      "title": "Roronoa Zoro (035) #OP17-035 Near Mint English"
      }
     ]
    },
    "id": "712609",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 0.09,
+   "tcgMarket": 0.06,
    "tcgLow": 0.01,
    "tcgMid": 0.15,
    "soldAnyFinish": false
@@ -8548,6 +8548,21 @@
     "volume": "3 sales per week",
     "recentSales": [
      {
+      "date": "2026-11-15",
+      "price": 0.15,
+      "title": "Roronoa Zoro (095) #OP17-095 Near Mint English"
+     },
+     {
+      "date": "2026-11-14",
+      "price": 0.11,
+      "title": "Roronoa Zoro (095) #OP17-095 Near Mint English"
+     },
+     {
+      "date": "2026-11-10",
+      "price": 0.1,
+      "title": "Roronoa Zoro (095) #OP17-095 Near Mint English"
+     },
+     {
       "date": "2026-11-05",
       "price": 0.11,
       "title": "Roronoa Zoro (095) #OP17-095 Near Mint English"
@@ -8581,21 +8596,6 @@
       "date": "2026-10-11",
       "price": 0.12,
       "title": "Roronoa Zoro (095) #OP17-095 Near Mint English"
-     },
-     {
-      "date": "2026-10-10",
-      "price": 0.1,
-      "title": "Roronoa Zoro (095) #OP17-095 Near Mint English"
-     },
-     {
-      "date": "2026-10-05",
-      "price": 0.1,
-      "title": "Roronoa Zoro (095) #OP17-095 Near Mint English"
-     },
-     {
-      "date": "2026-09-30",
-      "price": 0.2,
-      "title": "Roronoa Zoro (095) #OP17-095 Near Mint English"
      }
     ]
    },
@@ -8604,7 +8604,7 @@
    "finish": "Non-foil",
    "tcgMarket": 0.1,
    "tcgLow": 0.01,
-   "tcgMid": 0.18,
+   "tcgMid": 0.2,
    "soldAnyFinish": false
   },
   {
@@ -8636,9 +8636,77 @@
    "id": "716628",
    "foil": false,
    "finish": "Non-foil",
-   "tcgMarket": 1.94,
-   "tcgLow": 1.74,
-   "tcgMid": 2.27,
+   "tcgMarket": 1.93,
+   "tcgLow": 1.25,
+   "tcgMid": 2.2,
+   "soldAnyFinish": false
+  },
+  {
+   "productId": 733309,
+   "name": "Roronoa Zoro (017)",
+   "baseName": "Roronoa Zoro",
+   "variant": "Standard",
+   "number": "OP18-017",
+   "set": "The Dominance of God Release Event Cards",
+   "setCode": "OP18 RE",
+   "don": false,
+   "rarity": "C",
+   "cost": "4",
+   "color": "Red",
+   "type": "Character",
+   "power": "4000",
+   "counter": "1000",
+   "attribute": "Slash",
+   "subtypes": "Alabasta;Straw Hat Crew",
+   "effect": "[Once Per Turn] If your {Alabasta} type Character would be removed from the field by your opponent's effect, you may give your Leader -2000 power during this turn instead.\r \n [When Attacking] Up to 1 of your {Alabasta} type Characters gains [Rush] during this turn.",
+   "released": "2026-11-13",
+   "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/733309_in_1000x1000.jpg",
+   "tcgplayerUrl": "https://www.tcgplayer.com/product/733309/one-piece-card-game-the-dominance-of-god-release-event-cards-roronoa-zoro-017",
+   "image": "images/733309.png",
+   "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP18-017+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
+   "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP18-017",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP18-017",
+   "sold": null,
+   "id": "733309",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
+   "soldAnyFinish": false
+  },
+  {
+   "productId": 733353,
+   "name": "Roronoa Zoro (092)",
+   "baseName": "Roronoa Zoro",
+   "variant": "Standard",
+   "number": "OP18-092",
+   "set": "The Dominance of God Release Event Cards",
+   "setCode": "OP18 RE",
+   "don": false,
+   "rarity": "UC",
+   "cost": "2",
+   "color": "Black",
+   "type": "Character",
+   "power": "2000",
+   "counter": "1000",
+   "attribute": "Slash",
+   "subtypes": "Straw Hat Crew;Elbaph",
+   "effect": "If there is a Character with a cost of 12 or more, this Character gains +3000 power.\r \n If you have 10 or more cards in your trash, this Character gains [Rush].\r \n  (This card can attack on the turn in which it is played.)",
+   "released": "2026-11-13",
+   "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/733353_in_1000x1000.jpg",
+   "tcgplayerUrl": "https://www.tcgplayer.com/product/733353/one-piece-card-game-the-dominance-of-god-release-event-cards-roronoa-zoro-092",
+   "image": "images/733353.png",
+   "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP18-092+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
+   "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP18-092",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP18-092",
+   "sold": null,
+   "id": "733353",
+   "foil": false,
+   "finish": "",
+   "tcgMarket": null,
+   "tcgLow": null,
+   "tcgMid": null,
    "soldAnyFinish": false
   },
   {
@@ -8662,7 +8730,7 @@
    "released": "2026-11-20",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/722652_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/722652/one-piece-card-game-the-dominance-of-god-roronoa-zoro-017",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/722652_in_1000x1000.jpg",
+   "image": "images/722652.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP18-017+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP18-017",
    "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP18-017",
@@ -8672,7 +8740,41 @@
    "finish": "Non-foil",
    "tcgMarket": null,
    "tcgLow": 2.99,
-   "tcgMid": 2.99,
+   "tcgMid": 4.0,
+   "soldAnyFinish": false
+  },
+  {
+   "productId": 731762,
+   "name": "Zoro & Sogeking",
+   "baseName": "Zoro & Sogeking",
+   "variant": "Standard",
+   "number": "OP18-027",
+   "set": "The Dominance of God",
+   "setCode": "OP18",
+   "don": false,
+   "rarity": "R",
+   "cost": "5",
+   "color": "Green",
+   "type": "Character",
+   "power": "6000",
+   "counter": "",
+   "attribute": "Ranged;Slash",
+   "subtypes": "Straw Hat Crew;Water Seven;Sniper Island",
+   "effect": "[Opponent's Turn] The base power of your active [Monkey.D.Luffy] Leader with 3 or more DON!! cards given becomes 7000.\r\n [On Play] Set up to 2 of your DON!! cards as active. Then, up to 1 of your opponent's Characters with a cost of 6 or less cannot be rested until the end of your opponent's next End Phase.",
+   "released": "2026-11-20",
+   "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/731762_in_1000x1000.jpg",
+   "tcgplayerUrl": "https://www.tcgplayer.com/product/731762/one-piece-card-game-the-dominance-of-god-zoro-and-sogeking",
+   "image": "images/731762.png",
+   "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP18-027+Zoro+%26+Sogeking+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
+   "collectrUrl": "https://app.getcollectr.com/?query=Zoro%20%26%20Sogeking%20OP18-027",
+   "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP18-027",
+   "sold": null,
+   "id": "731762",
+   "foil": true,
+   "finish": "Foil",
+   "tcgMarket": null,
+   "tcgLow": 25.0,
+   "tcgMid": 25.0,
    "soldAnyFinish": false
   },
   {
@@ -8696,7 +8798,7 @@
    "released": "2026-11-20",
    "imageRemote": "https://tcgplayer-cdn.tcgplayer.com/product/724684_in_1000x1000.jpg",
    "tcgplayerUrl": "https://www.tcgplayer.com/product/724684/one-piece-card-game-the-dominance-of-god-roronoa-zoro-092",
-   "image": "https://tcgplayer-cdn.tcgplayer.com/product/724684_in_1000x1000.jpg",
+   "image": "images/724684.png",
    "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=OP18-092+Roronoa+Zoro+one+piece+-japanese&LH_Sold=1&LH_Complete=1",
    "collectrUrl": "https://app.getcollectr.com/?query=Roronoa%20Zoro%20OP18-092",
    "pricechartingUrl": "https://www.pricecharting.com/search-products?type=prices&q=Zoro+OP18-092",
@@ -8706,7 +8808,7 @@
    "finish": "Non-foil",
    "tcgMarket": 2.99,
    "tcgLow": 2.99,
-   "tcgMid": 2.99,
+   "tcgMid": 4.0,
    "soldAnyFinish": false
   }
  ]
