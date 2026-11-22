@@ -67,6 +67,20 @@ const price = (c) => mainPrice(c).v;
 const charbar = document.querySelector(".charbar");
 new ResizeObserver(() => document.documentElement.style.setProperty("--charbar-h", charbar.offsetHeight + "px")).observe(charbar);
 
+// Tabs show their full name on wide screens and an icon + short name in the phone tab bar.
+const TAB_ICONS = { zoro: ["🗡️", "Zoro"], luffy: ["👒", "Luffy"], business: ["💰", "Binders"], matchups: ["🃏", "Tips"], golf: ["⛳", "Golf"] };
+function tabButton(key, label, withCount = false) {
+  const [icon, short] = TAB_ICONS[key] || ["⭐", label];
+  return `<button data-char="${esc(key)}" role="tab"><span class="tab-ico" aria-hidden="true">${icon}</span>` +
+    `<span class="tab-full">${esc(label)}</span><span class="tab-short">${esc(short)}</span>${withCount ? `<span class="count"></span>` : ""}</button>`;
+}
+
+// Phones: the filter dropdowns sit behind a Filters button.
+function updateFiltersButton() {
+  const active = ["#color", "#kind", "#finish"].filter((s) => $(s).value).length + ($("#sort").value !== "number" ? 1 : 0);
+  $("#filtersBtn").textContent = `Filters${active ? ` (${active})` : ""} ${$(".controls").classList.contains("open") ? "▴" : "▾"}`;
+}
+
 async function init() {
   state.manual = await fetch("data/manual.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
   state.owned = loadOwned();
@@ -77,12 +91,10 @@ async function init() {
   state.chars = await fetch("data/characters.json", { cache: "no-cache" })
     .then((r) => (r.ok ? r.json() : null))
     .catch(() => null) || [{ key: "zoro", label: "Zoro" }, { key: "luffy", label: "Luffy" }];
-  $("#chars").innerHTML = state.chars
-    .map((c) => `<button data-char="${esc(c.key)}" role="tab">${esc(c.label)}<span class="count"></span></button>`).join("") +
-    `<button data-char="business" role="tab">Binder Business</button>` +
-    `<button data-char="matchups" role="tab">Matchup Tips</button>` +
-    `<button data-char="golf" role="tab">Golf Scramble</button>` +
-    `<button type="button" id="syncBtn" class="sync-btn" title="Sync & share" aria-label="Sync and share">☁</button>`;
+  $("#chars").innerHTML = state.chars.map((c) => tabButton(c.key, c.label, true)).join("") +
+    tabButton("business", "Binder Business") + tabButton("matchups", "Matchup Tips") + tabButton("golf", "Golf Scramble") +
+    `<button type="button" id="syncBtn" class="sync-btn" title="Sync & share" aria-label="Sync and share">` +
+    `<span class="tab-ico" aria-hidden="true">☁</span><span class="tab-short">Sync</span></button>`;
   $("#syncBtn").addEventListener("click", () => Sync.open());
   // Card counts on the tabs (loads each tab's list in the background).
   state.chars.forEach(async (c) => {
@@ -291,6 +303,8 @@ document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("cli
   render();
 }));
 ["#search", "#color", "#kind", "#finish", "#sort"].forEach((s) => $(s).addEventListener("input", render));
+["#color", "#kind", "#finish", "#sort"].forEach((s) => $(s).addEventListener("input", updateFiltersButton));
+$("#filtersBtn").addEventListener("click", () => { $(".controls").classList.toggle("open"); updateFiltersButton(); });
 $("#listMode").addEventListener("click", (e) => {
   state.list = !state.list;
   e.target.textContent = state.list ? "Grid view" : "List view";

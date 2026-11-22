@@ -218,3 +218,65 @@ body.viewonly .own input { pointer-events: none; }
 .golf-team ol { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-direction: column; gap: 6px; }
 .golf-team li { display: flex; align-items: center; gap: 8px; }
 body.viewonly .golf-form, body.viewonly .golf-row button, body.viewonly #golfGenerate { display: none !important; }
+
+/* ---------- Phones: bottom tab bar, compact headers and stats, filters behind a button ---------- */
+.tab-ico, .tab-short, .filters-btn { display: none; }
+.chars .sync-btn .tab-ico { display: inline; }
+@media (max-width: 640px) {
+  body { padding-bottom: calc(66px + env(safe-area-inset-bottom)); }
+  .charbar { position: fixed; top: auto; bottom: 0; left: 0; right: 0; z-index: 20; border-bottom: none;
+             border-top: 1px solid var(--line); background: var(--panel); box-shadow: 0 -4px 16px rgba(0,0,0,.08);
+             padding-bottom: env(safe-area-inset-bottom); }
+  .chars { padding: 4px 6px; gap: 2px; }
+  .chars button, .chars .sync-btn { flex: 1 1 0; width: auto; margin: 0; padding: 5px 0 6px; border: none !important;
+             border-radius: 12px !important; background: transparent; color: var(--muted);
+             display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 11px; font-weight: 650; }
+  .chars button.active { background: transparent; color: var(--accent); }
+  .chars .tab-ico { display: block; font-size: 20px; line-height: 1; padding: 3px 14px; border-radius: 99px; }
+  .chars button.active .tab-ico { background: color-mix(in srgb, var(--accent) 16%, transparent); }
+  .chars .sync-btn.on { color: var(--accent); }
+  .chars .tab-short { display: block; }
+  .chars .tab-full, .chars .count { display: none; }
+
+  header { padding: 16px 16px 4px; }
+  h1 { font-size: 23px; }
+  .sub { font-size: 14px; margin: 4px 0 10px; }
+  /* Stats scroll sideways in one row instead of wrapping into several. */
+  .stats { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 0 16px 6px; scroll-snap-type: x proximity;
+           scroll-padding: 0 16px; scrollbar-width: none; }
+  .stats::-webkit-scrollbar { display: none; }
+  .stat { flex: none; padding: 8px 12px; scroll-snap-align: start; }
+  .stat b { font-size: 17px; white-space: nowrap; }
+  .stat span { font-size: 11px; white-space: nowrap; }
+
+  .controls { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 10px 16px; }
+  .controls .tabs { grid-column: 1 / -1; }
+  .controls .tabs button { flex: 1; }
+  .controls input[type=search] { min-width: 0; }
+  .filters-btn { display: block; }
+  .controls > select, #listMode, #export, .controls .import { display: none; }
+  .controls.open > select, .controls.open #listMode, .controls.open #export, .controls.open .import { display: block; }
+  .controls.open > select { grid-column: 1 / -1; }
+
+  main { padding: 12px; }
+  .grid { gap: 8px; }
+  .card { border-radius: 10px; }
+  .body { padding: 8px 9px 10px; gap: 5px; }
+  .name { font-size: 14px; }
+  .meta, .prices, .links, details { font-size: 12px; }
+  .main-price b { font-size: 17px; }
+  .chip { font-size: 11px; padding: 1px 6px; }
+  .own { padding: 5px 6px; gap: 4px; }
+  .own button { width: 30px; height: 30px; }
+  .own input { width: 40px; height: 30px; }
+  footer { padding: 12px 16px 20px; }
+
+  .biz { padding: 12px; gap: 12px; }
+  .panel { padding: 14px; }
+  .golf-teams-head h2 { flex-basis: 100%; }
+  .golf-teams-head label { flex: 1 1 100%; justify-content: space-between; font-size: 14px; }
+  .golf-teams-head select { flex: 1; max-width: 60%; }
+  .golf-teams-head button.primary { flex: 2; }
+  .mu-card img { width: 84px; }
+  .view-banner { font-size: 13px; }
+}
