@@ -35,6 +35,15 @@ Thursdays) writes `site/data/meta.json`: every English leader from tcgcsv.com, m
 finish at each leader's newest event from onepiece.limitlesstcg.com, and, for leaders with no
 tournament list yet, the cards that support them.
 
+## Golf Scramble tab
+
+Add golfers with a rank (1–5, 5 = strongest) and an optional ⭐ top-player flag, pick how many teams,
+and press **Make teams**. Top players are spread one per team first; everyone else is dealt strongest-first
+to the team furthest below its fair share, then players are swapped between teams while that narrows
+the gap in average rank. Pressing it again gives a different, equally balanced mix; **Copy** puts the
+teams on the clipboard to paste into a message. The list is saved in the browser and synced with ☁ Sync
+(`site/golf.js`).
+
 ## How it works
 
 - `scripts/fetch_cards.py` pulls the card list, pictures and TCGplayer prices from

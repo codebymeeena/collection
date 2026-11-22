@@ -81,6 +81,7 @@ async function init() {
     .map((c) => `<button data-char="${esc(c.key)}" role="tab">${esc(c.label)}<span class="count"></span></button>`).join("") +
     `<button data-char="business" role="tab">Binder Business</button>` +
     `<button data-char="matchups" role="tab">Matchup Tips</button>` +
+    `<button data-char="golf" role="tab">Golf Scramble</button>` +
     `<button type="button" id="syncBtn" class="sync-btn" title="Sync & share" aria-label="Sync and share">☁</button>`;
   $("#syncBtn").addEventListener("click", () => Sync.open());
   // Card counts on the tabs (loads each tab's list in the background).
@@ -113,11 +114,12 @@ async function init() {
 }
 
 // Extra tabs that aren't card lists; anything else is a card tab.
-const PAGES = { business: () => Business.show(), matchups: () => Matchups.show() };
+const PAGES = { business: () => Business.show(), matchups: () => Matchups.show(), golf: () => Golf.show() };
 async function route(key) {
   const page = PAGES[key];
   $("#businessView").hidden = key !== "business";
   $("#matchupsView").hidden = key !== "matchups";
+  $("#golfView").hidden = key !== "golf";
   $("#cardsView").hidden = !!page;
   if (!page) return showChar(key);
   try { localStorage.setItem(CHAR_KEY, key); } catch {}

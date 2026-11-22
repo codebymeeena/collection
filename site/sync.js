@@ -17,7 +17,7 @@ const Sync = (() => {
   let timer = null;
 
   const localStamp = () => Number(store.get(STAMP_KEY)) || 0;
-  const payload = () => ({ owned: App.getOwned(), business: Business.getEntries() });
+  const payload = () => ({ owned: App.getOwned(), business: Business.getEntries(), golf: Golf.getData() });
   const shareLink = () => viewId && `${location.origin}${location.pathname}#view=${viewId}`;
 
   function newCode() {
@@ -36,6 +36,7 @@ const Sync = (() => {
   function apply(data, readOnly) {
     App.setOwned(data.owned || {}, readOnly);
     Business.setEntries(data.business || [], readOnly);
+    if (data.golf) Golf.setData(data.golf, readOnly);
   }
 
   async function push() {
