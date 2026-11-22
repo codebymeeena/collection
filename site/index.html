@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f7a3f">
 <title>One Piece Card Collection</title>
-<link rel="stylesheet" href="style.css?v=15">
+<link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
 <div class="charbar">
   <div class="chars" id="chars" role="tablist" aria-label="Character">
-    <button data-char="zoro" role="tab">Zoro</button>
-    <button data-char="luffy" role="tab">Luffy</button>
-    <button data-char="business" role="tab">Binder Business</button>
-    <button data-char="matchups" role="tab">Matchup Tips</button>
-    <button data-char="golf" role="tab">Golf Scramble</button>
+    <button data-char="zoro" role="tab"><span class="tab-ico" aria-hidden="true">🗡️</span><span class="tab-full">Zoro</span><span class="tab-short">Zoro</span></button>
+    <button data-char="luffy" role="tab"><span class="tab-ico" aria-hidden="true">👒</span><span class="tab-full">Luffy</span><span class="tab-short">Luffy</span></button>
+    <button data-char="business" role="tab"><span class="tab-ico" aria-hidden="true">💰</span><span class="tab-full">Binder Business</span><span class="tab-short">Binders</span></button>
+    <button data-char="matchups" role="tab"><span class="tab-ico" aria-hidden="true">🃏</span><span class="tab-full">Matchup Tips</span><span class="tab-short">Tips</span></button>
+    <button data-char="golf" role="tab"><span class="tab-ico" aria-hidden="true">⛳</span><span class="tab-full">Golf Scramble</span><span class="tab-short">Golf</span></button>
   </div>
 </div>
 <section id="businessView" hidden></section>
@@ -33,6 +34,7 @@
     <button data-view="need">I need</button>
   </div>
   <input id="search" type="search" placeholder="Search name, number, set…">
+  <button type="button" id="filtersBtn" class="filters-btn" aria-label="Show filters">Filters ▾</button>
   <select id="color"><option value="">All colours</option></select>
   <select id="kind">
     <option value="">Cards &amp; DON!!</option>
@@ -59,7 +61,7 @@
 
 <footer>
   <p id="updated"></p>
-  <p>Site version 15</p>
+  <p>Site version 16</p>
   <p>All prices are shown in Canadian dollars, converted from the US-dollar prices below at the weekly exchange rate. The big price on each card is the TCGplayer market price (or, when that is clearly out of date — the cheapest listing is over 3× it and no eBay sale backs it — the cheapest TCGplayer listing); if TCGplayer has none, it falls back to the last eBay sale, then the eBay sold average. (Collectr has no public prices, so it is linked on each card instead.) Prices: TCGplayer market price (via tcgcsv.com). “Sold (raw)” and the recent-sales list come from
      PriceCharting, which tracks eBay sold listings for ungraded English copies. Each card links to eBay sold
      listings, TCGplayer, Collectr and PriceCharting so you can double-check. Your quantities are saved in this browser — turn on ☁ Sync (top right) to keep them on all your devices and share a view-only link.</p>
@@ -67,10 +69,10 @@
 </div>
 
 <dialog id="zoom"><img alt=""><button>Close</button></dialog>
-<script src="business.js?v=15"></script>
-<script src="sync.js?v=15"></script>
-<script src="matchups.js?v=15"></script>
-<script src="golf.js?v=15"></script>
-<script src="app.js?v=15"></script>
+<script src="business.js?v=16"></script>
+<script src="sync.js?v=16"></script>
+<script src="matchups.js?v=16"></script>
+<script src="golf.js?v=16"></script>
+<script src="app.js?v=16"></script>
 </body>
 </html>
