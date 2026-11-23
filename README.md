@@ -18,7 +18,7 @@ money spent, binders sold, average per binder, spending by type and a month-by-m
 Each sale can record the customer's name, where you messaged them (Instagram, TikTok, Facebook /
 Marketplace, …) and their username, and can be linked (🔗 Binder used) to the binder purchase it came
 from: the sale then shows that binder's cost and the profit on the sale, and the purchase shows how many
-of its binders are used and by whom. Customer details are hidden on view-only share links.
+of its binders are used and by whom. Choose “Customer brought their own binder” when they supplied it: the sale then has no binder cost. Customer details are hidden on view-only share links.
 Entries can be edited or deleted. They are saved in the browser; **Backup** / **Restore** move them
 between devices and **Download CSV** opens in Excel / Google Sheets.
 
