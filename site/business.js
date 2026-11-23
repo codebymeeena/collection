@@ -5,6 +5,7 @@ const Business = (() => {
   const BINDER_TYPES = ["9-pocket", "4-pocket", "12-pocket", "Top loader", "Other"];
   const binderType = (e) => e.binderType || "Not set";
   const CATEGORIES = ["Markers", "Binders", "Paint & brushes", "Shipping & fees", "Other supplies"];
+  const CHANNELS = ["Instagram", "Facebook / Marketplace", "TikTok", "Snapchat", "Text / iMessage", "Discord", "Kijiji", "In person", "Other"];
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
   const cad = (v) => (v < 0 ? "−" : "") + "CA$" + Math.abs(v).toLocaleString("en-CA", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -29,6 +30,14 @@ const Business = (() => {
   const sales = () => entries.filter((e) => e.type === "sale");
   const expenses = () => entries.filter((e) => e.type === "expense");
 
+  // A sale can point at the purchase its binder came from (sale.binderFrom = expense id).
+  // A purchase of 3 binders for CA$60 costs CA$20 per binder sold from it.
+  const unitCost = (x) => x.amount / Math.max(x.qty, 1);
+  const linkedBuy = (sale) => sale.binderFrom && entries.find((x) => x.id === sale.binderFrom && x.type === "expense");
+  const saleCost = (sale) => { const b = linkedBuy(sale); return b ? unitCost(b) * sale.qty : null; };
+  const salesFrom = (buy) => sales().filter((x) => x.binderFrom === buy.id);
+  const usedFrom = (buy, except) => salesFrom(buy).filter((x) => x.id !== except).reduce((t, x) => t + x.qty, 0);
+  const who = (e) => [e.customer, e.via].filter(Boolean).join(" · ");
   function mount() {
     $("#businessView").innerHTML = `
       <header>
@@ -41,9 +50,15 @@ const Business = (() => {
           <form class="panel" id="saleForm">
             <h2>💰 I sold a binder</h2>
             <label>Date <input type="date" name="date" required></label>
-            <label>What / who <input name="desc" placeholder="e.g. Zoro binder for Sam" required></label>
+            <label>What did you make? <input name="desc" placeholder="e.g. Zoro binder" required></label>
+            <div class="row">
+              <label>Customer's name <input name="customer" placeholder="e.g. Sam" autocomplete="off"></label>
+              <label>Messaged on <select name="via"><option value="">—</option>${CHANNELS.map((c) => `<option>${c}</option>`).join("")}</select></label>
+            </div>
+            <label>Their username / contact <input name="handle" placeholder="e.g. @sam.cards" autocomplete="off"></label>
             <div class="row">
               <label>Binder type <select name="binderType">${BINDER_TYPES.map((t) => `<option>${t}</option>`).join("")}</select></label>
+              <label>🔗 Binder used <select name="binderFrom"></select></label>
             </div>
             <div class="row">
               <label>Binders <input type="number" name="qty" min="1" step="1" value="1" required></label>
@@ -96,7 +111,10 @@ const Business = (() => {
       const row = e.target.closest("[data-id]");
       if (!row) return;
       const entry = entries.find((x) => x.id === row.dataset.id);
-      if (e.target.matches(".del") && confirm(`Delete "${entry.desc || entry.category}" (${cad(entry.amount)})?`)) {
+      const linked = entry.type === "expense" ? salesFrom(entry).length : 0;
+      if (e.target.matches(".del") && confirm(`Delete "${entry.desc || entry.category}" (${cad(entry.amount)})?` +
+          (linked ? `\n${linked} sale${linked > 1 ? "s are" : " is"} linked to it and will be unlinked.` : ""))) {
+        for (const x of salesFrom(entry)) delete x.binderFrom;
         entries = entries.filter((x) => x !== entry);
         save();
         render();
@@ -118,7 +136,13 @@ const Business = (() => {
       date: f.date.value,
       desc: f.desc.value.trim(),
       category: type === "sale" ? "Binder sale" : f.category.value,
-      ...(type === "sale" && { binderType: f.binderType.value }),
+      ...(type === "sale" && {
+        binderType: f.binderType.value,
+        customer: f.customer.value.trim(),
+        via: f.via.value,
+        handle: f.handle.value.trim(),
+        binderFrom: f.binderFrom.value || undefined,
+      }),
       qty: Math.max(1, Math.floor(+f.qty.value) || 1),
       amount: Math.round((+f.amount.value || 0) * 100) / 100,
     };
@@ -140,10 +164,25 @@ const Business = (() => {
     f.qty.value = entry.qty;
     f.amount.value = entry.amount;
     if (f.category) f.category.value = entry.category;
-    if (f.binderType) f.binderType.value = BINDER_TYPES.includes(entry.binderType) ? entry.binderType : "Other";
+    if (f.binderType) {
+      f.binderType.value = BINDER_TYPES.includes(entry.binderType) ? entry.binderType : "Other";
+      f.customer.value = entry.customer || "";
+      f.via.value = entry.via || "";
+      f.handle.value = entry.handle || "";
+      binderOptions(entry);
+    }
     f.classList.add("editing");
     f.querySelector("button.primary").textContent = "Save changes";
     f.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+  // Binder purchases to link a sale to: ones with binders left first, then used-up ones.
+  function binderOptions(sale = null) {
+    const buys = expenses().filter((x) => x.category === "Binders" || x.id === sale?.binderFrom)
+      .map((x) => ({ x, left: x.qty - usedFrom(x, sale?.id) }))
+      .sort((a, b) => (b.left > 0) - (a.left > 0) || b.x.date.localeCompare(a.x.date));
+    $("#saleForm").binderFrom.innerHTML = `<option value="">Not linked</option>` + buys.map(({ x, left }) =>
+      `<option value="${esc(x.id)}" ${x.id === sale?.binderFrom ? "selected" : ""}>${esc(x.date)} · ${esc(x.desc || x.category)} · ${cad(unitCost(x))} each · ${left > 0 ? `${left} of ${x.qty} left` : "all used"}</option>`).join("") +
+      (buys.length ? "" : `<option value="" disabled>Log a binder purchase under “I bought supplies” first</option>`);
   }
   function stopEdit() {
     editing = null;
@@ -168,6 +207,7 @@ const Business = (() => {
       [binders ? cad(made / binders) : "—", "Average per binder"],
       [cad(monthProfit), "Profit this month", monthProfit < 0 ? "neg" : "pos"],
     ].map(([v, l, cls]) => `<div class="stat ${cls || ""}"><b>${v}</b><span>${l}</span></div>`).join("");
+    if (!editing || editing.type !== "sale") binderOptions();
     renderBreakdown(spent);
     renderList();
   }
@@ -187,6 +227,13 @@ const Business = (() => {
       t.made += e.amount;
     }
     const typeRows = Object.entries(types).sort(([, a], [, b]) => b.made - a.made);
+    const channels = {};
+    for (const e of sales()) {
+      const c = (channels[e.via || "Not set"] ||= { count: 0, made: 0 });
+      c.count += 1;
+      c.made += e.amount;
+    }
+    const channelRows = Object.entries(channels).sort(([, a], [, b]) => b.made - a.made);
     $("#bizBreakdown").innerHTML = `
       <div class="biz-cols">
         <div>
@@ -199,6 +246,12 @@ const Business = (() => {
           <h2>Sales by binder type</h2>
           ${typeRows.length ? `<table class="biz-table"><tr><th>Type</th><th>Sold</th><th>Made</th><th>Avg each</th></tr>
             ${typeRows.map(([t, v]) => `<tr><td>${esc(t)}</td><td>${v.count}</td><td>${cad(v.made)}</td><td>${cad(v.made / v.count)}</td></tr>`).join("")}
+            </table>` : `<p class="meta">No sales yet.</p>`}
+        </div>
+        <div>
+          <h2>Where customers came from</h2>
+          ${channelRows.length ? `<table class="biz-table"><tr><th>Messaged on</th><th>Sales</th><th>Made</th></tr>
+            ${channelRows.map(([c, v]) => `<tr><td>${esc(c)}</td><td>${v.count}</td><td>${cad(v.made)}</td></tr>`).join("")}
             </table>` : `<p class="meta">No sales yet.</p>`}
         </div>
         <div>
@@ -218,11 +271,27 @@ const Business = (() => {
       <div class="biz-entry ${e.type}" data-id="${esc(e.id)}">
         <span class="date">${esc(e.date)}</span>
         <span class="what"><b>${esc(e.desc || e.category)}</b>
-          <span class="meta">${e.type === "sale" ? `${e.qty} × ${e.binderType ? esc(e.binderType) + " " : ""}binder${e.qty > 1 ? "s" : ""}` : `${esc(e.category)}${e.qty > 1 ? ` · ×${e.qty}` : ""}`}</span></span>
+          <span class="meta">${e.type === "sale" ? saleDetails(e) : buyDetails(e)}</span></span>
         <span class="amt">${e.type === "sale" ? "+" : "−"}${cad(e.amount).replace("−", "")}</span>
         <button class="edit" title="Edit">Edit</button>
         <button class="del" title="Delete">✕</button>
       </div>`).join("") : `<p class="meta">Nothing here yet — add a sale or an expense above.</p>`;
+  }
+
+  function saleDetails(e) {
+    const bits = [`${e.qty} × ${e.binderType ? esc(e.binderType) + " " : ""}binder${e.qty > 1 ? "s" : ""}`];
+    // Customer details stay private on view-only share links.
+    if (!readOnly && (e.customer || e.via || e.handle))
+      bits.push(`👤 ${[e.customer, e.via, e.handle].filter(Boolean).map(esc).join(" · ")}`);
+    const cost = saleCost(e);
+    if (cost != null) bits.push(`<span class="biz-link">🔗 binder ${cad(cost)} → profit <b class="${e.amount - cost < 0 ? "neg" : "pos"}">${cad(e.amount - cost)}</b></span>`);
+    return bits.join(" · ");
+  }
+  function buyDetails(e) {
+    const bits = [`${esc(e.category)}${e.qty > 1 ? ` · ×${e.qty}` : ""}`];
+    const used = salesFrom(e);
+    if (used.length) bits.push(`<span class="biz-link">🔗 used for ${used.reduce((t, x) => t + x.qty, 0)} of ${e.qty}${readOnly ? "" : `: ${used.map((x) => esc(x.customer || x.desc)).join(", ")}`}</span>`);
+    return bits.join(" · ");
   }
 
   function download(name, text, type) {
@@ -231,9 +300,14 @@ const Business = (() => {
   }
   function downloadCsv() {
     const q = (v) => `"${String(v).replace(/"/g, '""')}"`;
-    const rows = [["Date", "Type", "Category", "Binder type", "Description", "Quantity", "Amount (CAD)"],
-      ...[...entries].sort((a, b) => a.date.localeCompare(b.date))
-        .map((e) => [e.date, e.type === "sale" ? "Sale" : "Expense", e.category, e.type === "sale" ? binderType(e) : "", e.desc, e.qty, (e.type === "sale" ? 1 : -1) * e.amount])];
+    const rows = [["Date", "Type", "Category", "Binder type", "Description", "Quantity", "Amount (CAD)",
+      "Customer", "Messaged on", "Username / contact", "Binder used", "Binder cost (CAD)", "Profit on sale (CAD)"],
+      ...[...entries].sort((a, b) => a.date.localeCompare(b.date)).map((e) => {
+        const sale = e.type === "sale", cost = sale ? saleCost(e) : null, buy = sale && linkedBuy(e);
+        return [e.date, sale ? "Sale" : "Expense", e.category, sale ? binderType(e) : "", e.desc, e.qty, (sale ? 1 : -1) * e.amount,
+          sale ? e.customer || "" : "", sale ? e.via || "" : "", sale ? e.handle || "" : "",
+          buy ? `${buy.date} ${buy.desc || buy.category}` : "", cost != null ? cost.toFixed(2) : "", cost != null ? (e.amount - cost).toFixed(2) : ""];
+      })];
     download(`binder-business-${today()}.csv`, rows.map((r) => r.map(q).join(",")).join("\n"), "text/csv");
   }
   async function restore(e) {

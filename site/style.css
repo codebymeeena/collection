@@ -309,3 +309,6 @@ body.viewonly .golf-form, body.viewonly .golf-row button, body.viewonly #golfGen
 .golf-bay-teams:has(> .golf-team:nth-of-type(3)) { grid-template-columns: 1fr auto 1fr auto 1fr; }
 .golf-bay .golf-team:nth-of-type(3) { border-top-color: var(--purple); }
 @media (max-width: 860px) { .golf-bay-teams:has(> .golf-team:nth-of-type(3)) { grid-template-columns: 1fr; } .golf-vs { text-align: center; } }
+.biz-link { white-space: nowrap; }
+.biz-link b.pos, .biz-entry b.pos { color: var(--green); } .biz-link b.neg { color: var(--red); }
+.biz-entry .what .meta { white-space: normal; }
