@@ -112,6 +112,8 @@ const Business = (() => {
               <button data-f="all" class="active">All</button>
               <button data-f="sale">Sales</button>
               <button data-f="expense">Expenses</button>
+              <button data-f="binders">By binder</button>
+              <button data-f="supplies">By supplies</button>
             </div>
             <div class="biz-actions">
               <button type="button" id="bizCsv">Download CSV</button>
@@ -385,10 +387,8 @@ const Business = (() => {
       </div>`;
   }
 
-  function renderList() {
-    const list = entries.filter((e) => filter === "all" || e.type === filter)
-      .sort((a, b) => b.date.localeCompare(a.date) || b.id.localeCompare(a.id));
-    $("#bizList").innerHTML = list.length ? list.map((e) => `
+  const newest = (a, b) => b.date.localeCompare(a.date) || b.id.localeCompare(a.id);
+  const entryRow = (e) => `
       <div class="biz-entry ${e.type}" data-id="${esc(e.id)}">
         <span class="date">${esc(e.date)}</span>
         <span class="what"><b>${esc(title(e))}</b>
@@ -396,7 +396,74 @@ const Business = (() => {
         <span class="amt">${e.type === "sale" ? "+" : "−"}${cad(e.amount).replace("−", "")}</span>
         <button class="edit" title="Edit">Edit</button>
         <button class="del" title="Delete">✕</button>
-      </div>`).join("") : `<p class="meta">Nothing here yet — add a sale or an expense above.</p>`;
+      </div>`;
+
+  function renderList() {
+    if (filter === "binders") return renderByBinder();
+    if (filter === "supplies") return renderBySupplies();
+    const list = entries.filter((e) => filter === "all" || e.type === filter).sort(newest);
+    $("#bizList").innerHTML = list.length ? list.map(entryRow).join("") : `<p class="meta">Nothing here yet — add a sale or an expense above.</p>`;
+  }
+
+  // One card per binder purchase: the orders that used its binders, what those binders brought in
+  // (an order's money shared out by number of binders) and the profit after their cost.
+  // Then the customer's-own and not-linked binders.
+  function renderByBinder() {
+    const cards = [];
+    const orderRow = (sale, line, money, cost) => `
+      <div class="biz-group-row">
+        <span class="date">${esc(sale.date)}</span>
+        <span class="what">${esc(sale.desc)}${!readOnly && sale.customer ? ` <span class="meta">· ${esc(sale.customer)}</span>` : ""}</span>
+        <span class="meta">${line.qty} binder${line.qty > 1 ? "s" : ""}</span>
+        <span class="amt pos">+${cad(money)}</span>
+        ${cost != null ? `<span class="meta biz-group-profit">profit ${cad(money - cost)}</span>` : `<span></span>`}
+      </div>`;
+    const group = (head, rows, foot) => `<div class="biz-group">${head}${rows.join("") ||
+      `<p class="meta biz-group-empty">No orders have used these yet.</p>`}${foot}</div>`;
+    const linesWhere = (test) => sales().sort(newest).flatMap((sale) => linesOf(sale).filter(test)
+      .map((line) => ({ sale, line, money: (sale.amount * line.qty) / Math.max(sale.qty, 1) })));
+
+    for (const buy of expenses().filter((x) => x.category === "Binders").sort(newest)) {
+      const used = linesWhere((l) => l.from === buy.id);
+      const money = used.reduce((t, u) => t + u.money, 0);
+      const count = used.reduce((t, u) => t + u.line.qty, 0);
+      const cost = unitCost(buy) * count;
+      cards.push(group(
+        `<div class="biz-group-head" data-id="${esc(buy.id)}">
+          <div><b>${esc(title(buy))}</b>
+            <span class="meta">bought ${esc(buy.date)} · ${buy.qty} for ${cad(buy.amount)} (${cad(unitCost(buy))} each) · ${count} used, ${Math.max(buy.qty - count, 0)} left</span></div>
+          <button class="edit" title="Edit">Edit</button><button class="del" title="Delete">✕</button>
+        </div>`,
+        used.map((u) => orderRow(u.sale, u.line, u.money, unitCost(buy) * u.line.qty)),
+        count ? `<div class="biz-group-foot">Made ${cad(money)} from ${count} binder${count > 1 ? "s" : ""} · cost ${cad(cost)} ·
+          profit <b class="${money - cost < 0 ? "neg" : "pos"}">${cad(money - cost)}</b></div>` : ""));
+    }
+    const own = linesWhere((l) => l.own);
+    if (own.length) {
+      const money = own.reduce((t, u) => t + u.money, 0);
+      cards.push(group(`<div class="biz-group-head"><div><b>🙋 Customer's own binders</b><span class="meta">no binder cost</span></div></div>`,
+        own.map((u) => orderRow(u.sale, u.line, u.money, 0)),
+        `<div class="biz-group-foot">Made <b class="pos">${cad(money)}</b> from ${((n) => `${n} binder${n > 1 ? "s" : ""}`)(own.reduce((t, u) => t + u.line.qty, 0))}</div>`));
+    }
+    const loose = linesWhere((l) => !l.own && !lineBuy(l));
+    if (loose.length) cards.push(group(`<div class="biz-group-head"><div><b>Not linked to a purchase</b>
+        <span class="meta">edit these orders and pick the binder to see their profit</span></div></div>`,
+      loose.map((u) => orderRow(u.sale, u.line, u.money, null)), ""));
+    $("#bizList").innerHTML = cards.join("") || `<p class="meta">No binders yet — log a binder purchase under “I bought supplies”.</p>`;
+  }
+
+  // Everything except binders, grouped by type with a total for each.
+  function renderBySupplies() {
+    const groups = CATEGORIES.filter((c) => c !== "Binders")
+      .map((c) => ({ c, items: expenses().filter((x) => x.category === c).sort(newest) }))
+      .filter((g) => g.items.length)
+      .sort((a, b) => sum(b.items) - sum(a.items));
+    $("#bizList").innerHTML = groups.length ? groups.map(({ c, items }) => `
+      <div class="biz-group">
+        <div class="biz-group-head"><div><b>${esc(c)}</b><span class="meta">${items.length} purchase${items.length > 1 ? "s" : ""}</span></div>
+          <b class="neg">−${cad(sum(items))}</b></div>
+        ${items.map(entryRow).join("")}
+      </div>`).join("") : `<p class="meta">No supplies yet (other than binders).</p>`;
   }
 
   function saleDetails(e) {
