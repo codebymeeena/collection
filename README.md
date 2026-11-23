@@ -37,12 +37,19 @@ tournament list yet, the cards that support them.
 
 ## Golf Scramble tab
 
-Add golfers with a rank (1–5, 5 = strongest) and an optional ⭐ top-player flag, pick how many teams,
-and press **Make teams**. Top players are spread one per team first; everyone else is dealt strongest-first
-to the team furthest below its fair share, then players are swapped between teams while that narrows
-the gap in average rank. Pressing it again gives a different, equally balanced mix; **Copy** puts the
-teams on the clipboard to paste into a message. The list is saved in the browser and synced with ☁ Sync
-(`site/golf.js`).
+Add golfers with a rank (1–5, 5 = strongest), an optional ⭐ top-player flag and an optional
+🔗 "same team as" partner. Pick a format:
+
+- **Teams**: choose how many teams (2–12).
+- **2v2 bays / 3v3 bays**: as many full teams of 2 / 3 as possible (leftover players make a team
+  one bigger), two teams per bay; with an odd number of teams the last bay has three (e.g. 2v2v2).
+
+Partners always stay together. Top players are spread one per team first; everyone else is dealt
+strongest-first to the team furthest below its fair share; then players (or whole partner groups) are
+swapped between teams, and in bay formats whole teams between bays, while that makes things more even:
+all teams in Teams mode, the teams inside each bay in bay formats. Pressing **Make teams** again gives a
+different, equally fair mix; **Copy** puts the result on the clipboard. Saved in the browser and synced
+with ☁ Sync (`site/golf.js`).
 
 ## How it works
 
