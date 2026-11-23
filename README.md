@@ -15,7 +15,7 @@ A website with a tab per character — **Zoro** and **Luffy** so far — listing
 A third tab tracks the binder painting business: log supply purchases (markers, binders, paint,
 shipping, other) and binder sales, and it shows profit (all time and this month), money made,
 money spent, binders sold, average per binder, spending by type and a month-by-month table.
-Sales and binder purchases record the binder's pockets (4, 9 or 12), whether it's a top loader, its brand and colour. Each sale can also record the customer's name, where you messaged them (Instagram, TikTok, Facebook /
+Binder purchases record the binder's pockets (4, 9 or 12), whether it's a top loader, its brand and colour; a sale gets those from the purchase it's linked to. Each sale can also record the customer's name, where you messaged them (Instagram, TikTok, Facebook /
 Marketplace, …) and their username, and can be linked (🔗 Binder used) to the binder purchase it came
 from: the sale then shows that binder's cost and the profit on the sale, and the purchase shows how many
 of its binders are used and by whom. Choose “Customer brought their own binder” when they supplied it: the sale then has no binder cost. Customer details are hidden on view-only share links.
