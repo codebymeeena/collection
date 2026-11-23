@@ -2,7 +2,12 @@
 // Everything is saved in this browser (localStorage); Backup / Restore move it between devices.
 const Business = (() => {
   const KEY = "binder-business-v1";
-  const BINDER_TYPES = ["9-pocket", "4-pocket", "12-pocket", "Top loader", "Other"];
+  const BINDER_TYPES = ["9-pocket", "4-pocket", "12-pocket", "16-pocket", "20-pocket", "Top loader", "Other"];
+  const COLOURS = ["Black", "White", "Grey", "Blue", "Navy", "Red", "Pink", "Purple", "Green", "Yellow", "Orange", "Brown", "Clear", "Multicolour"];
+  const pocketsField = `<label>Pockets <select name="binderType">${BINDER_TYPES.map((t) => `<option>${t}</option>`).join("")}</select></label>`;
+  const colourField = `<label>Colour <input name="color" list="bizColours" placeholder="e.g. Black" autocomplete="off"></label>`;
+  // "Black 9-pocket" — what a binder is, for lists and labels.
+  const binderLabel = (e) => [e.color, e.binderType].filter(Boolean).join(" ");
   const binderType = (e) => e.binderType || "Not set";
   const CATEGORIES = ["Markers", "Binders", "Paint & brushes", "Shipping & fees", "Other supplies"];
   const CHANNELS = ["Instagram", "Facebook / Marketplace", "TikTok", "Snapchat", "Text / iMessage", "Discord", "Kijiji", "In person", "Other"];
@@ -59,9 +64,9 @@ const Business = (() => {
             </div>
             <label>Their username / contact <input name="handle" placeholder="e.g. @sam.cards" autocomplete="off"></label>
             <div class="row">
-              <label>Binder type <select name="binderType">${BINDER_TYPES.map((t) => `<option>${t}</option>`).join("")}</select></label>
               <label>🔗 Binder used <select name="binderFrom"></select></label>
             </div>
+            <div class="row">${pocketsField}${colourField}</div>
             <div class="row">
               <label>Binders <input type="number" name="qty" min="1" step="1" value="1" required></label>
               <label>Paid (CA$) <input type="number" name="amount" min="0" step="0.01" placeholder="0.00" required></label>
@@ -73,12 +78,14 @@ const Business = (() => {
             <label>Date <input type="date" name="date" required></label>
             <label>Type <select name="category">${CATEGORIES.map((c) => `<option>${c}</option>`).join("")}</select></label>
             <label>What <input name="desc" placeholder="e.g. Posca 12-pack"></label>
+            <div class="row binder-only">${pocketsField}${colourField}</div>
             <div class="row">
               <label>Quantity <input type="number" name="qty" min="1" step="1" value="1" required></label>
               <label>Cost (CA$) <input type="number" name="amount" min="0" step="0.01" placeholder="0.00" required></label>
             </div>
             <button class="primary">Add expense</button>
           </form>
+          <datalist id="bizColours">${COLOURS.map((c) => `<option value="${c}">`).join("")}</datalist>
         </div>
         <section class="panel" id="bizBreakdown"></section>
         <section class="panel">
@@ -102,6 +109,15 @@ const Business = (() => {
     for (const f of ["#saleForm", "#expenseForm"]) $(f).date.value = today();
     $("#saleForm").addEventListener("submit", (e) => submit(e, "sale"));
     $("#expenseForm").addEventListener("submit", (e) => submit(e, "expense"));
+    // Pockets / colour only matter for binder purchases.
+    $("#expenseForm").category.addEventListener("change", showBinderFields);
+    showBinderFields();
+    // Linking a sale to a purchase fills in that binder's pockets and colour.
+    $("#saleForm").binderFrom.addEventListener("change", (e) => {
+      const buy = entries.find((x) => x.id === e.target.value);
+      if (buy?.binderType) $("#saleForm").binderType.value = buy.binderType;
+      if (buy?.color) $("#saleForm").color.value = buy.color;
+    });
     $("#bizFilter").addEventListener("click", (e) => {
       const b = e.target.closest("button[data-f]");
       if (!b) return;
@@ -138,8 +154,11 @@ const Business = (() => {
       date: f.date.value,
       desc: f.desc.value.trim(),
       category: type === "sale" ? "Binder sale" : f.category.value,
-      ...(type === "sale" && {
+      ...((type === "sale" || f.category.value === "Binders") && {
         binderType: f.binderType.value,
+        color: f.color.value.trim() || undefined,
+      }),
+      ...(type === "sale" && {
         customer: f.customer.value.trim(),
         via: f.via.value,
         handle: f.handle.value.trim(),
@@ -154,6 +173,7 @@ const Business = (() => {
     stopEdit();
     f.reset();
     f.date.value = today();
+    showBinderFields();
     save();
     render();
   }
@@ -166,9 +186,10 @@ const Business = (() => {
     f.desc.value = entry.desc;
     f.qty.value = entry.qty;
     f.amount.value = entry.amount;
-    if (f.category) f.category.value = entry.category;
-    if (f.binderType) {
-      f.binderType.value = BINDER_TYPES.includes(entry.binderType) ? entry.binderType : "Other";
+    if (f.category) { f.category.value = entry.category; showBinderFields(); }
+    f.binderType.value = BINDER_TYPES.includes(entry.binderType) ? entry.binderType : entry.binderType ? "Other" : "9-pocket";
+    f.color.value = entry.color || "";
+    if (entry.type === "sale") {
       f.customer.value = entry.customer || "";
       f.via.value = entry.via || "";
       f.handle.value = entry.handle || "";
@@ -185,8 +206,11 @@ const Business = (() => {
       .sort((a, b) => (b.left > 0) - (a.left > 0) || b.x.date.localeCompare(a.x.date));
     $("#saleForm").binderFrom.innerHTML = `<option value="">Not linked</option>` +
       `<option value="${OWN}" ${sale?.ownBinder ? "selected" : ""}>🙋 Customer brought their own binder</option>` + buys.map(({ x, left }) =>
-      `<option value="${esc(x.id)}" ${x.id === sale?.binderFrom ? "selected" : ""}>${esc(x.date)} · ${esc(x.desc || x.category)} · ${cad(unitCost(x))} each · ${left > 0 ? `${left} of ${x.qty} left` : "all used"}</option>`).join("") +
+      `<option value="${esc(x.id)}" ${x.id === sale?.binderFrom ? "selected" : ""}>${esc(x.date)} · ${esc([x.desc, binderLabel(x)].filter(Boolean).join(" — ") || x.category)} · ${cad(unitCost(x))} each · ${left > 0 ? `${left} of ${x.qty} left` : "all used"}</option>`).join("") +
       (buys.length ? "" : `<option value="" disabled>Log a binder purchase under “I bought supplies” first</option>`);
+  }
+  function showBinderFields() {
+    $("#expenseForm .binder-only").hidden = $("#expenseForm").category.value !== "Binders";
   }
   function stopEdit() {
     editing = null;
@@ -231,6 +255,13 @@ const Business = (() => {
       t.made += e.amount;
     }
     const typeRows = Object.entries(types).sort(([, a], [, b]) => b.made - a.made);
+    const colours = {};
+    for (const e of sales()) {
+      const c = (colours[e.color || "Not set"] ||= { count: 0, made: 0 });
+      c.count += e.qty;
+      c.made += e.amount;
+    }
+    const colourRows = Object.entries(colours).sort(([, a], [, b]) => b.count - a.count || b.made - a.made);
     const channels = {};
     for (const e of sales()) {
       const c = (channels[e.via || "Not set"] ||= { count: 0, made: 0 });
@@ -247,9 +278,15 @@ const Business = (() => {
             <div class="bar"><i style="width:${(v / spent) * 100}%"></i></div>`).join("") : `<p class="meta">No expenses yet.</p>`}
         </div>
         <div>
-          <h2>Sales by binder type</h2>
-          ${typeRows.length ? `<table class="biz-table"><tr><th>Type</th><th>Sold</th><th>Made</th><th>Avg each</th></tr>
+          <h2>Sales by pockets</h2>
+          ${typeRows.length ? `<table class="biz-table"><tr><th>Pockets</th><th>Sold</th><th>Made</th><th>Avg each</th></tr>
             ${typeRows.map(([t, v]) => `<tr><td>${esc(t)}</td><td>${v.count}</td><td>${cad(v.made)}</td><td>${cad(v.made / v.count)}</td></tr>`).join("")}
+            </table>` : `<p class="meta">No sales yet.</p>`}
+        </div>
+        <div>
+          <h2>Sales by colour</h2>
+          ${colourRows.length ? `<table class="biz-table"><tr><th>Colour</th><th>Sold</th><th>Made</th></tr>
+            ${colourRows.map(([c, v]) => `<tr><td>${esc(c)}</td><td>${v.count}</td><td>${cad(v.made)}</td></tr>`).join("")}
             </table>` : `<p class="meta">No sales yet.</p>`}
         </div>
         <div>
@@ -283,7 +320,7 @@ const Business = (() => {
   }
 
   function saleDetails(e) {
-    const bits = [`${e.qty} × ${e.binderType ? esc(e.binderType) + " " : ""}binder${e.qty > 1 ? "s" : ""}`];
+    const bits = [`${e.qty} × ${binderLabel(e) ? esc(binderLabel(e)) + " " : ""}binder${e.qty > 1 ? "s" : ""}`];
     // Customer details stay private on view-only share links.
     if (!readOnly && (e.customer || e.via || e.handle))
       bits.push(`👤 ${[e.customer, e.via, e.handle].filter(Boolean).map(esc).join(" · ")}`);
@@ -293,7 +330,7 @@ const Business = (() => {
     return bits.join(" · ");
   }
   function buyDetails(e) {
-    const bits = [`${esc(e.category)}${e.qty > 1 ? ` · ×${e.qty}` : ""}`];
+    const bits = [`${esc(e.category)}${binderLabel(e) && e.category === "Binders" ? ` · ${esc(binderLabel(e))}` : ""}${e.qty > 1 ? ` · ×${e.qty}` : ""}`];
     const used = salesFrom(e);
     if (used.length) bits.push(`<span class="biz-link">🔗 used for ${used.reduce((t, x) => t + x.qty, 0)} of ${e.qty}${readOnly ? "" : `: ${used.map((x) => esc(x.customer || x.desc)).join(", ")}`}</span>`);
     return bits.join(" · ");
@@ -305,11 +342,11 @@ const Business = (() => {
   }
   function downloadCsv() {
     const q = (v) => `"${String(v).replace(/"/g, '""')}"`;
-    const rows = [["Date", "Type", "Category", "Binder type", "Description", "Quantity", "Amount (CAD)",
+    const rows = [["Date", "Type", "Category", "Pockets", "Colour", "Description", "Quantity", "Amount (CAD)",
       "Customer", "Messaged on", "Username / contact", "Binder used", "Binder cost (CAD)", "Profit on sale (CAD)"],
       ...[...entries].sort((a, b) => a.date.localeCompare(b.date)).map((e) => {
         const sale = e.type === "sale", cost = sale ? saleCost(e) : null, buy = sale && linkedBuy(e);
-        return [e.date, sale ? "Sale" : "Expense", e.category, sale ? binderType(e) : "", e.desc, e.qty, (sale ? 1 : -1) * e.amount,
+        return [e.date, sale ? "Sale" : "Expense", e.category, sale ? binderType(e) : e.binderType || "", e.color || "", e.desc, e.qty, (sale ? 1 : -1) * e.amount,
           sale ? e.customer || "" : "", sale ? e.via || "" : "", sale ? e.handle || "" : "",
           e.ownBinder ? "Customer's own binder" : buy ? `${buy.date} ${buy.desc || buy.category}` : "", cost != null ? cost.toFixed(2) : "", cost != null ? (e.amount - cost).toFixed(2) : ""];
       })];
