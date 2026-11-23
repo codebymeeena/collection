@@ -313,3 +313,13 @@ body.viewonly .golf-form, body.viewonly .golf-row button, body.viewonly #golfGen
 .biz-link b.pos, .biz-entry b.pos { color: var(--green); } .biz-link b.neg { color: var(--red); }
 .biz-entry .what .meta { white-space: normal; }
 .biz-binder-info { margin: -4px 0 0; }
+
+/* Binder lines in an order */
+.biz-lines { display: flex; flex-direction: column; gap: 6px; }
+.biz-lines-head { font-size: 13px; color: var(--muted); }
+.biz-line { display: grid; grid-template-columns: 1fr 64px 34px; gap: 6px; align-items: center; }
+.biz-line .line-info { grid-column: 1 / -1; margin: -2px 0 4px; font-size: 12px; }
+.biz-line .line-del { padding: 6px 0; visibility: hidden; }
+#saleLines.multi .biz-line { border-left: 3px solid var(--line); padding-left: 8px; }
+#saleLines.multi .line-del { visibility: visible; }
+.biz .biz-add-line { align-self: flex-start; font-size: 13px; padding: 5px 10px; border-style: dashed; }

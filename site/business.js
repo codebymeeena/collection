@@ -14,10 +14,9 @@ const Business = (() => {
   // Older entries stored "Top loader" (or 16/20-pocket) as the binder type.
   const isToploader = (e) => !!e.toploader || e.binderType === "Top loader";
   const pockets = (e) => (e.binderType === "Top loader" ? "" : e.binderType || "");
-  // A sale's binder details come from the binder purchase it's linked to (older sales kept their own).
-  const binderOf = (e) => (e.type === "sale" && linkedBuy(e)) || e;
-  const binderLabel = (e) => { const b = binderOf(e); return [b.brand, b.color, pockets(b), isToploader(b) && "top loader"].filter(Boolean).join(" "); };
-  const binderType = (e) => { const b = binderOf(e); return [pockets(b) || "Pockets not set", isToploader(b) && "top loader"].filter(Boolean).join(" · "); };
+  // What a binder is, from a purchase (or the details an older sale was saved with).
+  const binderLabel = (b) => [b.brand, b.color, pockets(b), isToploader(b) && "top loader"].filter(Boolean).join(" ");
+  const binderType = (b) => [pockets(b) || "Pockets not set", isToploader(b) && "top loader"].filter(Boolean).join(" · ");
   const title = (e) => e.desc || (e.category === "Binders" && binderLabel(e) ? `${binderLabel(e)} binder${e.qty > 1 ? "s" : ""}` : e.category);
   const CATEGORIES = ["Binders", "Markers", "Paint & brushes", "Shipping & fees", "Other supplies"];
   const CHANNELS = ["Instagram", "Facebook / Marketplace", "TikTok", "Snapchat", "Text / iMessage", "Discord", "Kijiji", "In person", "Other"];
@@ -45,15 +44,25 @@ const Business = (() => {
   const sales = () => entries.filter((e) => e.type === "sale");
   const expenses = () => entries.filter((e) => e.type === "expense");
 
-  // A sale can point at the purchase its binder came from (sale.binderFrom = expense id).
-  // A purchase of 3 binders for CA$60 costs CA$20 per binder sold from it.
-  const unitCost = (x) => x.amount / Math.max(x.qty, 1);
-  const linkedBuy = (sale) => sale.binderFrom && entries.find((x) => x.id === sale.binderFrom && x.type === "expense");
-  // A customer who brings their own binder costs nothing for the binder.
+  // An order (sale) has one or more binder lines: { from: purchase id, own: true if the customer
+  // brought it, qty }. Older sales stored a single binderFrom / ownBinder for all their binders.
+  // A purchase of 3 binders for CA$60 costs CA$20 per binder sold from it; their own binder costs 0.
   const OWN = "own";
-  const saleCost = (sale) => { if (sale.ownBinder) return 0; const b = linkedBuy(sale); return b ? unitCost(b) * sale.qty : null; };
-  const salesFrom = (buy) => sales().filter((x) => x.binderFrom === buy.id);
-  const usedFrom = (buy, except) => salesFrom(buy).filter((x) => x.id !== except).reduce((t, x) => t + x.qty, 0);
+  const unitCost = (x) => x.amount / Math.max(x.qty, 1);
+  const linesOf = (sale) => sale.lines?.length ? sale.lines
+    : [{ from: sale.binderFrom || "", own: !!sale.ownBinder, qty: sale.qty || 1 }];
+  const lineBuy = (line) => line.from && entries.find((x) => x.id === line.from && x.type === "expense");
+  const lineCost = (line) => (line.own ? 0 : lineBuy(line) ? unitCost(lineBuy(line)) * line.qty : null);
+  const saleCost = (sale) => {
+    const costs = linesOf(sale).map(lineCost).filter((c) => c != null);
+    return costs.length ? costs.reduce((a, b) => a + b, 0) : null;
+  };
+  // Pockets / colour / brand of one line: its purchase, or what an older unlinked sale was saved with.
+  const lineDetails = (line, sale) => lineBuy(line) || (line.own ? {} : sale);
+  const lineLabel = (line, sale) => line.own ? "their own binder" : binderLabel(lineDetails(line, sale));
+  const salesFrom = (buy) => sales().filter((x) => linesOf(x).some((l) => l.from === buy.id));
+  const usedFrom = (buy, except) => sales().filter((x) => x.id !== except)
+    .reduce((t, x) => t + linesOf(x).filter((l) => l.from === buy.id).reduce((a, l) => a + l.qty, 0), 0);
   const who = (e) => [e.customer, e.via].filter(Boolean).join(" · ");
   function mount() {
     $("#businessView").innerHTML = `
@@ -73,12 +82,12 @@ const Business = (() => {
               <label>Messaged on <select name="via"><option value="">—</option>${CHANNELS.map((c) => `<option>${c}</option>`).join("")}</select></label>
             </div>
             <label>Their username / contact <input name="handle" placeholder="e.g. @sam.cards" autocomplete="off"></label>
-            <label>🔗 Binder used <select name="binderFrom"></select></label>
-            <p class="meta biz-binder-info" id="saleBinderInfo"></p>
-            <div class="row">
-              <label>Binders <input type="number" name="qty" min="1" step="1" value="1" required></label>
-              <label>Paid (CA$) <input type="number" name="amount" min="0" step="0.01" placeholder="0.00" required></label>
+            <div class="biz-lines">
+              <span class="biz-lines-head">🔗 Binders in this order <span class="meta">— which binder and how many</span></span>
+              <div id="saleLines"></div>
+              <button type="button" id="addLine" class="biz-add-line">+ Add another binder</button>
             </div>
+            <label>Paid for the whole order (CA$) <input type="number" name="amount" min="0" step="0.01" placeholder="0.00" required></label>
             <button class="primary">Add sale</button>
           </form>
           <form class="panel" id="expenseForm">
@@ -120,10 +129,14 @@ const Business = (() => {
     // Pockets / colour only matter for binder purchases.
     $("#expenseForm").category.addEventListener("change", showBinderFields);
     showBinderFields();
-    // Linking a sale to a purchase fills in that binder's pockets and colour.
-    $("#saleForm").binderFrom.addEventListener("change", (e) => {
-      const buy = entries.find((x) => x.id === e.target.value);
-      showSaleBinder();
+    // Binder lines: add, remove, and show what each picked binder is.
+    $("#addLine").addEventListener("click", () => addLine());
+    $("#saleLines").addEventListener("change", (e) => { const l = e.target.closest(".biz-line"); if (l) lineInfo(l); });
+    $("#saleLines").addEventListener("click", (e) => {
+      if (!e.target.closest(".line-del")) return;
+      e.target.closest(".biz-line").remove();
+      if (!$("#saleLines").children.length) addLine();
+      $("#saleLines").classList.toggle("multi", $("#saleLines").children.length > 1);
     });
     $("#bizFilter").addEventListener("click", (e) => {
       const b = e.target.closest("button[data-f]");
@@ -139,7 +152,10 @@ const Business = (() => {
       const linked = entry.type === "expense" ? salesFrom(entry).length : 0;
       if (e.target.matches(".del") && confirm(`Delete "${title(entry)}" (${cad(entry.amount)})?` +
           (linked ? `\n${linked} sale${linked > 1 ? "s are" : " is"} linked to it and will be unlinked.` : ""))) {
-        for (const x of salesFrom(entry)) delete x.binderFrom;
+        for (const x of salesFrom(entry)) {
+        x.lines = linesOf(x).map((l) => (l.from === entry.id ? { ...l, from: "" } : l));
+        delete x.binderFrom;
+      }
         entries = entries.filter((x) => x !== entry);
         save();
         render();
@@ -176,10 +192,9 @@ const Business = (() => {
         customer: f.customer.value.trim(),
         via: f.via.value,
         handle: f.handle.value.trim(),
-        binderFrom: f.binderFrom.value && f.binderFrom.value !== OWN ? f.binderFrom.value : undefined,
-        ownBinder: f.binderFrom.value === OWN || undefined,
+        lines: readLines(),
       }),
-      qty: Math.max(1, Math.floor(+f.qty.value) || 1),
+      qty: type === "sale" ? readLines().reduce((t, l) => t + l.qty, 0) : Math.max(1, Math.floor(+f.qty.value) || 1),
       amount: Math.round((+f.amount.value || 0) * 100) / 100,
     };
     if (editing) entries = entries.map((x) => (x.id === editing.id ? entry : x));
@@ -188,7 +203,7 @@ const Business = (() => {
     f.reset();
     f.date.value = today();
     showBinderFields();
-    showSaleBinder();
+    if (type === "sale") setLines();
     save();
     render();
   }
@@ -199,29 +214,65 @@ const Business = (() => {
     const f = entry.type === "sale" ? $("#saleForm") : $("#expenseForm");
     f.date.value = entry.date;
     f.desc.value = entry.desc;
-    f.qty.value = entry.qty;
+    if (f.qty) f.qty.value = entry.qty;
     f.amount.value = entry.amount;
     if (f.category) { f.category.value = entry.category; showBinderFields(); fillBinder(f, entry); }
     if (entry.type === "sale") {
       f.customer.value = entry.customer || "";
       f.via.value = entry.via || "";
       f.handle.value = entry.handle || "";
-      binderOptions(entry);
-      showSaleBinder();
+      setLines(linesOf(entry), entry.id);
     }
     f.classList.add("editing");
     f.querySelector("button.primary").textContent = "Save changes";
     f.scrollIntoView({ behavior: "smooth", block: "center" });
   }
-  // Binder purchases to link a sale to: ones with binders left first, then used-up ones.
-  function binderOptions(sale = null) {
-    const buys = expenses().filter((x) => x.category === "Binders" || x.id === sale?.binderFrom)
-      .map((x) => ({ x, left: x.qty - usedFrom(x, sale?.id) }))
+  // Choices for one binder line: their own binder, then purchases with binders left, then used-up ones.
+  // `left` counts exclude the order being edited, so its own binders don't count against it.
+  function lineOptions(selected, saleId) {
+    const buys = expenses().filter((x) => x.category === "Binders" || x.id === selected)
+      .map((x) => ({ x, left: x.qty - usedFrom(x, saleId) }))
       .sort((a, b) => (b.left > 0) - (a.left > 0) || b.x.date.localeCompare(a.x.date));
-    $("#saleForm").binderFrom.innerHTML = `<option value="">Not linked</option>` +
-      `<option value="${OWN}" ${sale?.ownBinder ? "selected" : ""}>🙋 Customer brought their own binder</option>` + buys.map(({ x, left }) =>
-      `<option value="${esc(x.id)}" ${x.id === sale?.binderFrom ? "selected" : ""}>${esc(x.date)} · ${esc([binderLabel(x), x.desc].filter(Boolean).join(" — ") || x.category)} · ${cad(unitCost(x))} each · ${left > 0 ? `${left} of ${x.qty} left` : "all used"}</option>`).join("") +
+    return `<option value="">Not linked</option><option value="${OWN}" ${selected === OWN ? "selected" : ""}>🙋 Customer brought their own binder</option>` +
+      buys.map(({ x, left }) => `<option value="${esc(x.id)}" ${x.id === selected ? "selected" : ""}>${esc(x.date)} · ${esc([binderLabel(x), x.desc].filter(Boolean).join(" — ") || x.category)} · ${cad(unitCost(x))} each · ${left > 0 ? `${left} of ${x.qty} left` : "all used"}</option>`).join("") +
       (buys.length ? "" : `<option value="" disabled>Log a binder purchase under “I bought supplies” first</option>`);
+  }
+  function addLine(line = { from: "", own: false, qty: 1 }, saleId = editing?.id) {
+    const div = document.createElement("div");
+    div.className = "biz-line";
+    div.innerHTML = `<select class="line-from" aria-label="Binder used">${lineOptions(line.own ? OWN : line.from || "", saleId)}</select>
+      <input class="line-qty" type="number" min="1" step="1" value="${line.qty || 1}" aria-label="How many">
+      <button type="button" class="line-del" aria-label="Remove this binder">✕</button>
+      <p class="meta line-info"></p>`;
+    $("#saleLines").append(div);
+    $("#saleLines").classList.toggle("multi", $("#saleLines").children.length > 1);
+    lineInfo(div);
+  }
+  function setLines(lines = [{ from: "", own: false, qty: 1 }], saleId = null) {
+    $("#saleLines").innerHTML = "";
+    for (const l of lines) addLine(l, saleId);
+  }
+  function readLines() {
+    return [...$("#saleLines").children].map((d) => {
+      const v = d.querySelector(".line-from").value;
+      return { from: v && v !== OWN ? v : "", own: v === OWN, qty: Math.max(1, Math.floor(+d.querySelector(".line-qty").value) || 1) };
+    });
+  }
+  // Refresh each line's choices (e.g. after a purchase is added) without losing what's picked.
+  function refreshLines() {
+    for (const d of $("#saleLines").children) {
+      const sel = d.querySelector(".line-from"), v = sel.value;
+      sel.innerHTML = lineOptions(v, editing?.id);
+      sel.value = v;
+      lineInfo(d);
+    }
+  }
+  // Under each line: what that binder is and what it cost.
+  function lineInfo(div) {
+    const v = div.querySelector(".line-from").value;
+    const buy = v && v !== OWN && entries.find((x) => x.id === v);
+    div.querySelector(".line-info").textContent = buy ? `${binderLabel(buy) || "Binder"} · ${cad(unitCost(buy))} each` :
+      v === OWN ? "They supplied this binder — no binder cost." : "Pick the binder you bought, to track its cost and details.";
   }
   // Puts a binder's pockets / top loader / brand / colour into a form (keeping odd old values selectable).
   function fillBinder(f, e) {
@@ -238,13 +289,6 @@ const Business = (() => {
     const binders = $("#expenseForm").category.value === "Binders";
     $("#expenseForm .binder-only").hidden = !binders;
     $("#expenseForm .not-binder").hidden = binders;
-  }
-  // Under "Binder used": what that binder is.
-  function showSaleBinder() {
-    const v = $("#saleForm").binderFrom.value;
-    const buy = v && v !== OWN && entries.find((x) => x.id === v);
-    $("#saleBinderInfo").textContent = buy ? `${binderLabel(buy) || "Binder"} · ${cad(unitCost(buy))}` :
-      v === OWN ? "They supplied the binder — no binder cost." : "Pick the binder you bought for this sale to track its cost and details.";
   }
   function stopEdit() {
     editing = null;
@@ -269,7 +313,7 @@ const Business = (() => {
       [binders ? cad(made / binders) : "—", "Average per binder"],
       [cad(monthProfit), "Profit this month", monthProfit < 0 ? "neg" : "pos"],
     ].map(([v, l, cls]) => `<div class="stat ${cls || ""}"><b>${v}</b><span>${l}</span></div>`).join("");
-    if (!editing || editing.type !== "sale") { binderOptions(); showSaleBinder(); }
+    if (!$("#saleLines").children.length) setLines(); else refreshLines();
     renderBreakdown(spent);
     renderList();
   }
@@ -283,18 +327,20 @@ const Business = (() => {
     }
     const monthRows = Object.entries(months).sort(([a], [b]) => b.localeCompare(a));
     const types = {};
-    for (const e of sales()) {
-      const t = (types[binderType(e)] ||= { count: 0, made: 0 });
-      t.count += e.qty;
-      t.made += e.amount;
-    }
+    // Each binder line counts on its own; an order's money is shared out by number of binders.
+    const eachLine = (fn) => { for (const e of sales()) for (const l of linesOf(e)) fn(l, e, (e.amount * l.qty) / Math.max(e.qty, 1)); };
+    eachLine((l, e, made) => {
+      const t = (types[l.own ? "Their own binder" : binderType(lineDetails(l, e))] ||= { count: 0, made: 0 });
+      t.count += l.qty;
+      t.made += made;
+    });
     const typeRows = Object.entries(types).sort(([, a], [, b]) => b.made - a.made);
     const colours = {};
-    for (const e of sales()) {
-      const c = (colours[binderOf(e).color || "Not set"] ||= { count: 0, made: 0 });
-      c.count += e.qty;
-      c.made += e.amount;
-    }
+    eachLine((l, e, made) => {
+      const c = (colours[l.own ? "Their own binder" : lineDetails(l, e).color || "Not set"] ||= { count: 0, made: 0 });
+      c.count += l.qty;
+      c.made += made;
+    });
     const colourRows = Object.entries(colours).sort(([, a], [, b]) => b.count - a.count || b.made - a.made);
     const channels = {};
     for (const e of sales()) {
@@ -354,19 +400,22 @@ const Business = (() => {
   }
 
   function saleDetails(e) {
-    const bits = [`${e.qty} × ${binderLabel(e) ? esc(binderLabel(e)) + " " : ""}binder${e.qty > 1 ? "s" : ""}`];
+    const lines = linesOf(e);
+    const what = lines.map((l) => (l.own ? `${l.qty} × their own binder`
+      : lineLabel(l, e) ? `${l.qty} × ${esc(lineLabel(l, e))} binder${l.qty > 1 ? "s" : ""}` : `${l.qty} binder${l.qty > 1 ? "s" : ""}`));
+    const bits = [lines.length > 1 ? `${e.qty} binders: ${what.join(" + ")}` : what[0]];
     // Customer details stay private on view-only share links.
     if (!readOnly && (e.customer || e.via || e.handle))
       bits.push(`👤 ${[e.customer, e.via, e.handle].filter(Boolean).map(esc).join(" · ")}`);
     const cost = saleCost(e);
-    if (e.ownBinder) bits.push(`<span class="biz-link">🙋 their own binder → profit <b class="pos">${cad(e.amount)}</b></span>`);
-    else if (cost != null) bits.push(`<span class="biz-link">🔗 binder ${cad(cost)} → profit <b class="${e.amount - cost < 0 ? "neg" : "pos"}">${cad(e.amount - cost)}</b></span>`);
+    const unknown = lines.some((l) => lineCost(l) == null);
+    if (cost != null) bits.push(`<span class="biz-link">🔗 binder${e.qty > 1 ? "s" : ""} ${cad(cost)}${unknown ? " + unlinked" : ""} → profit <b class="${e.amount - cost < 0 ? "neg" : "pos"}">${cad(e.amount - cost)}</b>${unknown ? " (before unlinked binders)" : ""}</span>`);
     return bits.join(" · ");
   }
   function buyDetails(e) {
     const bits = [`${esc(e.category)}${e.qty > 1 ? ` · ×${e.qty}` : ""}`];
     const used = salesFrom(e);
-    if (used.length) bits.push(`<span class="biz-link">🔗 used for ${used.reduce((t, x) => t + x.qty, 0)} of ${e.qty}${readOnly ? "" : `: ${used.map((x) => esc(x.customer || x.desc)).join(", ")}`}</span>`);
+    if (used.length) bits.push(`<span class="biz-link">🔗 used for ${usedFrom(e)} of ${e.qty}${readOnly ? "" : `: ${used.map((x) => esc(x.customer || x.desc)).join(", ")}`}</span>`);
     return bits.join(" · ");
   }
 
@@ -379,13 +428,15 @@ const Business = (() => {
     const rows = [["Date", "Type", "Category", "Pockets", "Top loader", "Brand", "Colour", "Description", "Quantity", "Amount (CAD)",
       "Customer", "Messaged on", "Username / contact", "Binder used", "Binder cost (CAD)", "Profit on sale (CAD)"],
       ...[...entries].sort((a, b) => a.date.localeCompare(b.date)).map((e) => {
-        const sale = e.type === "sale", cost = sale ? saleCost(e) : null, buy = sale && linkedBuy(e);
-        const binder = sale || e.category === "Binders";
-        const b = binderOf(e);
-        return [e.date, sale ? "Sale" : "Expense", e.category, binder ? pockets(b) : "", binder ? (isToploader(b) ? "Yes" : "No") : "", binder ? b.brand || "" : "",
-          binder ? b.color || "" : "", title(e), e.qty, (sale ? 1 : -1) * e.amount,
+        const sale = e.type === "sale", cost = sale ? saleCost(e) : null;
+        // Binder columns: the purchase's own details, or each line of an order joined with " + ".
+        const parts = sale ? linesOf(e).map((l) => (l.own ? null : lineDetails(l, e))) : e.category === "Binders" ? [e] : [];
+        const col = (fn) => parts.map((b) => (b ? fn(b) : "own")).join(" + ");
+        return [e.date, sale ? "Sale" : "Expense", e.category, col((b) => pockets(b)), col((b) => (isToploader(b) ? "Yes" : "No")), col((b) => b.brand || ""),
+          col((b) => b.color || ""), title(e), e.qty, (sale ? 1 : -1) * e.amount,
           sale ? e.customer || "" : "", sale ? e.via || "" : "", sale ? e.handle || "" : "",
-          e.ownBinder ? "Customer's own binder" : buy ? `${buy.date} ${title(buy)}` : "", cost != null ? cost.toFixed(2) : "", cost != null ? (e.amount - cost).toFixed(2) : ""];
+          sale ? linesOf(e).map((l) => `${l.qty} × ${l.own ? "customer's own binder" : lineBuy(l) ? `${lineBuy(l).date} ${title(lineBuy(l))}` : "not linked"}`).join("; ") : "",
+          cost != null ? cost.toFixed(2) : "", cost != null ? (e.amount - cost).toFixed(2) : ""];
       })];
     download(`binder-business-${today()}.csv`, rows.map((r) => r.map(q).join(",")).join("\n"), "text/csv");
   }
