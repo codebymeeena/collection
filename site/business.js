@@ -34,7 +34,9 @@ const Business = (() => {
   // A purchase of 3 binders for CA$60 costs CA$20 per binder sold from it.
   const unitCost = (x) => x.amount / Math.max(x.qty, 1);
   const linkedBuy = (sale) => sale.binderFrom && entries.find((x) => x.id === sale.binderFrom && x.type === "expense");
-  const saleCost = (sale) => { const b = linkedBuy(sale); return b ? unitCost(b) * sale.qty : null; };
+  // A customer who brings their own binder costs nothing for the binder.
+  const OWN = "own";
+  const saleCost = (sale) => { if (sale.ownBinder) return 0; const b = linkedBuy(sale); return b ? unitCost(b) * sale.qty : null; };
   const salesFrom = (buy) => sales().filter((x) => x.binderFrom === buy.id);
   const usedFrom = (buy, except) => salesFrom(buy).filter((x) => x.id !== except).reduce((t, x) => t + x.qty, 0);
   const who = (e) => [e.customer, e.via].filter(Boolean).join(" · ");
@@ -141,7 +143,8 @@ const Business = (() => {
         customer: f.customer.value.trim(),
         via: f.via.value,
         handle: f.handle.value.trim(),
-        binderFrom: f.binderFrom.value || undefined,
+        binderFrom: f.binderFrom.value && f.binderFrom.value !== OWN ? f.binderFrom.value : undefined,
+        ownBinder: f.binderFrom.value === OWN || undefined,
       }),
       qty: Math.max(1, Math.floor(+f.qty.value) || 1),
       amount: Math.round((+f.amount.value || 0) * 100) / 100,
@@ -180,7 +183,8 @@ const Business = (() => {
     const buys = expenses().filter((x) => x.category === "Binders" || x.id === sale?.binderFrom)
       .map((x) => ({ x, left: x.qty - usedFrom(x, sale?.id) }))
       .sort((a, b) => (b.left > 0) - (a.left > 0) || b.x.date.localeCompare(a.x.date));
-    $("#saleForm").binderFrom.innerHTML = `<option value="">Not linked</option>` + buys.map(({ x, left }) =>
+    $("#saleForm").binderFrom.innerHTML = `<option value="">Not linked</option>` +
+      `<option value="${OWN}" ${sale?.ownBinder ? "selected" : ""}>🙋 Customer brought their own binder</option>` + buys.map(({ x, left }) =>
       `<option value="${esc(x.id)}" ${x.id === sale?.binderFrom ? "selected" : ""}>${esc(x.date)} · ${esc(x.desc || x.category)} · ${cad(unitCost(x))} each · ${left > 0 ? `${left} of ${x.qty} left` : "all used"}</option>`).join("") +
       (buys.length ? "" : `<option value="" disabled>Log a binder purchase under “I bought supplies” first</option>`);
   }
@@ -284,7 +288,8 @@ const Business = (() => {
     if (!readOnly && (e.customer || e.via || e.handle))
       bits.push(`👤 ${[e.customer, e.via, e.handle].filter(Boolean).map(esc).join(" · ")}`);
     const cost = saleCost(e);
-    if (cost != null) bits.push(`<span class="biz-link">🔗 binder ${cad(cost)} → profit <b class="${e.amount - cost < 0 ? "neg" : "pos"}">${cad(e.amount - cost)}</b></span>`);
+    if (e.ownBinder) bits.push(`<span class="biz-link">🙋 their own binder → profit <b class="pos">${cad(e.amount)}</b></span>`);
+    else if (cost != null) bits.push(`<span class="biz-link">🔗 binder ${cad(cost)} → profit <b class="${e.amount - cost < 0 ? "neg" : "pos"}">${cad(e.amount - cost)}</b></span>`);
     return bits.join(" · ");
   }
   function buyDetails(e) {
@@ -306,7 +311,7 @@ const Business = (() => {
         const sale = e.type === "sale", cost = sale ? saleCost(e) : null, buy = sale && linkedBuy(e);
         return [e.date, sale ? "Sale" : "Expense", e.category, sale ? binderType(e) : "", e.desc, e.qty, (sale ? 1 : -1) * e.amount,
           sale ? e.customer || "" : "", sale ? e.via || "" : "", sale ? e.handle || "" : "",
-          buy ? `${buy.date} ${buy.desc || buy.category}` : "", cost != null ? cost.toFixed(2) : "", cost != null ? (e.amount - cost).toFixed(2) : ""];
+          e.ownBinder ? "Customer's own binder" : buy ? `${buy.date} ${buy.desc || buy.category}` : "", cost != null ? cost.toFixed(2) : "", cost != null ? (e.amount - cost).toFixed(2) : ""];
       })];
     download(`binder-business-${today()}.csv`, rows.map((r) => r.map(q).join(",")).join("\n"), "text/csv");
   }
