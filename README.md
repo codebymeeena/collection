@@ -19,7 +19,7 @@ Binder purchases record the binder's pockets (4, 9 or 12), whether it's a top lo
 Marketplace, …) and their username, and can be linked (🔗 Binder used) to the binder purchase it came
 from: the sale then shows that binder's cost and the profit on the sale, and the purchase shows how many
 of its binders are used and by whom. Choose “Customer brought their own binder” when they supplied it: the sale then has no binder cost. Customer details are hidden on view-only share links.
-Entries can be edited or deleted. They are saved in the browser; **Backup** / **Restore** move them
+History can be shown as one list, sales only, expenses only, **By binder** (each binder purchase with the orders that used it, what those binders brought in and their profit, plus customer-own and unlinked binders) or **By supplies** (other expenses grouped by type with totals). Entries can be edited or deleted. They are saved in the browser; **Backup** / **Restore** move them
 between devices and **Download CSV** opens in Excel / Google Sheets.
 
 ## Sync & share (☁ button)

@@ -323,3 +323,30 @@ body.viewonly .golf-form, body.viewonly .golf-row button, body.viewonly #golfGen
 #saleLines.multi .biz-line { border-left: 3px solid var(--line); padding-left: 8px; }
 #saleLines.multi .line-del { visibility: visible; }
 .biz .biz-add-line { align-self: flex-start; font-size: 13px; padding: 5px 10px; border-style: dashed; }
+
+/* History grouped by binder / supplies */
+.biz-group { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin-bottom: 12px; }
+.biz-group-head { display: flex; align-items: center; gap: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.biz-group-head > div { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.biz-group-head b.neg { color: var(--red); }
+.biz-group-head button { padding: 4px 8px; font-size: 13px; }
+.biz-group-row { display: grid; grid-template-columns: 86px 1fr auto auto auto; gap: 10px; align-items: center; padding: 6px 0;
+                 border-bottom: 1px dashed var(--line); font-size: 14px; }
+.biz-group-row .amt.pos { color: var(--green); font-weight: 700; }
+.biz-group-row .date { color: var(--muted); font-size: 13px; }
+.biz-group-profit { min-width: 110px; text-align: right; }
+.biz-group-foot { padding-top: 8px; font-size: 14px; }
+.biz-group-foot b.pos { color: var(--green); } .biz-group-foot b.neg { color: var(--red); }
+.biz-group-empty { margin: 8px 0 0; }
+.biz-group .biz-entry:last-child { border-bottom: none; }
+@media (max-width: 640px) {
+  .biz-group-row { grid-template-columns: 1fr auto; gap: 2px 8px; }
+  .biz-group-row .date { grid-column: 1 / -1; }
+  .biz-group-profit { min-width: 0; }
+}
+#bizFilter button { white-space: nowrap; }
+@media (max-width: 640px) {
+  #bizFilter { flex: 1 1 100%; overflow-x: auto; scrollbar-width: none; }
+  #bizFilter::-webkit-scrollbar { display: none; }
+  #bizFilter button { flex: 1 0 auto; padding: 7px 10px; }
+}
