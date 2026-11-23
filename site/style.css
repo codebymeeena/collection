@@ -312,3 +312,4 @@ body.viewonly .golf-form, body.viewonly .golf-row button, body.viewonly #golfGen
 .biz-link { white-space: nowrap; }
 .biz-link b.pos, .biz-entry b.pos { color: var(--green); } .biz-link b.neg { color: var(--red); }
 .biz-entry .what .meta { white-space: normal; }
+.biz-binder-info { margin: -4px 0 0; }
