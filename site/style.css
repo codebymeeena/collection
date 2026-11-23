@@ -280,3 +280,32 @@ body.viewonly .golf-form, body.viewonly .golf-row button, body.viewonly #golfGen
   .mu-card img { width: 84px; }
   .view-banner { font-size: 13px; }
 }
+
+/* Golf: partners, formats, bays */
+.golf-form .golf-partner select { width: 100%; }
+.golf-group { display: inline-block; color: #fff; font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 99px; vertical-align: 1px; }
+.golf-modes { display: flex; }
+.golf-modes button { font: inherit; font-size: 14px; padding: 8px 12px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; }
+.golf-modes button + button { border-left: none; }
+.golf-modes button:first-child { border-radius: 8px 0 0 8px; }
+.golf-modes button:last-child { border-radius: 0 8px 8px 0; }
+.golf-modes button.active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 650; }
+#golfPlan { flex-basis: 100%; }
+#golfPlan:empty { display: none; }
+#golfWarn:empty { display: none; }
+.golf-bays { display: flex; flex-direction: column; gap: 12px; }
+.golf-bay { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.golf-bay-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.golf-bay-teams { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: center; }
+.golf-vs { font-weight: 800; color: var(--muted); font-size: 13px; text-transform: uppercase; }
+.golf-bay .golf-team { border-top-width: 3px; }
+.golf-bay .golf-team:last-child { border-top-color: var(--blue); }
+@media (max-width: 640px) {
+  .golf-modes { flex-basis: 100%; }
+  .golf-modes button { flex: 1; padding: 8px 4px; }
+  .golf-bay-teams { grid-template-columns: 1fr; gap: 6px; }
+  .golf-vs { text-align: center; }
+}
+.golf-bay-teams:has(> .golf-team:nth-of-type(3)) { grid-template-columns: 1fr auto 1fr auto 1fr; }
+.golf-bay .golf-team:nth-of-type(3) { border-top-color: var(--purple); }
+@media (max-width: 860px) { .golf-bay-teams:has(> .golf-team:nth-of-type(3)) { grid-template-columns: 1fr; } .golf-vs { text-align: center; } }
