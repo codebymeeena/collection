@@ -2,13 +2,20 @@
 // Everything is saved in this browser (localStorage); Backup / Restore move it between devices.
 const Business = (() => {
   const KEY = "binder-business-v1";
-  const BINDER_TYPES = ["9-pocket", "4-pocket", "12-pocket", "16-pocket", "20-pocket", "Top loader", "Other"];
+  const BINDER_TYPES = ["4-pocket", "9-pocket", "12-pocket"];
+  const BRANDS = ["Vault X", "Ultra PRO", "Ultimate Guard", "Dragon Shield", "Gamegenic", "BCW", "Monster Protectors", "Card Guard", "Amazon / no brand", "Other"];
   const COLOURS = ["Black", "White", "Grey", "Blue", "Navy", "Red", "Pink", "Purple", "Green", "Yellow", "Orange", "Brown", "Clear", "Multicolour"];
-  const pocketsField = `<label>Pockets <select name="binderType">${BINDER_TYPES.map((t) => `<option>${t}</option>`).join("")}</select></label>`;
+  const pocketsField = `<label>Pockets <select name="binderType">${BINDER_TYPES.map((t) => `<option ${t === "9-pocket" ? "selected" : ""}>${t}</option>`).join("")}</select></label>`;
+  const toploaderField = `<label>Top loader <select name="toploader"><option value="">No</option><option value="yes">Yes</option></select></label>`;
+  const brandField = `<label>Brand <select name="brand"><option value="">—</option>${BRANDS.map((b) => `<option>${b}</option>`).join("")}</select></label>`;
+  const binderFields = `<div class="row">${pocketsField}${toploaderField}</div><div class="row">${brandField}`;
   const colourField = `<label>Colour <input name="color" list="bizColours" placeholder="e.g. Black" autocomplete="off"></label>`;
   // "Black 9-pocket" — what a binder is, for lists and labels.
-  const binderLabel = (e) => [e.color, e.binderType].filter(Boolean).join(" ");
-  const binderType = (e) => e.binderType || "Not set";
+  // Older entries stored "Top loader" (or 16/20-pocket) as the binder type.
+  const isToploader = (e) => !!e.toploader || e.binderType === "Top loader";
+  const pockets = (e) => (e.binderType === "Top loader" ? "" : e.binderType || "");
+  const binderLabel = (e) => [e.brand, e.color, pockets(e), isToploader(e) && "top loader"].filter(Boolean).join(" ");
+  const binderType = (e) => [pockets(e) || "Pockets not set", isToploader(e) && "top loader"].filter(Boolean).join(" · ");
   const CATEGORIES = ["Markers", "Binders", "Paint & brushes", "Shipping & fees", "Other supplies"];
   const CHANNELS = ["Instagram", "Facebook / Marketplace", "TikTok", "Snapchat", "Text / iMessage", "Discord", "Kijiji", "In person", "Other"];
   const $ = (s) => document.querySelector(s);
@@ -66,7 +73,7 @@ const Business = (() => {
             <div class="row">
               <label>🔗 Binder used <select name="binderFrom"></select></label>
             </div>
-            <div class="row">${pocketsField}${colourField}</div>
+            ${binderFields}${colourField}</div>
             <div class="row">
               <label>Binders <input type="number" name="qty" min="1" step="1" value="1" required></label>
               <label>Paid (CA$) <input type="number" name="amount" min="0" step="0.01" placeholder="0.00" required></label>
@@ -78,7 +85,7 @@ const Business = (() => {
             <label>Date <input type="date" name="date" required></label>
             <label>Type <select name="category">${CATEGORIES.map((c) => `<option>${c}</option>`).join("")}</select></label>
             <label>What <input name="desc" placeholder="e.g. Posca 12-pack"></label>
-            <div class="row binder-only">${pocketsField}${colourField}</div>
+            <div class="binder-only">${binderFields}${colourField}</div></div>
             <div class="row">
               <label>Quantity <input type="number" name="qty" min="1" step="1" value="1" required></label>
               <label>Cost (CA$) <input type="number" name="amount" min="0" step="0.01" placeholder="0.00" required></label>
@@ -115,8 +122,7 @@ const Business = (() => {
     // Linking a sale to a purchase fills in that binder's pockets and colour.
     $("#saleForm").binderFrom.addEventListener("change", (e) => {
       const buy = entries.find((x) => x.id === e.target.value);
-      if (buy?.binderType) $("#saleForm").binderType.value = buy.binderType;
-      if (buy?.color) $("#saleForm").color.value = buy.color;
+      if (buy?.category === "Binders") fillBinder($("#saleForm"), buy);
     });
     $("#bizFilter").addEventListener("click", (e) => {
       const b = e.target.closest("button[data-f]");
@@ -156,6 +162,8 @@ const Business = (() => {
       category: type === "sale" ? "Binder sale" : f.category.value,
       ...((type === "sale" || f.category.value === "Binders") && {
         binderType: f.binderType.value,
+        toploader: f.toploader.value === "yes" || undefined,
+        brand: f.brand.value || undefined,
         color: f.color.value.trim() || undefined,
       }),
       ...(type === "sale" && {
@@ -187,8 +195,7 @@ const Business = (() => {
     f.qty.value = entry.qty;
     f.amount.value = entry.amount;
     if (f.category) { f.category.value = entry.category; showBinderFields(); }
-    f.binderType.value = BINDER_TYPES.includes(entry.binderType) ? entry.binderType : entry.binderType ? "Other" : "9-pocket";
-    f.color.value = entry.color || "";
+    fillBinder(f, entry);
     if (entry.type === "sale") {
       f.customer.value = entry.customer || "";
       f.via.value = entry.via || "";
@@ -208,6 +215,17 @@ const Business = (() => {
       `<option value="${OWN}" ${sale?.ownBinder ? "selected" : ""}>🙋 Customer brought their own binder</option>` + buys.map(({ x, left }) =>
       `<option value="${esc(x.id)}" ${x.id === sale?.binderFrom ? "selected" : ""}>${esc(x.date)} · ${esc([x.desc, binderLabel(x)].filter(Boolean).join(" — ") || x.category)} · ${cad(unitCost(x))} each · ${left > 0 ? `${left} of ${x.qty} left` : "all used"}</option>`).join("") +
       (buys.length ? "" : `<option value="" disabled>Log a binder purchase under “I bought supplies” first</option>`);
+  }
+  // Puts a binder's pockets / top loader / brand / colour into a form (keeping odd old values selectable).
+  function fillBinder(f, e) {
+    const keep = (sel, value) => {
+      if (value && ![...sel.options].some((o) => o.value === value)) sel.add(new Option(value, value));
+      sel.value = value || sel.options[0].value;
+    };
+    keep(f.binderType, pockets(e) || "9-pocket");
+    f.toploader.value = isToploader(e) ? "yes" : "";
+    keep(f.brand, e.brand || "");
+    f.color.value = e.color || "";
   }
   function showBinderFields() {
     $("#expenseForm .binder-only").hidden = $("#expenseForm").category.value !== "Binders";
@@ -342,11 +360,13 @@ const Business = (() => {
   }
   function downloadCsv() {
     const q = (v) => `"${String(v).replace(/"/g, '""')}"`;
-    const rows = [["Date", "Type", "Category", "Pockets", "Colour", "Description", "Quantity", "Amount (CAD)",
+    const rows = [["Date", "Type", "Category", "Pockets", "Top loader", "Brand", "Colour", "Description", "Quantity", "Amount (CAD)",
       "Customer", "Messaged on", "Username / contact", "Binder used", "Binder cost (CAD)", "Profit on sale (CAD)"],
       ...[...entries].sort((a, b) => a.date.localeCompare(b.date)).map((e) => {
         const sale = e.type === "sale", cost = sale ? saleCost(e) : null, buy = sale && linkedBuy(e);
-        return [e.date, sale ? "Sale" : "Expense", e.category, sale ? binderType(e) : e.binderType || "", e.color || "", e.desc, e.qty, (sale ? 1 : -1) * e.amount,
+        const binder = sale || e.category === "Binders";
+        return [e.date, sale ? "Sale" : "Expense", e.category, binder ? pockets(e) : "", binder ? (isToploader(e) ? "Yes" : "No") : "", binder ? e.brand || "" : "",
+          e.color || "", e.desc, e.qty, (sale ? 1 : -1) * e.amount,
           sale ? e.customer || "" : "", sale ? e.via || "" : "", sale ? e.handle || "" : "",
           e.ownBinder ? "Customer's own binder" : buy ? `${buy.date} ${buy.desc || buy.category}` : "", cost != null ? cost.toFixed(2) : "", cost != null ? (e.amount - cost).toFixed(2) : ""];
       })];
